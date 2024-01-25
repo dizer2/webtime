@@ -1,0 +1,32 @@
+@import "./mixins";
+@import "./variables";
+
+
+::-webkit-scrollbar {
+  width: 35px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main;
+}
+
+
+::selection {
+  background: rgba(0, 109, 192, 0.50);
+}
+
+
+
+.secondary-title {
+    @include font($dark, 64px, 700, normal, 0);
+}
+
+.body-hidden {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
