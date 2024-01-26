@@ -55,6 +55,7 @@ ul li {
   max-height: 100vh;
   overflow: hidden; }
 
-
+.App {
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=style.css.map */
