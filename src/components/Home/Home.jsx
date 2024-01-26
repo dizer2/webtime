@@ -6,7 +6,7 @@ const Home = () => {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-};
+  };
 
 
   return (
