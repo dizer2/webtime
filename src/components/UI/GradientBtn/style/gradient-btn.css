@@ -49,4 +49,14 @@ ul li {
 .App {
   overflow-x: hidden; }
 
-/*# sourceMappingURL=style.css.map */
+.gradient-btn {
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0;
+  color: #FFF; }
+
+/*# sourceMappingURL=gradient-btn.css.map */

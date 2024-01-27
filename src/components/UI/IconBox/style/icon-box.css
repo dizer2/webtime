@@ -49,4 +49,28 @@ ul li {
 .App {
   overflow-x: hidden; }
 
-/*# sourceMappingURL=style.css.map */
+.icon-box {
+  position: relative;
+  border: 1px solid transparent;
+  border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+  border-image-slice: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; }
+  .icon-box .icon-box__icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .icon-box .icon-box__icon .icon-box__circle {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+      border-radius: 50%;
+      filter: blur(30px); }
+
+/*# sourceMappingURL=icon-box.css.map */

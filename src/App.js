@@ -1,4 +1,5 @@
 import React, { Component, Suspense } from 'react';
+import "./components/main/style.css";
 import { useTranslation, withTranslation, Trans } from 'react-i18next';
 import Home from './components/Home/Home';
 

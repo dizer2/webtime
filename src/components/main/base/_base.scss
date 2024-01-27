@@ -21,12 +21,9 @@
 
 
 
-.secondary-title {
-    @include font($dark, 64px, 700, normal, 0);
-}
+
 
 .body-hidden {
     max-height: 100vh;
     overflow: hidden;
 }
-
