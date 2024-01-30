@@ -1,0 +1,234 @@
+@import "./../../main/style.scss";
+
+.home {
+    padding: 0 120px;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    @include display-center(space-between, none);
+    flex-direction: column;
+
+
+    &__header {
+        padding-top: 25px;
+        @include display-center(space-between, center);
+
+        .header__nav {
+            .header__list {
+                @include display-center(center, center);
+                column-gap: 30px;
+
+                .header__item {
+                    @include display-center(center, center);
+                    column-gap: 5px;
+                    @include font(#FFF, 16px, 600, normal, 0);
+                    cursor: pointer;
+                }
+
+                .header__dropdown {
+                    position: relative;
+
+                    &:hover {
+                        transition: .5s;
+                        .header__dropdown-content__overlay {
+                            z-index: 1;
+                            transition: .5s;
+
+                            .header__dropdown-content {
+                                transform: translateY(0px);
+                                opacity: 1;
+                                z-index: 1;
+                                transition: .5s;
+                            }
+                        }
+                    }
+
+                    &-content__overlay {
+                        position: absolute;
+                        top: 10px;
+                        padding-top: 40px; // Pudding from top of link include (top of link - 10px => and -40px)
+                        transition: .5s;
+                        z-index: -1; // Reduction z-index for when card not active user cant open it 
+
+
+                        .header__dropdown-content {
+                            padding: 30px;
+                            width: 660px;
+                            height: 220px;
+                            background: #121212;
+                            display: flex;
+                            column-gap: 80px;
+                            overflow: hidden;
+                            transform: translateY(-25px);
+                            opacity: 0;
+                            z-index: -1; 
+                            transition: .5s;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: -80px;
+                                bottom: -80px;
+                                width: 250px;
+                                height: 250px;
+                                background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+                                border-radius: 50%;
+                                z-index: 1;
+                                filter: blur(180px);
+                            }
+
+
+                            .header__dropdown--left, .header__dropdown--right {
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 15px;
+                                z-index: 2;
+
+                                .header__dropdown-item {
+                                    @include display-center(none, center);
+                                    column-gap: 15px;
+
+                                    .icon-box {
+                                        position: relative;
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            width: 50px;
+                                            height: 50px;
+                                            background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+                                            border-radius: 50%;
+                                            filter: blur(80px);
+                                            z-index: -1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .header__btn {
+            width: 180px;
+            height: 52px;
+
+            background-color: transparent;
+            @include font(#FFF, 16px, 700, normal, 0);
+
+            background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            border: 1px solid transparent;
+            border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+            border-image-slice: 1;
+        }
+    }
+
+
+    &__intro {
+        .intro__title {
+            margin-bottom: 30px;
+            @include font(#FFF, 64px, 700, normal, 0);
+
+            & strong {
+                background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        // .intro__slider {
+        //     @include display-center(start, center);
+        //     column-gap: 20px;
+        //     overflow-x: scroll;
+        //     overflow-y: hidden;
+        //     width: 100%;
+        //     height: 400px;
+        //     -ms-overflow-style: none;  /* IE and Edge */
+        //     scrollbar-width: none;  /* Firefox */
+        //     touch-action: pan-y;
+        //     &::-webkit-scrollbar {
+        //         display: none;
+        //     }
+
+            
+            // &-wrapper {
+            //     display: flex;
+            //     justify-content: flex-start;
+            //     column-gap: 20px;
+            //     white-space: nowrap;
+
+            .intro__slider {
+                display: flex;
+                column-gap: 20px;
+
+                .intro__card {
+                    padding: 20px;
+                    width: 400px;
+                    height: 380px;
+                    background: rgba(161, 161, 161, 0.20);
+                    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+                    backdrop-filter: blur(25px);
+
+
+                    &-header {
+                        margin-bottom: 20px;
+                        @include display-center(space-between, center);
+
+                        .intro__card-title {
+                            @include font(#FFF, 20px, 600, normal, 0);
+                        }
+
+                        .intro__card-price {
+                            @include font(#FFF, 16px, 400, normal, 0);
+                        }
+                    }
+
+
+                    &-img {
+                        margin-bottom: 20px;
+                        width: 100%;
+                        height: 224px;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+
+                        &--1 {
+                            background-image: url(../img/website-webdesign.jpg);
+                        }
+                        &--2 {
+                            background-image: url(../img/webdesign.jpg);
+                        }
+                        &--3 {
+                            background-image: url(../img/poster.jpg);
+                        }
+                        &--4 {
+                            background-image: url(../img/business-cards.jpg);
+                        }
+                    }
+                }
+            }
+
+            // }
+
+        // }
+    }
+
+
+    &__footer {
+        margin-bottom: 20px;
+        @include display-center(space-between, center);
+
+        .social__media-wrapper { // Move to _base.scss
+            display: flex;
+            column-gap: 20px;
+        }
+    }
+}
+
+

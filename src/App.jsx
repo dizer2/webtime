@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import React from 'react';
+import "./components/main/style.css";
 import Home from './components/Home/Home';
 import About from './components/About/About';
 
@@ -12,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Home/> */}
+      <Home/>
       <About />
     </div>
   );
