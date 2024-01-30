@@ -45,10 +45,6 @@ body {
 ::selection {
   background: rgba(0, 109, 192, 0.5); }
 
-.body-hidden {
-  max-height: 100vh;
-  overflow: hidden; }
-
 .App {
   overflow-x: hidden; }
 
