@@ -1,0 +1,18 @@
+@import "../../main/style.scss";
+
+.subTitle__container {
+	@include display-center(flex-start, center);
+	gap: $line-margin;
+	padding-left: $main-padding;
+	margin-bottom: 40px;
+
+	&-line {
+		width: $line-width;
+		height: 2px;
+		background: $main;
+	}
+
+	&-description {
+		@include subTitle();
+	}
+}
