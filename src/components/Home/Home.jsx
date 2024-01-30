@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "./style/home.css";
+import "./style/Home.css";
 import { useTranslation } from 'react-i18next';
 import Logo from '../main/img/Logo.jsx';
 import IconBox from '../UI/IconBox/IconBox.jsx';
