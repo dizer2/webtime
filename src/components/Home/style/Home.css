@@ -62,6 +62,7 @@ body {
     height: 32px;
     border-radius: 50%;
     border: 2px solid #fff;
+    background-color: black;
     z-index: 5;
     pointer-events: none; }
   .home .cursor-mini {
@@ -261,4 +262,4 @@ body {
       display: flex;
       column-gap: 20px; }
 
-/*# sourceMappingURL=Home.css.map */
+/*# sourceMappingURL=home.css.map */

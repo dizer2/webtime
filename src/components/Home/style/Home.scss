@@ -15,6 +15,7 @@
         height: 32px;
         border-radius: 50%;
         border: 2px solid $white;
+        background-color: rgb(0, 0, 0);
         z-index: 5;
         pointer-events: none;
     }
@@ -34,7 +35,7 @@
 
 
     &__header {
-        padding: $section-paddings;
+        padding: 0 $main-padding;
         padding-top: 25px;
         @include display-center(space-between, center);
 
@@ -238,7 +239,7 @@
 
     &__intro {
         .intro__title {
-            padding: $section-paddings;
+            padding: 0 $main-padding;
             // padding-right: $section-padding;
             margin-bottom: 30px;
             @include font($white, 64px, 700, normal, 0);
@@ -252,7 +253,7 @@
         }
 
         .intro__slider {
-            margin-left: $section-padding;
+            margin-left: $main-padding;
 
             display: flex;
             column-gap: 20px;
@@ -308,7 +309,7 @@
 
 
     &__footer {
-        padding: $section-paddings;
+        padding: 0 $main-padding;
         margin-bottom: 20px;
         @include display-center(space-between, center);
 

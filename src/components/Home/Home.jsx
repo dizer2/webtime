@@ -66,6 +66,7 @@ const Home = () => {
     default: {
       x: positionX - 16,
       y: positionY - 16,
+      backgroundColor: "rgb(0, 0, 0)",
       mixBlendMode: "difference"
     },
     text: {
