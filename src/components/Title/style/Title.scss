@@ -1,0 +1,30 @@
+@import "../../main/style.scss";
+	
+.title__container {
+	padding: 0 $secondry-padding;
+	margin-bottom: 80px;
+	&-title {
+		@include title();
+		@include display-center(flex-start, center);
+		position: relative;
+
+		&::after {
+			content: attr(data-after-content); 
+			position: absolute;
+			text-transform: uppercase;
+			@include secondary-title();
+		}
+
+		&::before {
+			content: "";
+			width: 120px;
+			height: 120px;
+			background: $main;
+			filter: blur(50px);
+			position: absolute;
+			top: -10%;
+			left: -10%;
+			z-index: -1;
+		}
+	}
+}

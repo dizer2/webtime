@@ -1,13 +1,16 @@
 @import "./mixins";
 @import "./variables";
 
+body {
+  background-color: $black;
+}
 
 ::-webkit-scrollbar {
-  width: 35px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: $black;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -22,8 +25,3 @@
 
 
 
-
-.body-hidden {
-    max-height: 100vh;
-    overflow: hidden;
-}

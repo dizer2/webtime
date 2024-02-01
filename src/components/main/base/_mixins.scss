@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import "./variables";
 
 @mixin font($color, $size, $weight, $line, $spacing) {
     font-family: 'Montserrat', sans-serif;
@@ -14,4 +15,56 @@
     display: flex;
     justify-content: $justify;
     align-items: $align;
+}
+
+
+@mixin title() {
+    width: 460px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    color: $white;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@mixin secondary-title() {
+    color: rgba(255, 255, 255, 0.20);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+@mixin secondary-description() {
+    font-family: 'Montserrat', sans-serif;
+    color: $white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@mixin subTitle() {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: $white;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+
+@mixin secondary-subTitle() {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: $white;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
