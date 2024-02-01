@@ -1,15 +1,40 @@
 @import "./../../main/style.scss";
 
 .home {
-    padding: 0 120px;
     height: 100vh;
     width: 100%;
-    background-color: #000;
+    background-color: $black;
     @include display-center(space-between, none);
     flex-direction: column;
+    // margin-bottom: 140px;
+
+
+    .cursor {
+        position: fixed;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid $white;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .cursor-mini {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        pointer-events: none;
+        background-color: $white;
+        z-index: 5;
+    }
 
 
     &__header {
+        padding: $section-paddings;
         padding-top: 25px;
         @include display-center(space-between, center);
 
@@ -21,15 +46,23 @@
                 .header__item {
                     @include display-center(center, center);
                     column-gap: 5px;
-                    @include font(#FFF, 16px, 600, normal, 0);
+                    @include font($white, 16px, 600, normal, 0);
                     cursor: pointer;
                 }
 
                 .header__dropdown {
                     position: relative;
+                    
+                    &-arrow {
+                        transition: .3s;
+                    }
 
                     &:hover {
-                        transition: .5s;
+                        .header__dropdown-arrow {
+                            transition: .3s;
+                            transform: rotate(-180deg);
+                        }
+
                         .header__dropdown-content__overlay {
                             z-index: 1;
                             transition: .5s;
@@ -46,7 +79,7 @@
                     &-content__overlay {
                         position: absolute;
                         top: 10px;
-                        padding-top: 40px; // Pudding from top of link include (top of link - 10px => and -40px)
+                        padding-top: 30px; // Pudding from top of link include (top of link - 10px => and -40px)
                         transition: .5s;
                         z-index: -1; // Reduction z-index for when card not active user cant open it 
 
@@ -55,11 +88,11 @@
                             padding: 30px;
                             width: 660px;
                             height: 220px;
-                            background: #121212;
+                            background: $ligth-dark;
                             display: flex;
                             column-gap: 80px;
                             overflow: hidden;
-                            transform: translateY(-25px);
+                            transform: translateY(-20px);
                             opacity: 0;
                             z-index: -1; 
                             transition: .5s;
@@ -71,7 +104,7 @@
                                 bottom: -80px;
                                 width: 250px;
                                 height: 250px;
-                                background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+                                background: $main;
                                 border-radius: 50%;
                                 z-index: 1;
                                 filter: blur(180px);
@@ -95,7 +128,7 @@
                                             position: absolute;
                                             width: 50px;
                                             height: 50px;
-                                            background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+                                            background: $main;
                                             border-radius: 50%;
                                             filter: blur(80px);
                                             z-index: -1;
@@ -111,116 +144,171 @@
         }
 
         .header__btn {
+            position: relative;
             width: 180px;
             height: 52px;
 
             background-color: transparent;
-            @include font(#FFF, 16px, 700, normal, 0);
-
-            background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @include font($white, 16px, 700, normal, 0);
 
             border: 1px solid transparent;
-            border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+            border-image: $main;
             border-image-slice: 1;
+            transition: .3s;
+            overflow: hidden;
+
+
+            & span {
+                transform: translate(-50%, -50%);
+                z-index: 2;
+
+                background: $main;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            // &-circle {
+            //     position: fixed;
+            //     top: 0;
+            //     left: 0;
+            //     width: 40px;
+            //     height: 40px;
+            //     background: $main;
+            //     border-radius: 50%;
+            //     transform: translate(-50%, -50%) scale(0);
+            //     transition: transform .2s;
+            //     z-index: 0;
+            //     pointer-events: none;
+            //     overflow: hidden;
+            //     z-index: 10;
+            // }
+
+            // &:hover {
+            //     .header__btn-circle {
+            //         transform: translate(-50%, -50%) scale(1);
+            //         transition: transform .2s;
+            //     }
+            // }
+
+            
+            // & span {
+            //     position: absolute;
+            //     left: 50%;
+            //     top: 50%;
+            //     transform: translate(-50%, -50%);
+
+                // background: $main;
+                // background-clip: text;
+                // -webkit-background-clip: text;
+                // -webkit-text-fill-color: transparent;
+            //     transition: .5s;   
+            //     z-index: 2;
+            // }
+
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: -100%;
+            //     width: 100%;
+            //     height: 100%;
+            //     background: $main;
+            //     transition: .5s;
+            //     z-index: 1; 
+            // }
+
+
+            // &:hover {
+            //     &:before {
+            //         left: 0;
+            //     }
+
+            //     & span {
+            //         background: $white;
+            //         background-clip: text;
+            //         -webkit-background-clip: text;
+            //         -webkit-text-fill-color: transparent;
+            //         transition: .5s;   
+            //     }
+            // }
         }
     }
 
 
     &__intro {
         .intro__title {
+            padding: $section-paddings;
+            // padding-right: $section-padding;
             margin-bottom: 30px;
-            @include font(#FFF, 64px, 700, normal, 0);
+            @include font($white, 64px, 700, normal, 0);
 
             & strong {
-                background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+                background: $main;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
 
-        // .intro__slider {
-        //     @include display-center(start, center);
-        //     column-gap: 20px;
-        //     overflow-x: scroll;
-        //     overflow-y: hidden;
-        //     width: 100%;
-        //     height: 400px;
-        //     -ms-overflow-style: none;  /* IE and Edge */
-        //     scrollbar-width: none;  /* Firefox */
-        //     touch-action: pan-y;
-        //     &::-webkit-scrollbar {
-        //         display: none;
-        //     }
+        .intro__slider {
+            margin-left: $section-padding;
 
-            
-            // &-wrapper {
-            //     display: flex;
-            //     justify-content: flex-start;
-            //     column-gap: 20px;
-            //     white-space: nowrap;
+            display: flex;
+            column-gap: 20px;
 
-            .intro__slider {
-                display: flex;
-                column-gap: 20px;
-
-                .intro__card {
-                    padding: 20px;
-                    width: 400px;
-                    height: 380px;
-                    background: rgba(161, 161, 161, 0.20);
-                    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
-                    backdrop-filter: blur(25px);
+            .intro__card {
+                padding: 20px;
+                width: 400px;
+                height: 380px;
+                background: rgba(161, 161, 161, 0.20);
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(25px);
+                cursor: grab;
 
 
-                    &-header {
-                        margin-bottom: 20px;
-                        @include display-center(space-between, center);
+                &-header {
+                    margin-bottom: 20px;
+                    @include display-center(space-between, center);
 
-                        .intro__card-title {
-                            @include font(#FFF, 20px, 600, normal, 0);
-                        }
-
-                        .intro__card-price {
-                            @include font(#FFF, 16px, 400, normal, 0);
-                        }
+                    .intro__card-title {
+                        @include font($white, 20px, 600, normal, 0);
                     }
 
+                    .intro__card-price {
+                        @include font($white, 16px, 400, normal, 0);
+                    }
+                }
 
-                    &-img {
-                        margin-bottom: 20px;
-                        width: 100%;
-                        height: 224px;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-position: center;
 
-                        &--1 {
-                            background-image: url(../img/website-webdesign.jpg);
-                        }
-                        &--2 {
-                            background-image: url(../img/webdesign.jpg);
-                        }
-                        &--3 {
-                            background-image: url(../img/poster.jpg);
-                        }
-                        &--4 {
-                            background-image: url(../img/business-cards.jpg);
-                        }
+                &-img {
+                    margin-bottom: 20px;
+                    width: 100%;
+                    height: 224px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    &--1 {
+                        background-image: url(../img/website-webdesign.jpg);
+                    }
+                    &--2 {
+                        background-image: url(../img/webdesign.jpg);
+                    }
+                    &--3 {
+                        background-image: url(../img/poster.jpg);
+                    }
+                    &--4 {
+                        background-image: url(../img/business-cards.jpg);
                     }
                 }
             }
-
-            // }
-
-        // }
+        }
     }
 
 
     &__footer {
+        padding: $section-paddings;
         margin-bottom: 20px;
         @include display-center(space-between, center);
 
@@ -230,5 +318,4 @@
         }
     }
 }
-
 
