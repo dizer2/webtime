@@ -1,5 +1,5 @@
 import React from 'react'
-import "./style/Title.css"
+import "./style/title.css"
 
 const Title = ({text, description}) => {
   return (
