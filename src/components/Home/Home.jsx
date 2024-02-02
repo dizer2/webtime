@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from "framer-motion";
-import "./style/Home.css";
+import "./style/home.css";
 import { useTranslation } from 'react-i18next';
 import Logo from '../main/img/Logo.jsx';
 import IconBox from '../UI/IconBox/IconBox.jsx';
@@ -41,7 +41,6 @@ const Home = () => {
 
   useEffect(() => {
     const mouseMove = e => {
-      console.log(e)
       const positionX = e.clientX;
       const positionY = e.clientY;
       setPosotionX(positionX)
