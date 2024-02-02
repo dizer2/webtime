@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "./style/about.css"
-import SubTitle from "../SubTitle/SubTitle.jsx"
-import Title from '../Title/Title.jsx'
+import SubTitle from "../UI/SubTitle/SubTitle.jsx"
+import Title from '../UI/Title/Title.jsx'
 import IconBox from '../UI/IconBox/IconBox.jsx';
 import img1 from "./img/img1.svg";
 import img2 from "./img/img2.svg";
