@@ -7,21 +7,24 @@
     border-image-slice: 1;
     @include display-center(center, center);
     background-color: #000;
-
+    
     .icon-box__icon {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         @include display-center(center, center);
+        z-index: 2;
 
 
-        .icon-box__circle {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-            border-radius: 50%;
-            filter: blur(30px);
-        }
+    }
+
+    .icon-box__circle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+        border-radius: 50%;
+        filter: blur(30px);
+        z-index: 1;
     }
 }

@@ -2,6 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import "./style/about.css"
 import SubTitle from "../SubTitle/SubTitle.jsx"
 import Title from '../Title/Title.jsx'
+import IconBox from '../UI/IconBox/IconBox.jsx';
+import img1 from "./img/img1.svg";
+import img2 from "./img/img2.svg";
+import img3 from "./img/img3.svg";
+import img4 from "./img/img4.svg";
+
+
 
 const About = () => {
 	const [showText, setShowText] = useState(true);
@@ -75,22 +82,66 @@ const About = () => {
 
 			<div className="about-us__box2-container">
 				<div className="about-us__box2-cart">
-					<div className="about-us__iconBox"></div>
+					<div className="about-us__iconBox">
+						<IconBox
+							boxSize={200}
+							imgPath={img1}
+
+							iconWidth={120} 
+							iconHeight={120}
+
+							circleSize = {60}
+							top = {50}
+						/>
+					</div>
 					<div className="about-us__cart-description">A wide range of project</div>
 				</div>
 
 				<div className="about-us__box2-cart">
-					<div className="about-us__iconBox"></div>
+					<div className="about-us__iconBox">
+						<IconBox
+							boxSize={200}
+							imgPath={img2}
+
+							iconWidth={120} 
+							iconHeight={120}
+
+							circleSize = {60}
+							top = {50}
+						/>
+					</div>
 					<div className="about-us__cart-description">Quality service</div>
 				</div>
 
 				<div className="about-us__box2-cart">
-					<div className="about-us__iconBox"></div>
+					<div className="about-us__iconBox">
+						<IconBox
+							boxSize={200}
+							imgPath={img3}
+
+							iconWidth={120} 
+							iconHeight={120}
+
+							circleSize = {60}
+							top = {50}
+						/>
+					</div>
 					<div className="about-us__cart-description">The best prices on the market</div>
 				</div>
 
 				<div className="about-us__box2-cart">
-					<div className="about-us__iconBox"></div>
+					<div className="about-us__iconBox">
+						<IconBox
+							boxSize={200}
+							imgPath={img4}
+
+							iconWidth={120} 
+							iconHeight={120}
+
+							circleSize = {60}
+							top = {50}
+						/>
+					</div>
 					<div className="about-us__cart-description">Future technologies.</div>
 				</div>
 			</div>

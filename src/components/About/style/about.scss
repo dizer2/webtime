@@ -44,7 +44,7 @@
 			width: 100%;
 			padding-left: $secondry-padding;
 			padding-right: $main-padding;
-			@include display-center(space-between, center);
+			@include display-center(space-between, flex-start);
 		}
 
 		&-cart {
@@ -57,7 +57,9 @@
 				width: 200px;
 				height: 200px;
 				background-color: #121212;
-				margin-bottom: 35px
+				margin-bottom: 35px;
+				@include display-center(center, center);
+
 			}
 
 			.about-us__cart-description {

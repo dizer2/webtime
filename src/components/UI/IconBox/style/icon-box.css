@@ -30,21 +30,20 @@ a:hover {
 ul li {
   list-style: none; }
 
+body {
+  background-color: #000; }
+
 ::-webkit-scrollbar {
-  width: 35px; }
+  width: 10px; }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; }
+  background: #000; }
 
 ::-webkit-scrollbar-thumb {
-  background: #006CC0; }
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 
 ::selection {
   background: rgba(0, 109, 192, 0.5); }
-
-.body-hidden {
-  max-height: 100vh;
-  overflow: hidden; }
 
 .App {
   overflow-x: hidden; }
@@ -64,13 +63,15 @@ ul li {
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center; }
-    .icon-box .icon-box__icon .icon-box__circle {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-      border-radius: 50%;
-      filter: blur(30px); }
+    align-items: center;
+    z-index: 2; }
+  .icon-box .icon-box__circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+    border-radius: 50%;
+    filter: blur(30px);
+    z-index: 1; }
 
 /*# sourceMappingURL=icon-box.css.map */

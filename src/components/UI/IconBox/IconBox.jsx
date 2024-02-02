@@ -23,8 +23,9 @@ function IconBox({boxSize, imgPath, iconWidth, iconHeight, circleSize, top }) {
   return (
     <div className='icon-box' style={boxStyles}>
         <div className='icon-box__icon' style={iconStyles}>
-            <div className="icon-box__circle" style={circleStyles}></div>
         </div>
+        <div className="icon-box__circle" style={circleStyles}></div>
+
     </div>
   )
 }

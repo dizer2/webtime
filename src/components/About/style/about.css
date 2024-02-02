@@ -97,7 +97,7 @@ body {
       padding-right: 120px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: flex-start; }
     .about-us__box2-cart {
       width: auto;
       height: auto;
@@ -109,7 +109,10 @@ body {
         width: 200px;
         height: 200px;
         background-color: #121212;
-        margin-bottom: 35px; }
+        margin-bottom: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
       .about-us__box2-cart .about-us__cart-description {
         width: 250px;
         text-align: center;
