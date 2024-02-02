@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+body {
+  background-color: #000; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #000; }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+
+::selection {
+  background: rgba(0, 109, 192, 0.5); }
+
+.App {
+  overflow-x: hidden; }
+
+.contacts {
+  margin-bottom: 140px; }
+  .contacts .title__container-title {
+    width: 600px; }
+  .contacts__wrapper {
+    padding: 0 120px 0 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    column-gap: 40px; }
+    .contacts__wrapper .contacts__info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px; }
+      .contacts__wrapper .contacts__info-email {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff;
+        text-transform: uppercase; }
+      .contacts__wrapper .contacts__info-phone {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff; }
+    .contacts__wrapper .contacts__form {
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      border-top: 2px solid rgba(255, 255, 255, 0.2); }
+      .contacts__wrapper .contacts__form-row {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px; }
+      .contacts__wrapper .contacts__form-box ::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 5px; }
+      .contacts__wrapper .contacts__form-box ::-webkit-scrollbar-track {
+        transform: translateX(-55px);
+        background: transparent; }
+      .contacts__wrapper .contacts__form-box ::-webkit-scrollbar-thumb {
+        transform: translateX(-55px);
+        background: gba(255, 255, 255, 0.6);
+        border-radius: 5px; }
+      .contacts__wrapper .contacts__form-box__message {
+        position: relative;
+        overflow: hidden;
+        height: 330px;
+        background-color: #121212; }
+      .contacts__wrapper .contacts__form-box__btn {
+        margin: 0 auto 10px auto;
+        width: 200px;
+        height: 50px;
+        background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .contacts__wrapper .contacts__form-box__heading {
+        margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff;
+        display: flex;
+        column-gap: 10px; }
+        .contacts__wrapper .contacts__form-box__heading-clue {
+          width: 18px;
+          height: 18px;
+          background-color: #fff;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      .contacts__wrapper .contacts__form-box__input {
+        padding: 0 15px;
+        height: 60px;
+        width: 400px;
+        background-color: #121212;
+        outline: none;
+        border: none;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff;
+        -webkit-box-shadow: inset 0 0 0 50px #121212;
+        -webkit-text-fill-color: #fff; }
+        .contacts__wrapper .contacts__form-box__input::placeholder {
+          color: rgba(255, 255, 255, 0.6); }
+      .contacts__wrapper .contacts__form-box__textarea {
+        padding: 0px;
+        padding-right: 10px;
+        margin: 15px 55px 15px 15px;
+        width: calc(100% - 30px);
+        height: 230px;
+        resize: none;
+        outline: none;
+        overflow-y: auto; }
+
+/*# sourceMappingURL=contacts.css.map */

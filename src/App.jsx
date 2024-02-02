@@ -3,6 +3,7 @@ import React from 'react';
 import "./components/main/style.css";
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Contacts from './components/Contacts/Contacts';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
   return (
     <div className="App">
       <Home/>
-      <About />
+      <About/>
+      <Contacts/>
     </div>
   );
 }

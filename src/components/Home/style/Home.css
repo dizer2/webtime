@@ -49,7 +49,6 @@ body {
   overflow-x: hidden; }
 
 .home {
-  padding: 0 120px;
   height: 100vh;
   width: 100%;
   background-color: #000;
@@ -57,7 +56,28 @@ body {
   justify-content: space-between;
   align-items: none;
   flex-direction: column; }
+  .home .cursor {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: black;
+    z-index: 5;
+    pointer-events: none; }
+  .home .cursor-mini {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: #fff;
+    z-index: 5; }
   .home__header {
+    padding: 0 120px;
     padding-top: 25px;
     display: flex;
     justify-content: space-between;
@@ -78,24 +98,27 @@ body {
         font-size: 16px;
         line-height: normal;
         letter-spacing: 0;
-        color: #FFF;
+        color: #fff;
         cursor: pointer; }
       .home__header .header__nav .header__list .header__dropdown {
         position: relative; }
-        .home__header .header__nav .header__list .header__dropdown:hover {
+        .home__header .header__nav .header__list .header__dropdown-arrow {
+          transition: .3s; }
+        .home__header .header__nav .header__list .header__dropdown:hover .header__dropdown-arrow {
+          transition: .3s;
+          transform: rotate(-180deg); }
+        .home__header .header__nav .header__list .header__dropdown:hover .header__dropdown-content__overlay {
+          z-index: 1;
           transition: .5s; }
-          .home__header .header__nav .header__list .header__dropdown:hover .header__dropdown-content__overlay {
+          .home__header .header__nav .header__list .header__dropdown:hover .header__dropdown-content__overlay .header__dropdown-content {
+            transform: translateY(0px);
+            opacity: 1;
             z-index: 1;
             transition: .5s; }
-            .home__header .header__nav .header__list .header__dropdown:hover .header__dropdown-content__overlay .header__dropdown-content {
-              transform: translateY(0px);
-              opacity: 1;
-              z-index: 1;
-              transition: .5s; }
         .home__header .header__nav .header__list .header__dropdown-content__overlay {
           position: absolute;
           top: 10px;
-          padding-top: 40px;
+          padding-top: 30px;
           transition: .5s;
           z-index: -1; }
           .home__header .header__nav .header__list .header__dropdown-content__overlay .header__dropdown-content {
@@ -106,7 +129,7 @@ body {
             display: flex;
             column-gap: 80px;
             overflow: hidden;
-            transform: translateY(-25px);
+            transform: translateY(-20px);
             opacity: 0;
             z-index: -1;
             transition: .5s; }
@@ -143,6 +166,7 @@ body {
                     filter: blur(80px);
                     z-index: -1; }
     .home__header .header__btn {
+      position: relative;
       width: 180px;
       height: 52px;
       background-color: transparent;
@@ -152,15 +176,21 @@ body {
       font-size: 16px;
       line-height: normal;
       letter-spacing: 0;
-      color: #FFF;
-      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
       border: 1px solid transparent;
       border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-      border-image-slice: 1; }
+      border-image-slice: 1;
+      transition: .3s;
+      overflow: hidden; }
+      .home__header .header__btn span {
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
   .home__intro .intro__title {
+    padding: 0 120px;
     margin-bottom: 30px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -168,13 +198,14 @@ body {
     font-size: 64px;
     line-height: normal;
     letter-spacing: 0;
-    color: #FFF; }
+    color: #fff; }
     .home__intro .intro__title strong {
       background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
   .home__intro .intro__slider {
+    margin-left: 120px;
     display: flex;
     column-gap: 20px; }
     .home__intro .intro__slider .intro__card {
@@ -183,7 +214,8 @@ body {
       height: 380px;
       background: rgba(161, 161, 161, 0.2);
       box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(25px); }
+      backdrop-filter: blur(25px);
+      cursor: grab; }
       .home__intro .intro__slider .intro__card-header {
         margin-bottom: 20px;
         display: flex;
@@ -196,7 +228,7 @@ body {
           font-size: 20px;
           line-height: normal;
           letter-spacing: 0;
-          color: #FFF; }
+          color: #fff; }
         .home__intro .intro__slider .intro__card-header .intro__card-price {
           font-family: 'Montserrat', sans-serif;
           font-style: normal;
@@ -204,7 +236,7 @@ body {
           font-size: 16px;
           line-height: normal;
           letter-spacing: 0;
-          color: #FFF; }
+          color: #fff; }
       .home__intro .intro__slider .intro__card-img {
         margin-bottom: 20px;
         width: 100%;
@@ -221,6 +253,7 @@ body {
         .home__intro .intro__slider .intro__card-img--4 {
           background-image: url(../img/business-cards.jpg); }
   .home__footer {
+    padding: 0 120px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -229,4 +262,4 @@ body {
       display: flex;
       column-gap: 20px; }
 
-/*# sourceMappingURL=Home.css.map */
+/*# sourceMappingURL=home.css.map */

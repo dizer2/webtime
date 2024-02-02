@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "./style/Home.css";
+import { motion } from "framer-motion";
+import "./style/home.css";
 import { useTranslation } from 'react-i18next';
 import Logo from '../main/img/Logo.jsx';
 import IconBox from '../UI/IconBox/IconBox.jsx';
@@ -10,18 +11,14 @@ import PhoneIcon from "./../main/img/phone-icon.svg";
 import PalleteIcon from "./../main/img/pallete-icon.svg";
 import CardIcon from "./../main/img/card-icon.svg";
 import PosterIcon from "./../main/img/poster-icon.svg";
-import SocialMedia from '../UI/SocialMedia/SocialMedia.jsx';
 
+import SocialMedia from '../UI/SocialMedia/SocialMedia.jsx';
 import LocalisationField from '../UI/LocalisationField/LocalisationField.jsx';
 import GradientBtn from '../UI/GradientBtn/GradientBtn.jsx';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-// import './styles.css';
-
-import { Pagination } from 'swiper/modules';
 
 
 const Home = () => {
@@ -32,9 +29,85 @@ const Home = () => {
   };
 
 
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+
+  const [positionX, setPosotionX] = useState(0);
+  const [positionY, setPosotionY] = useState(0);
+
+  useEffect(() => {
+    const mouseMove = e => {
+      console.log(e)
+      const positionX = e.clientX;
+      const positionY = e.clientY;
+      setPosotionX(positionX)
+      setPosotionY(positionY)
+
+      setMousePosition({
+        x: positionX,
+        y: positionY,
+      })
+    }
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    }
+  }, []);
+
+
+
+  const variants = {
+    default: {
+      x: positionX - 16,
+      y: positionY - 16,
+      backgroundColor: "rgb(0, 0, 0)",
+      mixBlendMode: "difference"
+    },
+    text: {
+      height: 100,
+      width: 100,
+      x: positionX- 50,
+      y: positionY - 50,
+      mixBlendMode: "normal"
+    }
+  }
+
+
+
+
+  const textEnter = (e) =>  {
+    setCursorVariant("text");
+  }
+  
+  const textLeave = (e) => {
+    setCursorVariant("default");
+  } 
+
 
   return (
 	<section className='home'>
+    <div
+      style={{ top: mousePosition.y, left: mousePosition.x }}
+      className='cursor-mini'
+      variants={variants}
+      animate={cursorVariant}
+    ></div>
+    
+    <motion.div
+      className='cursor'
+      variants={variants}
+      animate={cursorVariant}
+    />
+
+
+
+
     <header className="home__header">
 
         <div className="header__logo">
@@ -46,7 +119,7 @@ const Home = () => {
             <li className="header__item">About</li>
             <li className="header__item header__dropdown">
               Services 
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <svg className='header__dropdown-arrow' xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                 <path d="M5.70696 10.4899C5.31643 10.8804 5.31643 11.5136 5.70696 11.9041L10.5992 16.7915C11.3804 17.5719 12.6462 17.5716 13.427 16.7909L18.3173 11.9005C18.7079 11.51 18.7079 10.8768 18.3173 10.4863C17.9268 10.0957 17.2936 10.0957 16.9031 10.4863L12.7175 14.6719C12.327 15.0625 11.6938 15.0624 11.3033 14.6719L7.12117 10.4899C6.73065 10.0993 6.09748 10.0993 5.70696 10.4899Z" fill="white"/>
               </svg>
 
@@ -137,7 +210,18 @@ const Home = () => {
           </ul>
         </nav>
 
-        <button className="header__btn">Contacts</button>
+        <button
+        className={`header__btn`}
+        onMouseEnter={textEnter} onMouseLeave={textLeave}
+        >
+          <span>Contacts</span>
+
+        {/* <motion.div
+          className='header__btn-circle'
+          variants={variants}
+          animate={cursorVariant}
+        /> */}
+        </button>
 
     </header>
 
@@ -147,85 +231,79 @@ const Home = () => {
       <h1 className="intro__title">
         <strong>WebTime</strong> <strong>―</strong> your time with webtime,  developer on web, design solutions.
       </h1>
+      
+      <Swiper
+        slidesPerView='auto'
+        spaceBetween={20}
+        pagination={{
+          clickable: true,
+        }}
+        className="intro__slider mySwiper"
+      >
+        <SwiperSlide className="intro__card"> 
+          <div className="intro__card-header">
+            <h4 className="intro__card-title">Website & design</h4>
 
-      {/* <div className="intro__slider"> */}
+            <p className="intro__card-price">start from: 700$</p>
+          </div>
 
-        {/* <div className="intro__slider-wrapper"> */}
-          <Swiper
-           slidesPerView='auto'
-           spaceBetween={20}
-           pagination={{
-             clickable: true,
-           }}
-           className="intro__slider mySwiper"
-          >
-            <SwiperSlide className="intro__card"> 
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Website & design</h4>
+          <div className="intro__card-img intro__card-img--1"></div>
 
-                <p className="intro__card-price">start from: 700$</p>
-              </div>
+          <GradientBtn
+            text="View more"
+            width="100%"
+            height="50"
+          />
+        </SwiperSlide>
 
-              <div className="intro__card-img intro__card-img--1"></div>
+        <SwiperSlide className="intro__card">
+          <div className="intro__card-header">
+            <h4 className="intro__card-title">Web design</h4>
 
-              <GradientBtn
-                text="View more"
-                width="100%"
-                height="50"
-              />
-            </SwiperSlide>
+            <p className="intro__card-price">start from: 400$</p>
+          </div>
 
-            <SwiperSlide className="intro__card">
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Web design</h4>
+          <div className="intro__card-img intro__card-img--2"></div>
 
-                <p className="intro__card-price">start from: 400$</p>
-              </div>
+          <GradientBtn
+            text="View more"
+            width="100%"
+            height="50"
+          />
+        </SwiperSlide>
 
-              <div className="intro__card-img intro__card-img--2"></div>
+        <SwiperSlide className="intro__card">
+          <div className="intro__card-header">
+            <h4 className="intro__card-title">Poster</h4>
 
-              <GradientBtn
-                text="View more"
-                width="100%"
-                height="50"
-              />
-            </SwiperSlide>
+            <p className="intro__card-price">start from: 250$</p>
+          </div>  
 
-            <SwiperSlide className="intro__card">
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Poster</h4>
+          <div className="intro__card-img intro__card-img--3"></div>
 
-                <p className="intro__card-price">start from: 250$</p>
-              </div>  
+          <GradientBtn
+            text="View more"
+            width="100%"
+            height="50"
+          />
+        </SwiperSlide>
 
-              <div className="intro__card-img intro__card-img--3"></div>
+        <SwiperSlide className="intro__card">
+          <div className="intro__card-header">
+            <h4 className="intro__card-title">Business cards</h4>
 
-              <GradientBtn
-                text="View more"
-                width="100%"
-                height="50"
-              />
-            </SwiperSlide>
+            <p className="intro__card-price">start from: 100$</p>
+          </div>
 
-            <SwiperSlide className="intro__card">
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Business cards</h4>
+          <div className="intro__card-img intro__card-img--4"></div>
 
-                <p className="intro__card-price">start from: 100$</p>
-              </div>
-
-              <div className="intro__card-img intro__card-img--4"></div>
-
-              <GradientBtn
-                text="View more"
-                width="100%"
-                height="50"
-              />
-            </SwiperSlide>
-          </Swiper>
-
-        {/* </div>
-      </div> */}
+          <GradientBtn
+            text="View more"
+            width="100%"
+            height="50"
+          />
+        </SwiperSlide>
+      </Swiper>
     </section>
 
 
@@ -236,14 +314,14 @@ const Home = () => {
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
               <path d="M15 43.8888L17.1524 35.8856C15.4165 32.7679 14.865 29.1299 15.5991 25.6391C16.3332 22.1482 18.3036 19.0387 21.1488 16.8812C23.9939 14.7237 27.523 13.6628 31.0884 13.8933C34.6538 14.1238 38.0164 15.6302 40.5591 18.136C43.1018 20.6418 44.6541 23.979 44.9311 27.5352C45.2081 31.0914 44.1912 34.6281 42.0671 37.4962C39.9429 40.3643 36.854 42.3715 33.3672 43.1495C29.8803 43.9275 26.2294 43.424 23.0843 41.7315L15 43.8888ZM23.4741 38.7366L23.9741 39.0327C26.2521 40.3807 28.9128 40.9385 31.5416 40.6193C34.1703 40.3 36.6194 39.1215 38.5073 37.2676C40.3951 35.4136 41.6156 32.9883 41.9786 30.3695C42.3415 27.7508 41.8266 25.0857 40.514 22.7896C39.2014 20.4935 37.1648 18.6954 34.7217 17.6755C32.2786 16.6555 29.5661 16.4711 27.007 17.1509C24.448 17.8307 22.186 19.3365 20.5736 21.4336C18.9613 23.5308 18.0891 26.1016 18.0931 28.7453C18.0909 30.9374 18.6982 33.087 19.8472 34.955L20.1608 35.471L18.9574 39.9379L23.4741 38.7366Z" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M35.6086 30.8003C35.3155 30.5643 34.9723 30.3981 34.6052 30.3146C34.2381 30.231 33.8567 30.2322 33.4901 30.318C32.9392 30.5465 32.5833 31.4094 32.2274 31.8408C32.1524 31.9443 32.0421 32.0168 31.9173 32.0449C31.7925 32.0729 31.6617 32.0545 31.5495 31.9931C29.5329 31.2046 27.8426 29.7586 26.7531 27.89C26.6602 27.7734 26.6162 27.6253 26.6304 27.477C26.6447 27.3287 26.716 27.1916 26.8294 27.0948C27.2263 26.7024 27.5178 26.2165 27.6768 25.6819C27.7121 25.0923 27.5768 24.5049 27.287 23.9899C27.063 23.2679 26.6366 22.625 26.0582 22.1372C25.76 22.0032 25.4292 21.9583 25.1059 22.0079C24.7826 22.0574 24.4806 22.1993 24.2363 22.4164C23.8121 22.7817 23.4755 23.2374 23.2511 23.7498C23.0267 24.2623 22.9203 24.8184 22.9398 25.3774C22.9411 25.6912 22.9809 26.0038 23.0584 26.308C23.2552 27.0388 23.5578 27.7371 23.9567 28.3807C24.2444 28.8737 24.5584 29.3509 24.8973 29.8104C25.9985 31.3197 27.3828 32.6011 28.9733 33.5836C29.7715 34.0829 30.6245 34.4888 31.5156 34.7934C32.4412 35.2123 33.4632 35.3731 34.4731 35.2587C35.0484 35.1718 35.5936 34.945 36.0605 34.5983C36.5275 34.2516 36.9019 33.7957 37.1509 33.2706C37.2972 32.9534 37.3416 32.5988 37.278 32.2554C37.1255 31.5532 36.1848 31.1387 35.6086 30.8003Z" fill="white"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M35.6086 30.8003C35.3155 30.5643 34.9723 30.3981 34.6052 30.3146C34.2381 30.231 33.8567 30.2322 33.4901 30.318C32.9392 30.5465 32.5833 31.4094 32.2274 31.8408C32.1524 31.9443 32.0421 32.0168 31.9173 32.0449C31.7925 32.0729 31.6617 32.0545 31.5495 31.9931C29.5329 31.2046 27.8426 29.7586 26.7531 27.89C26.6602 27.7734 26.6162 27.6253 26.6304 27.477C26.6447 27.3287 26.716 27.1916 26.8294 27.0948C27.2263 26.7024 27.5178 26.2165 27.6768 25.6819C27.7121 25.0923 27.5768 24.5049 27.287 23.9899C27.063 23.2679 26.6366 22.625 26.0582 22.1372C25.76 22.0032 25.4292 21.9583 25.1059 22.0079C24.7826 22.0574 24.4806 22.1993 24.2363 22.4164C23.8121 22.7817 23.4755 23.2374 23.2511 23.7498C23.0267 24.2623 22.9203 24.8184 22.9398 25.3774C22.9411 25.6912 22.9809 26.0038 23.0584 26.308C23.2552 27.0388 23.5578 27.7371 23.9567 28.3807C24.2444 28.8737 24.5584 29.3509 24.8973 29.8104C25.9985 31.3197 27.3828 32.6011 28.9733 33.5836C29.7715 34.0829 30.6245 34.4888 31.5156 34.7934C32.4412 35.2123 33.4632 35.3731 34.4731 35.2587C35.0484 35.1718 35.5936 34.945 36.0605 34.5983C36.5275 34.2516 36.9019 33.7957 37.1509 33.2706C37.2972 32.9534 37.3416 32.5988 37.278 32.2554C37.1255 31.5532 36.1848 31.1387 35.6086 30.8003Z" fill="white"/>
             </svg>
           }
           size='default'
         />
 
         <SocialMedia
-          linkPath="#!"
+          linkPath="mailto:help.webtime@gmail.com"
           icon={
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.0385 43.3703H20.5972V29.8707L12.6562 23.915V40.988C12.6562 42.3062 13.7243 43.3703 15.0385 43.3703Z" fill="white"/>
