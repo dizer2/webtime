@@ -6,7 +6,16 @@
     border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
     border-image-slice: 1;
     @include display-center(center, center);
-    background-color: #000;
+
+    
+    &--black {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &--white {
+        background-color: rgba($white, 0.5);
+        border: none;
+    }
     
     .icon-box__icon {
         background-size: cover;
@@ -14,8 +23,6 @@
         background-position: center;
         @include display-center(center, center);
         z-index: 2;
-
-
     }
 
     .icon-box__circle {

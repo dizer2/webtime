@@ -48,34 +48,26 @@ body {
 .App {
   overflow-x: hidden; }
 
-.icon-box {
-  position: relative;
-  border: 1px solid transparent;
-  border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-  border-image-slice: 1;
+.arrow-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0.1rem;
+  color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-  .icon-box--black {
-    background-color: rgba(0, 0, 0, 0.5); }
-  .icon-box--white {
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none; }
-  .icon-box .icon-box__icon {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2; }
-  .icon-box .icon-box__circle {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-    border-radius: 50%;
-    filter: blur(30px);
-    z-index: 1; }
+  justify-content: start;
+  align-items: center;
+  column-gap: 10px;
+  text-transform: uppercase;
+  transition: .3s; }
+  .arrow-btn .arrow-btn--white {
+    color: white; }
+  .arrow-btn span {
+    background-clip: text; }
+  .arrow-btn:hover {
+    column-gap: 25px;
+    transition: .3s; }
 
-/*# sourceMappingURL=icon-box.css.map */
+/*# sourceMappingURL=arrow-btn.css.map */

@@ -102,16 +102,25 @@ body {
       .contacts__wrapper .contacts__form-box__message {
         position: relative;
         overflow: hidden;
-        height: 330px;
+        height: 260px;
         background-color: #121212; }
       .contacts__wrapper .contacts__form-box__btn {
-        margin: 0 auto 10px auto;
-        width: 200px;
+        margin: 30px auto 0px auto;
+        width: 100%;
         height: 50px;
         background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+        border: none;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        column-gap: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff; }
       .contacts__wrapper .contacts__form-box__heading {
         margin-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
@@ -152,7 +161,7 @@ body {
       .contacts__wrapper .contacts__form-box__textarea {
         padding: 0px;
         padding-right: 10px;
-        margin: 15px 55px 15px 15px;
+        margin: 15px;
         width: calc(100% - 30px);
         height: 230px;
         resize: none;

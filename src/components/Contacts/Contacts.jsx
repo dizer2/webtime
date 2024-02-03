@@ -60,8 +60,12 @@ const Contacts = () => {
 
               <div className="contacts__form-box__message">
                 <textarea className='contacts__form-box__input contacts__form-box__textarea' placeholder='Write about the service that you would like to receive'></textarea>
-                <div className="contacts__form-box__btn">
-                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              </div>
+
+              <button className="contacts__form-box__btn">
+                  Send
+
+                  <svg width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_506_608)">
                     <path d="M30.3624 6.88688L21.8624 28.8452C21.4976 29.7874 20.2921 30.0559 19.5621 29.3576L14.7708 24.7745L11.8338 27.7114C11.3876 28.1577 10.6246 27.8416 10.6246 27.2106V20.8087L3.27036 13.7742C2.46751 13.0063 2.82078 11.6551 3.89678 11.3785L28.6885 5.00345C29.8048 4.71635 30.7785 5.81185 30.3624 6.88688ZM26.9164 8.50051L11.3778 18.6344L13.8364 20.9861L26.9164 8.50051Z" fill="white"/>
                     </g>
@@ -71,8 +75,7 @@ const Contacts = () => {
                     </clipPath>
                     </defs>
                   </svg>
-                </div>
-              </div>
+                </button>
             </div>
         </div>
       </div>

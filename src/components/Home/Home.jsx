@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from "framer-motion";
 import "./style/Home.css";
@@ -23,89 +23,70 @@ import 'swiper/css/pagination';
 
 const Home = () => {
   const { t, i18n } = useTranslation();
+  const [cursorVariant, setCursorVariant] = useState("default");
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = (lng) => i18n.changeLanguage(lng);
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const maxX = window.innerWidth;
+    const maxY = window.innerHeight;
+
+    if (clientX >= 0 && clientX <= maxX && clientY >= 0 && clientY <= maxY) {
+      setMousePosition({ x: clientX, y: clientY });
+    } else {
+      setMousePosition({ x: -100, y: -100 });
+    }
   };
 
-
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const [cursorVariant, setCursorVariant] = useState("default");
-
-
-  const [positionX, setPosotionX] = useState(0);
-  const [positionY, setPosotionY] = useState(0);
+  const textEnter = useCallback(() => setCursorVariant("default"), []);
+  const textLeave = useCallback(() => setCursorVariant("hide"), []);
 
   useEffect(() => {
-    const mouseMove = e => {
-      console.log(e)
-      const positionX = e.clientX;
-      const positionY = e.clientY;
-      setPosotionX(positionX)
-      setPosotionY(positionY)
+    // Get initial mouse coordinates
+    setMousePosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
 
-      setMousePosition({
-        x: positionX,
-        y: positionY,
-      })
-    }
-
-    window.addEventListener("mousemove", mouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseenter", textEnter);
+    window.addEventListener("mouseleave", textLeave);
 
     return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    }
-  }, []);
-
-
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseenter", textEnter);
+      window.removeEventListener("mouseleave", textLeave);
+    };
+  }, [textEnter, textLeave]);
 
   const variants = {
     default: {
-      x: positionX - 16,
-      y: positionY - 16,
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
       backgroundColor: "rgb(0, 0, 0)",
-      mixBlendMode: "difference"
+      mixBlendMode: "difference",
     },
-    text: {
-      height: 100,
-      width: 100,
-      x: positionX- 50,
-      y: positionY - 50,
-      mixBlendMode: "normal"
-    }
-  }
+    hide: {
+      height: -10,
+      width: -10,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+    },
+  };
 
-
-
-
-  const textEnter = (e) =>  {
-    setCursorVariant("text");
-  }
-  
-  const textLeave = (e) => {
-    setCursorVariant("default");
-  } 
 
 
   return (
 	<section className='home'>
     <div
       style={{ top: mousePosition.y, left: mousePosition.x }}
-      className='cursor-mini'
-      variants={variants}
-      animate={cursorVariant}
+      className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""}`}
     ></div>
-    
+
     <motion.div
-      className='cursor'
+       className={`cursor ${cursorVariant === "hide" ? "_hide" : ""}`}
       variants={variants}
       animate={cursorVariant}
     />
-
-
 
 
     <header className="home__header">
@@ -212,7 +193,7 @@ const Home = () => {
 
         <button
         className={`header__btn`}
-        onMouseEnter={textEnter} onMouseLeave={textLeave}
+        // onMouseEnter={textEnter} onMouseLeave={textLeave}
         >
           <span>Contacts</span>
 

@@ -1,0 +1,52 @@
+@import "./../../main/style.scss";
+
+
+.services {
+    .title__container {
+        &-title {
+            width: 360px;
+        }
+    }
+
+
+    &__wrapper {
+        @include display-center(space-between, center);
+        flex-wrap: wrap;
+        gap: 50px 30px;
+        padding: 0 $main-padding $section-margin $secondry-padding;
+
+        .services__card {
+            padding: 20px 30px;
+            width: 520px;
+            height: 350px;
+            background-color: $ligth-dark;
+
+            @include display-center(space-between, start);
+            flex-direction: column;
+
+
+            // Border Gradient Style
+            border-width: 1px;
+            border-style: solid;
+            border-image: $main;
+            border-image-repeat: round;
+            border-image-slice: 1;
+
+
+            &--contact {
+                background: $main;
+            }
+
+            &-main {
+                .services__card-title {
+                    margin: 20px 0 15px;
+                    @include font($white, 24px, 700, normal, 0);
+                }
+    
+                .services__card-description {
+                    @include font($white, 16px, 400, normal, 0);
+                }
+            }
+        }
+    }
+}
