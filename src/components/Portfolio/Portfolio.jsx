@@ -10,6 +10,9 @@ import img2 from "./img/img2.png"
 import img3 from "./img/img3.png"
 import img4 from "./img/img4.png"
 
+import { Parallax } from 'swiper/modules';
+
+
 const Portfolio = () => {
   const swiperRef = useRef(null);
 
@@ -45,13 +48,11 @@ const Portfolio = () => {
           loop={true}
           slidesPerView='auto'
           spaceBetween={20}
-          pagination={{
-            clickable: true,
-          }}
           className="portfolio__slider mySwiper"
           ref={swiperRef}
-		  effect="slide" // Set the slide effect
-		  speed={500}
+		      speed={300}
+          parallax={true}
+          modules={[Parallax]}
         >
           <SwiperSlide className="portfolio__card"> 
             <div className="portfolio__card-img portfolio__card-img1">

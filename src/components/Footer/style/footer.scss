@@ -1,0 +1,112 @@
+@import "../../main/style.scss";
+
+.footer {
+	width: 100%;
+	padding: $main-padding;
+	background-color: $secondary-dark;
+	padding-bottom: 35px;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+
+	&__top {
+		width: 100%;
+		height: auto;
+		@include display-center(space-between, center);
+		position: relative;
+
+		&-logo {
+			position: relative;
+			@include display-center(flex-start, center);
+			svg {
+				z-index: 1;
+			}
+			&::after {
+				content: "";
+				width: 120px;
+				height: 120px;
+				background: $main;
+				filter: blur(50px);
+				position: absolute;
+				z-index: -1;
+				left: -5%;
+				top: -110%;
+			}
+		}
+
+		&-description {
+			width: 335px;
+			margin-top: 25px;
+			@include secondary-subTitle();
+		}
+
+		.social__media-wrapper {
+			margin-top: 35px;
+            column-gap: 20px;
+		}
+
+		&-nav {
+			width: auto;
+			height: 200px;
+		}
+
+		
+		&-form {
+			width: auto;
+			height: 200px;
+		}
+
+		&-subTitle {
+			@include secondary-description();
+			font-weight: 500;
+			padding-bottom: 25px;
+		}
+
+		&-input {
+			width: 400px;
+			height: 60px;
+			background-color: $ligth-dark;
+			display: flex;
+			
+			input {
+				width: 340px;
+				height: 100%;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				padding: 0 15px;
+
+				@include secondary-subTitle();
+				color: rgba($color: #fff, $alpha: 0.6);
+			}
+
+			div {
+				width: 60px;
+				height: 60px;
+				background: $main;
+				@include display-center(center, center);
+
+			}
+		}
+	}
+
+	&__bottom {
+		width: 100%;
+		height: 50px;
+		margin-top: $section-margin;
+		@include secondary-subTitle();
+		color: rgba($color: #fff, $alpha: 0.6);
+
+		&-line {
+			width: 100%;
+			height: 1px;
+			background: $main;
+		}
+
+		p {
+			text-align: center;
+			margin-top: 35px;
+		}
+
+	}
+}

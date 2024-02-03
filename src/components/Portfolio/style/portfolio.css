@@ -64,7 +64,8 @@ body {
       height: 100%;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      transition: 0.5s; }
     .portfolio__box .portfolio__card {
       width: 700px !important;
       border-radius: 10px; }
