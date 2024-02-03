@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from "framer-motion";
-import "./style/home.css";
+import "./style/Home.css";
 import { useTranslation } from 'react-i18next';
 import Logo from '../main/img/Logo.jsx';
 import IconBox from '../UI/IconBox/IconBox.jsx';
@@ -22,7 +22,7 @@ import 'swiper/css/pagination';
 
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -35,28 +35,30 @@ const Home = () => {
 
     if (clientX >= 0 && clientX <= maxX && clientY >= 0 && clientY <= maxY) {
       setMousePosition({ x: clientX, y: clientY });
+      setCursorVariant("default");
     } else {
       setMousePosition({ x: -100, y: -100 });
+      setCursorVariant("hide");
     }
   };
 
-  const textEnter = useCallback(() => setCursorVariant("default"), []);
-  const textLeave = useCallback(() => setCursorVariant("hide"), []);
+  const handleMouseEnter = useCallback(() => setCursorVariant("default"), []);
+  const handleMouseLeave = useCallback(() => setCursorVariant("hide"), []);
 
   useEffect(() => {
     // Get initial mouse coordinates
     setMousePosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
 
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseenter", textEnter);
-    window.addEventListener("mouseleave", textLeave);
+    document.addEventListener("mouseenter", handleMouseEnter);
+    document.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseenter", textEnter);
-      window.removeEventListener("mouseleave", textLeave);
+      document.removeEventListener("mouseenter", handleMouseEnter);
+      document.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [textEnter, textLeave]);
+  }, [handleMouseEnter, handleMouseLeave]);
 
   const variants = {
     default: {
@@ -66,28 +68,25 @@ const Home = () => {
       mixBlendMode: "difference",
     },
     hide: {
-      height: -10,
-      width: -10,
+      height: 10,
+      width: 10,
       x: mousePosition.x - 5,
       y: mousePosition.y - 5,
     },
   };
 
-
-
   return (
-	<section className='home'>
-    <div
-      style={{ top: mousePosition.y, left: mousePosition.x }}
-      className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""}`}
-    ></div>
+    <section className='home'>
+      <div
+        style={{ top: mousePosition.y, left: mousePosition.x }}
+        className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""}`}
+      ></div>
 
-    <motion.div
-       className={`cursor ${cursorVariant === "hide" ? "_hide" : ""}`}
-      variants={variants}
-      animate={cursorVariant}
-    />
-
+      <motion.div
+        className={`cursor ${cursorVariant === "hide" ? "_hide" : ""}`}
+        variants={variants}
+        animate={cursorVariant}
+      />
 
     <header className="home__header">
 
