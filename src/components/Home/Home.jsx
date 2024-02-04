@@ -23,10 +23,12 @@ import 'swiper/css/pagination';
 
 const Home = () => {
   const { i18n } = useTranslation();
+  const changeLanguage = (lng) => i18n.changeLanguage(lng);
+
+
+  // Cursor Animation
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const changeLanguage = (lng) => i18n.changeLanguage(lng);
 
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
@@ -75,20 +77,45 @@ const Home = () => {
     },
   };
 
+
+  // Burger Menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuHandleClick = () => {
+      setIsMenuOpen(!isMenuOpen);
+
+      isMenuOpen ? document.body.classList.remove("_body-hidden") :  document.body.classList.add("_body-hidden");
+  }
+
+  
+  // Check device 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const mobileKeywords = ['android', 'iphone', 'ipad', 'mobile'];
+    const isMobileDevice = mobileKeywords.some(keyword => userAgent.includes(keyword));
+
+    setIsMobile(isMobileDevice);
+  }, []);
+
+
+
   return (
-    <section className='home'>
+    <section className={`home ${isMenuOpen ? "_menu-open" : ""}`}>
       <div
         style={{ top: mousePosition.y, left: mousePosition.x }}
-        className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""}`}
+        className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
       ></div>
 
       <motion.div
-        className={`cursor ${cursorVariant === "hide" ? "_hide" : ""}`}
+        className={`cursor ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
         variants={variants}
         animate={cursorVariant}
       />
 
     <header className="home__header">
+      <div className="header__wrapper">
 
         <div className="header__logo">
           <Logo/>
@@ -102,7 +129,6 @@ const Home = () => {
               <svg className='header__dropdown-arrow' xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                 <path d="M5.70696 10.4899C5.31643 10.8804 5.31643 11.5136 5.70696 11.9041L10.5992 16.7915C11.3804 17.5719 12.6462 17.5716 13.427 16.7909L18.3173 11.9005C18.7079 11.51 18.7079 10.8768 18.3173 10.4863C17.9268 10.0957 17.2936 10.0957 16.9031 10.4863L12.7175 14.6719C12.327 15.0625 11.6938 15.0624 11.3033 14.6719L7.12117 10.4899C6.73065 10.0993 6.09748 10.0993 5.70696 10.4899Z" fill="white"/>
               </svg>
-
 
               <div className="header__dropdown-content__overlay">
                 <ul className='header__dropdown-content'>
@@ -183,33 +209,159 @@ const Home = () => {
                     </div>
                 </ul>
               </div>
-
             </li>
             <li className="header__item">Portfolio</li>
             <li className="header__item">Contacts</li>
           </ul>
         </nav>
 
-        <button
-        className={`header__btn`}
-        // onMouseEnter={textEnter} onMouseLeave={textLeave}
-        >
+        <button className={`header__btn`}>
           <span>Contacts</span>
-
-        {/* <motion.div
-          className='header__btn-circle'
-          variants={variants}
-          animate={cursorVariant}
-        /> */}
         </button>
 
+
+        <div className="header__nav-box">
+          <nav className="header__nav header__nav-menu">
+            <ul className="header__list">
+              <li className="header__item">About</li>
+              <li className="header__item header__dropdown">
+
+                <div className='header__item-dropdown'>
+                  <p>Services</p>
+                   
+                  <svg className='header__dropdown-arrow' xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M5.70696 10.4899C5.31643 10.8804 5.31643 11.5136 5.70696 11.9041L10.5992 16.7915C11.3804 17.5719 12.6462 17.5716 13.427 16.7909L18.3173 11.9005C18.7079 11.51 18.7079 10.8768 18.3173 10.4863C17.9268 10.0957 17.2936 10.0957 16.9031 10.4863L12.7175 14.6719C12.327 15.0625 11.6938 15.0624 11.3033 14.6719L7.12117 10.4899C6.73065 10.0993 6.09748 10.0993 5.70696 10.4899Z" fill="white"/>
+                  </svg>
+                </div>
+
+
+                <div className="header__dropdown-content__overlay">
+                  <ul className='header__dropdown-content'>
+                      <div className="header__dropdown--left">
+                        <li className="header__dropdown-item">
+                            <IconBox
+                              boxSize={40}
+                              imgPath={LaptopIcon}
+
+                              iconWidth={26} 
+                              iconHeight={26}
+
+                              circleSize = {12}
+                              top = {20}
+                            />
+                            Web Development
+                        </li>
+
+                        <li className="header__dropdown-item">
+                            <IconBox
+                              boxSize={40}
+                              imgPath={PalleteIcon}
+
+                              iconWidth={26} 
+                              iconHeight={26}
+
+                              circleSize = {12}
+                              top = {20}
+                            />
+                            Design / Redesign / Logo
+                        </li>
+
+                        <li className="header__dropdown-item">
+                            <IconBox
+                              boxSize={40}
+                              imgPath={PosterIcon}
+
+                              iconWidth={26} 
+                              iconHeight={26}
+
+                              circleSize = {12}
+                              top = {20}
+                            />
+                            Posters / Billboards 
+                        </li>
+                      </div>
+
+
+                      <div className="header__dropdown--right">
+
+                        <li className="header__dropdown-item">
+                            <IconBox
+                              boxSize={40}
+                              imgPath={PhoneIcon}
+
+                              iconWidth={26} 
+                              iconHeight={26}
+
+                              circleSize = {12}
+                              top = {20}
+                            />
+                            Mobile design
+                        </li>
+
+                        <li className="header__dropdown-item">
+                            <IconBox
+                              boxSize={40}
+                              imgPath={CardIcon}
+
+                              iconWidth={26} 
+                              iconHeight={26}
+
+                              circleSize = {12}
+                              top = {20}
+                            />
+                            Business card / Leaflets
+                        </li>
+                      </div>
+                  </ul>
+                </div>
+              </li>
+              <li className="header__item">Portfolio</li>
+              <li className="header__item">Contacts</li>
+            </ul>
+          </nav>
+
+          <button className={`header__btn header__btn-menu`}>
+            <span>Contacts</span>
+          </button>
+        </div>
+
+
+
+        <div className="header__menu" onClick={menuHandleClick}>
+          <div className="rolling__block">
+            <p className="menu__text rolling__block--before">MENU</p>
+            <p className="menu__text rolling__block--after">MENU</p>
+          </div>
+
+          <div className="menu__icon">
+            <div className="menu__icon-line">
+              <div className="menu__icon-line__inner menu__icon--bar"></div>
+              <div className="menu__icon-line__inner menu__icon--bar"></div>
+            </div>
+
+
+            <div className="menu__icon-line">
+              <div className="menu__icon-line__inner menu__icon--bar"></div>
+              <div className="menu__icon-line__inner menu__icon--bar"></div>
+            </div>
+
+
+            <div className="menu__icon-line">
+              <div className="menu__icon-line__inner menu__icon--bar"></div>
+              <div className="menu__icon-line__inner menu__icon--bar"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </header>
 
 
 
     <section className="home__intro">
       <h1 className="intro__title">
-        <strong>WebTime</strong> <strong>―</strong> your time with webtime,  developer on web, design solutions.
+        {/* <strong>WebTime</strong> <strong>―</strong> your time with webtime, where innovation meets design. */}
+        <strong>WebTime</strong> <strong>―</strong> your time with webtime, where design and development converge.
       </h1>
       
       <Swiper
@@ -224,7 +376,7 @@ const Home = () => {
           <div className="intro__card-header">
             <h4 className="intro__card-title">Website & design</h4>
 
-            <p className="intro__card-price">start from: 700$</p>
+            <p className="intro__card-price">from: 700$</p>
           </div>
 
           <div className="intro__card-img intro__card-img--1"></div>
@@ -240,7 +392,7 @@ const Home = () => {
           <div className="intro__card-header">
             <h4 className="intro__card-title">Web design</h4>
 
-            <p className="intro__card-price">start from: 400$</p>
+            <p className="intro__card-price">from: 400$</p>
           </div>
 
           <div className="intro__card-img intro__card-img--2"></div>
@@ -256,15 +408,13 @@ const Home = () => {
           <div className="intro__card-header">
             <h4 className="intro__card-title">Poster</h4>
 
-            <p className="intro__card-price">start from: 250$</p>
+            <p className="intro__card-price">from: 250$</p>
           </div>  
 
           <div className="intro__card-img intro__card-img--3"></div>
 
           <GradientBtn
             text="View more"
-            width="100%"
-            height="50"
           />
         </SwiperSlide>
 
@@ -272,7 +422,7 @@ const Home = () => {
           <div className="intro__card-header">
             <h4 className="intro__card-title">Business cards</h4>
 
-            <p className="intro__card-price">start from: 100$</p>
+            <p className="intro__card-price">from: 100$</p>
           </div>
 
           <div className="intro__card-img intro__card-img--4"></div>
@@ -292,36 +442,37 @@ const Home = () => {
         <SocialMedia
           linkPath="#!"
           icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-              <path d="M15 43.8888L17.1524 35.8856C15.4165 32.7679 14.865 29.1299 15.5991 25.6391C16.3332 22.1482 18.3036 19.0387 21.1488 16.8812C23.9939 14.7237 27.523 13.6628 31.0884 13.8933C34.6538 14.1238 38.0164 15.6302 40.5591 18.136C43.1018 20.6418 44.6541 23.979 44.9311 27.5352C45.2081 31.0914 44.1912 34.6281 42.0671 37.4962C39.9429 40.3643 36.854 42.3715 33.3672 43.1495C29.8803 43.9275 26.2294 43.424 23.0843 41.7315L15 43.8888ZM23.4741 38.7366L23.9741 39.0327C26.2521 40.3807 28.9128 40.9385 31.5416 40.6193C34.1703 40.3 36.6194 39.1215 38.5073 37.2676C40.3951 35.4136 41.6156 32.9883 41.9786 30.3695C42.3415 27.7508 41.8266 25.0857 40.514 22.7896C39.2014 20.4935 37.1648 18.6954 34.7217 17.6755C32.2786 16.6555 29.5661 16.4711 27.007 17.1509C24.448 17.8307 22.186 19.3365 20.5736 21.4336C18.9613 23.5308 18.0891 26.1016 18.0931 28.7453C18.0909 30.9374 18.6982 33.087 19.8472 34.955L20.1608 35.471L18.9574 39.9379L23.4741 38.7366Z" fill="white"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M35.6086 30.8003C35.3155 30.5643 34.9723 30.3981 34.6052 30.3146C34.2381 30.231 33.8567 30.2322 33.4901 30.318C32.9392 30.5465 32.5833 31.4094 32.2274 31.8408C32.1524 31.9443 32.0421 32.0168 31.9173 32.0449C31.7925 32.0729 31.6617 32.0545 31.5495 31.9931C29.5329 31.2046 27.8426 29.7586 26.7531 27.89C26.6602 27.7734 26.6162 27.6253 26.6304 27.477C26.6447 27.3287 26.716 27.1916 26.8294 27.0948C27.2263 26.7024 27.5178 26.2165 27.6768 25.6819C27.7121 25.0923 27.5768 24.5049 27.287 23.9899C27.063 23.2679 26.6366 22.625 26.0582 22.1372C25.76 22.0032 25.4292 21.9583 25.1059 22.0079C24.7826 22.0574 24.4806 22.1993 24.2363 22.4164C23.8121 22.7817 23.4755 23.2374 23.2511 23.7498C23.0267 24.2623 22.9203 24.8184 22.9398 25.3774C22.9411 25.6912 22.9809 26.0038 23.0584 26.308C23.2552 27.0388 23.5578 27.7371 23.9567 28.3807C24.2444 28.8737 24.5584 29.3509 24.8973 29.8104C25.9985 31.3197 27.3828 32.6011 28.9733 33.5836C29.7715 34.0829 30.6245 34.4888 31.5156 34.7934C32.4412 35.2123 33.4632 35.3731 34.4731 35.2587C35.0484 35.1718 35.5936 34.945 36.0605 34.5983C36.5275 34.2516 36.9019 33.7957 37.1509 33.2706C37.2972 32.9534 37.3416 32.5988 37.278 32.2554C37.1255 31.5532 36.1848 31.1387 35.6086 30.8003Z" fill="white"/>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 38.8888L12.1524 30.8856C10.4165 27.7679 9.86504 24.1299 10.5991 20.6391C11.3332 17.1482 13.3036 14.0387 16.1488 11.8812C18.9939 9.72366 22.523 8.66281 26.0884 8.8933C29.6538 9.12379 33.0164 10.6302 35.5591 13.136C38.1018 15.6418 39.6541 18.979 39.9311 22.5352C40.2081 26.0914 39.1912 29.6281 37.0671 32.4962C34.9429 35.3643 31.854 37.3715 28.3672 38.1495C24.8803 38.9275 21.2294 38.424 18.0843 36.7315L10 38.8888ZM18.4741 33.7366L18.9741 34.0327C21.2521 35.3807 23.9128 35.9385 26.5416 35.6193C29.1703 35.3 31.6194 34.1215 33.5073 32.2676C35.3951 30.4136 36.6156 27.9883 36.9786 25.3695C37.3415 22.7508 36.8266 20.0857 35.514 17.7896C34.2014 15.4935 32.1648 13.6954 29.7217 12.6755C27.2786 11.6555 24.5661 11.4711 22.007 12.1509C19.448 12.8307 17.186 14.3365 15.5736 16.4336C13.9613 18.5308 13.0891 21.1016 13.0931 23.7453C13.0909 25.9374 13.6982 28.087 14.8472 29.955L15.1608 30.471L13.9574 34.9379L18.4741 33.7366Z" fill="white"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M30.6086 25.8007C30.3155 25.5647 29.9723 25.3986 29.6052 25.3151C29.2381 25.2315 28.8567 25.2327 28.4901 25.3185C27.9392 25.5469 27.5833 26.4099 27.2274 26.8413C27.1524 26.9448 27.0421 27.0173 26.9173 27.0453C26.7925 27.0734 26.6617 27.055 26.5495 26.9936C24.5329 26.2051 22.8426 24.7591 21.7531 22.8905C21.6602 22.7739 21.6162 22.6258 21.6304 22.4775C21.6447 22.3292 21.716 22.1921 21.8294 22.0952C22.2263 21.7029 22.5178 21.217 22.6768 20.6824C22.7121 20.0928 22.5768 19.5054 22.287 18.9904C22.063 18.2684 21.6366 17.6255 21.0582 17.1377C20.76 17.0037 20.4292 16.9588 20.1059 17.0084C19.7826 17.0579 19.4806 17.1998 19.2363 17.4168C18.8121 17.7822 18.4755 18.2379 18.2511 18.7503C18.0267 19.2628 17.9203 19.8189 17.9398 20.3779C17.9411 20.6917 17.9809 21.0043 18.0584 21.3085C18.2552 22.0393 18.5578 22.7376 18.9567 23.3812C19.2444 23.8742 19.5584 24.3514 19.8973 24.8109C20.9985 26.3202 22.3828 27.6016 23.9733 28.5841C24.7715 29.0834 25.6245 29.4893 26.5156 29.7939C27.4412 30.2128 28.4632 30.3736 29.4731 30.2592C30.0484 30.1722 30.5936 29.9455 31.0605 29.5988C31.5275 29.2521 31.9019 28.7962 32.1509 28.2711C32.2972 27.9539 32.3416 27.5993 32.278 27.2559C32.1255 26.5537 31.1848 26.1391 30.6086 25.8007Z" fill="white"/>
             </svg>
           }
-          size='default'
+          size='big'
         />
 
         <SocialMedia
           linkPath="mailto:help.webtime@gmail.com"
           icon={
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.0385 43.3703H20.5972V29.8707L12.6562 23.915V40.988C12.6562 42.3062 13.7243 43.3703 15.0385 43.3703Z" fill="white"/>
-              <path d="M39.6562 43.3703H45.2149C46.5331 43.3703 47.5972 42.3022 47.5972 40.988V23.915L39.6562 29.8707" fill="white"/>
-              <path d="M39.6562 19.5472V29.8704L47.5972 23.9147V20.7384C47.5972 17.7923 44.2342 16.1128 41.8797 17.8796" fill="white"/>
-              <path d="M20.5977 29.8701V19.5469L30.1268 26.6937L39.656 19.5469V29.8701L30.1268 37.0169" fill="white"/>
-              <path d="M12.6562 20.7384V23.9147L20.5972 29.8704V19.5472L18.3738 17.8796C16.0153 16.1128 12.6562 17.7923 12.6562 20.7384Z" fill="white"/>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.0385 38.3703H15.5972V24.8707L7.65625 18.915V35.988C7.65625 37.3062 8.72431 38.3703 10.0385 38.3703Z" fill="white"/>
+              <path d="M34.6562 38.3703H40.2149C41.5331 38.3703 42.5972 37.3023 42.5972 35.988V18.915L34.6562 24.8707" fill="white"/>
+              <path d="M34.6562 14.5477V24.8709L42.5972 18.9152V15.7389C42.5972 12.7928 39.2342 11.1133 36.8797 12.8801" fill="white"/>
+              <path d="M15.5977 24.8706V14.5474L25.1268 21.6942L34.656 14.5474V24.8706L25.1268 32.0174" fill="white"/>
+              <path d="M7.65625 15.7389V18.9152L15.5972 24.8709V14.5477L13.3738 12.8801C11.0153 11.1133 7.65625 12.7928 7.65625 15.7389" fill="white"/>
             </svg>
           }
-          size='default'
+          size='big'
         />
 
         <SocialMedia
           linkPath="#!"
           icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-              <path d="M16.6921 28.9371C16.6921 28.9371 28.8989 23.7958 33.1324 21.9854C34.7554 21.2613 40.259 18.944 40.259 18.944C40.259 18.944 42.7992 17.9303 42.5875 20.3923C42.5169 21.4061 41.9524 24.9543 41.388 28.7922C40.5412 34.2232 39.6239 40.1611 39.6239 40.1611C39.6239 40.1611 39.4828 41.8266 38.2833 42.1162C37.0838 42.4059 35.1081 41.1025 34.7554 40.8128C34.4731 40.5956 29.4634 37.337 27.6288 35.7439C27.1349 35.3094 26.5705 34.4405 27.6993 33.4267C30.2395 31.0371 33.2736 28.0682 35.1081 26.1854C35.9549 25.3164 36.8015 23.2889 33.2736 25.7509C28.2639 29.2991 23.3247 32.6302 23.3247 32.6302C23.3247 32.6302 22.1957 33.3542 20.079 32.7025C17.9621 32.0509 15.4925 31.1819 15.4925 31.1819C15.4925 31.1819 13.7992 30.0957 16.6921 28.9371Z" fill="white"/>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6921 23.9371C11.6921 23.9371 23.8989 18.7958 28.1324 16.9854C29.7554 16.2613 35.259 13.944 35.259 13.944C35.259 13.944 37.7992 12.9303 37.5875 15.3923C37.5169 16.4061 36.9524 19.9543 36.388 23.7922C35.5412 29.2232 34.6239 35.1611 34.6239 35.1611C34.6239 35.1611 34.4828 36.8266 33.2833 37.1162C32.0838 37.4059 30.1081 36.1025 29.7554 35.8128C29.4731 35.5956 24.4634 32.337 22.6288 30.7439C22.1349 30.3094 21.5705 29.4405 22.6993 28.4267C25.2395 26.0371 28.2736 23.0682 30.1081 21.1854C30.9549 20.3164 31.8015 18.2889 28.2736 20.7509C23.2639 24.2991 18.3247 27.6302 18.3247 27.6302C18.3247 27.6302 17.1957 28.3542 15.079 27.7025C12.9621 27.0509 10.4925 26.1819 10.4925 26.1819C10.4925 26.1819 8.79919 25.0957 11.6921 23.9371Z" fill="white"/>
             </svg>
+
           }
-          size='default'
+          size='big'
         />
       </div>
 

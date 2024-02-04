@@ -3,6 +3,10 @@
 
 body {
   background-color: $black;
+
+  &._body-hidden {
+    overflow: hidden;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -23,5 +27,30 @@ body {
 }
 
 
+.rolling__block {
+  position: relative;
 
+  height: 23px;
+  overflow: hidden;
+  transition: .5s;
+
+  &:hover {
+      transition: .5s;
+
+      .rolling__block--before {
+          transform: translateY(-25px);
+      }
+      .rolling__block--after {
+          transform: translateY(-25px);
+      }
+  }
+
+  .rolling__block--before, .rolling__block--after {
+      transition: .5s;
+  }
+
+  .rolling__block--after {
+      position: absolute;
+  }
+}
 

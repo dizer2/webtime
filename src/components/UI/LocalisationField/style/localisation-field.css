@@ -32,6 +32,8 @@ ul li {
 
 body {
   background-color: #000; }
+  body._body-hidden {
+    overflow: hidden; }
 
 ::-webkit-scrollbar {
   width: 10px; }
@@ -44,6 +46,22 @@ body {
 
 ::selection {
   background: rgba(0, 109, 192, 0.5); }
+
+.rolling__block {
+  position: relative;
+  height: 23px;
+  overflow: hidden;
+  transition: .5s; }
+  .rolling__block:hover {
+    transition: .5s; }
+    .rolling__block:hover .rolling__block--before {
+      transform: translateY(-25px); }
+    .rolling__block:hover .rolling__block--after {
+      transform: translateY(-25px); }
+  .rolling__block .rolling__block--before, .rolling__block .rolling__block--after {
+    transition: .5s; }
+  .rolling__block .rolling__block--after {
+    position: absolute; }
 
 .App {
   overflow-x: hidden; }
@@ -71,5 +89,12 @@ body {
     height: 25px;
     width: 2px;
     background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+
+@media screen and (max-width: 1200px) {
+  .localisation-field__language {
+    font-size: 18px; }
+  .localisation-field__line {
+    height: 22px;
+    width: 1.5px; } }
 
 /*# sourceMappingURL=localisation-field.css.map */

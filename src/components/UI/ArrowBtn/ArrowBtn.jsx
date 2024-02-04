@@ -23,9 +23,9 @@ const ViewMoreBtn = ({ text, isGradient = true, customGradient, isWhite = false 
         <defs>
           <linearGradient id="paint0_linear_321_172" x1="10.5635" y1="4.37125" x2="33.1126" y2="9.17363"
             gradientUnits="userSpaceOnUse">
-            <stop stop-color="#2BBFFE" />
-            <stop offset="0.521875" stop-color="#8629FD" />
-            <stop offset="1" stop-color="#FC4AF5" />
+            <stop stopColor="#2BBFFE" />
+            <stop offset="0.521875" stopColor="#8629FD" />
+            <stop offset="1" stopColor="#FC4AF5" />
           </linearGradient>
         </defs>
       </svg>

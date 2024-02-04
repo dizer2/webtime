@@ -16,3 +16,11 @@ $main-padding: 120px;
 $secondry-padding: 230px;
 $line-margin: 30px;
 $line-width: 80px;
+
+
+
+
+@media screen and (max-width: 1200px) {
+    $main-padding: 100px;
+    $secondry-padding: 190px;
+}

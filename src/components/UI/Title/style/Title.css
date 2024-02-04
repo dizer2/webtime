@@ -32,6 +32,8 @@ ul li {
 
 body {
   background-color: #000; }
+  body._body-hidden {
+    overflow: hidden; }
 
 ::-webkit-scrollbar {
   width: 10px; }
@@ -44,6 +46,22 @@ body {
 
 ::selection {
   background: rgba(0, 109, 192, 0.5); }
+
+.rolling__block {
+  position: relative;
+  height: 23px;
+  overflow: hidden;
+  transition: .5s; }
+  .rolling__block:hover {
+    transition: .5s; }
+    .rolling__block:hover .rolling__block--before {
+      transform: translateY(-25px); }
+    .rolling__block:hover .rolling__block--after {
+      transform: translateY(-25px); }
+  .rolling__block .rolling__block--before, .rolling__block .rolling__block--after {
+    transition: .5s; }
+  .rolling__block .rolling__block--after {
+    position: absolute; }
 
 .App {
   overflow-x: hidden; }
@@ -86,4 +104,4 @@ body {
       left: -10%;
       z-index: -1; }
 
-/*# sourceMappingURL=Title.css.map */
+/*# sourceMappingURL=title.css.map */

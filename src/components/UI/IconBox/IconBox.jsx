@@ -5,6 +5,8 @@ function IconBox({boxSize, imgPath, iconWidth, iconHeight, circleSize, top, them
     const boxStyles = {
         width: `${boxSize}px`,
         height: `${boxSize}px`,
+        minWidth:`${boxSize}px`,
+        minHeight:`${boxSize}px`,
     }
 
     const iconStyles = {

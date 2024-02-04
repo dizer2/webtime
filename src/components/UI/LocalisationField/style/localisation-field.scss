@@ -21,3 +21,18 @@
         background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
     }
 }
+
+
+
+@media screen and (max-width: 1200px) {
+    .localisation-field {
+        &__language {
+            font-size: 18px;
+        }
+    
+        &__line {
+            height: 22px;
+            width: 1.5px;
+        }
+    }
+}
