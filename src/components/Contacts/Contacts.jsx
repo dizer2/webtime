@@ -39,7 +39,7 @@ const Contacts = () => {
                     </svg>
                   </div>
                 </p>
-                <input className='contacts__form-box__input' type="text" placeholder='Name of your company' />
+                <input className='contacts__form-box__input' type="text" placeholder='Your company' />
               </div>
             </div>
 

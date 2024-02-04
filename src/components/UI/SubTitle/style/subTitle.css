@@ -116,6 +116,7 @@ body {
   .subTitle__container {
     padding: 0 30px;
     gap: 10px;
+    text-align: center;
     display: flex;
     justify-content: center; }
     .subTitle__container-line {
