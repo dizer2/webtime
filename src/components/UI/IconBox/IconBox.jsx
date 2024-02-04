@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style/icon-box.css"
 
-function IconBox({boxSize, imgPath, iconWidth, iconHeight, circleSize, top, theme = "black" }) {
+function IconBox({boxSize, imgPath, iconWidth, iconHeight, circleSize, top, theme = "black", size }) {
     const boxStyles = {
         width: `${boxSize}px`,
         height: `${boxSize}px`,
@@ -23,11 +23,9 @@ function IconBox({boxSize, imgPath, iconWidth, iconHeight, circleSize, top, them
 
 
   return (
-    <div className={`icon-box icon-box--${theme}`} style={boxStyles}>
-        <div className='icon-box__icon' style={iconStyles}>
-        </div>
+    <div className={`icon-box icon-box--${theme} icon-box--${size}`} style={boxStyles}>
+        <div className='icon-box__icon' style={iconStyles}></div>
         <div className="icon-box__circle" style={circleStyles}></div>
-
     </div>
   )
 }

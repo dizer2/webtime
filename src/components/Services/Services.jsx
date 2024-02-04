@@ -31,18 +31,15 @@ const Services = () => {
             <div className="services__card">
                 <div className="services__card-main">
                     <IconBox 
-                        boxSize={84}
                         imgPath={LaptopIcon}
-
-                        iconWidth={54} 
-                        iconHeight={54}
+                        size = "medium"
 
                         circleSize = {26}
                         top = {50}
                     />
 
                     <h3 className="services__card-title">Web Development</h3>    
-                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience.</p>      
+                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                 </div>
 
                 <ArrowBtn
@@ -56,18 +53,15 @@ const Services = () => {
             <div className="services__card">
                 <div className="services__card-main">
                     <IconBox 
-                        boxSize={84}
                         imgPath={PalleteIcon}
-
-                        iconWidth={54} 
-                        iconHeight={54}
+                        size = "medium"
 
                         circleSize = {26}
                         top = {50}
                     />
 
                     <h3 className="services__card-title">Design / Redesign / Logo</h3>    
-                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience.</p>      
+                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                 </div>
 
                 <ArrowBtn
@@ -82,18 +76,15 @@ const Services = () => {
             <div className="services__card">
                 <div className="services__card-main">
                     <IconBox 
-                        boxSize={84}
                         imgPath={PosterIcon}
-
-                        iconWidth={54} 
-                        iconHeight={54}
+                        size = "medium"
 
                         circleSize = {26}
                         top = {50}
                     />
 
                     <h3 className="services__card-title">Posters / Billboards </h3>    
-                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience.</p>      
+                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                 </div>
 
                 <ArrowBtn
@@ -108,18 +99,15 @@ const Services = () => {
             <div className="services__card">
                 <div className="services__card-main">
                     <IconBox 
-                        boxSize={84}
                         imgPath={MobileIcon}
-
-                        iconWidth={54} 
-                        iconHeight={54}
+                        size = "medium"
 
                         circleSize = {26}
                         top = {50}
                     />
 
                     <h3 className="services__card-title">Mobile design</h3>    
-                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience.</p>      
+                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                 </div>
 
                 <ArrowBtn
@@ -134,18 +122,15 @@ const Services = () => {
             <div className="services__card">
                 <div className="services__card-main">
                     <IconBox 
-                        boxSize={84}
                         imgPath={CardIcon}
-
-                        iconWidth={54} 
-                        iconHeight={54}
+                        size = "medium"
 
                         circleSize = {26}
                         top = {50}
                     />
 
                     <h3 className="services__card-title">Business card / Leaflets</h3>    
-                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience.</p>      
+                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                 </div>
 
                 <ArrowBtn
@@ -160,19 +145,15 @@ const Services = () => {
             <div className="services__card services__card--contact">
                 <div className="services__card-main">
                     <IconBox 
-                        boxSize={84}
                         imgPath={PhoneIcon}
                         theme = "white"
-
-                        iconWidth={54} 
-                        iconHeight={54}
-
+                        size = "medium"
                         circleSize = {26}
                         top = {50}
                     />
 
-                    <h3 className="services__card-title">Design / Redesign / Logo</h3>    
-                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience.</p>      
+                    <h3 className="services__card-title">Contact</h3>    
+                    <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                 </div>
 
                 <ArrowBtn

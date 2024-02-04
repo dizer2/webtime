@@ -77,6 +77,8 @@ body {
     width: 80px;
     height: 2px;
     background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+    .subTitle__container-line--second {
+      display: none; }
   .subTitle__container-description {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -86,5 +88,42 @@ body {
     line-height: normal;
     letter-spacing: 2.4px;
     text-transform: uppercase; }
+
+@media screen and (max-width: 1200px) {
+  .subTitle__container {
+    padding-left: 100px;
+    gap: 25px; }
+    .subTitle__container-line {
+      width: 60px;
+      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); } }
+@media screen and (max-width: 1000px) {
+  .subTitle__container {
+    padding-left: 80px;
+    gap: 20px; }
+    .subTitle__container-line {
+      width: 40px;
+      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); } }
+@media screen and (max-width: 800px) {
+  .subTitle__container {
+    padding-left: 30px;
+    gap: 10px; }
+    .subTitle__container-line {
+      width: 30px;
+      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+    .subTitle__container-description {
+      font-size: 16px; } }
+@media screen and (max-width: 500px) {
+  .subTitle__container {
+    padding: 0 30px;
+    gap: 10px;
+    display: flex;
+    justify-content: center; }
+    .subTitle__container-line {
+      width: 30px;
+      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+      .subTitle__container-line--second {
+        display: block; }
+    .subTitle__container-description {
+      font-size: 16px; } }
 
 /*# sourceMappingURL=subTitle.css.map */

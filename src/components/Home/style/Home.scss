@@ -311,7 +311,6 @@
 
 @media screen and (max-width: 1200px) {
     $main-padding: 100px;
-    $secondry-padding: 190px;
 
     .home {
         &._menu-open {
@@ -577,7 +576,6 @@
 
 @media screen and (max-width: 1000px) {
     $main-padding: 80px;
-    $secondry-padding: 150px;
 
     .home {
         &._menu-open {
@@ -632,11 +630,8 @@
 
 @media screen and (max-width: 800px) {
     $main-padding: 30px;
-    $secondry-padding: 60px;
 
     .home {
-
-
         &__header {
             padding: 0 $main-padding;
             padding-top: 25px;

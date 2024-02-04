@@ -13,12 +13,12 @@
         @include display-center(space-between, center);
         flex-wrap: wrap;
         gap: 50px 30px;
-        padding: 0 $main-padding $section-margin $secondry-padding;
+        padding: 0 $main-padding 0 $secondry-padding;
 
         .services__card {
             padding: 20px 30px;
-            width: 520px;
-            height: 350px;
+            width: 500px;
+            height: 340px;
             background-color: $ligth-dark;
 
             @include display-center(space-between, start);
@@ -50,3 +50,166 @@
         }
     }
 }
+
+
+
+@media screen and (max-width: 1400px) {
+    .services {
+        &__wrapper {
+            .services__card {
+                padding: 20px;
+                width: 410px;
+                height: 280px;
+    
+                @include display-center(space-between, start);
+                flex-direction: column;
+    
+                &-main {
+                    .services__card-title {
+                        margin: 15px 0 10px;    
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    $main-padding: 100px;
+    $secondry-padding: 185px;
+
+
+    .services {
+        .title__container {
+            &-title {
+                width: 320px;
+            }
+        }
+
+        &__wrapper {
+            padding: 0 $main-padding 0 $secondry-padding;
+
+            .services__card {
+                padding: 15px;
+                width: 340px;
+                height: 240px;
+    
+                &-main {
+                    .services__card-title {
+                        margin: 15px 0 10px;    
+                        font-size: 20px;
+                    }
+                    
+                    .services__card-description {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    $main-padding: 80px;
+    $secondry-padding: 140px;
+
+
+    .services {
+        .title__container {
+            &-title {
+                width: 320px;
+            }
+        }
+
+        &__wrapper {
+            padding: 0 $main-padding $section-margin $secondry-padding;
+            gap: 30px 0px;
+
+
+            .services__card {
+                padding: 15px;
+                width: 100%;
+                height: 240px;
+    
+                &-main {
+                    .services__card-title {
+                        margin: 15px 0 10px;    
+                        font-size: 20px;
+                    }
+                    
+                    .services__card-description {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    $main-padding: 30px;
+    $secondry-padding: 70px;
+
+
+    .services {
+        .title__container {
+            &-title {
+                width: 260px;
+            }
+        }
+
+        &__wrapper {
+            padding: 0 $main-padding 0 $secondry-padding;
+            gap: 30px 0px;
+
+
+            .services__card {
+                padding: 15px;
+                width: 100%;
+                height: 240px;
+    
+                &-main {
+                    .services__card-title {
+                        margin: 15px 0 10px;    
+                        font-size: 20px;
+                    }
+                    
+                    .services__card-description {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+
+@media screen and (max-width: 500px) {
+    $main-padding: 30px;
+    $secondry-padding: 30px;
+
+
+    .services {
+        &__wrapper {
+            padding: 0 $main-padding 0 $secondry-padding;
+            .services__card {
+                height: 120%;
+    
+                &-main {
+                    .services__card-title {
+                        margin: 15px 0 10px;    
+                        font-size: 20px;
+                    }
+                    
+                    .services__card-description {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+} 

@@ -10,9 +10,91 @@
 		width: $line-width;
 		height: 2px;
 		background: $main;
+
+		&--second {
+			display: none;
+		}
 	}
 
 	&-description {
 		@include subTitle();
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	$main-padding: 100px;
+	$line-margin: 25px;
+	$line-width: 60px;
+
+	.subTitle__container  {
+		padding-left: $main-padding;
+		gap: $line-margin;
+
+		&-line {
+			width: $line-width;
+			background: $main;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	$main-padding: 80px;
+	$line-margin: 20px;
+	$line-width: 40px;
+
+	.subTitle__container  {
+		padding-left: $main-padding;
+		gap: $line-margin;
+
+		&-line {
+			width: $line-width;
+			background: $main;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	$main-padding: 30px;
+	$line-margin: 10px;
+	$line-width: 30px;
+
+	.subTitle__container  {
+		padding-left: $main-padding;
+		gap: $line-margin;
+
+		&-line {
+			width: $line-width;
+			background: $main;
+		}
+
+		&-description {
+			font-size: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	$main-padding: 30px;
+	$line-margin: 10px;
+	$line-width: 30px;
+
+	.subTitle__container  {
+		padding: 0 $main-padding;
+		gap: $line-margin;
+		display: flex;
+		justify-content: center;
+
+		&-line {
+			width: $line-width;
+			background: $main;
+
+			&--second {
+				display: block;
+			}
+		}
+
+		&-description {
+			font-size: 16px;
+		}
 	}
 }
