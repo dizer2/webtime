@@ -46,6 +46,22 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media screen and (max-width: 1400px) {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 22px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+        font-size: 18px;
+    }
 }
 
 @mixin subTitle() {
@@ -67,4 +83,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media screen and (max-width: 800px) {
+        font-size: 14px;
+    }
 }
+
+

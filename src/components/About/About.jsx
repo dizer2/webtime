@@ -81,7 +81,7 @@ const About = () => {
 			<SubTitle text={"what makes us the best?"}/>
 
 			<div className="about-us__box2-container">
-				<div className="about-us__box2-cart">
+				<div className="about-us__box2-cart about-us__box2-cart1">
 					<div className="about-us__iconBox">
 						<IconBox
 							boxSize={200}
@@ -97,7 +97,7 @@ const About = () => {
 					<div className="about-us__cart-description">A wide range of project</div>
 				</div>
 
-				<div className="about-us__box2-cart">
+				<div className="about-us__box2-cart about-us__box2-cart2">
 					<div className="about-us__iconBox">
 						<IconBox
 							boxSize={200}
@@ -113,7 +113,7 @@ const About = () => {
 					<div className="about-us__cart-description">Quality service</div>
 				</div>
 
-				<div className="about-us__box2-cart">
+				<div className="about-us__box2-cart about-us__box2-cart3">
 					<div className="about-us__iconBox">
 						<IconBox
 							boxSize={200}
@@ -129,7 +129,7 @@ const About = () => {
 					<div className="about-us__cart-description">The best prices on the market</div>
 				</div>
 
-				<div className="about-us__box2-cart">
+				<div className="about-us__box2-cart about-us__box2-cart4">
 					<div className="about-us__iconBox">
 						<IconBox
 							boxSize={200}
