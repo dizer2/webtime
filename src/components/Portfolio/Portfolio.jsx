@@ -20,44 +20,20 @@ const Portfolio = () => {
     const handleScroll = (event) => {
       if (swiperRef.current) {
         const swiper = swiperRef.current.swiper;
-  
-        // Check if it's a touch event
-        if (event.type === 'touchmove') {
-          // Use touch event properties to determine direction
-          const touchStart = event.touches[0].clientY;
-          const touchEnd = event.changedTouches[0].clientY;
-          const deltaY = touchEnd - touchStart;
-  
-          // Determine the direction based on touch event
-          const direction = deltaY > 0 ? 'down' : 'up';
-  
-          if (direction === 'down') {
-            swiper.slideNext(); // Scroll down, move to the next slide
-          } else {
-            swiper.slidePrev(); // Scroll up, move to the previous slide
-          }
+        if (event.deltaY > 0) {
+          swiper.slideNext();
         } else {
-          // For non-touch events (e.g., wheel)
-          if (event.deltaY > 0) {
-            swiper.slideNext(); // Scroll down, move to the next slide
-          } else {
-            swiper.slidePrev(); // Scroll up, move to the previous slide
-          }
+          swiper.slidePrev();
         }
       }
     };
-  
-    // Use both 'wheel' and 'touchmove' events
+
     window.addEventListener('wheel', handleScroll);
-    window.addEventListener('touchmove', handleScroll);
-  
+
     return () => {
       window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('touchmove', handleScroll);
     };
   }, []);
-  
-  
 
   return (
     <div className='portfolio'>
@@ -77,7 +53,6 @@ const Portfolio = () => {
 		      speed={300}
           parallax={true}
           modules={[Parallax]}
-          centeredSlides={true}
         >
           <SwiperSlide className="portfolio__card"> 
             <div className="portfolio__card-img portfolio__card-img1">
