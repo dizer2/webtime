@@ -118,4 +118,31 @@ body {
       .portfolio__box .portfolio__card-img4::after {
         background-image: url(../img/logo4.svg); }
 
+@media screen and (max-width: 1000px) {
+  .portfolio__box .portfolio__card {
+    width: 500px !important; }
+    .portfolio__box .portfolio__card-img::after {
+      content: "";
+      width: 170px;
+      height: 100px; } }
+@media screen and (max-width: 800px) {
+  .portfolio__box .portfolio__card {
+    width: 350px !important; }
+    .portfolio__box .portfolio__card-img::after {
+      content: "";
+      width: 150px;
+      height: 100px; } }
+@media screen and (max-width: 500px) {
+  .portfolio__box {
+    display: flex;
+    justify-content: center; }
+    .portfolio__box .portfolio__card {
+      width: 300px !important; }
+      .portfolio__box .portfolio__card-img::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        margin-right: 10px; } }
+
 /*# sourceMappingURL=portfolio.css.map */
