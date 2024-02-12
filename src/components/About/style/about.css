@@ -31,9 +31,11 @@ ul li {
   list-style: none; }
 
 body {
-  background-color: #000; }
-  body._body-hidden {
-    overflow: hidden; }
+  background-color: #000;
+  overflow-x: hidden; }
+
+.App {
+  overflow-x: hidden; }
 
 ::-webkit-scrollbar {
   width: 10px; }
@@ -55,9 +57,9 @@ body {
   .rolling__block:hover {
     transition: .5s; }
     .rolling__block:hover .rolling__block--before {
-      transform: translateY(-25px); }
+      transform: translateY(-23px); }
     .rolling__block:hover .rolling__block--after {
-      transform: translateY(-25px); }
+      transform: translateY(-23px); }
   .rolling__block .rolling__block--before, .rolling__block .rolling__block--after {
     transition: .5s; }
   .rolling__block .rolling__block--after {

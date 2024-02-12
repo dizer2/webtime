@@ -28,7 +28,7 @@ const Contacts = () => {
               </div>
 
               <div className="contacts__form-box">
-                <p className="contacts__form-box__heading">
+                <div className="contacts__form-box__heading">
                   Company
 
                   <div className="contacts__form-box__heading-clue">
@@ -38,7 +38,7 @@ const Contacts = () => {
                       <path d="M3.36222 9.52734C2.67897 9.52734 2.125 10.0815 2.125 10.7646C2.125 11.4474 2.67899 12.0014 3.36222 12.0014C4.04509 12.0014 4.59885 11.4474 4.59885 10.7646C4.59885 10.0815 4.04509 9.52734 3.36222 9.52734Z" fill="black"/>
                     </svg>
                   </div>
-                </p>
+                </div>
                 <input className='contacts__form-box__input' type="text" placeholder='Your company' />
               </div>
             </div>
