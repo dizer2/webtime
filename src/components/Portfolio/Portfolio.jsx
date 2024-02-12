@@ -45,6 +45,7 @@ const Portfolio = () => {
 
       <div className="portfolio__box">
         <Swiper
+          centeredSlides={true}
           loop={true}
           slidesPerView='auto'
           spaceBetween={20}
