@@ -3,23 +3,34 @@ import "./style/contacts.css"
 
 import SubTitle from "../UI/SubTitle/SubTitle.jsx"
 import Title from '../UI/Title/Title.jsx'
+import { Reveal } from '../utils/Reveal/Reveal.tsx'
+import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx'
 
 const Contacts = () => {
   return (
     <section className='contacts'>
-      <SubTitle text={"LET'S GO TO ACTION"}/>
+      <Reveal>
+        <SubTitle text={"LET'S GO TO ACTION"}/>
+		  </Reveal>
       
-      <Title 
-        text={"Let us create the best design for your niche"}
-        description={""}
-      />
+      <RevealSecodary>
+        <Title 
+          text={"Let us create the best design for your niche"}
+          description={""}
+        />
+		  </RevealSecodary>
+
 
       <div className="contacts__wrapper">
-        <div className="contacts__info">
-            <a href='mailto:help.webtime@gmail.com' className="contacts__info-email">help.webtime@gmail.com</a>
-            <a href='tel:+420 773 203 868' className="contacts__info-phone">+420 773 203 868</a>
-        </div>
+        <Reveal>
+          <div className="contacts__info">
+              <a href='mailto:help.webtime@gmail.com' className="contacts__info-email">help.webtime@gmail.com</a>
+              <a href='tel:+420 773 203 868' className="contacts__info-phone">+420 773 203 868</a>
+          </div>
+        </Reveal>
 
+
+        <RevealSecodary>
         <div className="contacts__form">
             <div className="contacts__form-row">
               <div className="contacts__form-box">
@@ -78,6 +89,7 @@ const Contacts = () => {
                 </button>
             </div>
         </div>
+		  </RevealSecodary>
       </div>
     </section>
   )

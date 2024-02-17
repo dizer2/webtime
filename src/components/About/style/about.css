@@ -137,6 +137,11 @@ body {
       justify-content: flex-start;
       align-items: center;
       flex-direction: column; }
+      .about-us__box2-cart .animation-div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column; }
       .about-us__box2-cart .about-us__iconBox {
         width: 200px;
         height: 200px;
@@ -519,6 +524,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
+  .about-us__box2-cart .animation-div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; }
   .about-us__box2-cart .about-us__cart-description {
     width: 60%; }
   .about-us__box3 {
@@ -539,6 +550,12 @@ body {
       align-items: center;
       flex-direction: column;
       padding: 0 30px; }
+      .about-us__box3-top .animation-div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center; }
       .about-us__box3-top .about-us__button {
         bottom: 0px; }
     .about-us__box3-description {

@@ -11,7 +11,8 @@ import img3 from "./img/img3.png"
 import img4 from "./img/img4.png"
 
 import { Parallax } from 'swiper/modules';
-
+import { Reveal } from '../utils/Reveal/Reveal.tsx'
+import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx'
 
 const Portfolio = () => {
   const swiperRef = useRef(null);
@@ -37,11 +38,16 @@ const Portfolio = () => {
 
   return (
     <div className='portfolio'>
-      <SubTitle text={"your project can be here"}/>
-      <Title 
-        text={"Projects that speak for themselves"}
-        description={"portfolio"}
-      />
+		  <Reveal>
+        <SubTitle text={"your project can be here"}/>
+		  </Reveal>
+
+      <RevealSecodary>
+        <Title 
+          text={"Projects that speak for themselves"}
+          description={"portfolio"}
+        />
+		  </RevealSecodary>
 
       <div className="portfolio__box">
         <Swiper

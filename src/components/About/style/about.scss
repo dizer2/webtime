@@ -1,5 +1,8 @@
 @import "../../main/style.scss";
 
+
+
+
 .about-us {
 	width: 100%;
 	margin-bottom: $section-margin;
@@ -52,6 +55,11 @@
 			height: auto;
 			@include display-center(flex-start, center);
 			flex-direction: column;
+
+			.animation-div {
+				@include display-center(flex-start, center);
+				flex-direction: column;
+			}
 
 			.about-us__iconBox {
 				width: 200px;
@@ -459,8 +467,19 @@
 				@include display-center(center, center);
 				flex-direction: column;
 			}
+
 			
 			&-cart {
+			
+				.animation-div {
+					div {
+						@include display-center(center, center);
+		
+						flex-direction: column;
+						text-align: center;
+					}
+	
+				}
 				.about-us__cart-description {
 					width: 60%;
 				}
@@ -483,6 +502,15 @@
 				@include display-center(center, center);
 				flex-direction: column;
 				padding: 0 30px;
+				.animation-div {
+					&:last-child {
+						@include display-center(center, center);
+		
+						flex-direction: column;
+						text-align: center;
+					}
+	
+				}
 				.about-us__button {
 					bottom: 0px;
 				}

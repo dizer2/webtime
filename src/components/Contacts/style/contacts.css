@@ -261,6 +261,8 @@ body {
       width: calc(100% - 30px);
       height: 200px; } }
 @media screen and (max-width: 1000px) {
+  .contacts .animation-div {
+    width: 100% !important; }
   .contacts__wrapper {
     padding: 0 80px 0 140px;
     flex-direction: column; }

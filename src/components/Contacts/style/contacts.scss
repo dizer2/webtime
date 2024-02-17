@@ -247,7 +247,11 @@
     $main-padding: 80px;
     $secondry-padding: 140px;
 
+
     .contacts {
+        .animation-div {
+            width: 100% !important;
+        }
         &__wrapper {
             padding: 0 $main-padding 0 $secondry-padding;
             flex-direction: column;

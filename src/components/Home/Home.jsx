@@ -19,6 +19,8 @@ import GradientBtn from '../UI/GradientBtn/GradientBtn.jsx';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Reveal } from '../utils/Reveal/Reveal.tsx';
+import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 
 
 const Home = () => {
@@ -118,6 +120,7 @@ const Home = () => {
       <div className="home__interactive-element home__interactive-element--1"></div>
 
 
+      
       <div className="home__interactive-element home__interactive-element--2">
         <svg width="376" height="355" viewBox="0 0 376 355" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M258.096 80.4934C299.696 101.356 365.564 82.8114 374.809 97.2991C384.053 112.366 335.519 160.465 330.897 205.667C326.852 251.448 365.564 294.332 359.786 314.614C338.477 366.381 290.708 294.656 241.5 335C192.292 375.344 175.5 345.5 157.477 323.381C136.098 319.904 144.272 316.932 103.827 319.25C63.3816 321.569 0.980587 335.477 0.980587 319.25C0.4028 302.445 62.226 255.505 64.5371 210.303C67.4261 164.522 11.3807 121.059 14.8475 109.469C18.3142 98.4581 80.7152 119.32 118.849 96.1401C156.405 72.3803 169.117 3.99842 184.139 0.521377C199.161 -2.95567 216.495 59.0516 258.096 80.4934Z" fill="url(#paint0_linear_752_351)"/>
@@ -131,7 +134,7 @@ const Home = () => {
         </svg>
       </div>
 
-      <div className="home__interactive-element home__interactive-element--3">
+      {/* <div className="home__interactive-element home__interactive-element--3">
         <svg width="402" height="380" viewBox="0 0 402 380" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M401.98 235.946C402.889 255.773 372.234 263.795 361.667 280.6C350.995 297.573 353.013 322.821 338.668 336.831C324.533 350.635 301.699 363.72 282.728 358.191C245.245 347.267 250.836 257.487 212.217 263.23C171.745 269.247 211.305 383.035 170.505 379.938C137.707 377.448 155.534 314.767 151.534 282.134C149.641 266.695 160.775 245.311 149.068 235.064C137.591 225.018 118.238 238.42 102.986 238.755C69.1664 239.498 8.26435 267.98 0.543571 235.061C-8.70356 195.634 103.02 216.721 108.489 176.596C110.961 158.461 68.1203 156.388 68.551 138.09C68.862 124.875 86.327 116.408 98.6722 111.666C112.311 106.427 133.818 122.472 142.947 111.068C165.96 82.3191 87.5962 19.5291 119.932 1.89465C145.898 -12.2654 155.079 57.3447 183.683 64.8695C194.743 67.7789 207.185 50.1616 217.131 55.8036C232.42 64.4761 214.92 101.297 231.524 107.067C261.121 117.354 277.033 51.4873 308.368 51.3126C324.991 51.22 344.241 64.6591 349.46 80.434C355.758 99.4689 331.965 118.19 330.611 138.192C329.741 151.045 331.398 165.31 337.61 176.596C351.54 201.905 400.657 207.09 401.98 235.946Z" fill="url(#paint0_linear_752_352)"/>
           <defs>
@@ -142,7 +145,7 @@ const Home = () => {
           </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div> */}
 
 
       <div className="header__menu-overlay"></div>
@@ -387,81 +390,87 @@ const Home = () => {
 
 
       <section className="home__intro">
-        <h1 className="intro__title">
-          {/* <strong>WebTime</strong> <strong>―</strong> your time with webtime, where innovation meets design. */}
-          <strong>WebTime</strong> <strong>―</strong> your time with webtime, where design and development converge.
-        </h1>
+
+        <Reveal>
+          <h1 className="intro__title">
+            {/* <strong>WebTime</strong> <strong>―</strong> your time with webtime, where innovation meets design. */}
+            <strong>WebTime</strong> <strong>―</strong> your time with webtime, where design and development converge.
+          </h1>
+		    </Reveal>
         
-        <Swiper
-          slidesPerView='auto'
-          spaceBetween={20}
-          pagination={{
-            clickable: true,
-          }}
-          className="intro__slider mySwiper"
-        >
-          <SwiperSlide className="intro__card"> 
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Website & design</h4>
+		    <RevealSecodary>
+          <Swiper
+            slidesPerView='auto'
+            spaceBetween={20}
+            pagination={{
+              clickable: true,
+            }}
+            className="intro__slider mySwiper"
+          >
+            <SwiperSlide className="intro__card"> 
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Website & design</h4>
 
-              <p className="intro__card-price">from: 700$</p>
-            </div>
+                <p className="intro__card-price">from: 700$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--1"></div>
+              <div className="intro__card-img intro__card-img--1"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
-          </SwiperSlide>
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </SwiperSlide>
 
-          <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Web design</h4>
+            <SwiperSlide className="intro__card">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Web design</h4>
 
-              <p className="intro__card-price">from: 400$</p>
-            </div>
+                <p className="intro__card-price">from: 400$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--2"></div>
+              <div className="intro__card-img intro__card-img--2"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
-          </SwiperSlide>
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </SwiperSlide>
 
-          <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Poster</h4>
+            <SwiperSlide className="intro__card">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Poster</h4>
 
-              <p className="intro__card-price">from: 250$</p>
-            </div>  
+                <p className="intro__card-price">from: 250$</p>
+              </div>  
 
-            <div className="intro__card-img intro__card-img--3"></div>
+              <div className="intro__card-img intro__card-img--3"></div>
 
-            <GradientBtn
-              text="View more"
-            />
-          </SwiperSlide>
+              <GradientBtn
+                text="View more"
+              />
+            </SwiperSlide>
 
-          <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Business cards</h4>
+            <SwiperSlide className="intro__card">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Business cards</h4>
 
-              <p className="intro__card-price">from: 100$</p>
-            </div>
+                <p className="intro__card-price">from: 100$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--4"></div>
+              <div className="intro__card-img intro__card-img--4"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
-          </SwiperSlide>
-        </Swiper>
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </SwiperSlide>
+          </Swiper>
+		    </RevealSecodary>
+
       </section>
 
 
