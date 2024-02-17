@@ -33,6 +33,8 @@ ul li {
 body {
   background-color: #000;
   overflow-x: hidden; }
+  body._body-hidden {
+    overflow: hidden; }
 
 .App {
   overflow-x: hidden; }
