@@ -7,6 +7,7 @@ import Contacts from './components/Contacts/Contacts';
 import Services from './components/Services/Services';
 import Portfolio from './components/Portfolio/Portfolio';
 import Footer from './components/Footer/Footer';
+import { ParallaxText } from './components/UI/ParallaxProps/ParallaxProps.tsx';
 
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
     <div className="App">
       <Home/>
       <About/>
+      <section className='text-animation'>
+      <ParallaxText baseVelocity={-3}>Website Development • Custom Web Design</ParallaxText>
+      <ParallaxText baseVelocity={2}>Posters • Billboards • Mobile Design • Business card • Leaflets </ParallaxText>
+      </section>
       <Services/>
       <Portfolio />
       <Contacts/>

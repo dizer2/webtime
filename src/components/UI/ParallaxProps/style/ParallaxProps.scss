@@ -1,0 +1,61 @@
+@import "./../../../main/style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+
+  html {
+	scroll-snap-type: y mandatory;
+  }
+  
+  .text-animation {
+	margin-bottom: $section-margin;
+  }
+  
+  .progress {
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: var(--accent);
+	bottom: 100px;
+  }
+  
+  .parallax {
+	overflow: hidden;
+	letter-spacing: -2px;
+	line-height: 0.8;
+	margin: 0;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+  }
+  
+  .parallax .scroller {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 64px;
+	display: flex;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+
+  }
+  
+  .parallax span {
+	display: block;
+	margin-right: 30px;
+	@include font($white, 86px, 700, normal, 0);
+	background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+	background-clip: text;
+	font-family: "Plaster", system-ui;
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-font-smoothing: antialiased;
+  }
+  
+
+
+@media screen and (max-width: 800px) {
+	.parallax span {
+		font-size: 48px;
+	}
+}
