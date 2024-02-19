@@ -48,6 +48,26 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     baseX.set(baseX.get() + moveBy);
   });
 
+  React.useEffect(() => {
+    const isMobile = () => {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    };
+
+    if (isMobile()) {
+      const updateX = () => {
+        const moveBy = directionFactor.current * baseVelocity * (1 / 60); // Assuming 60fps
+
+        baseX.set(baseX.get() + moveBy);
+      };
+
+      const interval = setInterval(updateX, 1000 / 60); // 60fps
+
+      return () => clearInterval(interval);
+    }
+  }, [baseVelocity, baseX]);
+
+  
+
   return (
     <div className="parallax">
       <motion.div className="scroller" style={{ x }}>
