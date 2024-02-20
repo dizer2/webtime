@@ -7,6 +7,7 @@ import Contacts from './components/Contacts/Contacts';
 import Services from './components/Services/Services';
 import Portfolio from './components/Portfolio/Portfolio';
 import Footer from './components/Footer/Footer';
+import ServicesPage from './components/ServicesPage/ServicesPage';
 
 
 function App() {
@@ -18,12 +19,13 @@ function App() {
 
   return (
     <div className="App">
-      <Home/>
+      {/* <Home/>
       <About/>
       <Services/>
       <Portfolio />
       <Contacts/>
-      <Footer />
+      <Footer /> */}
+      <ServicesPage/>
     </div>
   );
 }

@@ -5,6 +5,7 @@
     @include display-center(start, center);
     column-gap: 10px;
     text-transform: uppercase;
+    cursor: pointer;
     transition: .3s;
     .arrow-btn--white {
         color: white;

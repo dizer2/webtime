@@ -83,6 +83,7 @@ body {
   align-items: center;
   column-gap: 10px;
   text-transform: uppercase;
+  cursor: pointer;
   transition: .3s; }
   .arrow-btn .arrow-btn--white {
     color: white; }
