@@ -14,7 +14,7 @@ export const Reveal = ({ children, width = "fit-content"}: Props) => {
 
 	useEffect(() => {
 		if (isInView) {
-			console.log(true);
+			// console.log(true);
 			mainControls.start("visible");
 		}
 	}, [isInView])

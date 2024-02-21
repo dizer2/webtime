@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style/arrow-btn.css";
 
-const ArrowBtn = ({ text, isGradient = true, customGradient, isWhite = false, gradientID, color1, color2, color3, offset }) => {
+const ArrowBtn = ({ text, isGradient = true, customGradient, isWhite = false, gradientID = "paint0_linear_866_370", color1 = "#2BBFFE", color2 = "#8629FD", color3 = "#FC4AF5", offset = "0.521875" }) => {
   const styles = {
     background: isGradient && customGradient
       ? `linear-gradient(${customGradient.direction}, ${customGradient.colors.join(', ')})`

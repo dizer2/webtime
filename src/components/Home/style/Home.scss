@@ -31,7 +31,6 @@
             transform: translate(-50%, -50%);
             filter: blur(50px);
             animation: flyingAnimation-2 15s infinite;
-
         }
 
         &--3 {
@@ -248,7 +247,7 @@
 
 
     &__intro {
-        z-index: 1;
+        z-index: 10;
 
         .intro__title {
             padding: 0 $main-padding;
@@ -417,7 +416,7 @@
             .home__interactive-element {
                 z-index: 12;
                 opacity: 0;
-                animation: hideElement 1s forwards, showElement 1s 2s forwards;
+                animation: hideElement 2s forwards, showElement 1s 2s forwards;
                 transition: z-index .2s ease-in-out 1.2s;
             }
 
@@ -435,7 +434,6 @@
                     .header__logo {
                         z-index: 12;
                     }
-
 
                     .header__menu-wrapper {
                         padding: 0 $main-padding;
@@ -473,6 +471,8 @@
                                         display: flex;
                                         align-items: center;
                                         transition: .3s;
+                                        user-select: none;
+                                        
 
                                         &:hover {
                                             transform: translateX(-20px);
@@ -908,10 +908,12 @@
         &__interactive-element {
             &--2 svg{
                 width: 200px;
+                filter: blur(100px);
             }
     
             &--3 svg{
                 width: 200px;
+                filter: blur(100px);
             }
         }
 

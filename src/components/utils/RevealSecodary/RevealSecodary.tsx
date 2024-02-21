@@ -14,7 +14,7 @@ export const RevealSecodary = ({ children, width = "fit-content"}: Props) => {
 
 	useEffect(() => {
 		if (isInView) {
-			console.log(true);
+			// console.log(true);
 			mainControls.start("visible");
 
 		}

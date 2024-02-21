@@ -380,7 +380,7 @@ const Home = () => {
             <strong>WebTime</strong> <strong>―</strong> your time with webtime, where design and development converge.
           </h1>
 		    </Reveal>
-        
+
 		    <RevealSecodary>
           <Swiper
             slidesPerView='auto'
@@ -452,7 +452,7 @@ const Home = () => {
               />
             </SwiperSlide>
           </Swiper>
-		    </RevealSecodary>
+        </RevealSecodary>
 
       </section>
 
