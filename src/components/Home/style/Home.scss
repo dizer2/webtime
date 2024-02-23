@@ -55,7 +55,6 @@
         pointer-events: none;
         transition: opacity 0.2s;
         opacity: 1;
-        // mix-blend-mode: exclusion;
 
         &._hide {
             opacity: 0;
@@ -185,6 +184,7 @@
                                     .header__dropdown-item {
                                         @include display-center(none, center);
                                         column-gap: 15px;
+                                        color: $white;
 
                                         .icon-box {
                                             position: relative;
@@ -247,8 +247,6 @@
 
 
     &__intro {
-        z-index: 10;
-
         .intro__title {
             padding: 0 $main-padding;
             margin-bottom: 30px;
@@ -402,13 +400,13 @@
                 display: block;
                 position: fixed;
                 width: 100vw;
-                height: 100vh;
+                height: 100vb;
                 background-color: rgb(0, 0, 0);
                 z-index: 11;
                 opacity: 1;
 
                 @keyframes burgerOverlayAnimation {
-                    0% { top: -100vh; }
+                    0% { top: -100vb; }
                     100% { top: 0px; }
                 }
             }
@@ -437,12 +435,13 @@
 
                     .header__menu-wrapper {
                         padding: 0 $main-padding;
+                        margin: 0;
                         display: flex;
                         justify-content: space-between;
                         flex-direction: column;
 
                         width: 100vw;
-                        height: 100vh;
+                        height: 100vb;
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -570,7 +569,7 @@
 
                                 @keyframes hide {
                                     0% { display: block; bottom: 19.5px; }
-                                    100% { display: none; bottom: -100vh; }
+                                    100% { display: none; bottom: -100vb; }
                                 }
                             }
                         }
@@ -586,7 +585,7 @@
                 z-index: 12;
                 @keyframes burgerHideOverlayAnimation {
                     0% { top: 0; };
-                    100% { top: -100vh; };
+                    100% { top: -100vb; };
                 }
             }
 
@@ -608,11 +607,11 @@
 
 
         .header__menu-overlay {
-            top: -100vh;
+            top: -100vb;
             display: block;
             position: fixed;
             width: 100vw;
-            height: 100vh;
+            height: 100vb;
             background-color: rgb(0, 0, 0);
             opacity: 0;
             z-index: -1;

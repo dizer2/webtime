@@ -1,14 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import React from 'react';
 import "./components/main/style.css";
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Contacts from './components/Contacts/Contacts';
-import Services from './components/Services/Services';
-import Portfolio from './components/Portfolio/Portfolio';
-import Footer from './components/Footer/Footer';
+
 import ServicesPage from './components/ServicesPage/ServicesPage';
 import { ParallaxText } from './components/UI/ParallaxProps/ParallaxProps.tsx';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Index from './Pages/Index.jsx';
+import Pages from './Pages/Pages.jsx';
 
 
 function App() {
@@ -20,17 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home/>
-      <About/>
-      <section className='text-animation'>
-      <ParallaxText baseVelocity={-3}>Website Development • Custom Web Design</ParallaxText>
-      <ParallaxText baseVelocity={2}>Posters • Billboards • Mobile Design • Business card • Leaflets </ParallaxText>
-      </section>
-      <Services/>
-      <Portfolio />
-      <Contacts/>
-      <Footer />
-      {/* <ServicesPage/> */}
+      <Pages/>
     </div>
   );
 }

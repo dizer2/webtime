@@ -87,7 +87,11 @@ body {
     .services-page__menu-logo svg {
       cursor: pointer;
       width: 160px;
-      height: 34px; }
+      height: 34px;
+      transition: .3s; }
+      .services-page__menu-logo svg:hover {
+        transition: .3s;
+        opacity: 0.6; }
     .services-page__menu-nav .services-page__menu-list {
       display: flex;
       flex-direction: column;
@@ -126,15 +130,15 @@ body {
         width: 200px;
         height: 80px;
         z-index: -1; }
-      .services-page__main .services-page__title--0::before {
+      .services-page__main .services-page__title--web-development::before {
         background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
-      .services-page__main .services-page__title--1::before {
+      .services-page__main .services-page__title--design::before {
         background: linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%); }
-      .services-page__main .services-page__title--2::before {
+      .services-page__main .services-page__title--poster-billboards::before {
         background: linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%); }
-      .services-page__main .services-page__title--3::before {
+      .services-page__main .services-page__title--mobile-design::before {
         background: linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%); }
-      .services-page__main .services-page__title--4::before {
+      .services-page__main .services-page__title--business-card-leaflets::before {
         background: linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%); }
     .services-page__main .services-page__subtitle {
       margin-bottom: 50px;

@@ -14,6 +14,7 @@ import CardIcon from "./../main/img/card-icon.svg";
 import PhoneIcon from "./../Services/img/phone-icon.svg";
 import { Reveal } from '../utils/Reveal/Reveal.tsx'
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx'
+import { Link } from 'react-router-dom'
 
 
 const Services = () => {
@@ -48,13 +49,15 @@ const Services = () => {
                         <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                     </div>
 
-                    <ArrowBtn
-                        text = "View more"
-                        customGradient={{
-                            direction: '99deg',
-                            colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
-                        }}
-                    />        
+                    <Link to={"/web-development"}>
+                        <ArrowBtn
+                            text = "View more"
+                            customGradient={{
+                                direction: '99deg',
+                                colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
+                            }}
+                        />     
+                    </Link>
                 </div>
             </RevealSecodary>
 
@@ -73,14 +76,17 @@ const Services = () => {
                         <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                     </div>
 
-                    <ArrowBtn
-                        text = "View more"
-                        customGradient={{
-                            direction: '99deg',
-                            colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
-                        }}
-                        textColor={arrowBtnColor}
-                    />      
+                    <Link to={"/design"}>
+                        <ArrowBtn
+                            text = "View more"
+                            customGradient={{
+                                direction: '99deg',
+                                colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
+                            }}
+                            textColor={arrowBtnColor}
+                        />      
+                    </Link>
+
                 </div>
             </RevealSecodary>
 
@@ -100,14 +106,16 @@ const Services = () => {
                         <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                     </div>
 
-                    <ArrowBtn
-                        text = "View more"
-                        customGradient={{
-                            direction: '99deg',
-                            colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
-                        }}
-                        textColor={arrowBtnColor}
-                    />      
+                    <Link to={"/poster-billboards"}>
+                        <ArrowBtn
+                            text = "View more"
+                            customGradient={{
+                                direction: '99deg',
+                                colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
+                            }}
+                            textColor={arrowBtnColor}
+                        />    
+                    </Link>
                 </div>
             </RevealSecodary>
 
@@ -128,17 +136,18 @@ const Services = () => {
                         <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                     </div>
 
-                    <ArrowBtn
-                        text = "View more"
-                        customGradient={{
-                            direction: '99deg',
-                            colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
-                        }}
-                        textColor={arrowBtnColor}
-                    />      
+                    <Link to={"/mobile-design"}>
+                        <ArrowBtn
+                            text = "View more"
+                            customGradient={{
+                                direction: '99deg',
+                                colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
+                            }}
+                            textColor={arrowBtnColor}
+                        />     
+                    </Link>
                 </div>
             </RevealSecodary>
-
 
 
             <RevealSecodary>
@@ -156,14 +165,16 @@ const Services = () => {
                         <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
                     </div>
 
-                    <ArrowBtn
-                        text = "View more"
-                        customGradient={{
-                            direction: '99deg',
-                            colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
-                        }}
-                        textColor={arrowBtnColor}
-                    />      
+                    <Link to={"/business-card-leaflets"}>
+                        <ArrowBtn
+                            text = "View more"
+                            customGradient={{
+                                direction: '99deg',
+                                colors: ['#2BBFFE', '#8629FD', '#FC4AF5'],
+                            }}
+                            textColor={arrowBtnColor}
+                        />    
+                    </Link>
                 </div>
             </RevealSecodary>
 

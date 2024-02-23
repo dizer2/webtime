@@ -22,7 +22,14 @@
             cursor: pointer;
             width: 160px;
             height: 34px;
+            transition: .3s;
+
+            &:hover {
+                transition: .3s;
+                opacity: 0.6;
+            }
         }
+
 
         &-nav {
             .services-page__menu-list {
@@ -60,11 +67,11 @@
                 z-index: -1;
             }
 
-            &--0 { &::before { background: $main; } }
-            &--1 { &::before { background: $design-page; } }
-            &--2 { &::before { background: $poster-page; } }
-            &--3 { &::before { background: $mobile-page; } }
-            &--4 { &::before { background: $card-page; } }
+            &--web-development { &::before { background: $main; } }
+            &--design { &::before { background: $design-page; } }
+            &--poster-billboards { &::before { background: $poster-page; } }
+            &--mobile-design { &::before { background: $mobile-page; } }
+            &--business-card-leaflets { &::before { background: $card-page; } }
         }
 
         .services-page__subtitle {

@@ -3,13 +3,14 @@ import "./style/services-page.css"
 import Logo from '../main/img/Logo'
 import LocalisationField from '../UI/LocalisationField/LocalisationField'
 import ArrowBtn from "./../UI/ArrowBtn/ArrowBtn"
+import { Link } from 'react-router-dom'
 
 
-const ServicesPage = () => {
-    const currentPage = 3;
+const ServicesPage = ({ currentPage }) => {
+    // const currentPage = 3;
 
     const pagesData = {
-        0: {
+        "web-development": {
             backgroundImg: require('./img/0-background.jpg'),
             mainColor: "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)",
             gradientParts: {
@@ -20,13 +21,12 @@ const ServicesPage = () => {
                 offset: "0.521875",
             },
             menu: {
-                nav1: "Home",   
-                nav2: "Corporate sites",   
-                nav3: "Landing page",   
-                nav4: "Online stores",   
-                nav5: "Highly loaded services & portals",   
-                nav6: "WOW sites",   
-                nav7: "Portfolio",   
+                nav1: "Corporate sites",   
+                nav2: "Landing page",   
+                nav3: "Online stores",   
+                nav4: "Highly loaded services & portals",   
+                nav5: "WOW sites",   
+                nav6: "Portfolio",   
             },
             title: "Web Development",
             subtitle: "It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience, expertise and skills to create the best sites in your niche.",
@@ -119,7 +119,7 @@ const ServicesPage = () => {
                 },
             },
         },
-        1: {
+        "design": {
             backgroundImg: require('./img/1-background.jpg'),
             mainColor: "linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%)",
             gradientParts: {
@@ -130,11 +130,10 @@ const ServicesPage = () => {
                 offset: "0.486",
             },
             menu: {
-                nav1: "Home",   
-                nav2: "Design",   
-                nav3: "Redesign",   
-                nav4: "Logo",   
-                nav5: "Mobile design",   
+                nav1: "Design",   
+                nav2: "Redesign",   
+                nav3: "Logo",   
+                nav4: "Mobile design",   
             },
             title: "Design / Redesign\nLogo",
             subtitle: "Make a distinctive mark in the business world with our design services. Whether you need a completely new logo, a stylish redesign, or an inspiring brand, our team of experienced designers is ready to bring your ideas to life. Elevate your brand to new heights with our creative solutions designed to highlight your uniqueness and capture the attention of your target audience.",
@@ -185,7 +184,7 @@ const ServicesPage = () => {
                 },
             },
         },
-        2: {
+        "poster-billboards": {
             backgroundImg: require('./img/2-background.jpg'),
             mainColor: "linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%)",
             gradientParts: {
@@ -196,11 +195,10 @@ const ServicesPage = () => {
                 offset: "0.516",
             },
             menu: {
-                nav1: "Home",   
-                nav2: "Billboards",   
-                nav3: "Posters",   
-                nav4: "Business card ",   
-                nav5: "Leaflets",   
+                nav1: "Billboards",   
+                nav2: "Posters",   
+                nav3: "Business card ",   
+                nav4: "Leaflets",   
             },
             title: "Posters / Billboards",
             subtitle: "Elevate your brand presence with our Poster and Billboard Design services. Our expert designers craft visually striking posters that captivate on a smaller scale, and bold billboards that dominate the urban skyline. From impactful imagery to compelling messaging, we ensure your brand stands out in both intimate and grand spaces. Make a powerful statement, spark interest, and leave a lasting impression with our Poster and Billboard Design expertise. Where creativity meets visibility, we turn your ideas into visual spectacles that demand attention.",
@@ -237,7 +235,7 @@ const ServicesPage = () => {
                 },
             },
         },
-        3: {
+        "mobile-design": {
             backgroundImg: require('./img/3-background.jpg'),
             mainColor: "linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%)",
             gradientParts: {
@@ -248,11 +246,10 @@ const ServicesPage = () => {
                 offset: "0.892222",
             },
             menu: {
-                nav1: "Home",   
-                nav2: "Mobile design",   
-                nav3: "Web design",   
-                nav4: "Web redesign",   
-                nav5: "Logo",   
+                nav1: "Mobile design",   
+                nav2: "Web design",   
+                nav3: "Web redesign",   
+                nav4: "Logo",   
             },
             title: "Mobile Design",
             subtitle: "Unique design for your mobile app is the key to a successful launch! Our mobile design specialists will create intuitive and stylish interfaces that not only attract attention but also ensure ease of use. Give your brand a standout look and make a lasting impression.",
@@ -275,7 +272,7 @@ const ServicesPage = () => {
                 },
             },
         },
-        4: {
+        "business-card-leaflets": {
             backgroundImg: require('./img/4-background.jpg'),
             mainColor: "linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%)",
             gradientParts: {
@@ -286,11 +283,10 @@ const ServicesPage = () => {
                 offset: "0.396",
             },
             menu: {
-                nav1: "Home",   
-                nav2: "Business card",   
-                nav3: "Leaflets",   
-                nav4: "Posters",   
-                nav5: "Billboards",   
+                nav1: "Business card",   
+                nav2: "Leaflets",   
+                nav3: "Posters",   
+                nav4: "Billboards",   
             },
             title: "Business card / Leaflets",
             subtitle: "Forge a lasting connection with our Business Card and Leaflet Design services. Our expert designers create business cards that embody professionalism and leaflets that tell your brand story succinctly. From impactful first impressions to comprehensive brand communication, our designs ensure you stand out. Elevate your networking and promotional strategies with our expertise, turning ordinary pieces into powerful brand assets. Make every exchange memorable – where business cards and leaflets become ambassadors of your brand identity.",
@@ -333,18 +329,26 @@ const ServicesPage = () => {
   return (
     <section className='services-page' style={{backgroundImage: `url(${pagesData[currentPage].backgroundImg})`}}>
         <div className="services-page__menu">
-            <div className="services-page__menu-logo">
-                <Logo
-                    gradientID = {pagesData[currentPage].gradientParts.gradientID}
-                    color1 = {pagesData[currentPage].gradientParts.color1}
-                    color2 = {pagesData[currentPage].gradientParts.color2}
-                    color3 = {pagesData[currentPage].gradientParts.color3}
-                    offset = {pagesData[currentPage].gradientParts.offset}
-                />
-            </div>
+            <Link to={'/'}>
+                <div className="services-page__menu-logo">
+                    <Logo
+                        gradientID = {pagesData[currentPage].gradientParts.gradientID}
+                        color1 = {pagesData[currentPage].gradientParts.color1}
+                        color2 = {pagesData[currentPage].gradientParts.color2}
+                        color3 = {pagesData[currentPage].gradientParts.color3}
+                        offset = {pagesData[currentPage].gradientParts.offset}
+                    />
+                </div>
+            </Link>
 
             <nav className="services-page__menu-nav">
                 <ul className="services-page__menu-list">
+                    <Link to={"/"}>
+                        <li className="services-page__menu-item">
+                            Home
+                        </li>
+                    </Link>
+
                     {Object.values(pagesData[currentPage].menu).map((menuItem, index) => (
                         <li key={index} className="services-page__menu-item">
                             {menuItem}

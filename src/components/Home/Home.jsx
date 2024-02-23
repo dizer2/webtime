@@ -16,12 +16,13 @@ import SocialMedia from '../UI/SocialMedia/SocialMedia.jsx';
 import LocalisationField from '../UI/LocalisationField/LocalisationField.jsx';
 import GradientBtn from '../UI/GradientBtn/GradientBtn.jsx';
 
+import { Outlet, Link } from "react-router-dom";
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Reveal } from '../utils/Reveal/Reveal.tsx';
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
-
 
 const Home = () => {
   const { i18n } = useTranslation();
@@ -113,20 +114,59 @@ const Home = () => {
   }, []);
 
 
+  // Check if the Dev Tool open
+  const [devToolsOpen, setDevToolsOpen] = useState(false);
+
+  useEffect(() => {
+    const detectDevTools = () => {
+      // Пороговое значение для определения, что инструменты разработчика могут быть открыты
+      const threshold = 160;
+      const devToolsDetected =
+        window.outerWidth - window.innerWidth > threshold ||
+        window.outerHeight - window.innerHeight > threshold;
+
+      setDevToolsOpen(devToolsDetected);
+    };
+
+    // Проверяем при монтировании компонента
+    detectDevTools();
+
+    // Добавляем обработчик события resize для отслеживания изменений размера окна
+    window.addEventListener('resize', detectDevTools);
+
+    // Удаляем обработчик события при размонтировании компонента
+    return () => {
+      window.removeEventListener('resize', detectDevTools);
+    };
+  }, []);
+
 
 
   return (
     <section id='home' className="home">
-      <div
-        style={{ top: mousePosition.y, left: mousePosition.x }}
-        className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
-      ></div>
+        {
+          devToolsOpen ?
+          ""
+          :
+          <div
+            style={{ top: mousePosition.y, left: mousePosition.x }}
+            className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
+          ></div>
+        }
 
-      <motion.div
-        className={`cursor ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
-        variants={variants}
-        animate={cursorVariant}
-      />
+
+        {
+          devToolsOpen ?
+          ""
+          :
+          <motion.div
+            className={`cursor ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
+            variants={variants}
+            animate={cursorVariant}
+          />
+        }
+
+
 
       <div className="home__interactive-element home__interactive-element--1"></div>
       
@@ -178,79 +218,92 @@ const Home = () => {
                 <div className="header__dropdown-content__overlay">
                   <ul className='header__dropdown-content'>
                       <div className="header__dropdown--left">
-                        <li className="header__dropdown-item">
-                            <IconBox
-                              boxSize={40}
-                              imgPath={LaptopIcon}
+                        <Link to={"/web-development"}>
+                          <li className="header__dropdown-item">
+                              <IconBox
+                                boxSize={40}
+                                imgPath={LaptopIcon}
 
-                              iconWidth={26} 
-                              iconHeight={26}
+                                iconWidth={26} 
+                                iconHeight={26}
 
-                              circleSize = {12}
-                              top = {20}
-                            />
-                            Web Development
-                        </li>
+                                circleSize = {12}
+                                top = {20}
+                              />
+                              Web Development
+                          </li>                        
+                        </Link>
 
-                        <li className="header__dropdown-item">
-                            <IconBox
-                              boxSize={40}
-                              imgPath={PalleteIcon}
 
-                              iconWidth={26} 
-                              iconHeight={26}
+                        <Link to={"/design"}>
+                          <li className="header__dropdown-item">
+                              <IconBox
+                                boxSize={40}
+                                imgPath={PalleteIcon}
 
-                              circleSize = {12}
-                              top = {20}
-                            />
-                            Design / Redesign / Logo
-                        </li>
+                                iconWidth={26} 
+                                iconHeight={26}
 
-                        <li className="header__dropdown-item">
-                            <IconBox
-                              boxSize={40}
-                              imgPath={PosterIcon}
+                                circleSize = {12}
+                                top = {20}
+                              />
+                              Design / Redesign / Logo
+                          </li>
+                        </Link>
 
-                              iconWidth={26} 
-                              iconHeight={26}
+                        <Link to={"/poster-billboards"}>
+                          <li className="header__dropdown-item">
+                              <IconBox
+                                boxSize={40}
+                                imgPath={PosterIcon}
 
-                              circleSize = {12}
-                              top = {20}
-                            />
-                            Posters / Billboards 
-                        </li>
+                                iconWidth={26} 
+                                iconHeight={26}
+
+                                circleSize = {12}
+                                top = {20}
+                              />
+                              Posters / Billboards 
+                          </li>
+                        </Link>
+
                       </div>
 
 
                       <div className="header__dropdown--right">
 
-                        <li className="header__dropdown-item">
-                            <IconBox
-                              boxSize={40}
-                              imgPath={PhoneIcon}
+                        <Link to={"/mobile-design"}>
+                          <li className="header__dropdown-item">
+                              <IconBox
+                                boxSize={40}
+                                imgPath={PhoneIcon}
 
-                              iconWidth={26} 
-                              iconHeight={26}
+                                iconWidth={26} 
+                                iconHeight={26}
 
-                              circleSize = {12}
-                              top = {20}
-                            />
-                            Mobile design
-                        </li>
+                                circleSize = {12}
+                                top = {20}
+                              />
+                              Mobile design
+                          </li>
+                        </Link>
 
-                        <li className="header__dropdown-item">
-                            <IconBox
-                              boxSize={40}
-                              imgPath={CardIcon}
+                        <Link to={"/business-card-leaflets"}>
+                          <li className="header__dropdown-item">
+                              <IconBox
+                                boxSize={40}
+                                imgPath={CardIcon}
 
-                              iconWidth={26} 
-                              iconHeight={26}
+                                iconWidth={26} 
+                                iconHeight={26}
 
-                              circleSize = {12}
-                              top = {20}
-                            />
-                            Business card / Leaflets
-                        </li>
+                                circleSize = {12}
+                                top = {20}
+                              />
+                              Business card / Leaflets
+                          </li>
+                        </Link>
+
                       </div>
                   </ul>
                 </div>
