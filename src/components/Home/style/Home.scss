@@ -322,10 +322,7 @@
         @include display-center(space-between, center);
         z-index: 1;
 
-        .social__media-wrapper { // Move to _base.scss
-            display: flex;
-            column-gap: 20px;
-        }
+
     }
 }
 

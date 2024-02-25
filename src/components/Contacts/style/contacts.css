@@ -67,10 +67,15 @@ body {
   .rolling__block .rolling__block--after {
     position: absolute; }
 
+.social__media-wrapper {
+  display: flex;
+  column-gap: 20px; }
+
 .App {
   overflow-x: hidden; }
 
 .contacts {
+  padding-top: 140px;
   margin-bottom: 140px; }
   .contacts .title__container-title {
     width: 600px; }

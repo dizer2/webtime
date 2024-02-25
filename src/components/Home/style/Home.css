@@ -67,6 +67,10 @@ body {
   .rolling__block .rolling__block--after {
     position: absolute; }
 
+.social__media-wrapper {
+  display: flex;
+  column-gap: 20px; }
+
 .App {
   overflow-x: hidden; }
 
@@ -326,9 +330,6 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1; }
-    .home__footer .social__media-wrapper {
-      display: flex;
-      column-gap: 20px; }
 
 @keyframes flyingAnimation-1 {
   0%, 100% {

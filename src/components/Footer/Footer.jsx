@@ -4,13 +4,31 @@ import Logo from '../main/img/Logo';
 import SocialMedia from '../UI/SocialMedia/SocialMedia';
 
 const Footer = () => {
+	const currentYear = new Date().getFullYear();
+
+
+	  // Scroll To Section 
+	  const handleScrollToSection = (sectionId) => {
+		document.body.classList.remove("body-hidden", false); 
+	
+		if (!sectionId || sectionId === 'top') {
+		  window.scrollTo({ top: 0, behavior: 'smooth' });
+		  return;
+		}
+	  
+		const sectionRef = document.getElementById(sectionId);
+		if (sectionRef) {
+		  sectionRef.scrollIntoView({ behavior: 'smooth' });
+		}
+	  };
+	  
   return (
 	<div className='footer'>
 
 		<div className="footer__top">
 				<div className="footer__top-left">
 					<div className="footer__top-logo">
-						<Logo />
+						<Logo scrollToHome={() => handleScrollToSection('home')} />
 					</div>
 
 					<p className='footer__top-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada vulputate magna, ac scelerisque ex pretium ac. </p>
@@ -55,6 +73,18 @@ const Footer = () => {
 
 				<div className="footer__top-nav">
 					<p className="footer__top-subTitle">Navigation</p>
+
+
+					<nav className='footer__nav'>
+						<ul className='footer__list'>
+							<li onClick={() => handleScrollToSection('home')} className='footer__item'>Home</li>
+							<li onClick={() => handleScrollToSection('about')} className='footer__item'>About</li>
+							<li onClick={() => handleScrollToSection('services')} className='footer__item'>Services</li>
+							<li onClick={() => handleScrollToSection('portfolio')} className='footer__item'>Portfolio</li>
+							<li onClick={() => handleScrollToSection('contacts')} className='footer__item'>Contacts</li>
+						</ul>
+					</nav>
+					
 				</div>
 
 				<div className="footer__top-form">
@@ -74,7 +104,7 @@ const Footer = () => {
 
 		<div className="footer__bottom">
 			<div className="footer__bottom-line"></div>
-			<p>  © <span id='year'>2023</span> WebTime. All rights reserved.</p>
+			<p>  © <span id='year'>{currentYear}</span> WebTime. All rights reserved.</p>
 		</div>
 	</div>
   )

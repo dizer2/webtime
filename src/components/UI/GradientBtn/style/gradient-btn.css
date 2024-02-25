@@ -67,6 +67,10 @@ body {
   .rolling__block .rolling__block--after {
     position: absolute; }
 
+.social__media-wrapper {
+  display: flex;
+  column-gap: 20px; }
+
 .App {
   overflow-x: hidden; }
 

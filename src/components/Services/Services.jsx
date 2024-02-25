@@ -21,7 +21,7 @@ const Services = () => {
     const arrowBtnColor = "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
 
   return (
-    <section className='services'>
+    <section id='services' className='services'>
 		<Reveal>
             <SubTitle text={"our services"}/>
 		</Reveal>

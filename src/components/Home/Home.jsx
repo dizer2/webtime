@@ -141,6 +141,25 @@ const Home = () => {
   }, []);
 
 
+  // Scroll To Section 
+  const handleScrollToSection = (sectionId) => {
+    setIsMenuOpen(false);
+    
+    document.body.classList.remove("body-hidden", false); 
+
+    if (!sectionId || sectionId === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+  
+    const sectionRef = document.getElementById(sectionId);
+    if (sectionRef) {
+      sectionRef.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+
+
 
   return (
     <section id='home' className="home">
@@ -208,8 +227,8 @@ const Home = () => {
 
           <nav className="header__nav">
             <ul className="header__list">
-              <li className="header__item">About</li>
-              <li className="header__item header__dropdown">
+              <li onClick={() => handleScrollToSection('about')} className="header__item">About</li>
+              <li onClick={() => handleScrollToSection('services')} className="header__item header__dropdown">
                 Services 
                 <svg className='header__dropdown-arrow' xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                   <path d="M5.70696 10.4899C5.31643 10.8804 5.31643 11.5136 5.70696 11.9041L10.5992 16.7915C11.3804 17.5719 12.6462 17.5716 13.427 16.7909L18.3173 11.9005C18.7079 11.51 18.7079 10.8768 18.3173 10.4863C17.9268 10.0957 17.2936 10.0957 16.9031 10.4863L12.7175 14.6719C12.327 15.0625 11.6938 15.0624 11.3033 14.6719L7.12117 10.4899C6.73065 10.0993 6.09748 10.0993 5.70696 10.4899Z" fill="white"/>
@@ -308,8 +327,8 @@ const Home = () => {
                   </ul>
                 </div>
               </li>
-              <li className="header__item">Portfolio</li>
-              <li className="header__item">Contacts</li>
+              <li onClick={() => handleScrollToSection('portfolio')} className="header__item">Portfolio</li>
+              <li onClick={() => handleScrollToSection('contacts')} className="header__item">Contacts</li>
             </ul>
           </nav>
 

@@ -37,7 +37,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className='portfolio'>
+    <div id='portfolio' className='portfolio'>
 		  <Reveal>
         <SubTitle text={"your project can be here"}/>
 		  </Reveal>

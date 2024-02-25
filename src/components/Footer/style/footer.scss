@@ -2,7 +2,7 @@
 
 .footer {
 	width: 100%;
-	padding: $main-padding;
+	padding: $section-margin $main-padding 35px;
 	background-color: $secondary-dark;
 	padding-bottom: 35px;
 	overflow: hidden;
@@ -10,16 +10,19 @@
 	z-index: 3;
 
 	&__top {
+		margin-bottom: $section-margin;
 		width: 100%;
 		height: auto;
-		@include display-center(space-between, center);
+		@include display-center(space-between, start);
 		position: relative;
 
 		&-logo {
 			position: relative;
 			@include display-center(flex-start, center);
+			
 			svg {
 				z-index: 1;
+				cursor: pointer;
 			}
 			&::after {
 				content: "";
@@ -42,18 +45,35 @@
 
 		.social__media-wrapper {
 			margin-top: 35px;
-            column-gap: 20px;
 		}
 
 		&-nav {
 			width: auto;
 			height: 200px;
+
+			
+			.footer__nav {
+				.footer__list {
+					display: flex;
+					flex-direction: column;
+					row-gap: 10px;
+					
+					.footer__item {
+						cursor: pointer;
+                        @include font(rgba(255, 255, 255, 0.6), 16px, 500, normal, 0);
+					}
+				}
+			}
 		}
 
 		
 		&-form {
 			width: auto;
-			height: 200px;
+			// height: 200px;
+
+			.footer__top-input {
+				cursor: pointer;
+			}
 		}
 
 		&-subTitle {
@@ -93,7 +113,6 @@
 	&__bottom {
 		width: 100%;
 		height: 50px;
-		margin-top: $section-margin;
 		@include secondary-subTitle();
 		color: rgba($color: #fff, $alpha: 0.6);
 
@@ -116,31 +135,37 @@
     $secondry-padding: 185px;
 
 	.footer {
-		padding: $main-padding;
+		padding: $section-margin $main-padding 35px;
 		background-color: $secondary-dark;
 		&__top {
 			flex-wrap: wrap;
-			gap: 40px;
+			gap: 80px;
 		}
 	}
 	
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
 	$main-padding: 80px;
     $secondry-padding: 140px;
 
 	.footer {
-		padding: $main-padding;
+		padding: $section-margin $main-padding 35px;
 		background-color: $secondary-dark;
 		&__top {
+			justify-content: space-around;
 			flex-wrap: wrap;
-			gap: 40px;
+			gap: 80px 100px;
+
+			&-form {
+				text-align: center;
+			}
 		}
 	}
-	
 }
+
+
 
 
 @media screen and (max-width: 800px) {
@@ -148,11 +173,12 @@
     $secondry-padding: 70px;
 
 	.footer {
-		padding: $main-padding;
+		padding: $section-margin $main-padding 35px;
 		background-color: $secondary-dark;
 		&__top {
 			flex-wrap: wrap;
-			gap: 30px;
+			gap: 80px 100px;
+
 
 			&-description {
 				width: 300px;
@@ -165,12 +191,12 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
 	$main-padding: 30px;
     $secondry-padding: 30px;
 
 	.footer {
-		padding: $main-padding;
+		padding: $section-margin $main-padding 35px;
 		background-color: $secondary-dark;
 		&__top {
 			width: 100%;
@@ -180,8 +206,15 @@
 			}
 			&-nav {
 				width: 100%;
-				@include display-center(center, flex-start);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 
+				.footer__nav {
+					.footer__list {
+						align-items: center;
+					}
+				}
 			}
 
 			&-form {
@@ -194,7 +227,7 @@
 
 			&-input {
 				width: 330px;
-				height: 60px;
+				height: 50px;
 				background-color: $ligth-dark;
 				display: flex;
 				
@@ -211,8 +244,8 @@
 				}
 	
 				div {
-					width: 55px;
-					height: 55px;
+					width: 50px;
+					height: 50px;
 					background: $main;
 					@include display-center(center, center);
 	
@@ -223,6 +256,30 @@
 				width: 100%;
 				@include display-center(center, center);
 				flex-direction: column;
+			}
+		}
+	}
+ }
+
+
+ @media screen and (max-width: 500px) {
+	.footer  {
+		&__top {
+			&-input {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				height: 50px;
+				
+				input {
+					width: 100%;
+					height: 100%;
+				}
+	
+				div {
+					min-width: 50px;
+					height: 50px;
+				}
 			}
 		}
 	}

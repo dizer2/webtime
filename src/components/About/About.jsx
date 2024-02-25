@@ -43,7 +43,7 @@ const About = () => {
 	}
 	  
   return (
-	<div className='about-us'>
+	<div id='about' className='about-us'>
 
 		<Reveal>
 			<SubTitle text={"now about business"}/>

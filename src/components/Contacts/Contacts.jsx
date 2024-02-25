@@ -8,7 +8,7 @@ import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx'
 
 const Contacts = () => {
   return (
-    <section className='contacts'>
+    <section id='contacts' className='contacts'>
       <Reveal>
         <SubTitle text={"LET'S GO TO ACTION"}/>
 		  </Reveal>

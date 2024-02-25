@@ -67,51 +67,57 @@ body {
   .rolling__block .rolling__block--after {
     position: absolute; }
 
+.social__media-wrapper {
+  display: flex;
+  column-gap: 20px; }
+
 .App {
   overflow-x: hidden; }
 
-.services .title__container-title {
-  width: 360px; }
-.services__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 50px 30px;
-  padding: 0 120px 0 230px; }
-  .services__wrapper .services__card {
-    padding: 20px 30px;
-    width: 500px;
-    height: 340px;
-    background-color: #121212;
+.services {
+  padding-top: 140px; }
+  .services .title__container-title {
+    width: 360px; }
+  .services__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    border-width: 1px;
-    border-style: solid;
-    border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-    border-image-repeat: round;
-    border-image-slice: 1; }
-    .services__wrapper .services__card--contact {
-      background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
-    .services__wrapper .services__card-main .services__card-title {
-      margin: 20px 0 15px;
-      font-family: 'Montserrat', sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: #fff; }
-    .services__wrapper .services__card-main .services__card-description {
-      font-family: 'Montserrat', sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: #fff; }
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+    padding: 0 120px 0 230px; }
+    .services__wrapper .services__card {
+      padding: 20px 30px;
+      width: 500px;
+      height: 340px;
+      background-color: #121212;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-direction: column;
+      border-width: 1px;
+      border-style: solid;
+      border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+      border-image-repeat: round;
+      border-image-slice: 1; }
+      .services__wrapper .services__card--contact {
+        background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+      .services__wrapper .services__card-main .services__card-title {
+        margin: 20px 0 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff; }
+      .services__wrapper .services__card-main .services__card-description {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff; }
 
 @media screen and (max-width: 1400px) {
   .services__wrapper .services__card {
