@@ -11,13 +11,14 @@
 	left: 0%;
 	top: 0%;
 	z-index: 20;
-	background-image: url(../img/bg.svg);
 	background-size: cover;
 	@include display-center(center, center);
+	background-color: $black;
 
 	svg {
 		width: 300px;
 		height: 300px;
+		z-index: 2;
 	}
 	
 	.item {
@@ -28,5 +29,101 @@
 		stroke-width: 1;
 		stroke-linejoin: round;
 		stroke-linecap: round;
+	}
+
+	.loader__bg1 {
+		width: 400px;
+		height: 400px;
+		background: $main;
+		position: absolute;
+		filter: blur(200px);
+		left: -10%;
+		top: -10%;
+		z-index: 1;
+	}
+
+	.loader__bg2 {
+		width: 400px;
+		height: 400px;
+		background: $main;
+		position: absolute;
+		filter: blur(200px);
+		right: -10%;
+		bottom: -10%;
+		z-index: 1;
+	}
+}
+
+@media screen and(max-width: 1200px) {
+	.loader {
+		svg {
+			width: 250px;
+			height: 250px;
+		}
+		
+		.item {
+			width: 250px;
+			height: 250px;
+			overflow: visible;
+			stroke: #fff;
+			stroke-width: 0.5;
+			stroke-linejoin: round;
+			stroke-linecap: round;
+		}
+	
+		.loader__bg1 {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			filter: blur(150px);
+			left: -5%;
+			top: -5%;
+		}
+	
+		.loader__bg2 {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			filter: blur(150px);
+			right: -5%;
+			bottom: -5%;
+		}
+	}
+}
+
+@media screen and(max-width: 500px) {
+	.loader {
+		svg {
+			width: 200px;
+			height: 200px;
+		}
+		
+		.item {
+			width: 200px;
+			height: 200px;
+			overflow: visible;
+			stroke: #fff;
+			stroke-width: 0.5;
+			stroke-linejoin: round;
+			stroke-linecap: round;
+		}
+	
+		.loader__bg1 {
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			filter: blur(120px);
+			left: -3%;
+			top: -3%;
+		}
+	
+		.loader__bg2 {
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			filter: blur(120px);
+			right: -3%;
+			bottom: -3%;
+		}
 	}
 }

@@ -5,9 +5,12 @@ import { motion } from 'framer-motion'; // Import motion from framer-motion
 const Loader = () => {
 	const [hideLoader, setHideLoader] = useState(false);
 
+
+
 	useEffect(() => {
 		const timer = setTimeout(() => {
 		setHideLoader(true);
+		
 		}, 5000);
 
 		return () => clearTimeout(timer);
@@ -38,6 +41,36 @@ const Loader = () => {
 				delay: 3.5,
 	}}
     >
+
+		<motion.div
+			className="loader__bg1"
+			animate={{
+				rotate: [0, 270], 
+				x: [0, -1000], 
+			}}
+			transition={{
+				type: "spring",
+				duration: 2,
+				delay: 3,
+			}}
+			>
+		</motion.div>
+
+		<motion.div
+			className="loader__bg2"
+			animate={{
+				rotate: [0, 270], 
+				x: [0, 1000], 
+			}}
+			transition={{
+				type: "spring",
+				duration: 2,
+				delay: 3,
+			}}
+			>
+			{/* Вміст, який ви бажаєте анімувати */}
+		</motion.div>
+
 		 <motion.svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 179 39"
