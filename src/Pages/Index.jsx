@@ -7,12 +7,14 @@ import Portfolio from '../components/Portfolio/Portfolio'
 import Contacts from '../components/Contacts/Contacts'
 import Footer from '../components/Footer/Footer'
 import { ParallaxText } from '../components/UI/ParallaxProps/ParallaxProps.tsx'
+import Loader from '../components/UI/Loader/Loader.jsx'
 
 
 
 const Index = () => {
   return (
     <div>
+        <Loader />
         <Home/>
         <About/>
         <section className='text-animation'>
