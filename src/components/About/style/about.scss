@@ -214,6 +214,13 @@
     $secondry-padding: 185px;
 
 	.about-us {
+		.title__container {
+			&-title {
+				width: 400px;
+			}
+		}
+	
+
 		&__box {
 			height: auto;
 			flex-wrap: wrap;
@@ -269,6 +276,12 @@
     $secondry-padding: 140px;
 
 	.about-us {
+		.title__container {
+			&-title {
+				width: 360px;
+			}
+		}
+
 		&__box {
 			height: auto;
 			flex-wrap: wrap;
@@ -350,6 +363,12 @@
     $secondry-padding: 70px;
 
 	.about-us {
+		.title__container {
+			&-title {
+				width: 330px;
+			}
+		}
+
 		&__box {
 			gap: 30px;
 			padding-left:  $secondry-padding;

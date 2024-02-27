@@ -237,7 +237,7 @@ const Home = () => {
                 <div className="header__dropdown-content__overlay">
                   <ul className='header__dropdown-content'>
                       <div className="header__dropdown--left">
-                        <Link to={"/web-development"}>
+                        <Link to="/web-development">
                           <li className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}

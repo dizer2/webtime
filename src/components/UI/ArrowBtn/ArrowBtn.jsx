@@ -12,7 +12,7 @@ const ArrowBtn = ({ text, isGradient = true, customGradient, isWhite = false, gr
   };
 
   return (
-    <div className='arrow-btn'>
+    <div className={`arrow-btn arrow-btn--${isWhite ? "white" : "gradient"}`}>
       <span style={styles}>{text}</span>
 
       <svg width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">

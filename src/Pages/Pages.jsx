@@ -13,7 +13,7 @@ const Pages = () => {
 
 
                 {/* Routes To Services Page */}
-                <Route path="/web-development" element={ <ServicesPage currentPage="web-development" /> } />
+                <Route path="/web-development" element={<ServicesPage currentPage="web-development" />} />
                 <Route path="/design" element={ <ServicesPage currentPage="design" />  } />
                 <Route path="/poster-billboards" element={ <ServicesPage currentPage="poster-billboards" />  } />
                 <Route path="/mobile-design" element={ <ServicesPage currentPage="mobile-design" />  } />

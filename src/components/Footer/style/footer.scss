@@ -265,6 +265,14 @@
  @media screen and (max-width: 500px) {
 	.footer  {
 		&__top {
+			&-logo {
+				&::after {
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+
 			&-input {
 				display: flex;
 				justify-content: space-between;
