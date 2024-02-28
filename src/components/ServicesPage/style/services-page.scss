@@ -6,12 +6,20 @@ body._poster-billboards { &::-webkit-scrollbar-thumb {background: $poster-page !
 body._mobile-design { &::-webkit-scrollbar-thumb {background: $mobile-page !important;} }
 body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-page !important;} }
 
+
+.burger__menu {
+    width: 30px;
+    height: 30px;
+    background: #c33636;
+}
+
 .services-page {
     display: flex;
+
+    .header__menu-wrapper {
+        display: none;
+    }
     
-
-
-
     &__menu {
         position: fixed;
         @include display-center(space-between, start);
@@ -38,6 +46,9 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             }
         }
 
+        .header__wrapper {
+            display: none;
+        }
 
         &-nav {
             .services-page__menu-list {
@@ -49,6 +60,10 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
                     cursor: pointer;
                 }
             }
+        }
+
+        .header__menu {
+            display: none;
         }
     }
 
@@ -258,12 +273,176 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
 
 
 @media screen and (max-width: 800px) {
+    $main-padding: 30px;
+
     .services-page {
         display: block;
 
+        &._menu-open {
+            .header__menu-overlay {
+                display: block;
+                position: fixed;
+                width: 100vw;
+                height: 100vmax;
+                background-color: rgb(0, 0, 0);
+                z-index: 11;
+                opacity: 1;
+                animation: burgerOverlayAnimation 1s .8s forwards;
+                @keyframes burgerOverlayAnimation {
+                    0% { top: -100vb; }
+                    100% { top: 0px; }
+                }
+            }
+
+
+            .header__menu-wrapper {
+                padding: 0 $main-padding;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+
+                width: 100vw;
+                height: 100vb;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -35px);
+                z-index: 12;
+                animation: showElement 2s 1s forwards;
+
+
+                .header__menu-header--phantom {
+                    height: 36px;
+                    margin-top: 25px;
+                }
+
+                .header__menu-row {
+                    @include display-center(center, center);
+
+                    .header__menu-nav {
+                        .header__menu-list {
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 20px;
+
+                            .header__menu-item {
+                                display: flex;
+                                align-items: center;
+                                transition: .3s;
+                                user-select: none;
+                                
+
+                                &:hover {
+                                    transform: translateX(-20px);
+                                    transition: .3s;
+
+                                    .header__menu-item__rhombus {
+                                        transform: rotate(-45deg) scale(1);
+                                        transition: .3s;
+                                    }
+
+                                    p {
+                                        &::before {
+                                            left: -90px;
+                                            width: 94.3px;   
+                                            transition: .3s;
+                                        }
+                                    }
+                                }
+
+                                &__order {
+                                    width: 17px;
+                                    @include font($white, 12px, 500, normal, 0);
+                                    margin-right: 5px;
+                                }
+
+                                &__rhombus {
+                                    margin-right: 90px;
+                                    width: 6px;
+                                    height: 6px;
+                                    background-color: $white;
+                                    transform: rotate(-45deg) scale(0);
+                                    transition: .3s;
+                                }
+
+                                p {
+                                    max-width: 200px;
+                                    position: relative;
+                                    cursor: pointer;
+                                    @include font($white, 20px, 600, normal, 0);
+
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0px;
+                                        width: 0px;   
+                                        min-height: 2px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        background-color: $white;
+                                        transition: .3s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .home__footer {
+                    padding: 0;
+                }
+            }
+
+            .services-page {
+                position: relative;
+            }
+
+            .home__footer {
+                .localisation-field {
+                    display: flex;
+                }
+            }
+        }
+
+        &._menu-close {
+            .header__menu-overlay {
+                animation: burgerHideOverlayAnimation 1.5s forwards;
+                opacity: 1;
+                z-index: 12;
+                @keyframes burgerHideOverlayAnimation {
+                    0% { top: 0; };
+                    100% { top: -100vb; };
+                }
+            }
+        }
+
+
+        .header__menu-overlay {
+            top: -100vb;
+            display: block;
+            position: fixed;
+            width: 100vw;
+            height: 100vb;
+            background-color: rgb(0, 0, 0);
+            opacity: 0;
+            z-index: -1;
+
+            &._quickly-close-overlay {
+                display: none;
+            }
+        }
+
+        .header__menu-wrapper {
+            opacity: 0;
+            transition: .5s;
+        }
+
+
         &__menu {
             padding: 25px 30px 0 30px;
-            position: static;
+            position: relative;
             width: 100%;
             height: auto;
             background-color: transparent;
@@ -274,9 +453,21 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             .services-page__menu-nav {
                 display: none;
             }
+            
+            &-logo--link {
+                z-index: 12;
+            }
 
             &-phantom {
                 display: none;
+            }
+
+            .localisation-field {
+                display: none;
+            }
+
+            .header__menu {
+                display: flex;
             }
         }
 
@@ -312,7 +503,54 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
 
 
 @media screen and (max-width: 600px) {
+    $main-padding: 30px;
+
+
     .services-page {
+        &._menu-open {
+            .header__menu-wrapper {
+                padding: 0 $main-padding;
+
+                .header__menu-row {
+                    flex-direction: column;
+                    justify-content: center;
+                    column-gap: 0;
+
+                    .header__menu-img {
+                        display: none
+                    } 
+
+                    .header__menu-nav {
+                        .header__menu-list {
+                            .header__menu-item {
+                                &:hover {
+                                    transform: translateX(-15px);
+
+                                    p {
+                                        &::before {
+                                            left: -70px;
+                                            width: 74.3px;   
+                                        }
+                                    }
+                                }
+
+                                &__rhombus {
+                                    margin-right: 70px;
+                                }
+
+                                p {
+                                    &::before {
+                                        min-height: 1px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
         &__main {
             .services-page__services-container {
                 .services-page__service {

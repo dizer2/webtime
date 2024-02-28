@@ -23,6 +23,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Reveal } from '../utils/Reveal/Reveal.tsx';
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
+import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
 const Home = () => {
   const { i18n } = useTranslation();
@@ -81,25 +82,6 @@ const Home = () => {
   };
 
 
-  // Burger Menu
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const menuHandleClick = () => {
-      setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
-  
-      const bodyClassList = document.body.classList;
-      const homeElement = document.getElementById('home');
-  
-      if (!isMenuOpen) {
-          bodyClassList.add("_body-hidden");
-          homeElement.classList.add('_menu-open');
-          homeElement.classList.remove('_menu-close');
-      } else {
-          bodyClassList.remove("_body-hidden");
-          homeElement.classList.remove('_menu-open');
-          homeElement.classList.add('_menu-close');
-      }
-  }
 
   
   // Check device 
@@ -143,7 +125,10 @@ const Home = () => {
 
   // Scroll To Section 
   const handleScrollToSection = (sectionId) => {
-    setIsMenuOpen(false);
+    menuHandleClick();
+    if(isMenuOpen) {
+      document.querySelector(".header__menu-overlay").classList.add('_quickly-close-overlay');
+    } 
     
     document.body.classList.remove("body-hidden", false); 
 
@@ -157,6 +142,29 @@ const Home = () => {
       sectionRef.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+
+  // Burger Menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuHandleClick = () => {
+      setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
+  
+      const bodyClassList = document.body.classList;
+      const parentElement = document.getElementById('home');
+      document.querySelector(".header__menu-overlay").classList.remove('_quickly-close-overlay');
+      
+  
+      if (!isMenuOpen) {
+          bodyClassList.add("_body-hidden");
+          parentElement.classList.add('_menu-open');
+          parentElement.classList.remove('_menu-close');
+      } else {
+          bodyClassList.remove("_body-hidden");
+          parentElement.classList.remove('_menu-open');
+          parentElement.classList.add('_menu-close');
+      }
+  }
   
 
 
@@ -347,23 +355,23 @@ const Home = () => {
 
               <div className="header__menu-nav">
                 <div className="header__menu-list">
-                  <div className="header__menu-item">
+                  <div onClick={() => handleScrollToSection('about')} className="header__menu-item">
                     <div className='header__menu-item__order'>01</div>
                     <div className='header__menu-item__rhombus'></div>
                     <p>About</p>
                   </div>
-                  <div className="header__menu-item">
+                  <div onClick={() => handleScrollToSection('services')} className="header__menu-item">
                     <div className='header__menu-item__order'>02</div>
                     <div className='header__menu-item__rhombus'></div>
 
                     <p>Services</p>
                   </div>
-                  <div className="header__menu-item">
+                  <div onClick={() => handleScrollToSection('portfolio')} className="header__menu-item">
                     <div className='header__menu-item__order'>03</div>
                     <div className='header__menu-item__rhombus'></div>
                     <p>Portfolio</p>
                   </div>
-                  <div className="header__menu-item">
+                  <div onClick={() => handleScrollToSection('contacts')} className="header__menu-item">
                     <div className='header__menu-item__order'>04</div>
                     <div className='header__menu-item__rhombus'></div>
                     <p>Contacts</p>
@@ -415,31 +423,8 @@ const Home = () => {
             </footer>
           </div>
 
-          <div className="header__menu" onClick={menuHandleClick}>
-            <div className="rolling__block rolling__block--menu">
-              <p className="menu__text rolling__block--before">MENU</p>
-              <p className="menu__text rolling__block--after">MENU</p>
-            </div>
 
-            <div className="menu__icon">
-              <div className="menu__icon-line">
-                <div className="menu__icon-line__inner menu__icon--bar"></div>
-                <div className="menu__icon-line__inner menu__icon--bar"></div>
-              </div>
-
-
-              <div className="menu__icon-line">
-                <div className="menu__icon-line__inner menu__icon--bar"></div>
-                <div className="menu__icon-line__inner menu__icon--bar"></div>
-              </div>
-
-
-              <div className="menu__icon-line">
-                <div className="menu__icon-line__inner menu__icon--bar"></div>
-                <div className="menu__icon-line__inner menu__icon--bar"></div>
-              </div>
-            </div>
-          </div>
+          <BurgerMenu burgerOnClick={menuHandleClick}/>
         </div>
       </header>
 
@@ -568,7 +553,9 @@ const Home = () => {
           />
         </div>
 
-        <LocalisationField/>
+        <LocalisationField
+          gradient="linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
+        />
       </footer>
     </section>
   )
