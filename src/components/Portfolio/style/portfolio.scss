@@ -42,7 +42,8 @@
       .swiper-button-next:hover {
         background: $main; 
 		opacity: 0.5;
-      }
+		transition: background-color 0.3s ease; 
+	}
     }
 
     .portfolio__card {
@@ -173,6 +174,7 @@
 			cursor: pointer; 
 			transition: background-color 0.3s ease; 
 			display: flex;
+			transition: 0.5s;
 
 			svg {
 				width: 20px ;
