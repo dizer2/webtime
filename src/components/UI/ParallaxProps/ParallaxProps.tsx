@@ -1,14 +1,6 @@
 import "./style/ParallaxProps.css";
 import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame
-} from "framer-motion";
+import { motion, useMotionValue, useTransform, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import React from "react";
 
@@ -19,16 +11,6 @@ interface ParallaxProps {
 
 function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400
-  });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false
-  });
-
 
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
@@ -36,37 +18,20 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-
-    if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
-    } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
-    }
-
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+    moveBy += directionFactor.current * moveBy;
 
     baseX.set(baseX.get() + moveBy);
   });
 
   React.useEffect(() => {
-    const isMobile = () => {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const updateX = () => {
+      const moveBy = directionFactor.current * baseVelocity * (1 / 60); // Assuming 60fps
+      baseX.set(baseX.get() + moveBy);
     };
 
-    if (isMobile()) {
-      const updateX = () => {
-        const moveBy = directionFactor.current * baseVelocity * (1 / 60); // Assuming 60fps
-
-        baseX.set(baseX.get() + moveBy);
-      };
-
-      const interval = setInterval(updateX, 1000 / 60); // 60fps
-
-      return () => clearInterval(interval);
-    }
+    const interval = setInterval(updateX, 1000 / 60); // 60fps
+    return () => clearInterval(interval);
   }, [baseVelocity, baseX]);
-
-  
 
   return (
     <div className="parallax">
