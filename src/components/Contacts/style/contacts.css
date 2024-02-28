@@ -76,6 +76,15 @@ body {
   margin-bottom: 140px; }
   .contacts .title__container-title {
     width: 600px; }
+  .contacts .error-message {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #FF006B;
+    margin-top: 5px; }
   .contacts__wrapper {
     padding: 0 120px 0 230px;
     display: flex;
@@ -145,6 +154,8 @@ body {
         line-height: normal;
         letter-spacing: 0;
         color: #fff; }
+      .contacts__wrapper .contacts__form-box .error-message {
+        color: #FF006B; }
       .contacts__wrapper .contacts__form-box__heading {
         margin-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
@@ -182,6 +193,11 @@ body {
         -webkit-text-fill-color: #fff; }
         .contacts__wrapper .contacts__form-box__input::placeholder {
           color: rgba(255, 255, 255, 0.6); }
+        .contacts__wrapper .contacts__form-box__input::-webkit-outer-spin-button, .contacts__wrapper .contacts__form-box__input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0; }
+        .contacts__wrapper .contacts__form-box__input[type=number] {
+          -moz-appearance: textfield; }
       .contacts__wrapper .contacts__form-box__textarea {
         padding: 0px;
         padding-right: 5px;
