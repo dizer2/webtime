@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import "./style/about.css"
 import SubTitle from "../UI/SubTitle/SubTitle.jsx"
 import Title from '../UI/Title/Title.jsx'
@@ -10,37 +10,43 @@ import img4 from "./img/img4.svg";
 import { Reveal } from '../utils/Reveal/Reveal.tsx';
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 
-
 const About = () => {
-	const [showText, setShowText] = useState(true);
-	const [textHeight, setTextHeight] = useState(100);
-	const [defulTextHeight, setDefulTextHeight] = useState(100);
+    const [showText, setShowText] = useState(true);
+    const [textHeight, setTextHeight] = useState(0);
+    const [defulTextHeight, setDefulTextHeight] = useState(0);
 
-	const aboutDescriptionRef = useRef(null);
-	const aboutDescriptionRef2 = useRef(null);
+    const aboutDescriptionRef = useRef(null);
+    const aboutDescriptionRef2 = useRef(null);
 
-	const aboutDescription = showText ? "about-us__box3-description" : "about-us__box3-description about-us__box3-description--active";
-	const aboutLine = showText ? "about-us__button-line" : "about-us__button-line about-us__button-line--active";
+    const aboutDescription = showText ? "about-us__box3-description" : "about-us__box3-description about-us__box3-description--active";
+    const aboutLine = showText ? "about-us__button-line" : "about-us__button-line about-us__button-line--active";
 
+    useEffect(() => {
+        function handleResize() {
+            if (aboutDescriptionRef2.current) {
+                setDefulTextHeight(aboutDescriptionRef2.current.scrollHeight);
+                setTextHeight(aboutDescriptionRef2.current.scrollHeight);
+            }
+        }
+        // Встановлюємо початкову висоту тексту при завантаженні компонента
+        handleResize();
+        // Додаємо обробник події resize
+        window.addEventListener('resize', handleResize);
+        // Прибираємо обробник події при видаленні компонента
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
-	useEffect(() => {
-		if (aboutDescriptionRef2.current) {
-			setDefulTextHeight(aboutDescriptionRef2.current.scrollHeight);
-			setTextHeight(aboutDescriptionRef2.current.scrollHeight);
-		}
-	}, [])
+    const showTextHandle = () => {
+        setShowText(!showText);
+        if (showText === false) {
+            setTextHeight(defulTextHeight);
+        } else {
+            if (aboutDescriptionRef.current) {
+                setTextHeight(aboutDescriptionRef.current.scrollHeight);
+            }
+        }
+    }
 
-	const showTextHandle = () => {
-		setShowText(!showText);
-
-		if (showText == false) {
-			setTextHeight(defulTextHeight);
-		} else {
-			if (aboutDescriptionRef.current) {
-				setTextHeight(aboutDescriptionRef.current.scrollHeight);
-			}
-		}
-	}
 	  
   return (
 	<div id='about' className='about-us'>
