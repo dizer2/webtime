@@ -28,15 +28,17 @@ const About = () => {
                 setTextHeight(aboutDescriptionRef2.current.scrollHeight);
             }
         }
-        // Встановлюємо початкову висоту тексту при завантаженні компонента
         handleResize();
-        // Додаємо обробник події resize
         window.addEventListener('resize', handleResize);
-        // Прибираємо обробник події при видаленні компонента
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const showTextHandle = () => {
+		const button = document.querySelector('.about-us__button');
+
+		if (button) {
+			button.classList.toggle('about-us__button--open');
+		}	
         setShowText(!showText);
         if (showText === false) {
             setTextHeight(defulTextHeight);
@@ -63,8 +65,6 @@ const About = () => {
 			/>
 		</RevealSecodary>
 	
-		
-
 		<div className="about-us__box">
 
 			<Reveal>
