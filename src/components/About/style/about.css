@@ -199,7 +199,12 @@ body {
           background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
           filter: blur(50px);
           position: absolute;
-          z-index: -1; }
+          z-index: -1;
+          transform: scale(1);
+          transition: 0.5s; }
+        .about-us__box3-top .about-us__button--open::after {
+          transform: scale(0.7) !important;
+          transition: 0.5s !important; }
         .about-us__box3-top .about-us__button-line {
           position: absolute;
           width: 18px;
@@ -364,6 +369,7 @@ body {
   .about-us__box-column {
     display: flex; }
   .about-us__box-subTitle {
+    width: 25px;
     transform: rotate(0deg); }
   .about-us__box-line {
     margin-top: 50px; }

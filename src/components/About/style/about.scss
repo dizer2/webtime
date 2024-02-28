@@ -98,6 +98,8 @@
 				position: relative;
 				bottom: 15px;
 
+			
+
 				&::after {
 					content: "";
 					width: 120px;
@@ -106,6 +108,15 @@
 					filter: blur(50px);
 					position: absolute;
 					z-index: -1;
+					transform: scale(1);
+					transition: 0.5s;
+				}
+
+				&--open {
+					&::after { 
+						transform: scale(0.7) !important;
+						transition: 0.5s !important;
+					}
 				}
 
 				&-line {
@@ -129,6 +140,7 @@
 			
 			}
 		}
+
 
 		&-description {
 			width: 100%;
@@ -297,6 +309,7 @@
 			}
 
 			&-subTitle {
+				width: 25px;
 				transform: rotate(0deg);
 			}
 

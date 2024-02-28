@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'; // Import motion from framer-motion
 const Loader = () => {
 	const [hideLoader, setHideLoader] = useState(false);
 
-
-
 	useEffect(() => {
 		const timer = setTimeout(() => {
 		setHideLoader(true);
