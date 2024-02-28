@@ -80,9 +80,23 @@
 }
 
 
+@media screen and (max-width: 1200px) {
+	.portfolio {
+		.title__container {
+			&-title {
+				width: 400px;
+			}
+		}
+	}
+}
 
 @media screen and (max-width: 1000px) {
 	.portfolio {
+		.title__container {
+			&-title {
+				width: 360px;
+			}
+		}
 		&__box {
 			  .portfolio__card {
 				width: 500px !important;
@@ -100,6 +114,12 @@
 
 @media screen and (max-width: 800px) {
 	.portfolio {
+		.title__container {
+			&-title {
+				width: 300px;
+			}
+		}
+
 		&__box {
 			  .portfolio__card {
 				width: 350px !important;

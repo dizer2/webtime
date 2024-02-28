@@ -35,18 +35,15 @@ body {
   overflow-x: hidden; }
   body._body-hidden {
     overflow: hidden; }
+  body ::-webkit-scrollbar {
+    width: 10px; }
+  body ::-webkit-scrollbar-track {
+    background: #000; }
+  body ::-webkit-scrollbar-thumb {
+    background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 
 .App {
   overflow-x: hidden; }
-
-::-webkit-scrollbar {
-  width: 10px; }
-
-::-webkit-scrollbar-track {
-  background: #000; }
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 
 ::selection {
   background: rgba(0, 109, 192, 0.5); }
@@ -197,6 +194,7 @@ body {
 
 @media screen and (max-width: 1400px) {
   .contacts__wrapper {
+    column-gap: 35px;
     width: 100%; }
     .contacts__wrapper .contacts__info {
       width: 230px;
@@ -268,6 +266,8 @@ body {
       width: calc(100% - 30px);
       height: 200px; } }
 @media screen and (max-width: 1000px) {
+  .contacts .title__container-title {
+    width: 500px; }
   .contacts .animation-div {
     width: 100% !important; }
   .contacts__wrapper {
@@ -284,6 +284,8 @@ body {
       .contacts__wrapper .contacts__info-email, .contacts__wrapper .contacts__info-phone {
         font-size: 20px; } }
 @media screen and (max-width: 800px) {
+  .contacts .title__container-title {
+    width: 400px; }
   .contacts__wrapper {
     padding: 0 30px 0 70px; }
     .contacts__wrapper .contacts__info {

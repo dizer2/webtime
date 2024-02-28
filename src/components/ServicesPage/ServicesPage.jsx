@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./style/services-page.css"
 import Logo from '../main/img/Logo'
 import LocalisationField from '../UI/LocalisationField/LocalisationField'
 import ArrowBtn from "./../UI/ArrowBtn/ArrowBtn"
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 const ServicesPage = ({ currentPage }) => {
-    // const currentPage = 3;
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
 
     const pagesData = {
         "web-development": {
@@ -21,12 +25,30 @@ const ServicesPage = ({ currentPage }) => {
                 offset: "0.521875",
             },
             menu: {
-                nav1: "Corporate sites",   
-                nav2: "Landing page",   
-                nav3: "Online stores",   
-                nav4: "Highly loaded services & portals",   
-                nav5: "WOW sites",   
-                nav6: "Portfolio",   
+                nav1: {
+                    nav: "Corporate sites",   
+                    goTo: "corporate-sites",
+                },
+                nav2: {
+                    nav: "Landing page", 
+                    goTo: "landing-page",
+                },
+                nav3: {
+                    nav: "Online stores",   
+                    goTo: "online-stores",
+                },
+                nav4: {
+                    nav: "Highly loaded services & portals",   
+                    goTo: "services-portals",
+                },
+                nav5: {
+                    nav: "WOW sites",   
+                    goTo: "wow-sites",
+                },
+                nav6: {
+                    nav: "Portfolio",   
+                    goTo: "personal-portfolio",
+                }
             },
             title: "Web Development",
             subtitle: "It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience, expertise and skills to create the best sites in your niche.",
@@ -34,31 +56,38 @@ const ServicesPage = ({ currentPage }) => {
                 example1: {
                     title: "Corporate Sites",
                     imgPath: require('./img/corporate-sites.jpg'),
+                    goTo: "corporate-sites",
                 },
                 example2: {
                     title: "Landing Page",
                     imgPath: require('./img/landing-page.jpg'),
+                    goTo: "landing-page",
                 },
                 example3: {
                     title: "Online Stores",
                     imgPath: require('./img/online-stores.jpg'),
+                    goTo: "online-stores",
                 },
                 example4: {
                     title: "Services / Portals",
                     imgPath: require('./img/services-portals.jpg'),
+                    goTo: "services-portals",
                 },
                 example5: {
                     title: "WOW Sites",
                     imgPath: require('./img/wow-sites.jpg'),
+                    goTo: "wow-sites",
                 },
                 example6: {
                     title: "Personal / Portfolio",
                     imgPath: require('./img/personal-portfolio.jpg'),
+                    goTo: "personal-portfolio",
                 },
             },
             services: {
                 block1: {
                     title: "Corporate sites",   
+                    blockID: "corporate-sites",
 
                     tag1: "Corporate Web",
                     tag2: "Branding",
@@ -69,6 +98,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block2: {
                     title: "Landing page", 
+                    blockID: "landing-page",
 
                     tag1: "Impactful Design",
                     tag2: "Web Landing",
@@ -79,6 +109,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block3: {
                     title: "Online stores",   
+                    blockID: "online-stores",
 
                     tag1: "Ecommerce Hub",
                     tag2: "Secure Shopping",
@@ -89,6 +120,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block4: {
                     title: "Services / Portals",   
+                    blockID: "services-portals",
 
                     tag1: "Scalable Web",
                     tag2: "Heavy Traffic",
@@ -99,6 +131,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block5: {
                     title: "WOW sites",   
+                    blockID: "wow-sites",
 
                     tag1: "Innovative Design",
                     tag2: "3D Effects",
@@ -109,6 +142,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block6: {
                     title: "Personal / Portfolio",   
+                    blockID: "personal-portfolio",
 
                     tag1: "Showcase Work",
                     tag2: "Project Gallery",
@@ -130,10 +164,23 @@ const ServicesPage = ({ currentPage }) => {
                 offset: "0.486",
             },
             menu: {
-                nav1: "Design",   
-                nav2: "Redesign",   
-                nav3: "Logo",   
-                nav4: "Mobile design",   
+                nav1: {
+                    nav: "Design",
+                    goTo: "design",
+                },
+                nav2: {
+                    nav: "Redesign",
+                    goTo: "redesign",
+                },
+                nav3: {
+                    nav: "Logo",
+                    goTo: "logo",
+                },
+                nav4: {
+                    nav: "Mobile design",
+                    goTo: "mobile-design",
+                    otherPage: true,
+                },
             },
             title: "Design / Redesign\nLogo",
             subtitle: "Make a distinctive mark in the business world with our design services. Whether you need a completely new logo, a stylish redesign, or an inspiring brand, our team of experienced designers is ready to bring your ideas to life. Elevate your brand to new heights with our creative solutions designed to highlight your uniqueness and capture the attention of your target audience.",
@@ -141,19 +188,23 @@ const ServicesPage = ({ currentPage }) => {
                 example1: {
                     title: "Web Design",
                     imgPath: require('./img/web-design.jpg'),
+                    goTo: "design",
                 },
                 example2: {
                     title: "Web Redesign",
                     imgPath: require('./img/web-redesign.jpg'),
+                    goTo: "redesign",
                 },
                 example3: {
                     title: "Logo",
                     imgPath: require('./img/logo.jpg'),
+                    goTo: "logo",
                 },
             },
             services: {
                 block1: {
                     title: "Web Design",   
+                    blockID: "design",
 
                     tag1: "Any scale",
                     tag2: "Multy page",
@@ -164,6 +215,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block2: {
                     title: "Web Redesign", 
+                    blockID: "redesign",
 
                     tag1: "Modern",
                     tag2: "New technologies",
@@ -173,7 +225,8 @@ const ServicesPage = ({ currentPage }) => {
                     description: "Experience a digital makeover with our Redesign services. Whether refreshing your current website or undergoing a complete transformation, our skilled team enhances visual appeal, functionality, and user engagement. Elevate your brand's online presence, captivate your audience, and stay ahead in the ever-evolving digital landscape. Unleash the power of redesign to redefine success in the virtual realm – where your brand's evolution meets excellence.",
                 },
                 block3: {
-                    title: "Logo",   
+                    title: "Logo", 
+                    blockID: "logo",
 
                     tag1: "Branding",
                     tag2: "Graphic design",
@@ -195,10 +248,24 @@ const ServicesPage = ({ currentPage }) => {
                 offset: "0.516",
             },
             menu: {
-                nav1: "Billboards",   
-                nav2: "Posters",   
-                nav3: "Business card ",   
-                nav4: "Leaflets",   
+                nav1: {
+                    nav: "Posters",
+                    goTo: "posters",
+                },
+                nav2: {
+                    nav: "Billboards",
+                    goTo: "billboards",
+                },
+                nav3: {
+                    nav: "Business card",
+                    goTo: "business-card-leaflets",
+                    otherPage: true,
+                },
+                nav4: {
+                    nav: "Leaflets",
+                    goTo: "business-card-leaflets",
+                    otherPage: true,
+                },
             },
             title: "Posters / Billboards",
             subtitle: "Elevate your brand presence with our Poster and Billboard Design services. Our expert designers craft visually striking posters that captivate on a smaller scale, and bold billboards that dominate the urban skyline. From impactful imagery to compelling messaging, we ensure your brand stands out in both intimate and grand spaces. Make a powerful statement, spark interest, and leave a lasting impression with our Poster and Billboard Design expertise. Where creativity meets visibility, we turn your ideas into visual spectacles that demand attention.",
@@ -206,15 +273,18 @@ const ServicesPage = ({ currentPage }) => {
                 example1: {
                     title: "Posters",
                     imgPath: require('./img/poster.jpg'),
+                    goTo: "posters",
                 },
                 example2: {
                     title: "Billboards",
                     imgPath: require('./img/billboard.jpg'),
+                    goTo: "billboards",
                 },
             },
             services: {
                 block1: {
                     title: "Posters",   
+                    blockID: "posters",
 
                     tag1: "Poster Design",
                     tag2: "Multicolored",
@@ -225,6 +295,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block2: {
                     title: "Billboards", 
+                    blockID: "billboards",
                     
                     tag1: "Billboards Design",
                     tag2: "Attracting people",
@@ -246,10 +317,25 @@ const ServicesPage = ({ currentPage }) => {
                 offset: "0.892222",
             },
             menu: {
-                nav1: "Mobile design",   
-                nav2: "Web design",   
-                nav3: "Web redesign",   
-                nav4: "Logo",   
+                nav1: {
+                    nav: "Mobile design",
+                    goTo: "mobile-design",
+                },
+                nav2: {
+                    nav: "Web design",
+                    goTo: "design",
+                    otherPage: true,
+                },
+                nav3: {
+                    nav: "Web redesign",
+                    goTo: "design",
+                    otherPage: true,
+                },
+                nav4: {
+                    nav: "Logo",
+                    goTo: "design",
+                    otherPage: true,
+                },
             },
             title: "Mobile Design",
             subtitle: "Unique design for your mobile app is the key to a successful launch! Our mobile design specialists will create intuitive and stylish interfaces that not only attract attention but also ensure ease of use. Give your brand a standout look and make a lasting impression.",
@@ -257,11 +343,13 @@ const ServicesPage = ({ currentPage }) => {
                 example1: {
                     title: "Mobile Design",
                     imgPath: require('./img/mobile-design.jpg'),
+                    goTo: "mobile-design",
                 },
             },
             services: {
                 block1: {
                     title: "Mobile Design",   
+                    blockID: "mobile-design",
                     
                     tag1: "App design",
                     tag2: "Mobility",
@@ -283,10 +371,24 @@ const ServicesPage = ({ currentPage }) => {
                 offset: "0.396",
             },
             menu: {
-                nav1: "Business card",   
-                nav2: "Leaflets",   
-                nav3: "Posters",   
-                nav4: "Billboards",   
+                nav1: {
+                    nav: "Business card",
+                    goTo: "business-card",
+                },
+                nav2: {
+                    nav: "Leaflets",
+                    goTo: "leaflets",
+                },
+                nav3: {
+                    nav: "Posters",
+                    goTo: "poster-billboards",
+                    otherPage: true,
+                },
+                nav4: {
+                    nav: "Logo",
+                    goTo: "poster-billboards",
+                    otherPage: true,
+                },
             },
             title: "Business card / Leaflets",
             subtitle: "Forge a lasting connection with our Business Card and Leaflet Design services. Our expert designers create business cards that embody professionalism and leaflets that tell your brand story succinctly. From impactful first impressions to comprehensive brand communication, our designs ensure you stand out. Elevate your networking and promotional strategies with our expertise, turning ordinary pieces into powerful brand assets. Make every exchange memorable – where business cards and leaflets become ambassadors of your brand identity.",
@@ -294,15 +396,18 @@ const ServicesPage = ({ currentPage }) => {
                 example1: {
                     title: "Business Card",
                     imgPath: require('./img/business-card.jpg'),
+                    goTo: "business-card",
                 },
                 example2: {
                     title: "Leaflets",
                     imgPath: require('./img/leaflets.jpg'),
+                    goTo: "leaflets",
                 },
             },
             services: {
                 block1: {
                     title: "Business card ",   
+                    blockID: "business-card",
                     
                     tag1: "Compact Design",
                     tag2: "Stylish Card",
@@ -313,6 +418,7 @@ const ServicesPage = ({ currentPage }) => {
                 },
                 block2: {
                     title: "Leaflets", 
+                    blockID: "leaflets",
                     
                     tag1: "Paper Advertising",
                     tag2: "Flyer",
@@ -325,7 +431,42 @@ const ServicesPage = ({ currentPage }) => {
         },
     }
 
+
+    // Scroll To Section 
+    const handleScrollToSection = (sectionId) => {
+        // setIsMenuOpen(false);
+        
+        document.body.classList.remove("body-hidden", false); 
+
+        if (!sectionId || sectionId === 'top') {
+            window.scrollTo({ top: 100, behavior: 'smooth'});
+            return;
+        }
     
+        const sectionRef = document.getElementById(sectionId);
+        if (sectionRef) {
+            sectionRef.scrollIntoView({  block: "center", behavior: 'smooth',  });
+        }
+    };
+  
+    const isOnOtherPage = (checkedLink, goTo) => {
+        return checkedLink ? goTo : "";
+    }
+
+
+    const clearBodyClasses = () => {
+        document.body.classList.forEach(className => {
+            if (className.startsWith('_')) {
+                document.body.classList.remove(className);
+            }
+        });
+    }
+
+    clearBodyClasses();
+
+    document.body.classList.add(`_${currentPage}`);
+    
+
   return (
     <section className='services-page' style={{backgroundImage: `url(${pagesData[currentPage].backgroundImg})`}}>
         <div className="services-page__menu">
@@ -343,16 +484,16 @@ const ServicesPage = ({ currentPage }) => {
 
             <nav className="services-page__menu-nav">
                 <ul className="services-page__menu-list">
-                    <Link to={"/"}>
-                        <li className="services-page__menu-item">
+                    <Link to={"/"} >
+                        <li onClick={clearBodyClasses} className="services-page__menu-item">
                             Home
                         </li>
                     </Link>
 
                     {Object.values(pagesData[currentPage].menu).map((menuItem, index) => (
-                        <li key={index} className="services-page__menu-item">
-                            {menuItem}
-                        </li>
+                        <Link key={index} to={menuItem.otherPage ? `/${menuItem.goTo}` : ""} onClick={() => handleScrollToSection(menuItem.goTo)} className="services-page__menu-item">
+                            {menuItem.nav}
+                        </Link>
                     ))}
                 </ul>   
             </nav>
@@ -369,7 +510,7 @@ const ServicesPage = ({ currentPage }) => {
 
             <div className="services-page__services-container">
                 {Object.values(pagesData[currentPage].examples).map((example, exampleIndex) => (
-                    <div key={exampleIndex} className="services-page__service">
+                    <div key={exampleIndex} onClick={() => handleScrollToSection(example.goTo)} className="services-page__service">
                         <img src={example.imgPath} className='services-page__service-img' alt={`The best ${example.title} from the webtime company`} />
                         <p className="services-page__service-title">{example.title}</p>
                     </div>
@@ -377,7 +518,7 @@ const ServicesPage = ({ currentPage }) => {
             </div>
 
             {Object.values(pagesData[currentPage].services).map((block, blockIndex) => (
-                <div key={blockIndex} className="services-page__description-box">
+                <div key={blockIndex} id={block.blockID} className="services-page__description-box">
                     <div className="services-page__description-title">
                         <span style={{background: pagesData[currentPage].mainColor}}></span>
                         <p>{block.title}</p>

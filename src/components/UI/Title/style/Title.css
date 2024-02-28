@@ -35,18 +35,15 @@ body {
   overflow-x: hidden; }
   body._body-hidden {
     overflow: hidden; }
+  body ::-webkit-scrollbar {
+    width: 10px; }
+  body ::-webkit-scrollbar-track {
+    background: #000; }
+  body ::-webkit-scrollbar-thumb {
+    background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 
 .App {
   overflow-x: hidden; }
-
-::-webkit-scrollbar {
-  width: 10px; }
-
-::-webkit-scrollbar-track {
-  background: #000; }
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 
 ::selection {
   background: rgba(0, 109, 192, 0.5); }
@@ -150,6 +147,14 @@ body {
       .title__container-title::after {
         text-align: center;
         font-size: 44px;
-        margin-left: 5%; } }
+        margin: 0;
+        padding: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      .title__container-title::before {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
 
 /*# sourceMappingURL=title.css.map */

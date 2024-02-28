@@ -40,13 +40,11 @@
             row-gap: 30px;
             border-top: 2px solid rgba(255, 255, 255, 0.2);
 
-
             &-row {
                 display: flex;
                 justify-content: space-between;
                 column-gap: 24px;
             }
-
 
 
             &-box {
@@ -135,6 +133,7 @@
 @media screen and (max-width: 1400px) {
     .contacts {
         &__wrapper {
+            column-gap: 35px;
             width: 100%;
             .contacts__info {
                 width: 230px;
@@ -250,6 +249,13 @@
 
 
     .contacts {
+        .title__container {
+            &-title {
+                width: 500px;
+            }
+        }
+    
+
         .animation-div {
             width: 100% !important;
         }
@@ -277,6 +283,12 @@
     $secondry-padding: 70px;
 
     .contacts {
+        .title__container {
+            &-title {
+                width: 400px;
+            }
+        }
+
         &__wrapper {
             padding: 0 $main-padding 0 $secondry-padding;
 

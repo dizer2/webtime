@@ -8,23 +8,25 @@ body {
   &._body-hidden {
     overflow: hidden;
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $main;
+  }
+  
 }
 
 .App {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: $black;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $main;
-}
 
 
 ::selection {

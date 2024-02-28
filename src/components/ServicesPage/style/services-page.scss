@@ -1,7 +1,15 @@
 @import "./../../main/style.scss";
 
+body._web-development { &::-webkit-scrollbar-thumb {background: $main !important;} }
+body._design { &::-webkit-scrollbar-thumb {background: $design-page !important;} }
+body._poster-billboards { &::-webkit-scrollbar-thumb {background: $poster-page !important;} }
+body._mobile-design { &::-webkit-scrollbar-thumb {background: $mobile-page !important;} }
+body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-page !important;} }
+
 .services-page {
     display: flex;
+    
+
 
 
     &__menu {
