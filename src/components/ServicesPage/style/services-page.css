@@ -300,14 +300,14 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       display: block;
       position: fixed;
       width: 100vw;
-      height: 100vmax;
+      height: 100vh;
       background-color: black;
       z-index: 11;
       opacity: 1;
       animation: burgerOverlayAnimation 1s .8s forwards; }
   @keyframes burgerOverlayAnimation {
     0% {
-      top: -100vb; }
+      top: -100vh; }
     100% {
       top: 0px; } }
     .services-page._menu-open .header__menu-wrapper {
@@ -402,7 +402,7 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
     0% {
       top: 0; }
     100% {
-      top: -100vb; } }
+      top: -100vh; } }
     .services-page .header__menu-overlay {
       top: -100vb;
       display: block;

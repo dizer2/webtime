@@ -372,13 +372,13 @@
                 display: block;
                 position: fixed;
                 width: 100vw;
-                height: 100vb;
+                height: 100vh;
                 background-color: rgb(0, 0, 0);
                 z-index: 11;
                 opacity: 1;
 
                 @keyframes burgerOverlayAnimation {
-                    0% { top: -100vb; }
+                    0% { top: -100vh; }
                     100% { top: 0px; }
                 }
             }
@@ -527,7 +527,7 @@
                 z-index: 12;
                 @keyframes burgerHideOverlayAnimation {
                     0% { top: 0; };
-                    100% { top: -100vb; };
+                    100% { top: -100vh; };
                 }
             }
 
@@ -553,7 +553,7 @@
             display: block;
             position: fixed;
             width: 100vw;
-            height: 100vmax;
+            height: 100vh;
             background-color: rgb(0, 0, 0);
             opacity: 0;
             z-index: -1;

@@ -436,10 +436,10 @@ const ServicesPage = ({ currentPage }) => {
 
     // Scroll To Section 
     const handleScrollToSection = (sectionId) => {
-        menuHandleClick();
         if(isMenuOpen) {
+            menuHandleClick();
             document.querySelector(".header__menu-overlay").classList.add('_quickly-close-overlay');
-        } 
+        }
         
         document.body.classList.remove("body-hidden", false); 
 

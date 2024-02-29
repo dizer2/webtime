@@ -283,13 +283,13 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
                 display: block;
                 position: fixed;
                 width: 100vw;
-                height: 100vmax;
+                height: 100vh;
                 background-color: rgb(0, 0, 0);
                 z-index: 11;
                 opacity: 1;
                 animation: burgerOverlayAnimation 1s .8s forwards;
                 @keyframes burgerOverlayAnimation {
-                    0% { top: -100vb; }
+                    0% { top: -100vh; }
                     100% { top: 0px; }
                 }
             }
@@ -413,7 +413,7 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
                 z-index: 12;
                 @keyframes burgerHideOverlayAnimation {
                     0% { top: 0; };
-                    100% { top: -100vb; };
+                    100% { top: -100vh; };
                 }
             }
         }
