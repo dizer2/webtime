@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import "./style/footer.css"
 import Logo from '../main/img/Logo';
 import SocialMedia from '../UI/SocialMedia/SocialMedia';
+import emailjs from '@emailjs/browser';
+
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
-
+	const [feedbackInput, setFeedbackInput] = useState('');
+	const form = useRef();
+	const [feedbackTitle, setFeedbackTitle] = useState('Would you like to leave a review?');
 
 	  // Scroll To Section 
 	  const handleScrollToSection = (sectionId) => {
@@ -21,6 +25,36 @@ const Footer = () => {
 		  sectionRef.scrollIntoView({ behavior: 'smooth' });
 		}
 	  };
+
+	  const handleFeedback = (e) => {
+		e.preventDefault();
+		
+		// Validation: Check if feedbackInput has less than 5 characters
+		if (feedbackInput.trim().length < 5) {
+			console.log("Feedback must be at least 5 characters long.");
+			setFeedbackTitle('Feedback too short');
+			return; 
+		}
+
+		setFeedbackTitle('Would you like to leave a review?');
+		setFeedbackInput('');
+		emailjs
+			.sendForm('service_3o2k54m', 'template_qah1gya', form.current, {
+				publicKey: 'ihxIxbysdP1fNWl9p',
+			})
+			.then(
+				() => {
+					console.log('SUCCESS!');
+				},
+				(error) => {
+					console.log('FAILED...', error.text);
+				},
+			);
+	}
+
+	  const handleChange = (e) => {
+	    setFeedbackInput(e.target.value);
+	  }
 	  
   return (
 	<div className='footer'>
@@ -87,19 +121,19 @@ const Footer = () => {
 					
 				</div>
 
-				<div className="footer__top-form">
-					<p className="footer__top-subTitle">Would you like to leave a review?</p>
+				<form  ref={form} onSubmit={handleFeedback} className="footer__top-form">
+				<p className={`footer__top-subTitle ${feedbackTitle !== 'Would you like to leave a review?' ? 'error-message' : ''}`}>{feedbackTitle}</p>
 
 					<div className='footer__top-input'>
-						<input type="text" name="text" placeholder='We appreciate your feedback' />
-						<div>
+						<input value={feedbackInput} onChange={handleChange} name='feedback' type="text" placeholder='We appreciate your feedback' />
+						<button type="sumbit">
 							<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M5.99597 28.2801L28.0089 18.4634C29.7739 17.6763 29.7739 15.3237 28.0089 14.5366L5.99597 4.71995C4.00152 3.83053 1.93277 5.80552 2.92067 7.65585L7.12338 15.5275C7.45025 16.1397 7.45025 16.8603 7.12338 17.4725L2.92067 25.3441C1.93277 27.1945 4.00152 29.1695 5.99597 28.2801Z" fill="white"/>
 							</svg>
-						</div>
+						</button>
 					</div>
-								
-				</div>
+				</form >
+				
 		</div>
 
 		<div className="footer__bottom">

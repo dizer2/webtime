@@ -160,6 +160,26 @@ body {
       @media screen and (max-width: 800px) {
         .footer__top-subTitle {
           font-size: 18px; } }
+    .footer__top .error-message {
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #FF006B; }
+      @media screen and (max-width: 1400px) {
+        .footer__top .error-message {
+          font-size: 18px; } }
+      @media screen and (max-width: 1000px) {
+        .footer__top .error-message {
+          font-size: 22px; } }
+      @media screen and (max-width: 1000px) {
+        .footer__top .error-message {
+          font-size: 20px; } }
+      @media screen and (max-width: 800px) {
+        .footer__top .error-message {
+          font-size: 18px; } }
     .footer__top-input {
       width: 400px;
       height: 60px;
@@ -182,10 +202,12 @@ body {
         @media screen and (max-width: 800px) {
           .footer__top-input input {
             font-size: 14px; } }
-      .footer__top-input div {
+      .footer__top-input button {
         width: 60px;
         height: 60px;
         background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+        border: none;
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center; }
