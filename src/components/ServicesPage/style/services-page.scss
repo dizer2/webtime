@@ -68,13 +68,31 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
     }
 
     &__main {
-        padding: 50px;
+        padding: 30px 50px 50px 50px;
         width: 78%;
         background-position: top;
 
+        .services-page__user-location {
+            &, & a {
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+                
+                @include font($white, 16px, 500, normal, 0);
+                cursor: pointer;
+                transition: .4s;
+            }
+
+            &:hover {
+                opacity: 0.8;
+                transition: .4s;
+            }
+        }
+
+
         .services-page__title {
             position: relative;
-            margin-top: 45px;
+            margin-top: 90px;
             margin-bottom: 25px;
             @include font($white, 48px, 700, normal, 0);
             z-index: 1;
@@ -476,8 +494,12 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             width: 100%;
             height: auto;
 
+            .services-page__user-location {
+                margin-top: 60px;
+            }
+
             .services-page__title {
-                margin-top: 80px;
+                margin-top: 50px;
                 margin-bottom: 25px;
                 font-size: 40px;
 
@@ -550,8 +572,28 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             }
         }
 
+        .header__menu {
+            .rolling__block {
+                display: none;
+            } 
+        }
 
         &__main {
+            .services-page__user-location {
+                &, & a {
+                    font-size: 14px;
+
+                    svg {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                & a {
+                    white-space: nowrap;
+                }
+            }
+
             .services-page__services-container {
                 .services-page__service {
                     width: 100%;

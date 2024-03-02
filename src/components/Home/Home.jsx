@@ -82,7 +82,6 @@ const Home = () => {
   };
 
 
-
   
   // Check device 
   const [isMobile, setIsMobile] = useState(false);
@@ -168,7 +167,30 @@ const Home = () => {
   
 
 
+  // Static Header
+  const [scrollingDown, setScrollingDown] = useState(false);
 
+  useEffect(() => {
+    let prevScrollPos = window.pageYOffset;
+
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setScrollingDown(prevScrollPos < currentScrollPos);
+      prevScrollPos = currentScrollPos;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+  // const dropdownContent = document.querySelector('.header__dropdown-content');
+  // dropdownContent.classList.add('_hide');
+  
   return (
     <section id='home' className="home">
         {
@@ -226,9 +248,11 @@ const Home = () => {
 
       <div className="header__menu-overlay"></div>
 
-      <header className="home__header">
-        <div className="header__wrapper">
+        <div className="home__header--phantom"></div>
+      <header className={`home__header ${!scrollingDown ? "_header-show" : "_header-hide"}`} style={{backgroundColor: scrollingDown ? 'rgba(0, 0, 0, 0.8)' : 'transparent'}}  >
+        <div id='header' className="header__phantom"></div>
 
+        <div className={`header__wrapper`}>
           <div className="header__logo">
             <Logo/>
           </div>
@@ -419,7 +443,9 @@ const Home = () => {
                 />
               </div>
 
-              <LocalisationField/>
+              <LocalisationField
+                gradient="linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
+              />
             </footer>
           </div>
 
@@ -431,85 +457,81 @@ const Home = () => {
 
       <section className="home__intro">
 
-        <Reveal>
-          <h1 className="intro__title">
-            {/* <strong>WebTime</strong> <strong>―</strong> your time with webtime, where innovation meets design. */}
-            <strong>WebTime</strong> <strong>―</strong> your time with webtime, where design and development converge.
-          </h1>
-		    </Reveal>
+        <h1 className="intro__title">
+          {/* <strong>WebTime</strong> <strong>―</strong> your time with webtime, where innovation meets design. */}
+          <strong>WebTime</strong> <strong>―</strong> your time with webtime, where design and development converge.
+        </h1>
 
-		    <RevealSecodary>
-          <Swiper
-            slidesPerView='auto'
-            spaceBetween={20}
-            pagination={{
-              clickable: true,
-            }}
-            className="intro__slider mySwiper"
-          >
-            <SwiperSlide className="intro__card"> 
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Website & design</h4>
+        <Swiper
+          slidesPerView='auto'
+          spaceBetween={20}
+          pagination={{
+            clickable: true,
+          }}
+          className="intro__slider mySwiper"
+        >
+          <SwiperSlide className="intro__card"> 
+            <div className="intro__card-header">
+              <h4 className="intro__card-title">Website & design</h4>
 
-                <p className="intro__card-price">from: 700$</p>
-              </div>
+              <p className="intro__card-price">from: 700$</p>
+            </div>
 
-              <div className="intro__card-img intro__card-img--1"></div>
+            <div className="intro__card-img intro__card-img--1"></div>
 
-              <GradientBtn
-                text="View more"
-                width="100%"
-                height="50"
-              />
-            </SwiperSlide>
+            <GradientBtn
+              text="View more"
+              width="100%"
+              height="50"
+            />
+          </SwiperSlide>
 
-            <SwiperSlide className="intro__card">
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Web design</h4>
+          <SwiperSlide className="intro__card">
+            <div className="intro__card-header">
+              <h4 className="intro__card-title">Web design</h4>
 
-                <p className="intro__card-price">from: 400$</p>
-              </div>
+              <p className="intro__card-price">from: 400$</p>
+            </div>
 
-              <div className="intro__card-img intro__card-img--2"></div>
+            <div className="intro__card-img intro__card-img--2"></div>
 
-              <GradientBtn
-                text="View more"
-                width="100%"
-                height="50"
-              />
-            </SwiperSlide>
+            <GradientBtn
+              text="View more"
+              width="100%"
+              height="50"
+            />
+          </SwiperSlide>
 
-            <SwiperSlide className="intro__card">
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Poster</h4>
+          <SwiperSlide className="intro__card">
+            <div className="intro__card-header">
+              <h4 className="intro__card-title">Poster</h4>
 
-                <p className="intro__card-price">from: 250$</p>
-              </div>  
+              <p className="intro__card-price">from: 250$</p>
+            </div>  
 
-              <div className="intro__card-img intro__card-img--3"></div>
+            <div className="intro__card-img intro__card-img--3"></div>
 
-              <GradientBtn
-                text="View more"
-              />
-            </SwiperSlide>
+            <GradientBtn
+              text="View more"
+            />
+          </SwiperSlide>
 
-            <SwiperSlide className="intro__card">
-              <div className="intro__card-header">
-                <h4 className="intro__card-title">Business cards</h4>
+          <SwiperSlide className="intro__card">
+            <div className="intro__card-header">
+              <h4 className="intro__card-title">Business cards</h4>
 
-                <p className="intro__card-price">from: 100$</p>
-              </div>
+              <p className="intro__card-price">from: 100$</p>
+            </div>
 
-              <div className="intro__card-img intro__card-img--4"></div>
+            <div className="intro__card-img intro__card-img--4"></div>
 
-              <GradientBtn
-                text="View more"
-                width="100%"
-                height="50"
-              />
-            </SwiperSlide>
-          </Swiper>
-        </RevealSecodary>
+            <GradientBtn
+              text="View more"
+              width="100%"
+              height="50"
+            />
+          </SwiperSlide>
+        </Swiper>
 
       </section>
 

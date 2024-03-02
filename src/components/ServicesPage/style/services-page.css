@@ -35,12 +35,15 @@ body {
   overflow-x: hidden; }
   body._body-hidden {
     overflow: hidden; }
-  body ::-webkit-scrollbar {
-    width: 10px; }
-  body ::-webkit-scrollbar-track {
-    background: #000; }
-  body ::-webkit-scrollbar-thumb {
-    background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #000; }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 
 .App {
   overflow-x: hidden; }
@@ -133,12 +136,28 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
     .services-page__menu .header__menu {
       display: none; }
   .services-page__main {
-    padding: 50px;
+    padding: 30px 50px 50px 50px;
     width: 78%;
     background-position: top; }
+    .services-page__main .services-page__user-location, .services-page__main .services-page__user-location a {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: normal;
+      letter-spacing: 0;
+      color: #fff;
+      cursor: pointer;
+      transition: .4s; }
+    .services-page__main .services-page__user-location:hover {
+      opacity: 0.8;
+      transition: .4s; }
     .services-page__main .services-page__title {
       position: relative;
-      margin-top: 45px;
+      margin-top: 90px;
       margin-bottom: 25px;
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
@@ -441,8 +460,10 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       padding: 30px;
       width: 100%;
       height: auto; }
+      .services-page__main .services-page__user-location {
+        margin-top: 60px; }
       .services-page__main .services-page__title {
-        margin-top: 80px;
+        margin-top: 50px;
         margin-bottom: 25px;
         font-size: 40px; }
         .services-page__main .services-page__title::before {
@@ -471,6 +492,15 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
         margin-right: 70px; }
       .services-page._menu-open .header__menu-wrapper .header__menu-row .header__menu-nav .header__menu-list .header__menu-item p::before {
         min-height: 1px; }
+  .services-page .header__menu .rolling__block {
+    display: none; }
+  .services-page__main .services-page__user-location, .services-page__main .services-page__user-location a {
+    font-size: 14px; }
+    .services-page__main .services-page__user-location svg, .services-page__main .services-page__user-location a svg {
+      width: 18px;
+      height: 18px; }
+  .services-page__main .services-page__user-location a {
+    white-space: nowrap; }
   .services-page__main .services-page__services-container .services-page__service {
     width: 100%;
     display: flex;

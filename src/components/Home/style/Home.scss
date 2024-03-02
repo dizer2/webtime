@@ -87,16 +87,54 @@
         display: none;
     }
 
-    &__header {
-        padding: 0 $main-padding;
+    &__header--phantom {
         padding-top: 25px;
-        // @include display-center(space-between, center);
+        height: 46px;
+    }
+
+    &__header {
+        position: absolute;
+        right: 0;
+        left: 0;
+        padding: 25px $main-padding;
+        z-index: 11;
+        transition: .5s;
+
+        &._header-show {
+            position: fixed;
+            top: 0px;
+            padding: 25px $main-padding;
+            backdrop-filter: blur(5px);
+            transition: .5s;
+        }
+
+        &._header-hide {
+            position: fixed;
+            top: -80px;
+            transition: .5s;
+
+            .header__wrapper {
+                .header__nav {
+                    .header__list {
+                        .header__dropdown {
+                            &:hover {
+                                .header__dropdown-content__overlay {
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
 
         .header__wrapper {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
 
             .header__menu {
                 display: none;
@@ -116,51 +154,52 @@
 
                     .header__dropdown {
                         position: relative;
-                        
+                    
                         &-arrow {
                             transition: .3s;
                         }
-
+                    
                         &:hover {
                             .header__dropdown-arrow {
                                 transition: .3s;
                                 transform: rotate(-180deg);
                             }
-
+                    
                             .header__dropdown-content__overlay {
                                 z-index: 10;
                                 transition: .5s;
-
+                                // pointer-events: none;
+                                pointer-events: auto;
+                    
                                 .header__dropdown-content {
-                                    transform: translateY(0px);
-                                    opacity: 1;
-                                    z-index: 10;
-                                    transition: .5s;
+                                    display: flex;
+                                    opacity: 0; /* Initial opacity set to 0 */
+                                    transform: translateY(-20px); /* Initial position above */
+                                    transition: opacity 0.4s, transform 0.4s; /* Transition properties */
+                                    animation: showDropdown 0.4s forwards;
                                 }
                             }
                         }
-
+                    
                         &-content__overlay {
                             position: absolute;
                             top: 10px;
-                            padding-top: 30px; // Pudding from top of link include (top of link - 10px => and -40px)
+                            padding-top: 30px;
                             transition: .5s;
-                            z-index: -1; // Reduction z-index for when card not active user cant open it 
-
-
+                            z-index: -1;
+                            pointer-events: none;
+                    
                             .header__dropdown-content {
                                 padding: 30px;
                                 width: 660px;
                                 height: 220px;
                                 background: $ligth-dark;
-                                display: flex;
+                                display: flex; /* Change from display: none */
                                 column-gap: 80px;
                                 overflow: hidden;
-                                transform: translateY(-20px);
-                                opacity: 0;
-                                z-index: -1; 
-                                transition: .5s;
-
+                                transition: .4s;
+                                animation: hideDropdown 0.4s forwards;
+                    
                                 &::before {
                                     content: "";
                                     position: absolute;
@@ -173,21 +212,21 @@
                                     z-index: 1;
                                     filter: blur(180px);
                                 }
-
-
+                    
                                 .header__dropdown--left, .header__dropdown--right {
                                     display: flex;
                                     flex-direction: column;
                                     row-gap: 15px;
                                     z-index: 2;
-
+                    
                                     .header__dropdown-item {
                                         @include display-center(none, center);
                                         column-gap: 15px;
                                         color: $white;
-
+                    
                                         .icon-box {
                                             position: relative;
+                    
                                             &::before {
                                                 content: "";
                                                 position: absolute;
@@ -203,14 +242,31 @@
                                 }
                             }
                         }
-
                     }
+                    
+                    @keyframes showDropdown {
+                        to {
+                            transform: translateY(0px);
+                            opacity: 1;
+                            z-index: 10;
+                        }
+                    }
+                    
+                    @keyframes hideDropdown {
+                        from {
+                            transform: translateY(0px);
+                            opacity: 1;
+                            z-index: 10;
+                        }
+                        to {
+                            transform: translateY(-20px);
+                            opacity: 0;
+                            z-index: -1;
+                        }
+                    }
+                    
                 }
             }
-
-            // .header__nav-box {
-            //     display: none;
-            // }
 
             .header__menu-wrapper {
                 display: none;
@@ -352,7 +408,8 @@
 
 @keyframes showElement {
     0% { opacity: 0; }
-    100% { opacity: 1; }
+    30% { position: fixed; }
+    100% { opacity: 1; position: fixed; }
 }
 
 @keyframes hideElement {
@@ -391,15 +448,12 @@
             }
 
             .home__header {
-                position: relative;
-                padding: 0 $main-padding;
-
+                z-index: 12;
 
                 .header__wrapper {
                     display: flex;
                     align-items: center;
                     z-index: 100;
-                    margin-top: 25px;
 
                     .header__logo {
                         z-index: 12;
@@ -413,19 +467,14 @@
                         flex-direction: column;
 
                         width: 100vw;
-                        height: 100vb;
-                        position: absolute;
+                        height: 100vh;
+                        position: fixed;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -35px);
                         z-index: 12;
                         animation: showElement 2s 1s forwards;
 
-
-                        .header__menu-header--phantom {
-                            height: 36px;
-                            margin-top: 25px;
-                        }
 
                         .header__menu-row {
                             display: flex;
@@ -522,6 +571,7 @@
 
         &._menu-close {
             .header__menu-overlay {
+                position: fixed;
                 animation: burgerHideOverlayAnimation 1.5s forwards;
                 opacity: 1;
                 z-index: 12;
@@ -549,7 +599,7 @@
 
 
         .header__menu-overlay {
-            top: -100vb;
+            top: -100vh;
             display: block;
             position: fixed;
             width: 100vw;
@@ -563,10 +613,18 @@
             }
         }
 
+        .home__header--phantom {
+            height: 65px;
+        }
+
 
         &__header {
+            z-index: 12;
             padding: 0 $main-padding;
-            padding-top: 25px;
+
+            &._header-show {
+                padding: 25px $main-padding;
+            }
 
             .header__wrapper {
                 .header__logo {
@@ -581,6 +639,10 @@
                 .header__menu-wrapper {
                     opacity: 0;
                     transition: .5s;
+
+                    .header__menu-header--phantom {
+                        height: 65px;
+                    }
                 }
 
                 .header__menu {
@@ -614,6 +676,11 @@
         &._menu-open {
             .home__header {
                 padding: 0 $main-padding;
+
+                &._header-show {
+                    padding: 25px $main-padding;
+                }
+
 
                 .header__wrapper {
                     .header__menu-wrapper {
@@ -669,8 +736,11 @@
 
 
         &__header {
-            padding: 0 $main-padding;
-            padding-top: 25px;
+            padding: 0px $main-padding;
+
+            &._header-show {
+                padding: 25px $main-padding;
+            }
         }
 
         &__intro {
@@ -699,6 +769,10 @@
         &._menu-open {
             .home__header {
                 padding: 0 $main-padding;
+
+                &._header-show {
+                    padding: 25px $main-padding;
+                }
 
                 .header__wrapper {
                     .header__menu-wrapper {
@@ -761,6 +835,10 @@
         &__header {
             padding: 0 $main-padding;
             padding-top: 25px;
+
+            &._header-show {
+                padding: 25px $main-padding;
+            }
 
             .header__wrapper {
                 .header__nav {
@@ -876,6 +954,12 @@
                         }
                     }
                 }
+            }
+        }
+        
+        &__header {
+            &._header-show {
+                padding: 25px $main-padding;
             }
         }
 
