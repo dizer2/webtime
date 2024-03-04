@@ -108,6 +108,13 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
     height: 100vh;
     width: 22%;
     background-color: #0C0C0C; }
+    .services-page__menu .services-menu__wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-direction: column; }
     .services-page__menu-phantom {
       width: 22%; }
     .services-page__menu-logo svg {
@@ -318,7 +325,7 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
     .services-page._menu-open .header__menu-overlay {
       display: block;
       position: fixed;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       z-index: 11;
       opacity: 1;
@@ -337,13 +344,13 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       width: 100vw;
       height: 100vh;
       position: absolute;
-      top: 50%;
+      top: 0%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 0);
       z-index: 12;
       animation: showElement 2s 1s forwards; }
       .services-page._menu-open .header__menu-wrapper .header__menu-header--phantom {
-        height: 36px;
+        height: 35px;
         margin-top: 25px; }
       .services-page._menu-open .header__menu-wrapper .header__menu-row {
         display: flex;
@@ -437,21 +444,36 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       opacity: 0;
       transition: .5s; }
     .services-page__menu {
-      padding: 25px 30px 0 30px;
-      position: relative;
+      padding: 25px 30px;
+      position: fixed;
+      top: 0;
       width: 100%;
       height: auto;
       background-color: transparent;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row; }
+      z-index: 100;
+      transition: 0.4s; }
+      .services-page__menu .services-menu__wrapper {
+        width: 100%;
+        flex-direction: row; }
+      .services-page__menu._menu-show {
+        top: 0px;
+        transition: 0.4s;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px); }
+      .services-page__menu._menu-hide {
+        top: -100px;
+        transition: 0.4s;
+        background-color: transparent;
+        backdrop-filter: blur(0px); }
+      .services-page__menu._hide-bg {
+        background-color: transparent;
+        backdrop-filter: blur(0px); }
       .services-page__menu .services-page__menu-nav {
         display: none; }
       .services-page__menu-logo--link {
-        z-index: 12; }
+        z-index: 13; }
       .services-page__menu-phantom {
-        display: none; }
+        height: 100px; }
       .services-page__menu .localisation-field {
         display: none; }
       .services-page__menu .header__menu {
@@ -461,7 +483,7 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       width: 100%;
       height: auto; }
       .services-page__main .services-page__user-location {
-        margin-top: 60px; }
+        margin-top: 40px; }
       .services-page__main .services-page__title {
         margin-top: 50px;
         margin-bottom: 25px;
