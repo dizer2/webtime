@@ -69,7 +69,7 @@ const Footer = () => {
 						<Logo scrollToHome={() => handleScrollToSection('home')} />
 					</div>
 
-					<p className='footer__top-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada vulputate magna, ac scelerisque ex pretium ac. </p>
+					<p className='footer__top-description'>Webtime - where your site will shine, your business will climb, and success will be prime. Contact us today, let's make your dreams play.</p>
 
 					<div className="social__media-wrapper">
 						<SocialMedia
