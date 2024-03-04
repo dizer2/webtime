@@ -454,33 +454,17 @@ const ServicesPage = ({ currentPage }) => {
         }
     };
   
-    const isOnOtherPage = (checkedLink, goTo) => {
-        return checkedLink ? goTo : "";
-    }
-
-
-    const clearBodyClasses = () => {
-        document.body.classList.forEach(className => {
-            if (className.startsWith('_')) {
-                document.body.classList.remove(className);
-            }
-        });
-    }
-
-    clearBodyClasses();
-    document.body.classList.add(`_${currentPage}`);
-    
-
 
     // Burger Menu
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuHandleClick = () => {
-        setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
+        setIsMenuOpen(!isMenuOpen);
     
         const bodyClassList = document.body.classList;
         const parentElement = document.getElementById('services-page');
         document.querySelector(".header__menu-overlay").classList.remove('_quickly-close-overlay');
+        bodyClassList.add("_body-hidden");
     
         if (!isMenuOpen) {
             bodyClassList.add("_body-hidden");
@@ -492,15 +476,34 @@ const ServicesPage = ({ currentPage }) => {
             parentElement.classList.add('_menu-close');
         }
     }
+   
+   
+
+    const clearBodyClasses = () => {
+        // document.body.classList.forEach(className => {
+        //     if (className.startsWith('_')) {
+        //         document.body.classList.remove(className);
+        //     }
+        // });
+
+        for(let i = 0; i < pagesData.length; i++) {
+            document.body.classList.remove(`_${pagesData[currentPage]}`);
+        }
+    }
+
+    clearBodyClasses();
+    document.body.classList.add(`_${currentPage}`);
+    
 
 
+ 
 
   return (
     <section id='services-page' className='services-page' style={{backgroundImage: `url(${pagesData[currentPage].backgroundImg})`}}>
       <div className="header__menu-overlay"></div>
 
         <div className="services-page__menu">
-            <Link to={'/'} className="services-page__menu-logo--link">
+            <Link to={'/'} onClick={clearBodyClasses} className="services-page__menu-logo--link">
                 <div className="services-page__menu-logo">
                     <Logo
                         gradientID = {pagesData[currentPage].gradientParts.gradientID}
@@ -609,13 +612,22 @@ const ServicesPage = ({ currentPage }) => {
 
         <div className="services-page__main" >
             <div className="services-page__user-location">
-                <Link to={"/"}>
+                <Link to={"/"} onClick={clearBodyClasses}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5192 7.82274C2 8.77128 2 9.91549 2 12.2039V13.725C2 17.6258 2 19.5763 3.17157 20.7881C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.7881C22 19.5763 22 17.6258 22 13.725V12.2039C22 9.91549 22 8.77128 21.4808 7.82274C20.9616 6.87421 20.0131 6.28551 18.116 5.10812L16.116 3.86687C14.1106 2.62229 13.1079 2 12 2C10.8921 2 9.88939 2.62229 7.88403 3.86687L5.88403 5.10813C3.98695 6.28551 3.0384 6.87421 2.5192 7.82274ZM9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="white"/>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M2.5192 7.82274C2 8.77128 2 9.91549 2 12.2039V13.725C2 17.6258 2 19.5763 3.17157 20.7881C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.7881C22 19.5763 22 17.6258 22 13.725V12.2039C22 9.91549 22 8.77128 21.4808 7.82274C20.9616 6.87421 20.0131 6.28551 18.116 5.10812L16.116 3.86687C14.1106 2.62229 13.1079 2 12 2C10.8921 2 9.88939 2.62229 7.88403 3.86687L5.88403 5.10813C3.98695 6.28551 3.0384 6.87421 2.5192 7.82274ZM9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="white"/>
                     </svg>
-                    {">"} Home {">"}
+                    
+                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.288944 10.7559C0.669493 11.0814 1.28654 11.0814 1.66708 10.7559L6.42981 6.67775C7.19031 6.02664 7.19001 4.9715 6.42923 4.32064L1.66357 0.244147C1.28303 -0.0813822 0.665985 -0.0813822 0.285426 0.244147C-0.0951421 0.569684 -0.0951421 1.09747 0.285426 1.42301L4.36428 4.91207C4.74492 5.23758 4.74492 5.7654 4.36428 6.09091L0.288944 9.57702C-0.0916245 9.90253 -0.0916245 10.4303 0.288944 10.7559Z" fill="white"/>
+                    </svg>
+                    
+                    Home 
+                    
+                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.288944 10.7559C0.669493 11.0814 1.28654 11.0814 1.66708 10.7559L6.42981 6.67775C7.19031 6.02664 7.19001 4.9715 6.42923 4.32064L1.66357 0.244147C1.28303 -0.0813822 0.665985 -0.0813822 0.285426 0.244147C-0.0951421 0.569684 -0.0951421 1.09747 0.285426 1.42301L4.36428 4.91207C4.74492 5.23758 4.74492 5.7654 4.36428 6.09091L0.288944 9.57702C-0.0916245 9.90253 -0.0916245 10.4303 0.288944 10.7559Z" fill="white"/>
+                    </svg>
                </Link>
-                {pagesData[currentPage].title}
+                {pagesData[currentPage].title === "Design / Redesign\nLogo" ? "Design / Redesign / Logo" : pagesData[currentPage].title }
             </div>
             
             <h2 className={`services-page__title services-page__title--${currentPage}`}>{pagesData[currentPage].title}</h2>

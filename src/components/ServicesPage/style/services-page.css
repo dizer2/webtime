@@ -320,7 +320,6 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       position: fixed;
       width: 100vw;
       height: 100vh;
-      background-color: black;
       z-index: 11;
       opacity: 1;
       animation: burgerOverlayAnimation 1s .8s forwards; }
@@ -336,11 +335,11 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       justify-content: space-between;
       flex-direction: column;
       width: 100vw;
-      height: 100vb;
+      height: 100vh;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -35px);
+      transform: translate(-50%, -50%);
       z-index: 12;
       animation: showElement 2s 1s forwards; }
       .services-page._menu-open .header__menu-wrapper .header__menu-header--phantom {
@@ -423,12 +422,13 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
     100% {
       top: -100vh; } }
     .services-page .header__menu-overlay {
-      top: -100vb;
+      top: -100vh;
       display: block;
       position: fixed;
       width: 100vw;
-      height: 100vb;
-      background-color: black;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
       opacity: 0;
       z-index: -1; }
       .services-page .header__menu-overlay._quickly-close-overlay {
@@ -496,7 +496,7 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
     display: none; }
   .services-page__main .services-page__user-location, .services-page__main .services-page__user-location a {
     font-size: 14px; }
-    .services-page__main .services-page__user-location svg, .services-page__main .services-page__user-location a svg {
+    .services-page__main .services-page__user-location svg:nth-child(1), .services-page__main .services-page__user-location a svg:nth-child(1) {
       width: 18px;
       height: 18px; }
   .services-page__main .services-page__user-location a {
