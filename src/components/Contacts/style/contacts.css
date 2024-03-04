@@ -80,6 +80,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .contacts__animation {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    left: -15%;
+    margin-top: 600px;
+    cursor: none;
+    z-index: -1;
+    opacity: 0.4; }
+    .contacts__animation canvas {
+      transform: scale(1.5);
+      cursor: none; }
   .contacts__container {
     width: 100%; }
   .contacts .title__container-title {

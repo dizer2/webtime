@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './style/contacts.css';
 import SubTitle from '../UI/SubTitle/SubTitle.jsx';
 import Title from '../UI/Title/Title.jsx';
@@ -6,6 +6,8 @@ import { Reveal } from '../utils/Reveal/Reveal.tsx';
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 import emailjs from '@emailjs/browser';
 import Popup from '../UI/Popup/Popup.jsx';
+import Spline from '@splinetool/react-spline';
+import { useInView } from 'react-intersection-observer';
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +17,32 @@ const Contacts = () => {
     phone: '',
     message: '',
   });
+
+
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0 // Це значить, що коли елемент стає видимим хоча б на 1 піксель, isVisible буде true
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
 
 	const [popupClass, setPopupClass] = useState(false);
 
@@ -99,6 +127,12 @@ const Contacts = () => {
     <section id='contacts' className='contacts'>
 
       <Popup popupClass={popupClass} setPopupClass={setPopupClass}/>
+
+
+      <div className="contacts__animation" ref={ref}>
+        {isVisible &&            <Spline scene="https://prod.spline.design/sBc2IswkDzxxAXpm/scene.splinecode" 
+ width={300} height={300} />}
+      </div>
 
       <div className="contacts__container">
 
