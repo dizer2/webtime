@@ -3,7 +3,29 @@
 .contacts {
     padding-top: $section-margin;
     margin-bottom: $section-margin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    &__animation {
+        width: 1000px;
+        height: 500px;
+        position: absolute;
+        left: -15%;
+        margin-top: 600px;
+        cursor: none;
+        z-index: -1;
+        opacity: 0.4;
+
+        canvas {
+            transform: scale(1.5);
+            cursor: none;
+        }
+    }
+
+    &__container {
+        width: 100%;
+    }
 
     .title__container {
         &-title {

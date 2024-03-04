@@ -3,6 +3,7 @@ import "./style/footer.css"
 import Logo from '../main/img/Logo';
 import SocialMedia from '../UI/SocialMedia/SocialMedia';
 import emailjs from '@emailjs/browser';
+import Popup from '../UI/Popup/Popup';
 
 
 const Footer = () => {
@@ -10,6 +11,7 @@ const Footer = () => {
 	const [feedbackInput, setFeedbackInput] = useState('');
 	const form = useRef();
 	const [feedbackTitle, setFeedbackTitle] = useState('Would you like to leave a review?');
+	const [popupClass, setPopupClass] = useState(false);
 
 	  // Scroll To Section 
 	  const handleScrollToSection = (sectionId) => {
@@ -45,6 +47,7 @@ const Footer = () => {
 			.then(
 				() => {
 					console.log('SUCCESS!');
+					setPopupClass(true);
 				},
 				(error) => {
 					console.log('FAILED...', error.text);
@@ -58,6 +61,7 @@ const Footer = () => {
 	  
   return (
 	<div className='footer'>
+		<Popup popupClass={popupClass} setPopupClass={setPopupClass} />
 
 		<div className="footer__top">
 				<div className="footer__top-left">
@@ -65,7 +69,7 @@ const Footer = () => {
 						<Logo scrollToHome={() => handleScrollToSection('home')} />
 					</div>
 
-					<p className='footer__top-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada vulputate magna, ac scelerisque ex pretium ac. </p>
+					<p className='footer__top-description'>Webtime - where your site will shine, your business will climb, and success will be prime. Contact us today, let's make your dreams play.</p>
 
 					<div className="social__media-wrapper">
 						<SocialMedia
