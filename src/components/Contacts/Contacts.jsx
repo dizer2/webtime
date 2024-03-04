@@ -5,6 +5,7 @@ import Title from '../UI/Title/Title.jsx';
 import { Reveal } from '../utils/Reveal/Reveal.tsx';
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 import emailjs from '@emailjs/browser';
+import Popup from '../UI/Popup/Popup.jsx';
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,9 @@ const Contacts = () => {
     phone: '',
     message: '',
   });
+
+	const [popupClass, setPopupClass] = useState(false);
+
 
   const [error, setError] = useState('');
   const form = useRef();
@@ -63,6 +67,7 @@ const Contacts = () => {
     }
   
     console.log('Sending email with data:', formData);
+
     setError({}); 
     setFormData({
       name: '',
@@ -79,6 +84,7 @@ const Contacts = () => {
     .then(
       () => {
         console.log('SUCCESS!');
+        setPopupClass(true);
       },
       (error) => {
         console.log('FAILED...', error.text);
@@ -91,6 +97,12 @@ const Contacts = () => {
 
   return (
     <section id='contacts' className='contacts'>
+
+      <Popup popupClass={popupClass} setPopupClass={setPopupClass}/>
+
+      <div className="contacts__container">
+
+
       <Reveal>
         <SubTitle text={"LET'S GO TO ACTION"} />
       </Reveal>
@@ -225,6 +237,7 @@ const Contacts = () => {
             </div>
           </form>
         </RevealSecodary>
+      </div>
       </div>
     </section>
   );

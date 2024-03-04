@@ -3,7 +3,13 @@
 .contacts {
     padding-top: $section-margin;
     margin-bottom: $section-margin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    &__container {
+        width: 100%;
+    }
 
     .title__container {
         &-title {

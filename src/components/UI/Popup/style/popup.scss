@@ -1,0 +1,93 @@
+@import "../../../main/style.scss";
+
+
+.popup-form {
+	width: 540px;
+	height: 130px;
+	position: fixed;
+	top: -50%;
+	z-index: 5;
+	padding: 15px 20px;
+	display: flex;
+	justify-content: center;
+	background: $main;
+	background: rgba($color: #000000, $alpha: 0.2);
+	backdrop-filter: blur(60px);
+	border: 2px solid transparent;
+	border-image: $main;
+	border-image-slice: 1;
+	transition: 0.5s;
+
+	
+
+	&__icon {
+		&-background {
+			width: 56px;
+			height: 56px;
+			background-color: $white;
+			@include display-center(center, center);
+		}
+	}
+
+	&__container {
+		margin-left: 25px;
+
+		&-title {
+			@include font($white, 20px, 600, normal, 0);
+		}
+
+		&-description {
+			@include font($white, 14px, 400, normal, 0);
+			margin-top: 5px;
+		}
+	}
+
+}
+
+.popup-form--open {
+	position: fixed;
+	top: 12% ;
+	transition: 0.5s;
+}
+
+
+@media screen and (max-width: 800px) {
+	.popup-form {
+		width: 80%;
+		height: auto;
+	}
+	.popup-form--open {
+		position: fixed;
+		top: 12% ;
+		transition: 0.5s;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.popup-form {
+		width: 85%;
+		height: auto;
+		padding: 10px 15px;
+
+		p {
+			text-align: center;
+		}
+
+		&__container {
+			margin-left: 0px;
+	
+			&-title {
+				@include font($white, 18px, 600, normal, 0);
+			}
+		}
+
+		&__icon {
+			display: none;
+		} 
+	}
+	.popup-form--open {
+		position: fixed;
+		top: 12% ;
+		transition: 0.5s;
+	}
+}
