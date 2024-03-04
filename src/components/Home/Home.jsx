@@ -167,8 +167,9 @@ const Home = () => {
   
 
 
-  // Static Header
+  // Fixed Header
   const [scrollingDown, setScrollingDown] = useState(false);
+  const [isUserOnTop, setIsUserOnTop] = useState(true);
 
   useEffect(() => {
     let prevScrollPos = window.pageYOffset;
@@ -177,19 +178,16 @@ const Home = () => {
       const currentScrollPos = window.pageYOffset;
       setScrollingDown(prevScrollPos < currentScrollPos);
       prevScrollPos = currentScrollPos;
+
+      currentScrollPos > 0 ? setIsUserOnTop(false) : setIsUserOnTop(true);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-
-
-  // const dropdownContent = document.querySelector('.header__dropdown-content');
-  // dropdownContent.classList.add('_hide');
   
   return (
     <section id='home' className="home">
@@ -249,7 +247,13 @@ const Home = () => {
       <div className="header__menu-overlay"></div>
 
         <div className="home__header--phantom"></div>
-      <header className={`home__header ${!scrollingDown ? "_header-show" : "_header-hide"}`} style={{backgroundColor: scrollingDown ? 'rgba(0, 0, 0, 0.8)' : 'transparent'}}  >
+      <header className={`home__header ${!scrollingDown ? "_header-show" : "_header-hide"}`} 
+
+        style={{
+          backgroundColor: isUserOnTop || isMenuOpen || scrollingDown ? "transparent" : "rgba(0, 0, 0, 0.8)",
+          backdropFilter: isUserOnTop || isMenuOpen || scrollingDown ? "blur(0px)" : "blur(5px)",
+        }}
+        >
         <div id='header' className="header__phantom"></div>
 
         <div className={`header__wrapper`}>

@@ -154,11 +154,10 @@ body {
       position: fixed;
       top: 0px;
       padding: 25px 120px;
-      backdrop-filter: blur(5px);
       transition: .5s; }
     .home__header._header-hide {
       position: fixed;
-      top: -80px;
+      top: -90px;
       transition: .5s; }
       .home__header._header-hide .header__wrapper .header__nav .header__list .header__dropdown:hover .header__dropdown-content__overlay {
         pointer-events: none; }
