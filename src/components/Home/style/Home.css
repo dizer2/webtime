@@ -164,8 +164,8 @@ body {
     .home__header .header__wrapper {
       width: 100%;
       display: flex;
-      align-items: center;
-      justify-content: space-between; }
+      justify-content: space-between;
+      align-items: center; }
       .home__header .header__wrapper .header__menu {
         display: none; }
       .home__header .header__wrapper .header__nav .header__list {

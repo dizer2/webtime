@@ -30,6 +30,14 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
         width: 22%;
         background-color: $secondary-dark;
 
+
+        .services-menu__wrapper {
+            height: 100%;
+            width: 100%;
+            @include display-center(space-between, start);
+            flex-direction: column;
+        }
+
         &-phantom {
             width: 22%;
         }
@@ -300,7 +308,7 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             .header__menu-overlay {
                 display: block;
                 position: fixed;
-                width: 100vw;
+                width: 100%;
                 height: 100vh;
                 z-index: 11;
                 opacity: 1;
@@ -322,15 +330,15 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
                 width: 100vw;
                 height: 100vh;
                 position: absolute;
-                top: 50%;
+                top: 0%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -0);
                 z-index: 12;
                 animation: showElement 2s 1s forwards;
 
 
                 .header__menu-header--phantom {
-                    height: 36px;
+                    height: 35px;
                     margin-top: 25px;
                 }
 
@@ -459,25 +467,52 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
 
 
         &__menu {
-            padding: 25px 30px 0 30px;
-            position: relative;
+            padding: 25px 30px;
+            position: fixed;
+            top: 0;
             width: 100%;
             height: auto;
             background-color: transparent;
-            @include display-center(space-between, center);
-            flex-direction: row;
+            // @include display-center(space-between, none);
+            // flex-direction: row;
+            z-index: 100;
+            transition: 0.4s;
 
+            .services-menu__wrapper {
+                width: 100%;
+
+                flex-direction: row;
+            }
+
+            &._menu-show {
+                top: 0px;
+                transition: 0.4s;
+                background-color: rgba(0, 0, 0, 0.8);
+                backdrop-filter: blur(5px);
+            }
+
+            &._menu-hide {
+                top: -100px;
+                transition: 0.4s;
+                background-color: transparent;
+                backdrop-filter: blur(0px);
+            }
+
+            &._hide-bg {
+                background-color: transparent;
+                backdrop-filter: blur(0px);
+            }
 
             .services-page__menu-nav {
                 display: none;
             }
             
             &-logo--link {
-                z-index: 12;
+                z-index: 13;
             }
 
             &-phantom {
-                display: none;
+                height: 100px;
             }
 
             .localisation-field {
@@ -495,7 +530,7 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             height: auto;
 
             .services-page__user-location {
-                margin-top: 60px;
+                margin-top: 40px;
             }
 
             .services-page__title {
