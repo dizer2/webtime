@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     &__animation {
         width: 1000px;
@@ -292,6 +293,10 @@
 
 
     .contacts {
+        &__animation {
+            display: none !important;
+        }
+        
         .title__container {
             &-title {
                 width: 500px;
@@ -325,7 +330,9 @@
     $main-padding: 30px;
     $secondry-padding: 70px;
 
+    
     .contacts {
+       
         .title__container {
             &-title {
                 width: 400px;

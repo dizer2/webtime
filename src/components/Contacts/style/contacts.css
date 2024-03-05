@@ -79,7 +79,8 @@ body {
   margin-bottom: 140px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .contacts__animation {
     width: 1000px;
     height: 500px;
@@ -302,6 +303,8 @@ body {
       width: calc(100% - 30px);
       height: 200px; } }
 @media screen and (max-width: 1000px) {
+  .contacts__animation {
+    display: none !important; }
   .contacts .title__container-title {
     width: 500px; }
   .contacts .animation-div {
