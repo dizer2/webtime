@@ -73,7 +73,7 @@ const Services = () => {
                         />
 
                         <h3 className="services__card-title">Design / Redesign / Logo</h3>    
-                        <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
+                        <p className="services__card-description">We turn ideas into visual perfection. Your brand, our creativity. Create a unique design and expressive style with us.</p>      
                     </div>
 
                     <Link to={"/design"}>
@@ -103,7 +103,7 @@ const Services = () => {
                         />
 
                         <h3 className="services__card-title">Posters / Billboards </h3>    
-                        <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
+                        <p className="services__card-description">We create bright posters and billboards for your unique idea. Every detail is a step towards impressive sensations that will leave a mark and attract attention.</p>      
                     </div>
 
                     <Link to={"/poster-billboards"}>
@@ -133,7 +133,7 @@ const Services = () => {
                         />
 
                         <h3 className="services__card-title">Mobile design</h3>    
-                        <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
+                        <p className="services__card-description">We translate your ideas into mobile design, creating a harmonious interaction of form and function. Your brand has its own story, and we make it visible.</p>      
                     </div>
 
                     <Link to={"/mobile-design"}>
@@ -162,7 +162,7 @@ const Services = () => {
                         />
 
                         <h3 className="services__card-title">Business card / Leaflets</h3>    
-                        <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
+                        <p className="services__card-description">Our mission is to attract attention and spread your brand. We don't just create ideas, we ignite them and help them blossom into unique brand experiences.</p>      
                     </div>
 
                     <Link to={"/business-card-leaflets"}>
@@ -190,7 +190,7 @@ const Services = () => {
                         />
 
                         <h3 className="services__card-title">Contact</h3>    
-                        <p className="services__card-description">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.</p>      
+                        <p className="services__card-description">We create more than websites and design. We create the "face" of the brand, a sales tool, and an image weapon. Our special approach and experience help us in this.</p>      
                     </div>
 
                     <ArrowBtn
