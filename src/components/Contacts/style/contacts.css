@@ -186,6 +186,7 @@ body {
         display: flex;
         column-gap: 10px; }
         .contacts__wrapper .contacts__form-box__heading-clue {
+          position: relative;
           width: 18px;
           height: 18px;
           background-color: #fff;
@@ -193,6 +194,62 @@ body {
           display: flex;
           justify-content: center;
           align-items: center; }
+          .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-question-icon {
+            min-width: 18px;
+            min-height: 18px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; }
+            .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-question-icon--main {
+              transition: .4s;
+              cursor: help; }
+          .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-clue {
+            padding: 0 15px;
+            position: absolute;
+            top: -60px;
+            width: 200px;
+            height: 50px;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 10px;
+            border: 1px solid linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: .4s; }
+            .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-clue._open {
+              opacity: 1;
+              transform: translateY(0px);
+              transition: .4s; }
+            .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-clue::before, .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-clue::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 70px;
+              height: 70px;
+              border-radius: 50%;
+              background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
+              filter: blur(50px);
+              z-index: 1; }
+            .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-clue::before {
+              left: -30px; }
+            .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-clue::after {
+              right: -30px; }
+            .contacts__wrapper .contacts__form-box__heading-clue .contacts__form-clue span {
+              font-family: 'Montserrat', sans-serif;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: normal;
+              letter-spacing: 0;
+              color: #fff;
+              z-index: 1; }
       .contacts__wrapper .contacts__form-box__input {
         padding: 0 15px;
         height: 60px;

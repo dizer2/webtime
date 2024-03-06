@@ -18,7 +18,7 @@ const ServicesPage = ({ currentPage }) => {
 
     const pagesData = {
         "web-development": {
-            backgroundImg: require('./img/0-background.jpg'),
+            backgroundImg: require('./img/0-background.svg').default,
             mainColor: "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)",
             gradientParts: {
                 gradientID: "paint0_linear_866_370",
@@ -157,7 +157,7 @@ const ServicesPage = ({ currentPage }) => {
             },
         },
         "design": {
-            backgroundImg: require('./img/1-background.jpg'),
+            backgroundImg: require('./img/1-background.svg').default,
             mainColor: "linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%)",
             gradientParts: {
                 gradientID: "paint0_linear_866_375",
@@ -241,7 +241,7 @@ const ServicesPage = ({ currentPage }) => {
             },
         },
         "poster-billboards": {
-            backgroundImg: require('./img/2-background.jpg'),
+            backgroundImg: require('./img/2-background.svg').default,
             mainColor: "linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%)",
             gradientParts: {
                 gradientID: "paint0_linear_866_376",
@@ -310,7 +310,7 @@ const ServicesPage = ({ currentPage }) => {
             },
         },
         "mobile-design": {
-            backgroundImg: require('./img/3-background.jpg'),
+            backgroundImg: require('./img/3-background.svg').default,
             mainColor: "linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%)",
             gradientParts: {
                 gradientID: "paint0_linear_866_377",
@@ -364,7 +364,7 @@ const ServicesPage = ({ currentPage }) => {
             },
         },
         "business-card-leaflets": {
-            backgroundImg: require('./img/4-background.jpg'),
+            backgroundImg: require('./img/4-background.svg').default,
             mainColor: "linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%)",
             gradientParts: {
                 gradientID: "paint0_linear_866_341",

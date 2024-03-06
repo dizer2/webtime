@@ -6,10 +6,6 @@ body._web-development {
         background: $main !important;
     }
 
-    &::selection {
-        background: red !important;
-    }
-
     .services-page {
         .gradient-btn { background: $main; }
 

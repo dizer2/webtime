@@ -73,8 +73,6 @@ body {
 
 body._web-development::-webkit-scrollbar-thumb {
   background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%) !important; }
-body._web-development::selection {
-  background: red !important; }
 body._web-development .services-page .gradient-btn {
   background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 body._web-development .services-page__popup-overlay::-webkit-scrollbar-thumb {
