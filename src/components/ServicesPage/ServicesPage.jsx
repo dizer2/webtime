@@ -6,6 +6,7 @@ import ArrowBtn from "./../UI/ArrowBtn/ArrowBtn"
 import { Link, useLocation } from 'react-router-dom'
 import BurgerMenu from '../UI/BurgerMenu/BurgerMenu'
 import SocialMedia from '../UI/SocialMedia/SocialMedia'
+import GradientBtn from '../UI/GradientBtn/GradientBtn'
 
 
 const ServicesPage = ({ currentPage }) => {
@@ -520,11 +521,74 @@ const ServicesPage = ({ currentPage }) => {
         window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+
+    // Let's discuss popup
+    const [togglePopup, setTogglePopup] = useState(false);
+
+    const handlePopupClick = () => {
+        setTogglePopup(!togglePopup);
+
+        if(!togglePopup) {
+            document.body.classList.add("_body-hidden");
+        } else {
+            document.body.classList.remove("_body-hidden");
+        }
+    }
  
 
   return (
     <section id='services-page' className='services-page' style={{backgroundImage: `url(${pagesData[currentPage].backgroundImg})`}}>
       <div className="header__menu-overlay"></div>
+
+      <div className={`services-page__popup-overlay ${togglePopup ? "_active" : ""}`}>
+        <div className={`services-page__popup`}>
+            <div className="services-page__popup-header">
+                <p className="services-page__popup-title">Let’s discuss </p>
+                
+                <svg onClick={handlePopupClick} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clipPath="url(#clip0_1016_357)">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M11.446 10.0004L20 18.147L18.553 19.5242L10 11.3775L1.44601 19.5242L0 18.147L8.553 10.0004L0 1.8537L1.44601 0.476562L10 8.62323L18.553 0.476562L20 1.8537L11.446 10.0004Z" fill={`url(#${pagesData[currentPage].gradientParts.gradientID})`}/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_1016_357" x1="0.904161" y1="3.22934" x2="22.0969" y2="6.69258" gradientUnits="userSpaceOnUse">
+                    <stop stopColor={pagesData[currentPage].gradientParts.color1}/>
+                    <stop offset={pagesData[currentPage].gradientParts.offset} stopColor={pagesData[currentPage].gradientParts.color2}/>
+                    <stop offset="1" stopColor={pagesData[currentPage].gradientParts.color3}/>
+                    </linearGradient>
+                    <clipPath id="clip0_1016_357">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+
+            <form action="" className='services-page__popup-form'>
+                <div className="services-page__popup__input-box">
+                    <span>Name</span>
+                    <input className='services-page__popup-input' type="text" placeholder='Your name' />
+                </div>
+                <div className="services-page__popup__input-box">
+                    <span>Phone number</span>
+                    <input className='services-page__popup-input' type="text" placeholder='Your phone number' />
+                </div>
+                <div className="services-page__popup__input-box">
+                    <span>Email</span>
+                    <input className='services-page__popup-input' type="text" placeholder='Your email' />
+                </div>
+                <div className="services-page__popup__input-box" >
+                    <span>Message</span>
+                    <div className="services-page__popup__textarea-wrapper">
+                        <textarea className='services-page__popup-input services-page__popup-textarea' placeholder='How can we help you ?'></textarea>
+                    </div>
+                </div>
+
+                <GradientBtn 
+                text="Send"
+                isSubmitBtn={true}/>
+            </form>
+        </div>
+      </div>
 
         <div className={`services-page__menu ${scrollingDown ? "_menu-hide" : "_menu-show"} ${isUserOnTop || isMenuOpen ? "_hide-bg" : ""}`}>
             <div className="services-menu__wrapper">
@@ -656,7 +720,7 @@ const ServicesPage = ({ currentPage }) => {
                 {pagesData[currentPage].title === "Design / Redesign\nLogo" ? "Design / Redesign / Logo" : pagesData[currentPage].title }
             </div>
             
-            <h2 className={`services-page__title services-page__title--${currentPage}`}>{pagesData[currentPage].title}</h2>
+            <h2 className={`services-page__title`}>{pagesData[currentPage].title}</h2>
             <p className="services-page__subtitle">It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial. You're not just buying man-hours, you're buying our experience, expertise and skills to create the best sites in your niche.</p>
 
             <div className="services-page__services-container">
@@ -688,6 +752,7 @@ const ServicesPage = ({ currentPage }) => {
                     </p>
 
                     <ArrowBtn
+                        handleClick = {handlePopupClick}
                         text="Let's discuss"
                         customGradient={{
                             direction: `${pagesData[currentPage].gradientParts.offset * 10}deg`,

@@ -48,9 +48,6 @@ body {
 .App {
   overflow-x: hidden; }
 
-::selection {
-  background: rgba(0, 109, 192, 0.5); }
-
 .rolling__block {
   position: relative;
   height: 23px;
