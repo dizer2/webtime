@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer';
 import { ParallaxText } from '../components/UI/ParallaxProps/ParallaxProps.tsx';
 import Loader from '../components/UI/Loader/Loader.jsx';
 
-const Index = () => {
+const Index = ({ hideLoader, setHideLoader }) => {
   const [baseVelocity, setBaseVelocity] = useState({});
 
   useEffect(() => {
@@ -27,8 +27,8 @@ const Index = () => {
 
   return (
     <div>
-      <Loader />
-      <Home/>
+      <Loader hideLoader={hideLoader} setHideLoader={setHideLoader}/>
+      <Home  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
       <About/>
       <section className='text-animation'>
         <ParallaxText baseVelocity={baseVelocity.velocity1}>Website Development • Custom Web Design</ParallaxText>

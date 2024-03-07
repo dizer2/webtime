@@ -2,14 +2,20 @@ import React, { useEffect, useState } from 'react'
 import "./style/loader.css"
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 
-const Loader = () => {
-	const [hideLoader, setHideLoader] = useState(false);
+const Loader = ({ hideLoader, setHideLoader }) => {
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
 		setHideLoader(true);
-		
 		}, 5000);
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+		document.body.classList.remove("_body-hidden"); 
+		}, 4000);
 
 		return () => clearTimeout(timer);
 	}, []);

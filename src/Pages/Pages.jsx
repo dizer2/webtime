@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as HashRouter, Router, Routes, Route, Link } from "react-router-dom";
 import Index from './Index';
 import ServicesPage from '../components/ServicesPage/ServicesPage';
 
 
 const Pages = () => {
+	const [hideLoader, setHideLoader] = useState(false);
+
   return (
     <div>
         <HashRouter>
             <Routes>
-                <Route path="/" element={ <Index/> } />
+                <Route path="/" element={ <Index hideLoader={hideLoader} setHideLoader={setHideLoader}/> } />
 
 
                 {/* Routes To Services Page */}
