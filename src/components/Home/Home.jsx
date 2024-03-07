@@ -82,6 +82,16 @@ const Home = () => {
   };
 
 
+  // Remove Cursor if preloader active 
+  const [isPreloaderShow, setIsPreloaderShow] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPreloaderShow(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   
   // Check device 
   const [isMobile, setIsMobile] = useState(false);
@@ -188,6 +198,9 @@ const Home = () => {
     };
   }, []);
 
+
+
+
   
   return (
     <section id='home' className="home">
@@ -197,7 +210,7 @@ const Home = () => {
           :
           <div
             style={{ top: mousePosition.y, left: mousePosition.x }}
-            className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
+            className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" } ${isPreloaderShow ? " _hide-with-preloader" : ""}`}
           ></div>
         }
 
@@ -207,7 +220,7 @@ const Home = () => {
           ""
           :
           <motion.div
-            className={`cursor ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" }`}
+            className={`cursor ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" } ${isPreloaderShow ? " _hide-with-preloader" : ""}`}
             variants={variants}
             animate={cursorVariant}
           />
@@ -257,7 +270,7 @@ const Home = () => {
         <div id='header' className="header__phantom"></div>
 
         <div className={`header__wrapper`}>
-          <div className="header__logo">
+          <div onClick={() => handleScrollToSection('home')} className="header__logo">
             <Logo/>
           </div>
         
@@ -475,113 +488,127 @@ const Home = () => {
           className="intro__slider mySwiper"
         >
           <SwiperSlide className="intro__card"> 
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Web Development</h4>
+            <Link to="/web-development">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Web Development</h4>
 
-              <p className="intro__card-price">from: 650$</p>
-            </div>
+                <p className="intro__card-price">from: 650$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--1"></div>
+              <div className="intro__card-img intro__card-img--1"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </Link>
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Design</h4>
+            <Link to="/design">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Design</h4>
 
-              <p className="intro__card-price">from: 500$</p>
-            </div>
+                <p className="intro__card-price">from: 500$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--2"></div>
+              <div className="intro__card-img intro__card-img--2"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </Link>
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Poster</h4>
+            <Link to="/poster-billboards">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Poster</h4>
 
-              <p className="intro__card-price">from: 250$</p>
-            </div>  
+                <p className="intro__card-price">from: 250$</p>
+              </div>  
 
-            <div className="intro__card-img intro__card-img--3"></div>
+              <div className="intro__card-img intro__card-img--3"></div>
 
-            <GradientBtn
-              text="View more"
-            />
+              <GradientBtn
+                text="View more"
+              />
+            </Link>
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Logo</h4>
+            <Link to="/design">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Logo</h4>
 
-              <p className="intro__card-price">from: 100$</p>
-            </div>
+                <p className="intro__card-price">from: 100$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--4"></div>
+              <div className="intro__card-img intro__card-img--4"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </Link>
           </SwiperSlide>
           
           <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Business cards</h4>
+            <Link to="/business-card-leaflets">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Business cards</h4>
 
-              <p className="intro__card-price">from: 100$</p>
-            </div>
+                <p className="intro__card-price">from: 100$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--5"></div>
+              <div className="intro__card-img intro__card-img--5"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </Link>
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Leaflets</h4>
+            <Link to="/business-card-leaflets">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Leaflets</h4>
 
-              <p className="intro__card-price">from: 200$</p>
-            </div>
+                <p className="intro__card-price">from: 200$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--6"></div>
+              <div className="intro__card-img intro__card-img--6"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </Link>
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <div className="intro__card-header">
-              <h4 className="intro__card-title">Billboards</h4>
+            <Link to="/poster-billboards">
+              <div className="intro__card-header">
+                <h4 className="intro__card-title">Billboards</h4>
 
-              <p className="intro__card-price">from: 300$</p>
-            </div>
+                <p className="intro__card-price">from: 300$</p>
+              </div>
 
-            <div className="intro__card-img intro__card-img--7"></div>
+              <div className="intro__card-img intro__card-img--7"></div>
 
-            <GradientBtn
-              text="View more"
-              width="100%"
-              height="50"
-            />
+              <GradientBtn
+                text="View more"
+                width="100%"
+                height="50"
+              />
+            </Link>
           </SwiperSlide>
         </Swiper>
 

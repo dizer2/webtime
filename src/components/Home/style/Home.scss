@@ -59,6 +59,11 @@
         &._hide {
             opacity: 0;
         } 
+
+        &._hide-with-preloader {
+            opacity: 0;
+            transition: .2s;
+        }
     }
 
     .cursor-mini {
@@ -79,6 +84,11 @@
 
         &._hide {
             opacity: 0;
+        }
+
+        &._hide-with-preloader {
+            opacity: 0;
+            transition: .2s;
         }
     }
 
@@ -971,13 +981,16 @@
         }
 
         &__interactive-element {
-            &--2 svg{
-                width: 150px;
+            &--1 {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
-    
-            &--3 svg{
-                width: 150px;
+
+            &--2, &--3 {
+                display: none;
             }
+
         }
 
         &__intro {
