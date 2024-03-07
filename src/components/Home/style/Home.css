@@ -361,7 +361,13 @@ body {
           .home__intro .intro__slider .intro__card-img--3 {
             background-image: url(../img/poster.jpg); }
           .home__intro .intro__slider .intro__card-img--4 {
+            background-image: url(../img/logo.jpg); }
+          .home__intro .intro__slider .intro__card-img--5 {
             background-image: url(../img/business-cards.jpg); }
+          .home__intro .intro__slider .intro__card-img--6 {
+            background-image: url(../img/leafleats.jpg); }
+          .home__intro .intro__slider .intro__card-img--7 {
+            background-image: url(../img/billboard.jpg); }
   .home__footer {
     padding: 0 120px;
     margin-bottom: 20px;

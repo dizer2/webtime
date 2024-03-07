@@ -476,9 +476,9 @@ const Home = () => {
         >
           <SwiperSlide className="intro__card"> 
             <div className="intro__card-header">
-              <h4 className="intro__card-title">Website & design</h4>
+              <h4 className="intro__card-title">Web Development</h4>
 
-              <p className="intro__card-price">from: 700$</p>
+              <p className="intro__card-price">from: 650$</p>
             </div>
 
             <div className="intro__card-img intro__card-img--1"></div>
@@ -492,9 +492,9 @@ const Home = () => {
 
           <SwiperSlide className="intro__card">
             <div className="intro__card-header">
-              <h4 className="intro__card-title">Web design</h4>
+              <h4 className="intro__card-title">Design</h4>
 
-              <p className="intro__card-price">from: 400$</p>
+              <p className="intro__card-price">from: 500$</p>
             </div>
 
             <div className="intro__card-img intro__card-img--2"></div>
@@ -522,12 +522,60 @@ const Home = () => {
 
           <SwiperSlide className="intro__card">
             <div className="intro__card-header">
-              <h4 className="intro__card-title">Business cards</h4>
+              <h4 className="intro__card-title">Logo</h4>
 
               <p className="intro__card-price">from: 100$</p>
             </div>
 
             <div className="intro__card-img intro__card-img--4"></div>
+
+            <GradientBtn
+              text="View more"
+              width="100%"
+              height="50"
+            />
+          </SwiperSlide>
+          
+          <SwiperSlide className="intro__card">
+            <div className="intro__card-header">
+              <h4 className="intro__card-title">Business cards</h4>
+
+              <p className="intro__card-price">from: 100$</p>
+            </div>
+
+            <div className="intro__card-img intro__card-img--5"></div>
+
+            <GradientBtn
+              text="View more"
+              width="100%"
+              height="50"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide className="intro__card">
+            <div className="intro__card-header">
+              <h4 className="intro__card-title">Leaflets</h4>
+
+              <p className="intro__card-price">from: 200$</p>
+            </div>
+
+            <div className="intro__card-img intro__card-img--6"></div>
+
+            <GradientBtn
+              text="View more"
+              width="100%"
+              height="50"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide className="intro__card">
+            <div className="intro__card-header">
+              <h4 className="intro__card-title">Billboards</h4>
+
+              <p className="intro__card-price">from: 300$</p>
+            </div>
+
+            <div className="intro__card-img intro__card-img--7"></div>
 
             <GradientBtn
               text="View more"

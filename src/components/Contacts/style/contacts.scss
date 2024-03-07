@@ -61,6 +61,12 @@
             }
         }
 
+        .animation-div {
+            &:last-child {
+                width: 75% !important;
+            }
+        }
+
 
         .contacts__form {
             padding-top: 50px;
@@ -267,6 +273,12 @@
                 }
             }
 
+            .animation-div {
+                &:last-child {
+                    width: 70% !important;
+                }
+            }
+
 
             .contacts__form {
                 width: 100%;
@@ -275,7 +287,7 @@
                 flex-direction: column;
                 row-gap: 30px;
                 border-top: 2px solid rgba(255, 255, 255, 0.2);
-    
+
     
                 &-row {
                     width: 100%;
@@ -335,6 +347,13 @@
                 }
             }
 
+            
+            .animation-div {
+                &:last-child {
+                    width: 66% !important;
+                }
+            }
+
 
             .contacts__form {
                 .contacts__form-box {
@@ -383,6 +402,11 @@
             padding: 0 $main-padding 0 $secondry-padding;
             flex-direction: column;
 
+            .animation-div {
+                &:last-child {
+                    width: 100% !important;
+                }
+            }
             .contacts__info {
                 margin-bottom: 10px;
                 width: 100%;
