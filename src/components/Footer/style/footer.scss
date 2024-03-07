@@ -235,21 +235,22 @@
 			}
 
 			&-input {
-				width: 330px;
+				width: 400px;
 				height: 50px;
 				background-color: $ligth-dark;
 				display: flex;
 				
 				input {
-					width: 300px;
-					height: 100%;
+					width: 350px;
+					height: 50px;
 					background-color: transparent;
 					border: none;
 					outline: none;
 					padding: 0 15px;
 	
 					@include secondary-subTitle();
-					color: rgba($color: #fff, $alpha: 0.6);
+                    -webkit-text-fill-color: $white;
+					-webkit-box-shadow: inset 0 0 0 50px $ligth-dark;
 				}
 	
 				div {
@@ -257,7 +258,11 @@
 					height: 50px;
 					background: $main;
 					@include display-center(center, center);
-	
+				}
+
+				button {
+					width: 50px;
+					height: 50px;
 				}
 			}
 
@@ -268,7 +273,7 @@
 			}
 		}
 	}
- }
+ }	
 
 
  @media screen and (max-width: 500px) {
@@ -289,13 +294,23 @@
 				height: 50px;
 				
 				input {
-					width: 100%;
+					width: calc(100% - 50px);
 					height: 100%;
 				}
 	
 				div {
 					min-width: 50px;
 					height: 50px;
+				}
+
+				button {
+					width: 50px;
+					height: 50px;
+
+					& svg {
+						width: 28px;
+						height: 28px;
+					}
 				}
 			}
 		}

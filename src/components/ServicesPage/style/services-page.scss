@@ -1,20 +1,268 @@
 @import "./../../main/style.scss";
 
-body._web-development { &::-webkit-scrollbar-thumb {background: $main !important;} }
-body._design { &::-webkit-scrollbar-thumb {background: $design-page !important;} }
-body._poster-billboards { &::-webkit-scrollbar-thumb {background: $poster-page !important;} }
-body._mobile-design { &::-webkit-scrollbar-thumb {background: $mobile-page !important;} }
-body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-page !important;} }
 
+body._web-development { 
+    &::-webkit-scrollbar-thumb {
+        background: $main !important;
+    }
 
-.burger__menu {
-    width: 30px;
-    height: 30px;
-    background: #c33636;
+    .services-page {
+        .gradient-btn { background: $main; }
+
+        &__popup-overlay {
+            &::-webkit-scrollbar-thumb { background: $main !important; }
+            .services-page__popup {
+                &::before { background: $main; }
+            }
+        }
+
+        &__main {
+            .services-page__title {
+                &::before { background: $main; }
+            }
+        }
+    }
 }
+
+
+body._design {
+    &::-webkit-scrollbar-thumb {
+        background: $design-page !important;
+    }
+
+    .services-page {
+        .gradient-btn { background: $design-page; }
+
+        &__popup-overlay {
+            &::-webkit-scrollbar-thumb { background: $design-page !important; }
+
+            .services-page__popup {
+                &::before { background: $design-page; }
+            }
+        }
+
+        &__main {
+            .services-page__title {
+                &::before { background: $design-page; }
+            }
+        }
+    }
+}
+
+
+body._poster-billboards {
+    &::-webkit-scrollbar-thumb {
+        background: $poster-page !important;
+    }
+
+    .services-page {
+        .gradient-btn { background: $poster-page; }
+
+        &__popup-overlay {
+            &::-webkit-scrollbar-thumb { background: $poster-page !important; }
+
+            .services-page__popup {
+                &::before { background: $poster-page; }
+            }
+        }
+
+        &__main {
+            .services-page__title {
+                &::before { background: $poster-page; }
+
+            }
+        }
+    }
+}
+
+
+body._mobile-design {
+    &::-webkit-scrollbar-thumb {
+        background: $mobile-page !important;
+    }
+
+    .services-page {
+        .gradient-btn { background: $mobile-page; }
+
+        &__popup-overlay {
+            &::-webkit-scrollbar-thumb { background: $mobile-page !important; }
+
+            .services-page__popup {
+                &::before { background: $mobile-page; }
+            }
+        }
+
+        &__main {
+            .services-page__title {
+                &::before { background: $mobile-page; }
+            }
+        }
+    }
+}
+
+
+body._business-card-leaflets {
+    &::-webkit-scrollbar-thumb {
+        background: $card-page !important;
+    }
+
+    .services-page {
+        .gradient-btn { background: $card-page; }
+
+        &__popup-overlay {
+            &::-webkit-scrollbar-thumb { background: $card-page !important; }
+
+            .services-page__popup {
+                &::before { background: $card-page; }
+            }
+        }
+
+        &__main {
+            .services-page__title {
+                &::before { background: $card-page; }
+            }
+        }
+    }
+}
+
 
 .services-page {
     display: flex;
+ 
+
+    &__popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: -1;
+        opacity: 0;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+        @include display-center(center, center);
+        display: flex;
+        transition: .4s;
+        &::-webkit-scrollbar { width: 5px; }
+
+
+        &._active {
+            z-index: 10;
+            opacity: 1;
+            transition: 1s;    
+
+            .services-page__popup {
+                transform: translateY(0px);
+                // opacity: 1;
+                transition: .4s;
+            }
+        }
+
+        .services-page__popup {
+            min-width: 700px;
+            padding: 45px 50px;
+            background-color: $black;
+            box-shadow: 0 0 2px rgba($white, 0.6);
+            overflow-y: auto;
+            transform: translateY(-150px);
+            transition: .4s;
+            // opacity: 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 270px;
+                height: 270px;
+                border-radius: 100%;
+                filter: blur(250px);
+                z-index: -1;
+            }
+
+            &-header {
+                margin-bottom: 40px;
+                @include display-center(space-between, center);
+                @include font($white, 24px, 600, normal, 0);
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+
+            &-form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+               .services-page__popup__input-box {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    ::-webkit-scrollbar {
+                        width: 5px;
+                        border-radius: 5px;
+                    }
+                    ::-webkit-scrollbar-track {
+                        background: transparent;
+                    }
+                    ::-webkit-scrollbar-thumb {
+                        border-radius: 5px;
+                    }
+    
+                    
+                    span {
+                        margin-bottom: 5px;
+                        @include font($white, 16px, 500, normal, 0);
+                    }
+
+                    .services-page__popup-input {
+                        padding: 0 10px;
+                        width: 100%;
+                        height: 50px;
+                        outline: none;
+                        border: none;
+                        background-color: $ligth-dark;
+                        @include font($white, 16px, 500, normal, 0);
+                        border: 1px solid rgba($white, 0.1);
+
+                        -webkit-box-shadow: inset 0 0 0 50px $ligth-dark;
+                        -webkit-text-fill-color: $white;
+                    }
+
+                    .services-page__popup__textarea-wrapper {
+                        width: 100%;
+                        background-color: $ligth-dark;
+                        border: 1px solid rgba($white, 0.1);
+
+
+                        .services-page__popup-textarea {
+                            padding: 0px;
+                            padding-right: 5px;
+                            margin: 15px 10px;
+                            width: calc(100% - 20px);
+                            height: 100px;
+                            resize: none;
+                            outline: none;
+                            overflow-y: auto;
+                            border: none;
+                        }
+                    }
+                }
+
+
+                .gradient-btn {
+                    height: 50px;
+                    margin-top: 20px;
+                }
+            }
+
+        }
+    }
 
     .header__menu-wrapper {
         display: none;
@@ -115,12 +363,6 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
                 height: 80px;
                 z-index: -1;
             }
-
-            &--web-development { &::before { background: $main; } }
-            &--design { &::before { background: $design-page; } }
-            &--poster-billboards { &::before { background: $poster-page; } }
-            &--mobile-design { &::before { background: $mobile-page; } }
-            &--business-card-leaflets { &::before { background: $card-page; } }
         }
 
         .services-page__subtitle {
@@ -444,6 +686,15 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
         }
 
 
+        &__popup-overlay {
+            .services-page__popup {
+                margin: 0 $main-padding;
+                min-width: auto;
+                width: 100%;
+            }
+        }
+
+
         .header__menu-overlay {
             top: -100vh;
             display: block;
@@ -475,7 +726,7 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             background-color: transparent;
             // @include display-center(space-between, none);
             // flex-direction: row;
-            z-index: 100;
+            z-index: 9;
             transition: 0.4s;
 
             .services-menu__wrapper {
@@ -613,6 +864,20 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
             } 
         }
 
+        &__popup-overlay {
+            .services-page__popup {
+                padding: 25px;
+
+                &-header {
+                    margin-bottom: 30px;
+                }
+
+                .gradient-btn {
+                    margin-top: 10px;
+                }
+            }
+        }
+
         &__main {
             .services-page__user-location {
                 &, & a {
@@ -670,6 +935,25 @@ body._business-card-leaflets { &::-webkit-scrollbar-thumb {background: $card-pag
                 .services-page__description {
                     text-align: center;
                 }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-height: 730px) {
+    .services-page {
+        &__popup-overlay {
+            display: none;
+            justify-content: center;
+            align-items: start;
+
+            &._active {
+                display: flex;
+            }
+
+            .services-page__popup {
+                top: 0;
             }
         }
     }

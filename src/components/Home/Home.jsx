@@ -260,7 +260,7 @@ const Home = () => {
           <div className="header__logo">
             <Logo/>
           </div>
-
+        
           <nav className="header__nav">
             <ul className="header__list">
               <li onClick={() => handleScrollToSection('about')} className="header__item">About</li>

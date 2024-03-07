@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style/arrow-btn.css";
 
-const ArrowBtn = ({ text, isGradient = true, customGradient, isWhite = false, gradientID = "paint0_linear_866_370", color1 = "#2BBFFE", color2 = "#8629FD", color3 = "#FC4AF5", offset = "0.521875" }) => {
+const ArrowBtn = ({ handleClick, text, isGradient = true, customGradient, isWhite = false, gradientID = "paint0_linear_866_370", color1 = "#2BBFFE", color2 = "#8629FD", color3 = "#FC4AF5", offset = "0.521875" }) => {
   const styles = {
     background: isGradient && customGradient
       ? `linear-gradient(${customGradient.direction}, ${customGradient.colors.join(', ')})`
@@ -12,7 +12,7 @@ const ArrowBtn = ({ text, isGradient = true, customGradient, isWhite = false, gr
   };
 
   return (
-    <div className={`arrow-btn arrow-btn--${isWhite ? "white" : "gradient"}`}>
+    <div onClick={handleClick} className={`arrow-btn arrow-btn--${isWhite ? "white" : "gradient"}`}>
       <span style={styles}>{text}</span>
 
       <svg width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -48,9 +48,6 @@ body {
 .App {
   overflow-x: hidden; }
 
-::selection {
-  background: rgba(0, 109, 192, 0.5); }
-
 .rolling__block {
   position: relative;
   height: 23px;
@@ -76,26 +73,178 @@ body {
 
 body._web-development::-webkit-scrollbar-thumb {
   background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%) !important; }
+body._web-development .services-page .gradient-btn {
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+body._web-development .services-page__popup-overlay::-webkit-scrollbar-thumb {
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%) !important; }
+body._web-development .services-page__popup-overlay .services-page__popup::before {
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
+body._web-development .services-page__main .services-page__title::before {
+  background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
 
 body._design::-webkit-scrollbar-thumb {
   background: linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%) !important; }
+body._design .services-page .gradient-btn {
+  background: linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%); }
+body._design .services-page__popup-overlay::-webkit-scrollbar-thumb {
+  background: linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%) !important; }
+body._design .services-page__popup-overlay .services-page__popup::before {
+  background: linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%); }
+body._design .services-page__main .services-page__title::before {
+  background: linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%); }
 
 body._poster-billboards::-webkit-scrollbar-thumb {
   background: linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%) !important; }
+body._poster-billboards .services-page .gradient-btn {
+  background: linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%); }
+body._poster-billboards .services-page__popup-overlay::-webkit-scrollbar-thumb {
+  background: linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%) !important; }
+body._poster-billboards .services-page__popup-overlay .services-page__popup::before {
+  background: linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%); }
+body._poster-billboards .services-page__main .services-page__title::before {
+  background: linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%); }
 
 body._mobile-design::-webkit-scrollbar-thumb {
   background: linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%) !important; }
+body._mobile-design .services-page .gradient-btn {
+  background: linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%); }
+body._mobile-design .services-page__popup-overlay::-webkit-scrollbar-thumb {
+  background: linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%) !important; }
+body._mobile-design .services-page__popup-overlay .services-page__popup::before {
+  background: linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%); }
+body._mobile-design .services-page__main .services-page__title::before {
+  background: linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%); }
 
 body._business-card-leaflets::-webkit-scrollbar-thumb {
   background: linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%) !important; }
-
-.burger__menu {
-  width: 30px;
-  height: 30px;
-  background: #c33636; }
+body._business-card-leaflets .services-page .gradient-btn {
+  background: linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%); }
+body._business-card-leaflets .services-page__popup-overlay::-webkit-scrollbar-thumb {
+  background: linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%) !important; }
+body._business-card-leaflets .services-page__popup-overlay .services-page__popup::before {
+  background: linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%); }
+body._business-card-leaflets .services-page__main .services-page__title::before {
+  background: linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%); }
 
 .services-page {
   display: flex; }
+  .services-page__popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: .4s; }
+    .services-page__popup-overlay::-webkit-scrollbar {
+      width: 5px; }
+    .services-page__popup-overlay._active {
+      z-index: 10;
+      opacity: 1;
+      transition: 1s; }
+      .services-page__popup-overlay._active .services-page__popup {
+        transform: translateY(0px);
+        transition: .4s; }
+    .services-page__popup-overlay .services-page__popup {
+      min-width: 700px;
+      padding: 45px 50px;
+      background-color: #000;
+      box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
+      overflow-y: auto;
+      transform: translateY(-150px);
+      transition: .4s; }
+      .services-page__popup-overlay .services-page__popup::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 270px;
+        height: 270px;
+        border-radius: 100%;
+        filter: blur(250px);
+        z-index: -1; }
+      .services-page__popup-overlay .services-page__popup-header {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #fff; }
+        .services-page__popup-overlay .services-page__popup-header svg {
+          cursor: pointer; }
+      .services-page__popup-overlay .services-page__popup-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px; }
+        .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box {
+          width: 100%;
+          display: flex;
+          flex-direction: column; }
+          .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box ::-webkit-scrollbar {
+            width: 5px;
+            border-radius: 5px; }
+          .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box ::-webkit-scrollbar-track {
+            background: transparent; }
+          .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box ::-webkit-scrollbar-thumb {
+            border-radius: 5px; }
+          .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box span {
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: normal;
+            letter-spacing: 0;
+            color: #fff; }
+          .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box .services-page__popup-input {
+            padding: 0 10px;
+            width: 100%;
+            height: 50px;
+            outline: none;
+            border: none;
+            background-color: #121212;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: normal;
+            letter-spacing: 0;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            -webkit-box-shadow: inset 0 0 0 50px #121212;
+            -webkit-text-fill-color: #fff; }
+          .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box .services-page__popup__textarea-wrapper {
+            width: 100%;
+            background-color: #121212;
+            border: 1px solid rgba(255, 255, 255, 0.1); }
+            .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box .services-page__popup__textarea-wrapper .services-page__popup-textarea {
+              padding: 0px;
+              padding-right: 5px;
+              margin: 15px 10px;
+              width: calc(100% - 20px);
+              height: 100px;
+              resize: none;
+              outline: none;
+              overflow-y: auto;
+              border: none; }
+        .services-page__popup-overlay .services-page__popup-form .gradient-btn {
+          height: 50px;
+          margin-top: 20px; }
   .services-page .header__menu-wrapper {
     display: none; }
   .services-page__menu {
@@ -183,16 +332,6 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
         width: 200px;
         height: 80px;
         z-index: -1; }
-      .services-page__main .services-page__title--web-development::before {
-        background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
-      .services-page__main .services-page__title--design::before {
-        background: linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%); }
-      .services-page__main .services-page__title--poster-billboards::before {
-        background: linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%); }
-      .services-page__main .services-page__title--mobile-design::before {
-        background: linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%); }
-      .services-page__main .services-page__title--business-card-leaflets::before {
-        background: linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%); }
     .services-page__main .services-page__subtitle {
       margin-bottom: 50px;
       font-family: 'Montserrat', sans-serif;
@@ -428,6 +567,10 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       top: 0; }
     100% {
       top: -100vh; } }
+    .services-page__popup-overlay .services-page__popup {
+      margin: 0 30px;
+      min-width: auto;
+      width: 100%; }
     .services-page .header__menu-overlay {
       top: -100vh;
       display: block;
@@ -450,7 +593,7 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       width: 100%;
       height: auto;
       background-color: transparent;
-      z-index: 100;
+      z-index: 9;
       transition: 0.4s; }
       .services-page__menu .services-menu__wrapper {
         width: 100%;
@@ -516,6 +659,12 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
         min-height: 1px; }
   .services-page .header__menu .rolling__block {
     display: none; }
+  .services-page__popup-overlay .services-page__popup {
+    padding: 25px; }
+    .services-page__popup-overlay .services-page__popup-header {
+      margin-bottom: 30px; }
+    .services-page__popup-overlay .services-page__popup .gradient-btn {
+      margin-top: 10px; }
   .services-page__main .services-page__user-location, .services-page__main .services-page__user-location a {
     font-size: 14px; }
     .services-page__main .services-page__user-location svg:nth-child(1), .services-page__main .services-page__user-location a svg:nth-child(1) {
@@ -548,5 +697,14 @@ body._business-card-leaflets::-webkit-scrollbar-thumb {
       justify-content: center; }
     .services-page__main .services-page__description-box .services-page__description {
       text-align: center; } }
+@media screen and (max-height: 730px) {
+  .services-page__popup-overlay {
+    display: none;
+    justify-content: center;
+    align-items: start; }
+    .services-page__popup-overlay._active {
+      display: flex; }
+    .services-page__popup-overlay .services-page__popup {
+      top: 0; } }
 
 /*# sourceMappingURL=services-page.css.map */
