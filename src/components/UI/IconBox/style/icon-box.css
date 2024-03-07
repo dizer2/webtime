@@ -36,6 +36,9 @@ body {
   body._body-hidden {
     overflow: hidden; }
 
+::selection {
+  background: rgba(255, 255, 255, 0.2); }
+
 ::-webkit-scrollbar {
   width: 10px; }
 

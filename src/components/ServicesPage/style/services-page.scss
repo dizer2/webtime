@@ -167,6 +167,7 @@ body._business-card-leaflets {
             background-color: $black;
             box-shadow: 0 0 2px rgba($white, 0.6);
             overflow-y: auto;
+            overflow-x: hidden;
             transform: translateY(-150px);
             transition: .4s;
             // opacity: 0;
@@ -552,7 +553,7 @@ body._business-card-leaflets {
                 position: fixed;
                 width: 100%;
                 height: 100vh;
-                z-index: 11;
+                z-index: 9;
                 opacity: 1;
                 animation: burgerOverlayAnimation 1s .8s forwards;
                 @keyframes burgerOverlayAnimation {
@@ -934,6 +935,29 @@ body._business-card-leaflets {
     
                 .services-page__description {
                     text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    $main-padding: 30px;
+
+
+    .services-page {
+        &__popup-overlay {
+            .services-page__popup {
+                padding: 25px $main-padding;
+                margin: 0;
+                width: 100%;
+
+                &-header {
+                    margin-bottom: 30px;
+                }
+
+                .gradient-btn {
+                    margin-top: 10px;
                 }
             }
         }

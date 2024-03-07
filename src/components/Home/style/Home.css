@@ -36,6 +36,9 @@ body {
   body._body-hidden {
     overflow: hidden; }
 
+::selection {
+  background: rgba(255, 255, 255, 0.2); }
+
 ::-webkit-scrollbar {
   width: 10px; }
 
@@ -737,4 +740,4 @@ body {
     .home._menu-open .home__header .header__wrapper .header__nav-box .header__btn-menu {
       margin-top: 30px; } }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=Home.css.map */

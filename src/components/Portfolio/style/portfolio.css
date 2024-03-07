@@ -36,6 +36,9 @@ body {
   body._body-hidden {
     overflow: hidden; }
 
+::selection {
+  background: rgba(255, 255, 255, 0.2); }
+
 ::-webkit-scrollbar {
   width: 10px; }
 
@@ -73,7 +76,6 @@ body {
 
 .portfolio {
   width: 100%;
-  margin-bottom: 140px;
   padding-top: 140px; }
   .portfolio__box {
     width: 100%;

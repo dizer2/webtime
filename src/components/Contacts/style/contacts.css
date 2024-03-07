@@ -36,6 +36,9 @@ body {
   body._body-hidden {
     overflow: hidden; }
 
+::selection {
+  background: rgba(255, 255, 255, 0.2); }
+
 ::-webkit-scrollbar {
   width: 10px; }
 
@@ -325,7 +328,7 @@ body {
         width: 100%; }
         .contacts__wrapper .contacts__form-box__message {
           height: 260px; }
-        .contacts__wrapper .contacts__form-box__btn {
+        .contacts__wrapper .contacts__form-box .gradient-btn {
           margin: 30px auto 0px auto;
           width: 100%;
           height: 50px;
