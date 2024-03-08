@@ -288,12 +288,12 @@ const Contacts = () => {
                   </defs>
                 </svg>
               </button> */}
+            </div>
 
-              <GradientBtn 
+            
+            <GradientBtn 
                 text="Send"
                 isSubmitBtn={true}/>
-
-            </div>
           </form>
         </RevealSecodary>
       </div>

@@ -279,8 +279,8 @@ const Home = () => {
               <li onClick={() => handleScrollToSection('about')} className="header__item">About</li>
               <li onClick={() => handleScrollToSection('services')} className="header__item header__dropdown">
                 Services 
-                <svg className='header__dropdown-arrow' xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                  <path d="M5.70696 10.4899C5.31643 10.8804 5.31643 11.5136 5.70696 11.9041L10.5992 16.7915C11.3804 17.5719 12.6462 17.5716 13.427 16.7909L18.3173 11.9005C18.7079 11.51 18.7079 10.8768 18.3173 10.4863C17.9268 10.0957 17.2936 10.0957 16.9031 10.4863L12.7175 14.6719C12.327 15.0625 11.6938 15.0624 11.3033 14.6719L7.12117 10.4899C6.73065 10.0993 6.09748 10.0993 5.70696 10.4899Z" fill="white"/>
+                <svg className='header__dropdown-arrow' width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.292898 0.296507C-0.0976325 0.687017 -0.0976325 1.32022 0.292898 1.71072L5.18509 6.59812C5.96629 7.37852 7.23209 7.37822 8.01289 6.59752L12.9032 1.70712C13.2938 1.31662 13.2938 0.683417 12.9032 0.292897C12.5127 -0.0976325 11.8795 -0.0976325 11.489 0.292897L7.30339 4.47852C6.91289 4.86912 6.27969 4.86902 5.88919 4.47852L1.70711 0.296507C1.31659 -0.0940228 0.683418 -0.0940228 0.292898 0.296507Z" fill="white"/>
                 </svg>
 
                 <div className="header__dropdown-content__overlay">
@@ -381,7 +381,7 @@ const Home = () => {
             </ul>
           </nav>
 
-          <button className="header__btn">
+          <button onClick={() => handleScrollToSection('contacts')} className="header__btn">
             <span>Contacts</span> 
           </button>
 
@@ -618,6 +618,7 @@ const Home = () => {
       <footer className='home__footer'>
         <div className="social__media-wrapper">
           <SocialMedia
+            nameOfMedia = "whats-up"
             linkPath="#!"
             icon={
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -629,6 +630,7 @@ const Home = () => {
           />
 
           <SocialMedia
+            nameOfMedia = "email"
             linkPath="mailto:help.webtime@gmail.com"
             icon={
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -643,6 +645,7 @@ const Home = () => {
           />
 
           <SocialMedia
+            nameOfMedia = "telegram"
             linkPath="#!"
             icon={
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">

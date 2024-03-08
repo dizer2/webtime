@@ -153,23 +153,35 @@
                     column-gap: 30px;
 
                     .header__item {
+                        position: relative;
                         @include display-center(center, center);
-                        column-gap: 5px;
+                        column-gap: 10px;
                         @include font($white, 16px, 600, normal, 0);
                         cursor: pointer;
+                        transition: .4s;
+
+                        &:hover {
+                            transition: .4s;
+                            color: #a7a7a7; 
+
+                            .header__dropdown-arrow path {
+                                fill: #a7a7a7;
+                            }
+                        }
                     }
 
                     .header__dropdown {
                         position: relative;
                     
                         &-arrow {
-                            transition: .3s;
+                            transform: translateY(2px) rotate(0deg);
+                            transition: transform 0.3s, color 0.4s;
                         }
                     
                         &:hover {
                             .header__dropdown-arrow {
-                                transition: .3s;
-                                transform: rotate(-180deg);
+                                transition: transform 0.3s, color 0.4s;
+                                transform: translateY(2px) rotate(-180deg);
                             }
                     
                             .header__dropdown-content__overlay {
@@ -230,6 +242,13 @@
                                         @include display-center(none, center);
                                         column-gap: 15px;
                                         color: $white;
+                                        transition: .4s;
+
+
+                                        &:hover {
+                                            color: #a7a7a7; 
+                                            transition: .4s;
+                                        }
                     
                                         .icon-box {
                                             position: relative;

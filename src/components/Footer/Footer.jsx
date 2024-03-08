@@ -73,6 +73,7 @@ const Footer = () => {
 
 					<div className="social__media-wrapper">
 						<SocialMedia
+            				nameOfMedia = "whats-up"
 							linkPath="#!"
 							icon={
 								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,6 +85,7 @@ const Footer = () => {
 						/>
 
 						<SocialMedia
+            				nameOfMedia = "email"
 							linkPath="mailto:help.webtime@gmail.com"
 							icon={
 								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,6 +100,7 @@ const Footer = () => {
 						/>
 
 						<SocialMedia
+            				nameOfMedia = "telegram"
 							linkPath="#!"
 							icon={
 								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">

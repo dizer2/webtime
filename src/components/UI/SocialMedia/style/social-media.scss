@@ -1,22 +1,57 @@
 .social-media {
+    transition: .4s;
+    width: 50px;
+    height: 50px;
+
+    & svg path {
+        transition: .4s;
+    }
+
     &--big {
-        width: 50px;
-        height: 50px;
-        background-color: #fff;
+        // width: 50px;
+        // height: 50px;
+        // background-color: #fff;
     }
 
     &--mini {
-        width: 36px;
-        height: 36px;
-        display: none;
+        // width: 36px;
+        // height: 36px;
+    }
+
+    &:hover {
+        transition: .4s;
+        // background-color: #fff;
+    }
+
+
+    &--whats-up:hover  {
+        svg path {
+            fill: #25D366;
+        }
+    }
+
+    &--email:hover  {
+        svg {
+            path:nth-child(1) {fill: #4285F4;}
+            path:nth-child(2) {fill: #34A853;}
+            path:nth-child(3) {fill: #FBBC04;}
+            path:nth-child(4) {fill: #EA4335;}
+            path:nth-child(5) {fill: #C5221F;}
+        }
+    }
+
+    &--telegram:hover  {
+        svg path {
+            fill: #34AADF;
+        }
     }
 }
 
 
 
 @media screen and (max-width: 1200px) {
-    .social-meadia--big svg {
-        width: 42px;
-        height: 42px;
+    .social-media--big svg {
+        // width: 42px;
+        // height: 42px;
     }
 }
