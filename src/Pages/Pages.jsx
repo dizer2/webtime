@@ -2,9 +2,16 @@ import React, { useState } from 'react'
 import { BrowserRouter as HashRouter, Router, Routes, Route, Link } from "react-router-dom";
 import Index from './Index';
 import ServicesPage from '../components/ServicesPage/ServicesPage';
+import { useTranslation } from 'react-i18next';
 
 
 const Pages = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
 	const [hideLoader, setHideLoader] = useState(false);
 
   return (

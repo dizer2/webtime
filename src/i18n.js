@@ -7,15 +7,14 @@ i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
- 
   .init({
     fallbackLng: 'en',
     debug: true,
+    returnObjects: true, // Enable returnObjects option
 
     interpolation: {
       escapeValue: false,
     }
   });
-
 
 export default i18n;

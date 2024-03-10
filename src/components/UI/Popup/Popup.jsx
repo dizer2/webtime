@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import "./style/popup.css"
+import { useTranslation } from 'react-i18next'
 
 const Popup = ({ popupClass, setPopupClass }) => {
 	const classPopup = popupClass ? "popup-form popup-form--open": "popup-form"
+
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		if (popupClass) {
@@ -37,9 +40,9 @@ const Popup = ({ popupClass, setPopupClass }) => {
 	  </div>
 
 	  <div className="popup-form__container">
-		<p className='popup-form__container-title'>Successfully applied!</p>
+		<p className='popup-form__container-title'>{t('homePage.main.contactPopup.title')}</p>
 
-		<p className='popup-form__container-description'>Thank you for choosing Webtime! Your application has been successfully submitted. Our team will review it promptly. Sit tight while we work our magic to make your website dreams come true.</p>
+		<p className='popup-form__container-description'>{t('homePage.main.contactPopup.text')}</p>
 	  </div>
 	</div>
   )

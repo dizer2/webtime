@@ -15,8 +15,12 @@ import img4 from "./img/img4.png"
 import { Parallax, Navigation } from 'swiper/modules'; // Додаємо модуль Navigation
 import { Reveal } from '../utils/Reveal/Reveal.tsx'
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx'
+import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
+	const {t} = useTranslation();
+
+
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -41,13 +45,13 @@ const Portfolio = () => {
   return (
     <div id='portfolio' className='portfolio'>
 		  <Reveal>
-        <SubTitle text={"your project can be here"}/>
+        <SubTitle text={t('homePage.portfolio.banner')}/>
 		  </Reveal>
 
       <RevealSecodary>
         <Title 
-          text={"Projects that speak for themselves"}
-          description={"portfolio"}
+          text={t('homePage.portfolio.mainTitle.title')}
+          description={t('homePage.portfolio.mainTitle.secondTitle')}
         />
 		  </RevealSecodary>
 

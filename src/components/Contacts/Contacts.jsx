@@ -9,8 +9,12 @@ import Popup from '../UI/Popup/Popup.jsx';
 import Spline from '@splinetool/react-spline';
 import { useInView } from 'react-intersection-observer';
 import GradientBtn from '../UI/GradientBtn/GradientBtn.jsx';
+import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
+	const {t} = useTranslation();
+
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -142,11 +146,11 @@ const Contacts = () => {
 
 
       <Reveal>
-        <SubTitle text={"LET'S GO TO ACTION"} />
+        <SubTitle text={t('homePage.contacts.banner')} />
       </Reveal>
 
       <RevealSecodary>
-        <Title text={'Let us create the best design for your niche'} description={''} />
+        <Title text={t('homePage.contacts.mainTitle.title')} description={t('homePage.contacts.mainTitle.secondTitle')} />
       </RevealSecodary>
 
       <div className='contacts__wrapper'>
@@ -167,12 +171,12 @@ const Contacts = () => {
             <div className='contacts__form-row'>
               <div className='contacts__form-box'>
                 <p className={`contacts__form-box__heading ${error.name && 'error'}`}>
-                  {error.name ? 'Invalid Name' : 'Name'}
+                  {error.name ? t('homePage.contacts.inputName.error') : t('homePage.contacts.inputName.title')}
                 </p>
                 <input
                   className='contacts__form-box__input'
                   type='text'
-                  placeholder='Your name'
+                  placeholder={t('homePage.contacts.inputName.placeholder')}
                   onChange={handleChange}
                   value={formData.name}
                   name='name'
@@ -182,7 +186,7 @@ const Contacts = () => {
 
               <div className='contacts__form-box'>
                 <div className='contacts__form-box__heading'>
-                  {error.company ? 'Invalid Company' : 'Company'}
+                  {error.company ? t('homePage.contacts.inputCompany.error') : t('homePage.contacts.inputCompany.title')}
 
 
                   <div className='contacts__form-box__heading-clue'>
@@ -194,7 +198,7 @@ const Contacts = () => {
                         </svg>
                       </div>
 
-                      <span>Not required to fill out</span> 
+                      <span>{t('homePage.contacts.inputCompany.clue')}</span> 
                     </div>  
 
                     <div onMouseEnter={handleHover} onMouseLeave={handleHover} className="contacts__form-question-icon contacts__form-question-icon--main"> 
@@ -210,7 +214,7 @@ const Contacts = () => {
                 <input
                   className='contacts__form-box__input'
                   type='text'
-                  placeholder='Your company'
+                  placeholder={t('homePage.contacts.inputCompany.placeholder')}
                   onChange={handleChange}
                   value={formData.company}
                   name='company'
@@ -222,12 +226,12 @@ const Contacts = () => {
             <div className='contacts__form-row'>
               <div className='contacts__form-box'>
                 <p className={`contacts__form-box__heading ${error.email && 'error'}`}>
-                  {error.email ? 'Invalid Email' : 'Email'}
+                  {error.email ?  t('homePage.contacts.inputEmail.error') : t('homePage.contacts.inputEmail.title')}
                 </p>
                 <input
                   className='contacts__form-box__input'
                   type='text'
-                  placeholder='Your email'
+                  placeholder={t('homePage.contacts.inputEmail.placeholder')}
                   onChange={handleChange}
                   value={formData.email}
                   name='email'
@@ -237,13 +241,13 @@ const Contacts = () => {
 
               <div className='contacts__form-box'>
                 <p className={`contacts__form-box__heading ${error.phone && 'error'}`}>
-                  {error.phone ? 'Invalid Phone Number' : 'Phone number'}
+                  {error.phone ? t('homePage.contacts.inputPhone.error') : t('homePage.contacts.inputPhone.title')}
                 </p>
                 
                 <input
                   className='contacts__form-box__input'
                   type='number'
-                  placeholder='Your phone number'
+                  placeholder={t('homePage.contacts.inputPhone.placeholder')}
                   onChange={handleChange}
                   value={formData.phone}
                   name='phone'
@@ -255,14 +259,14 @@ const Contacts = () => {
 
             <div className='contacts__form-box'>
               <p className={`contacts__form-box__heading ${error.message && 'error'}`}>
-                {error.message ? 'Invalid Message' : 'Message'}
+                {error.message ? t('homePage.contacts.inputMessage.error') : t('homePage.contacts.inputMessage.title')}
               </p>
          
 
               <div className='contacts__form-box__message'>
                 <textarea
                   className='contacts__form-box__input contacts__form-box__textarea'
-                  placeholder='Write about the service that you would like to receive'
+                  placeholder={t('homePage.contacts.inputMessage.placeholder')}
                   onChange={handleChange}
                   value={formData.message}
                   name='message'
@@ -270,29 +274,11 @@ const Contacts = () => {
           
               </div>
               {error.message && <p className='error-message'>{error.message}</p>}
-             
-
-              {/* <button type="submit" className='contacts__form-box__btn'>
-                Send
-                <svg width='30' height='30' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                  <g clipPath='url(#clip0_506_608)'>
-                    <path
-                      d='M30.3624 6.88688L21.8624 28.8452C21.4976 29.7874 20.2921 30.0559 19.5621 29.3576L14.7708 24.7745L11.8338 27.7114C11.3876 28.1577 10.6246 27.8416 10.6246 27.2106V20.8087L3.27036 13.7742C2.46751 13.0063 2.82078 11.6551 3.89678 11.3785L28.6885 5.00345C29.8048 4.71635 30.7785 5.81185 30.3624 6.88688ZM26.9164 8.50051L11.3778 18.6344L13.8364 20.9861L26.9164 8.50051Z'
-                      fill='white'
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id='clip0_506_608'>
-                      <rect width='34' height='34' fill='white' />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button> */}
             </div>
 
             
             <GradientBtn 
-                text="Send"
+                text={t('homePage.contacts.sendBtn')}
                 isSubmitBtn={true}/>
           </form>
         </RevealSecodary>

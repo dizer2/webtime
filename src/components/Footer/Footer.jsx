@@ -4,13 +4,17 @@ import Logo from '../main/img/Logo';
 import SocialMedia from '../UI/SocialMedia/SocialMedia';
 import emailjs from '@emailjs/browser';
 import Popup from '../UI/Popup/Popup';
+import { useTranslation } from 'react-i18next';
 
 
 const Footer = () => {
+	const {t} = useTranslation();
+
+
 	const currentYear = new Date().getFullYear();
 	const [feedbackInput, setFeedbackInput] = useState('');
 	const form = useRef();
-	const [feedbackTitle, setFeedbackTitle] = useState('Would you like to leave a review?');
+	const [feedbackTitle, setFeedbackTitle] = useState(t('homePage.footer.feedback.title'));
 	const [popupClass, setPopupClass] = useState(false);
 
 	  // Scroll To Section 
@@ -69,7 +73,7 @@ const Footer = () => {
 						<Logo scrollToHome={() => handleScrollToSection('home')} />
 					</div>
 
-					<p className='footer__top-description'>Webtime - where your site will shine, your business will climb, and success will be prime. Contact us today, let's make your dreams play.</p>
+					<p className='footer__top-description'>{t('homePage.footer.description')}</p>
 
 					<div className="social__media-wrapper">
 						<SocialMedia
@@ -113,26 +117,26 @@ const Footer = () => {
 				</div>
 
 				<div className="footer__top-nav">
-					<p className="footer__top-subTitle">Navigation</p>
+					<p className="footer__top-subTitle">{t('homePage.footer.navigation')}</p>
 
 
 					<nav className='footer__nav'>
 						<ul className='footer__list'>
-							<li onClick={() => handleScrollToSection('home')} className='footer__item'>Home</li>
-							<li onClick={() => handleScrollToSection('about')} className='footer__item'>About</li>
-							<li onClick={() => handleScrollToSection('services')} className='footer__item'>Services</li>
-							<li onClick={() => handleScrollToSection('portfolio')} className='footer__item'>Portfolio</li>
-							<li onClick={() => handleScrollToSection('contacts')} className='footer__item'>Contacts</li>
+							<li onClick={() => handleScrollToSection('home')} className='footer__item'>{t('homePage.main.navigation.home')}</li>
+							<li onClick={() => handleScrollToSection('about')} className='footer__item'>{t('homePage.main.navigation.about')}</li>
+							<li onClick={() => handleScrollToSection('services')} className='footer__item'>{t('homePage.main.navigation.services')}</li>
+							<li onClick={() => handleScrollToSection('portfolio')} className='footer__item'>{t('homePage.main.navigation.portfolio')}</li>
+							<li onClick={() => handleScrollToSection('contacts')} className='footer__item'>{t('homePage.main.navigation.contacts')}</li>
 						</ul>
 					</nav>
 					
 				</div>
 
 				<form  ref={form} onSubmit={handleFeedback} className="footer__top-form">
-				<p className={`footer__top-subTitle ${feedbackTitle !== 'Would you like to leave a review?' ? 'error-message' : ''}`}>{feedbackTitle}</p>
+				<p className={`footer__top-subTitle ${feedbackTitle !== t('homePage.footer.feedback.title') ? 'error-message' : ''}`}>{feedbackTitle}</p>
 
 					<div className='footer__top-input'>
-						<input value={feedbackInput} onChange={handleChange} name='feedback' type="text" placeholder='We appreciate your feedback' />
+						<input value={feedbackInput} onChange={handleChange} name='feedback' type="text" placeholder={t('homePage.footer.feedback.placeholder')} />
 						<button type="sumbit">
 							<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M5.99597 28.2801L28.0089 18.4634C29.7739 17.6763 29.7739 15.3237 28.0089 14.5366L5.99597 4.71995C4.00152 3.83053 1.93277 5.80552 2.92067 7.65585L7.12338 15.5275C7.45025 16.1397 7.45025 16.8603 7.12338 17.4725L2.92067 25.3441C1.93277 27.1945 4.00152 29.1695 5.99597 28.2801Z" fill="white"/>
@@ -145,7 +149,7 @@ const Footer = () => {
 
 		<div className="footer__bottom">
 			<div className="footer__bottom-line"></div>
-			<p>  © <span id='year'>{currentYear}</span> WebTime. All rights reserved.</p>
+			<p>© <span id='year'>{currentYear}</span> {t('homePage.footer.copyright')}</p>
 		</div>
 	</div>
   )

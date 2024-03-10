@@ -26,9 +26,9 @@ import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
 const Home = () => {
-  const { i18n } = useTranslation();
-  const changeLanguage = (lng) => i18n.changeLanguage(lng);
+  const { t, i18n } = useTranslation();
 
+  const changeLanguage = (lng) => { i18n.changeLanguage(lng); };
 
   // Cursor Animation
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -276,9 +276,9 @@ const Home = () => {
         
           <nav className="header__nav">
             <ul className="header__list">
-              <li onClick={() => handleScrollToSection('about')} className="header__item">About</li>
+              <li onClick={() => handleScrollToSection('about')} className="header__item">{t('homePage.main.navigation.about')}</li>
               <li onClick={() => handleScrollToSection('services')} className="header__item header__dropdown">
-                Services 
+                {t('homePage.main.navigation.services')}
                 <svg className='header__dropdown-arrow' width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0.292898 0.296507C-0.0976325 0.687017 -0.0976325 1.32022 0.292898 1.71072L5.18509 6.59812C5.96629 7.37852 7.23209 7.37822 8.01289 6.59752L12.9032 1.70712C13.2938 1.31662 13.2938 0.683417 12.9032 0.292897C12.5127 -0.0976325 11.8795 -0.0976325 11.489 0.292897L7.30339 4.47852C6.91289 4.86912 6.27969 4.86902 5.88919 4.47852L1.70711 0.296507C1.31659 -0.0940228 0.683418 -0.0940228 0.292898 0.296507Z" fill="white"/>
                 </svg>
@@ -298,7 +298,7 @@ const Home = () => {
                                 circleSize = {12}
                                 top = {20}
                               />
-                              Web Development
+                              {t('homePage.main.services.service1')}
                           </li>                        
                         </Link>
 
@@ -315,7 +315,7 @@ const Home = () => {
                                 circleSize = {12}
                                 top = {20}
                               />
-                              Design / Redesign / Logo
+                              {t('homePage.main.services.service2')}
                           </li>
                         </Link>
 
@@ -331,7 +331,7 @@ const Home = () => {
                                 circleSize = {12}
                                 top = {20}
                               />
-                              Posters / Billboards 
+                              {t('homePage.main.services.service3')} 
                           </li>
                         </Link>
 
@@ -352,7 +352,7 @@ const Home = () => {
                                 circleSize = {12}
                                 top = {20}
                               />
-                              Mobile design
+                              {t('homePage.main.services.service4')}
                           </li>
                         </Link>
 
@@ -368,7 +368,7 @@ const Home = () => {
                                 circleSize = {12}
                                 top = {20}
                               />
-                              Business card / Leaflets
+                              {t('homePage.main.services.service5')}
                           </li>
                         </Link>
 
@@ -376,13 +376,13 @@ const Home = () => {
                   </ul>
                 </div>
               </li>
-              <li onClick={() => handleScrollToSection('portfolio')} className="header__item">Portfolio</li>
-              <li onClick={() => handleScrollToSection('contacts')} className="header__item">Contacts</li>
+              <li onClick={() => handleScrollToSection('portfolio')} className="header__item">{t('homePage.main.navigation.portfolio')}</li>
+              <li onClick={() => handleScrollToSection('contacts')} className="header__item">{t('homePage.main.navigation.contacts')}</li>
             </ul>
           </nav>
 
           <button onClick={() => handleScrollToSection('contacts')} className="header__btn">
-            <span>Contacts</span> 
+            <span>{t('homePage.home.contactBtn')}</span> 
           </button>
 
 
@@ -399,23 +399,23 @@ const Home = () => {
                   <div onClick={() => handleScrollToSection('about')} className="header__menu-item">
                     <div className='header__menu-item__order'>01</div>
                     <div className='header__menu-item__rhombus'></div>
-                    <p>About</p>
+                    <p>{t('homePage.main.navigation.about')}</p>
                   </div>
                   <div onClick={() => handleScrollToSection('services')} className="header__menu-item">
                     <div className='header__menu-item__order'>02</div>
                     <div className='header__menu-item__rhombus'></div>
 
-                    <p>Services</p>
+                    <p>{t('homePage.main.navigation.services')}</p>
                   </div>
                   <div onClick={() => handleScrollToSection('portfolio')} className="header__menu-item">
                     <div className='header__menu-item__order'>03</div>
                     <div className='header__menu-item__rhombus'></div>
-                    <p>Portfolio</p>
+                    <p>{t('homePage.main.navigation.portfolio')}</p>
                   </div>
                   <div onClick={() => handleScrollToSection('contacts')} className="header__menu-item">
                     <div className='header__menu-item__order'>04</div>
                     <div className='header__menu-item__rhombus'></div>
-                    <p>Contacts</p>
+                    <p>{t('homePage.main.navigation.contacts')}</p>
                   </div>
                 </div>
               </div>
@@ -476,7 +476,7 @@ const Home = () => {
 
         <h1 className="intro__title">
           {/* <strong>WebTime</strong> <strong>―</strong> your time with webtime, where innovation meets design. */}
-          <strong>WebTime</strong> <strong>―</strong> your time with webtime, where design and development converge.
+          <strong>{t('homePage.home.title.companyName')}</strong> <strong>{t('homePage.home.title.slash')}</strong> {t('homePage.home.title.text')}
         </h1>
 
         <Swiper
@@ -490,15 +490,15 @@ const Home = () => {
           <SwiperSlide className="intro__card"> 
             <Link to="/web-development">
               <div className="intro__card-header">
-                <h4 className="intro__card-title">Web Development</h4>
+                <h4 className="intro__card-title">{t('homePage.home.card1.title')}</h4>
 
-                <p className="intro__card-price">from: 650$</p>
+                <p className="intro__card-price">{t('homePage.home.card1.price')}</p>
               </div>
 
               <div className="intro__card-img intro__card-img--1"></div>
 
               <GradientBtn
-                text="View more"
+                text={`${t('homePage.main.viewMore')}`}
                 width="100%"
                 height="50"
               />
@@ -508,15 +508,15 @@ const Home = () => {
           <SwiperSlide className="intro__card">
             <Link to="/design">
               <div className="intro__card-header">
-                <h4 className="intro__card-title">Design</h4>
+                <h4 className="intro__card-title">{t('homePage.home.card2.title')}</h4>
 
-                <p className="intro__card-price">from: 500$</p>
+                <p className="intro__card-price">{t('homePage.home.card2.price')}</p>
               </div>
 
               <div className="intro__card-img intro__card-img--2"></div>
 
               <GradientBtn
-                text="View more"
+                text={`${t('homePage.main.viewMore')}`}
                 width="100%"
                 height="50"
               />
@@ -526,15 +526,15 @@ const Home = () => {
           <SwiperSlide className="intro__card">
             <Link to="/poster-billboards">
               <div className="intro__card-header">
-                <h4 className="intro__card-title">Poster</h4>
+                <h4 className="intro__card-title">{t('homePage.home.card3.title')}</h4>
 
-                <p className="intro__card-price">from: 250$</p>
+                <p className="intro__card-price">f{t('homePage.home.card3.price')}</p>
               </div>  
 
               <div className="intro__card-img intro__card-img--3"></div>
 
               <GradientBtn
-                text="View more"
+                text={`${t('homePage.main.viewMore')}`}
               />
             </Link>
           </SwiperSlide>
@@ -542,15 +542,15 @@ const Home = () => {
           <SwiperSlide className="intro__card">
             <Link to="/design">
               <div className="intro__card-header">
-                <h4 className="intro__card-title">Logo</h4>
+                <h4 className="intro__card-title">{t('homePage.home.card4.title')}</h4>
 
-                <p className="intro__card-price">from: 100$</p>
+                <p className="intro__card-price">{t('homePage.home.card4.price')}</p>
               </div>
 
               <div className="intro__card-img intro__card-img--4"></div>
 
               <GradientBtn
-                text="View more"
+                text={`${t('homePage.main.viewMore')}`}
                 width="100%"
                 height="50"
               />
@@ -560,15 +560,15 @@ const Home = () => {
           <SwiperSlide className="intro__card">
             <Link to="/business-card-leaflets">
               <div className="intro__card-header">
-                <h4 className="intro__card-title">Business cards</h4>
+                <h4 className="intro__card-title">{t('homePage.home.card5.title')}</h4>
 
-                <p className="intro__card-price">from: 100$</p>
+                <p className="intro__card-price">{t('homePage.home.card5.price')}</p>
               </div>
 
               <div className="intro__card-img intro__card-img--5"></div>
 
               <GradientBtn
-                text="View more"
+                text={`${t('homePage.main.viewMore')}`}
                 width="100%"
                 height="50"
               />
@@ -578,15 +578,15 @@ const Home = () => {
           <SwiperSlide className="intro__card">
             <Link to="/business-card-leaflets">
               <div className="intro__card-header">
-                <h4 className="intro__card-title">Leaflets</h4>
+                <h4 className="intro__card-title">{t('homePage.home.card6.title')}</h4>
 
-                <p className="intro__card-price">from: 200$</p>
+                <p className="intro__card-price">{t('homePage.home.card6.price')}</p>
               </div>
 
               <div className="intro__card-img intro__card-img--6"></div>
 
               <GradientBtn
-                text="View more"
+                text={`${t('homePage.main.viewMore')}`}
                 width="100%"
                 height="50"
               />
@@ -596,15 +596,15 @@ const Home = () => {
           <SwiperSlide className="intro__card">
             <Link to="/poster-billboards">
               <div className="intro__card-header">
-                <h4 className="intro__card-title">Billboards</h4>
+                <h4 className="intro__card-title">{t('homePage.home.card7.title')}</h4>
 
-                <p className="intro__card-price">from: 300$</p>
+                <p className="intro__card-price">{t('homePage.home.card7.price')}</p>
               </div>
 
               <div className="intro__card-img intro__card-img--7"></div>
 
               <GradientBtn
-                text="View more"
+                text={`${t('homePage.main.viewMore')}`}
                 width="100%"
                 height="50"
               />

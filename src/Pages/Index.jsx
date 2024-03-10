@@ -7,8 +7,11 @@ import Contacts from '../components/Contacts/Contacts';
 import Footer from '../components/Footer/Footer';
 import { ParallaxText } from '../components/UI/ParallaxProps/ParallaxProps.tsx';
 import Loader from '../components/UI/Loader/Loader.jsx';
+import { useTranslation } from 'react-i18next';
 
 const Index = ({ hideLoader, setHideLoader }) => {
+  const { t, i18n } = useTranslation();
+
   const [baseVelocity, setBaseVelocity] = useState({});
 
   useEffect(() => {
@@ -31,8 +34,8 @@ const Index = ({ hideLoader, setHideLoader }) => {
       <Home  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
       <About/>
       <section className='text-animation'>
-        <ParallaxText baseVelocity={baseVelocity.velocity1}>Website Development • Custom Web Design</ParallaxText>
-        <ParallaxText baseVelocity={baseVelocity.velocity2}>Posters • Billboards • Mobile Design • Business card • Leaflets </ParallaxText>
+        <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
+        <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText1')}</ParallaxText>
       </section>
       <Services/>
       <Portfolio />
