@@ -5,6 +5,7 @@ import SocialMedia from '../UI/SocialMedia/SocialMedia';
 import emailjs from '@emailjs/browser';
 import Popup from '../UI/Popup/Popup';
 import { useTranslation } from 'react-i18next';
+import Calculator from '../UI/Calculator/Calculator';
 
 
 const Footer = () => {
@@ -66,6 +67,8 @@ const Footer = () => {
   return (
 	<div className='footer'>
 		<Popup popupClass={popupClass} setPopupClass={setPopupClass} />
+		{/* <Calculator /> */}
+
 
 		<div className="footer__top">
 				<div className="footer__top-left">

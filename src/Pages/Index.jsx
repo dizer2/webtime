@@ -8,6 +8,7 @@ import Footer from '../components/Footer/Footer';
 import { ParallaxText } from '../components/UI/ParallaxProps/ParallaxProps.tsx';
 import Loader from '../components/UI/Loader/Loader.jsx';
 import { useTranslation } from 'react-i18next';
+import Calculator from '../components/UI/Calculator/Calculator.jsx';
 
 const Index = ({ hideLoader, setHideLoader }) => {
   const { t, i18n } = useTranslation();
