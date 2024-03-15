@@ -14,6 +14,8 @@ const Index = ({ hideLoader, setHideLoader }) => {
   const { t, i18n } = useTranslation();
 
   const [baseVelocity, setBaseVelocity] = useState({});
+  const [calculatorShow, setCalculatorShow] = useState(false);
+  const [calculatorMenu, setCalculatorMenu] = useState(false);
 
   useEffect(() => {
     const updateBaseVelocity = () => {
@@ -29,11 +31,13 @@ const Index = ({ hideLoader, setHideLoader }) => {
     return () => window.removeEventListener('resize', updateBaseVelocity);
   }, []);
 
+
+
   return (
     <div>
       <Loader hideLoader={hideLoader} setHideLoader={setHideLoader}/>
-      <Home  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
-      <About/>
+      <Home setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
+      <About setCalculatorMenu={setCalculatorMenu}/>
       <section className='text-animation'>
         <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
         <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText1')}</ParallaxText>
@@ -41,7 +45,7 @@ const Index = ({ hideLoader, setHideLoader }) => {
       <Services/>
       <Portfolio />
       <Contacts/>
-      <Footer />
+      <Footer setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>
     </div>
   );
 }

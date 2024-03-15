@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import Calculator from '../UI/Calculator/Calculator';
 
 
-const Footer = () => {
+const Footer = ({ calculatorShow, setCalculatorShow }) => {
 	const {t} = useTranslation();
 
 
@@ -67,7 +67,7 @@ const Footer = () => {
   return (
 	<div className='footer'>
 		<Popup popupClass={popupClass} setPopupClass={setPopupClass} />
-		{/* <Calculator /> */}
+		<Calculator setPopupClass={setPopupClass} setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>
 
 
 		<div className="footer__top">
