@@ -230,7 +230,7 @@ const About = ({ setCalculatorMenu }) => {
 		<div className="about-us__box3">
 				<div className="about-us__box3-top">
 					<Reveal>
-						<SubTitle text={"what makes us the best?"}/>
+						<SubTitle text={t('homePage.about.banner3')}/>
 					</Reveal>
 
 					<RevealSecodary>

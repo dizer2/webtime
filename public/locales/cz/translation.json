@@ -512,7 +512,12 @@
                     "title": "Mobilní design",
                     "imgPath": "./images/mobile-design.jpg",
                     "goTo": "mobile-design"
-                }
+                },
+                "example2": {
+                    "title": "Mobilní redesign",
+                    "imgPath": "./images/mobile-redesign.jpg",
+                    "goTo": "mobile-design"
+                  }
             },
             "services": {
                 "block1": {
