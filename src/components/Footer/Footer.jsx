@@ -11,11 +11,12 @@ import Calculator from '../UI/Calculator/Calculator';
 const Footer = ({ calculatorShow, setCalculatorShow }) => {
 	const {t} = useTranslation();
 
-
 	const currentYear = new Date().getFullYear();
 	const [feedbackInput, setFeedbackInput] = useState('');
 	const form = useRef();
 	const [feedbackTitle, setFeedbackTitle] = useState(t('homePage.footer.feedback.title'));
+	const [isError, setIsError] = useState(false)
+
 	const [popupClass, setPopupClass] = useState(false);
 
 	  // Scroll To Section 
@@ -39,6 +40,7 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 		// Validation: Check if feedbackInput has less than 5 characters
 		if (feedbackInput.trim().length < 5) {
 			console.log("Feedback must be at least 5 characters long.");
+			setIsError(true)
 			setFeedbackTitle(t('homePage.footer.feedback.toShort'));
 			return; 
 		}
@@ -53,6 +55,7 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 				() => {
 					console.log('SUCCESS!');
 					setPopupClass(true);
+					setIsError(false)
 				},
 				(error) => {
 					console.log('FAILED...', error.text);
@@ -137,7 +140,9 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 				</div>
 
 				<form  ref={form} onSubmit={handleFeedback} className="footer__top-form">
-				<p className={`footer__top-subTitle ${feedbackTitle !== t('homePage.footer.feedback.title') ? 'error-message' : ''}`}>{feedbackTitle}</p>
+				{/* <p className={`footer__top-subTitle ${feedbackTitle !== t('homePage.footer.feedback.title') ? 'error-message' : ''}`}>{feedbackTitle}</p> */}
+				<p className={`footer__top-subTitle ${isError ? 'error-message' : ''}`}>{feedbackTitle}</p>
+
 
 					<div className='footer__top-input'>
 						<input value={feedbackInput} onChange={handleChange} name='feedback' type="text" placeholder={t('homePage.footer.feedback.placeholder')} />

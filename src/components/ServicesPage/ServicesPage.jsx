@@ -8,6 +8,7 @@ import BurgerMenu from '../UI/BurgerMenu/BurgerMenu'
 import SocialMedia from '../UI/SocialMedia/SocialMedia'
 import GradientBtn from '../UI/GradientBtn/GradientBtn'
 import { useTranslation } from 'react-i18next'
+import { transform } from 'framer-motion'
 
 const ServicesPage = ({ currentPage }) => {
     const { t } = useTranslation();

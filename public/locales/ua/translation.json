@@ -316,136 +316,136 @@
             },
             "menu": {
                 "nav1": {
-                "nav": "Design",
-                "goTo": "design"
+                    "nav": "Дизайн",
+                    "goTo": "design"
                 },
                 "nav2": {
-                "nav": "Redesign",
-                "goTo": "redesign"
+                    "nav": "Редизайн",
+                    "goTo": "redesign"
                 },
                 "nav3": {
-                "nav": "Logo",
-                "goTo": "logo"
+                    "nav": "Логотип",
+                    "goTo": "logo"
                 },
                 "nav4": {
-                "nav": "Mobile design",
-                "goTo": "mobile-design",
-                "otherPage": true
+                    "nav": "Мобільний дизайн",
+                    "goTo": "mobile-design",
+                    "otherPage": true
                 }
             },
-            "title": "Design / Redesign\nLogo",
-            "subtitle": "Make a distinctive mark in the business world with our design services. Whether you need a completely new logo, a stylish redesign, or an inspiring brand, our team of experienced designers is ready to bring your ideas to life. Elevate your brand to new heights with our creative solutions designed to highlight your uniqueness and capture the attention of your target audience.",
+            "title": "Дизайн / Редизайн\nЛоготип",
+            "subtitle": "Зробіть відмітний слід у бізнес-світі з нашими дизайнерськими послугами. Чи вам потрібен абсолютно новий логотип, стильний передизайн або натхненний бренд, наша команда досвідчених дизайнерів готова втілити ваші ідеї в життя. Підніміть свій бренд на нові висоти з нашими творчими рішеннями, спрямованими на виділення вашої унікальності та привернення уваги вашої цільової аудиторії.",
             "examples": {
                 "example1": {
-                "title": "Web Design",
-                "imgPath": "./images/web-design.jpg",
-                "goTo": "design"
+                    "title": "Веб-дизайн",
+                    "imgPath": "./images/web-design.jpg",
+                    "goTo": "design"
                 },
                 "example2": {
-                "title": "Web Redesign",
-                "imgPath": "./images/web-redesign.jpg",
-                "goTo": "redesign"
+                    "title": "Редизайн веб-сайту",
+                    "imgPath": "./images/web-redesign.jpg",
+                    "goTo": "redesign"
                 },
                 "example3": {
-                "title": "Logo",
-                "imgPath": "./images/logo.jpg",
-                "goTo": "logo"
+                    "title": "Логотип",
+                    "imgPath": "./images/logo.jpg",
+                    "goTo": "logo"
                 }
             },
             "services": {
                 "block1": {
-                "title": "Web Design",
-                "blockID": "design",
-                "tag1": "Any scale",
-                "tag2": "Multy page",
-                "tag3": "Convenience",
-                "tag4": "Art",
-                "description": "Unlock the full potential of your online presence with our cutting-edge Web Design services. Our expert team crafts visually stunning and user-friendly websites tailored to elevate your brand. From intuitive navigation to captivating aesthetics, we ensure a seamless user experience that leaves a lasting impression. Transform your digital identity and stand out in the crowded online landscape. Elevate your business with our Web Design expertise – where innovation meets impact."
+                    "title": "Веб-дизайн",
+                    "blockID": "design",
+                    "tag1": "На будь-якому масштабі",
+                    "tag2": "Багатосторінковий",
+                    "tag3": "Зручність",
+                    "tag4": "Мистецтво",
+                    "description": "Розблокуйте повний потенціал вашої онлайн-присутності з нашими передовими послугами веб-дизайну. Наша команда експертів створює візуально вражаючі та зручні для користувачів веб-сайти, призначені для піднесення вашого бренду. Від інтуїтивно зрозумілої навігації до захоплюючої естетики ми забезпечуємо безперервний досвід користувача, який залишає незабутнє враження. Трансформуйте свою цифрову ідентичність і виділіться в затіненому онлайн-просторі. Підніміть свій бізнес з нашою експертизою в області веб-дизайну – де інновація зустрічається з впливом."
                 },
                 "block2": {
-                "title": "Web Redesign",
-                "blockID": "redesign",
-                "tag1": "Modern",
-                "tag2": "New technologies",
-                "tag3": "Improvement",
-                "tag4": "Update",
-                "description": "Experience a digital makeover with our Redesign services. Whether refreshing your current website or undergoing a complete transformation, our skilled team enhances visual appeal, functionality, and user engagement. Elevate your brand's online presence, captivate your audience, and stay ahead in the ever-evolving digital landscape. Unleash the power of redesign to redefine success in the virtual realm – where your brand's evolution meets excellence."
+                    "title": "Редизайн веб-сайту",
+                    "blockID": "redesign",
+                    "tag1": "Сучасний",
+                    "tag2": "Нові технології",
+                    "tag3": "Покращення",
+                    "tag4": "Оновлення",
+                    "description": "Відчуйте цифрову перетворення за допомогою наших послуг передизайну. Чи оновлюєте ваш поточний веб-сайт, чи зазнаєте повного перетворення, наша кваліфікована команда підвищує візуальний привабливість, функціональність та залученість користувачів. Підніміть онлайн-присутність вашого бренду, захопіть вашу аудиторію і залишайтеся на крок перед у постійно змінному цифровому ландшафті. Розкрийте потужність передизайну, щоб перевизначити успіх у віртуальному світі – де еволюція вашого бренду зустрічається з відмінністю."
                 },
                 "block3": {
-                "title": "Logo",
-                "blockID": "logo",
-                "tag1": "Branding",
-                "tag2": "Graphic design",
-                "tag3": "Unique",
-                "tag4": "Emblem",
-                "description": "Forge a memorable brand identity with our Logo Design services. Our creative team specializes in designing logos that resonate with your brand's essence. From timeless simplicity to bold innovation, we tailor logos that leave a lasting imprint. Elevate your brand recognition and make a statement in any market. Discover the art of visual storytelling with our Logo Design expertise – where every logo is a unique symbol of your brand's journey and aspirations."
+                    "title": "Логотип",
+                    "blockID": "logo",
+                    "tag1": "Брендинг",
+                    "tag2": "Графічний дизайн",
+                    "tag3": "Унікальний",
+                    "tag4": "Емблема",
+                    "description": "Створіть запам'ятовувану корпоративну ідентичність за допомогою наших послуг з дизайну логотипу. Наша творча команда спеціалізується на створенні логотипів, які віддзеркалюють суть вашого бренду. Від вічної простоти до сміливих інновацій ми адаптуємо логотипи, які залишають незабутній слід. Підвищте впізнаваність свого бренду та зробіть заяву на будь-якому ринку. Відкрийте мистецтво візуального розповідання з нашою експертизою в області дизайну логотипу – де кожен логотип є унікальним символом подорожі та амбіцій вашого бренду."
                 }
             }
         },
         "poster-billboards": {
-        "backgroundImg": "./images/2-background.svg",
-        "mainColor": "linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%)",
-        "gradientParts": {
-            "gradientID": "paint0_linear_866_376",
-            "color1": "#68E0CF",
-            "color2": "#3DCDFF",
-            "color3": "#209CFF",
-            "offset": "0.516"
-        },
-        "menu": {
-            "nav1": {
-            "nav": "Posters",
-            "goTo": "posters"
+            "backgroundImg": "./images/2-background.svg",
+            "mainColor": "linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_376",
+                "color1": "#68E0CF",
+                "color2": "#3DCDFF",
+                "color3": "#209CFF",
+                "offset": "0.516"
             },
-            "nav2": {
-            "nav": "Billboards",
-            "goTo": "billboards"
+            "menu": {
+                "nav1": {
+                    "nav": "Постери",
+                    "goTo": "posters"
+                },
+                "nav2": {
+                    "nav": "Білборди",
+                    "goTo": "billboards"
+                },
+                "nav3": {
+                    "nav": "Візитка",
+                    "goTo": "business-card-leaflets",
+                    "otherPage": true
+                },
+                "nav4": {
+                    "nav": "Листівки",
+                    "goTo": "business-card-leaflets",
+                    "otherPage": true
+                }
             },
-            "nav3": {
-            "nav": "Business card",
-            "goTo": "business-card-leaflets",
-            "otherPage": true
+            "title": "Постери / Білборди",
+            "subtitle": "Підніміть присутність вашого бренду за допомогою наших послуг дизайну постерів та білбордів. Наші досвідчені дизайнери створюють візуально вражаючі постери, які привертають увагу на меншому масштабі, та сміливі білборди, що домінують міський пейзаж. Від вражаючих зображень до переконливого повідомлення ми забезпечуємо, щоб ваш бренд виділявся як у невеликих, так і великих просторах. Зробіть потужну заяву, викличте інтерес і залиште незабутнє враження за допомогою нашої експертизи в області дизайну постерів та білбордів. Там, де творчість зустрічається з видимістю, ми перетворюємо ваші ідеї в візуальні шоу, які вимагають уваги.",
+            "examples": {
+                "example1": {
+                    "title": "Постери",
+                    "imgPath": "./images/poster.jpg",
+                    "goTo": "posters"
+                },
+                "example2": {
+                    "title": "Білборди",
+                    "imgPath": "./images/billboard.jpg",
+                    "goTo": "billboards"
+                }
             },
-            "nav4": {
-            "nav": "Leaflets",
-            "goTo": "business-card-leaflets",
-            "otherPage": true
+            "services": {
+                "block1": {
+                    "title": "Постери",
+                    "blockID": "posters",
+                    "tag1": "Дизайн постерів",
+                    "tag2": "Багатобарвний",
+                    "tag3": "Події",
+                    "tag4": "Різний розмір",
+                    "description": "Перетворіть ваше повідомлення в візуальний шедевр за допомогою наших послуг дизайну постерів. Наші вправні дизайнери створюють привабливі постери, які привертають увагу аудиторії і залишають незабутнє враження. Від вражаючих зображень до переконливого тексту ми забезпечуємо, щоб ваш постер виділявся в будь-якому просторі. Підвищте ефективність вашої промоції, викличте цікавість і зробіть заяву за допомогою нашої експертизи в області дизайну постерів. Використовуйте потужність візуальної комунікації і привертайте увагу за допомогою постерів, які говорять голосніше за слова."
+                },
+                "block2": {
+                    "title": "Білборди",
+                    "blockID": "billboards",
+                    "tag1": "Дизайн білбордів",
+                    "tag2": "Привертання людей",
+                    "tag3": "Рекламні панелі",
+                    "tag4": "Великі",
+                    "description": "Максимізуйте видимість вашого бренду за допомогою наших послуг дизайну білбордів. Наша експертна команда створює захопливі дизайни, які домінують над міським пейзажем і привертають увагу. Від сміливих візуальних рішень до коротких повідомлень ми забезпечуємо, щоб ваш білборд залишав незабутній слід у проходячих мимоволі. Підвищте ефективність вашої зовнішньої реклами, підсиліть впізнаваність бренду і зробіть заяву на великій сцені. Довіряйте нашій експертизі в області дизайну білбордів, щоб перетворити ваше повідомлення в непропущений шоу в міському ландшафті."
+                }
             }
-        },
-        "title": "Posters / Billboards",
-        "subtitle": "Elevate your brand presence with our Poster and Billboard Design services. Our expert designers craft visually striking posters that captivate on a smaller scale, and bold billboards that dominate the urban skyline. From impactful imagery to compelling messaging, we ensure your brand stands out in both intimate and grand spaces. Make a powerful statement, spark interest, and leave a lasting impression with our Poster and Billboard Design expertise. Where creativity meets visibility, we turn your ideas into visual spectacles that demand attention.",
-        "examples": {
-            "example1": {
-            "title": "Posters",
-            "imgPath": "./images/poster.jpg",
-            "goTo": "posters"
-            },
-            "example2": {
-            "title": "Billboards",
-            "imgPath": "./images/billboard.jpg",
-            "goTo": "billboards"
-            }
-        },
-        "services": {
-            "block1": {
-            "title": "Posters",
-            "blockID": "posters",
-            "tag1": "Poster Design",
-            "tag2": "Multicolored",
-            "tag3": "Event",
-            "tag4": "Different Size",
-            "description": "Transform your message into a visual masterpiece with our Poster Design services. Our skilled designers craft eye-catching posters that captivate audiences and leave a lasting impression. From impactful imagery to compelling copy, we ensure your poster stands out in any space. Elevate your promotional efforts, spark curiosity, and make a statement with our Poster Design expertise. Unleash the power of visual communication and turn heads with posters that speak louder than words."
-            },
-            "block2": {
-            "title": "Billboards",
-            "blockID": "billboards",
-            "tag1": "Billboards Design",
-            "tag2": "Attracting people",
-            "tag3": "Advertising Boards",
-            "tag4": "Large",
-            "description": "Maximize your brand visibility with our Billboard Design services. Our expert team creates captivating designs that dominate the skyline and command attention. From bold visuals to concise messaging, we ensure your billboard leaves a lasting impact on passersby. Elevate your outdoor advertising game, amplify brand recognition, and make a statement on the grand stage. Trust our Billboard Design expertise to transform your message into an unmissable spectacle in the urban landscape."
-            }
-        }
         },
         "mobile-design": {
             "backgroundImg": "./images/3-background.svg",
@@ -459,43 +459,48 @@
             },
             "menu": {
                 "nav1": {
-                "nav": "Mobile design",
-                "goTo": "mobile-design"
+                    "nav": "Мобільний дизайн",
+                    "goTo": "mobile-design"
                 },
                 "nav2": {
-                "nav": "Web design",
-                "goTo": "design",
-                "otherPage": true
+                    "nav": "Веб-дизайн",
+                    "goTo": "design",
+                    "otherPage": true
                 },
                 "nav3": {
-                "nav": "Web redesign",
-                "goTo": "design",
-                "otherPage": true
+                    "nav": "Редизайн веб-сайту",
+                    "goTo": "design",
+                    "otherPage": true
                 },
                 "nav4": {
-                "nav": "Logo",
-                "goTo": "design",
-                "otherPage": true
+                    "nav": "Логотип",
+                    "goTo": "design",
+                    "otherPage": true
                 }
             },
-            "title": "Mobile Design",
-            "subtitle": "Unique design for your mobile app is the key to a successful launch! Our mobile design specialists will create intuitive and stylish interfaces that not only attract attention but also ensure ease of use. Give your brand a standout look and make a lasting impression.",
+            "title": "Мобільний дизайн",
+            "subtitle": "Унікальний дизайн для вашого мобільного додатка - ключ до успішного запуску! Наші спеціалісти з мобільного дизайну створять інтуїтивні та стильні інтерфейси, які привертають увагу та забезпечують зручність використання. Надайте своєму бренду неповторний вигляд і залиште незабутнє враження.",
             "examples": {
                 "example1": {
-                "title": "Mobile Design",
-                "imgPath": "./images/mobile-design.jpg",
-                "goTo": "mobile-design"
-                }
+                    "title": "Мобільний дизайн",
+                    "imgPath": "./images/mobile-design.jpg",
+                    "goTo": "mobile-design"
+                },
+                "example2": {
+                    "title": "Мобільний редизайн",
+                    "imgPath": "./images/mobile-redesign.jpg",
+                    "goTo": "mobile-design"
+                  }
             },
             "services": {
                 "block1": {
-                "title": "Mobile Design",
-                "blockID": "mobile-design",
-                "tag1": "App design",
-                "tag2": "Mobility",
-                "tag3": "Visual Touch",
-                "tag4": "Multi-page",
-                "description": "Immerse your audience in a mobile-friendly experience with our Mobile Design services. Our expert team specializes in creating intuitive and visually appealing mobile interfaces. From responsive layouts to user-centric navigation, we ensure your brand shines on every device. Elevate your digital reach, engage users effortlessly, and stay ahead in the mobile-centric landscape. Explore the art of mobile design with us – where innovation meets user satisfaction, creating a lasting impact on the go."
+                    "title": "Мобільний дизайн",
+                    "blockID": "mobile-design",
+                    "tag1": "Дизайн додатків",
+                    "tag2": "Мобільність",
+                    "tag3": "Візуальний штрих",
+                    "tag4": "Багатосторінковий",
+                    "description": "Занурте свою аудиторію в дружнє до мобільних пристроїв досвід з нашими послугами мобільного дизайну. Наша експертна команда спеціалізується на створенні інтуїтивних та візуально привабливих інтерфейсів для мобільних пристроїв. Від адаптивних макетів до користувацько-центрованої навігації ми забезпечуємо, щоб ваш бренд сяяв на кожному пристрої. Підвищте свій цифровий охоплення, залучайте користувачів легко та залишайтеся на кроці перед іншими у мобільному світі. Відкрийте для себе мистецтво мобільного дизайну з нами - де інновація зустрічається з задоволенням користувачів, створюючи незабутній вплив у русі."
                 }
             }
         },
@@ -511,56 +516,56 @@
             },
             "menu": {
                 "nav1": {
-                "nav": "Business card",
-                "goTo": "business-card"
+                    "nav": "Візитка",
+                    "goTo": "business-card"
                 },
                 "nav2": {
-                "nav": "Leaflets",
-                "goTo": "leaflets"
+                    "nav": "Листівки",
+                    "goTo": "leaflets"
                 },
                 "nav3": {
-                "nav": "Posters",
-                "goTo": "poster-billboards",
-                "otherPage": true
+                    "nav": "Постери",
+                    "goTo": "poster-billboards",
+                    "otherPage": true
                 },
                 "nav4": {
-                "nav": "Logo",
-                "goTo": "poster-billboards",
-                "otherPage": true
+                    "nav": "Логотип",
+                    "goTo": "poster-billboards",
+                    "otherPage": true
                 }
             },
-            "title": "Business card / Leaflets",
-            "subtitle": "Forge a lasting connection with our Business Card and Leaflet Design services. Our expert designers create business cards that embody professionalism and leaflets that tell your brand story succinctly. From impactful first impressions to comprehensive brand communication, our designs ensure you stand out. Elevate your networking and promotional strategies with our expertise, turning ordinary pieces into powerful brand assets. Make every exchange memorable – where business cards and leaflets become ambassadors of your brand identity.",
+            "title": "Візитка / Листівки",
+            "subtitle": "Закуєте тісний зв'язок за допомогою наших послуг дизайну візиток і листівок. Наші досвідчені дизайнери створюють візитки, які втілюють професіоналізм, та листівки, що стисло розповідають вашу історію бренду. Від вражаючих перших вражень до комплексної комунікації бренду, наші дизайни забезпечують ваше виділення. Підвищте ваші мережеві та рекламні стратегії за допомогою нашої експертизи, перетворюючи звичайні елементи в потужні активи бренду. Зробіть кожен обмін незабутнім - де візитки та листівки стають послами вашої корпоративної ідентичності.",
             "examples": {
                 "example1": {
-                "title": "Business Card",
-                "imgPath": "./images/business-card.jpg",
-                "goTo": "business-card"
+                    "title": "Візитка",
+                    "imgPath": "./images/business-card.jpg",
+                    "goTo": "business-card"
                 },
                 "example2": {
-                "title": "Leaflets",
-                "imgPath": "./images/leaflets.jpg",
-                "goTo": "leaflets"
+                    "title": "Листівки",
+                    "imgPath": "./images/leaflets.jpg",
+                    "goTo": "leaflets"
                 }
             },
             "services": {
                 "block1": {
-                "title": "Business card",
-                "blockID": "business-card",
-                "tag1": "Compact Design",
-                "tag2": "Stylish Card",
-                "tag3": "Laconic Card",
-                "tag4": "Spectacular Card",
-                "description": "Make your mark with our Business Card Design services. Our team specializes in creating business cards that leave a lasting impression. From sleek professionalism to creative uniqueness, we tailor designs that reflect your brand identity. Elevate your networking game and make every introduction count. Explore the art of compact sophistication with our Business Card Design expertise – where every card is a statement of your brand's excellence."
+                    "title": "Візитка",
+                    "blockID": "business-card",
+                    "tag1": "Компактний дизайн",
+                    "tag2": "Стильна картка",
+                    "tag3": "Лаконічна картка",
+                    "tag4": "Ефектна картка",
+                    "description": "Залиште свій слід за допомогою наших послуг дизайну візиток. Наша команда спеціалізується на створенні візиток, що залишають незабутнє враження. Від стриманого професіоналізму до креативної унікальності, ми адаптуємо дизайни, які відображають вашу корпоративну ідентичність. Підвищте свою мережеву гру та робіть кожне знайомство значущим. Відкрийте для себе мистецтво компактної вишуканості з нашою експертизою в області дизайну візиток - де кожна картка є вираженням вашої корпоративної відмінності."
                 },
                 "block2": {
-                "title": "Leaflets",
-                "blockID": "leaflets",
-                "tag1": "Leaflet Design",
-                "tag2": "Informative",
-                "tag3": "Graphic Content",
-                "tag4": "Concise",
-                "description": "Tell your brand story succinctly with our Leaflet Design services. Our expert designers craft leaflets that capture attention and communicate your message effectively. From compelling visuals to concise copy, we ensure your leaflets stand out in the crowd. Elevate your promotional efforts, inform your audience, and leave a lasting impact with our Leaflet Design expertise. Discover the power of graphic storytelling and turn every piece into a compelling narrative that resonates with your target audience."
+                    "title": "Листівки",
+                    "blockID": "leaflets",
+                    "tag1": "Дизайн листівок",
+                    "tag2": "Інформативні",
+                    "tag3": "Графічний контент",
+                    "tag4": "Стислий",
+                    "description": "Розкажіть вашу брендову історію стисло за допомогою наших послуг дизайну листівок. Наші досвідчені дизайнери створюють листівки, що привертають увагу та ефективно комунікують ваше повідомлення. Від привабливих візуальних зображень до стислого тексту ми забезпечуємо, щоб ваші листівки виділялися серед інших. Підвищте ефективність ваших рекламних зусиль, інформуйте вашу аудиторію та залишайте незабутній вплив за допомогою нашої експертизи в області дизайну листівок. Відкрийте для себе потужність графічного розповідання та перетворіть кожен елемент в захопливу історію, яка резонує з вашою цільовою аудиторією."
                 }
             }
         }

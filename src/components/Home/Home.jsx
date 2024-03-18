@@ -565,7 +565,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card3.title')}</h4>
 
-                <p className="intro__card-price">f{t('homePage.home.card3.price')}</p>
+                <p className="intro__card-price">{t('homePage.home.card3.price')}</p>
               </div>  
 
               <div className="intro__card-img intro__card-img--3"></div>

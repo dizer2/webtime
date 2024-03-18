@@ -512,6 +512,11 @@
           "title": "Mobile Design",
           "imgPath": "./images/mobile-design.jpg",
           "goTo": "mobile-design"
+        },
+        "example2": {
+          "title": "Mobile Redesign",
+          "imgPath": "./images/mobile-redesign.jpg",
+          "goTo": "mobile-design"
         }
       },
       "services": {

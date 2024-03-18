@@ -76,6 +76,11 @@
 
 			.footer__top-input {
 				cursor: pointer;
+				
+				input {
+					-webkit-box-shadow: inset 0 0 0 50px $ligth-dark;
+					-webkit-text-fill-color: $white;
+				}
 			}
 		}
 

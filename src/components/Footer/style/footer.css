@@ -145,6 +145,9 @@ body {
       width: auto; }
       .footer__top-form .footer__top-input {
         cursor: pointer; }
+        .footer__top-form .footer__top-input input {
+          -webkit-box-shadow: inset 0 0 0 50px #121212;
+          -webkit-text-fill-color: #fff; }
     .footer__top-subTitle {
       font-family: 'Montserrat', sans-serif;
       color: #fff;
