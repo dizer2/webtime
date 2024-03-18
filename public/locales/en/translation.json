@@ -181,7 +181,8 @@
 
           "feedback": {
               "title": "Would you like to leave a review?",
-              "placeholder": "We appreciate your feedback"
+              "placeholder": "We appreciate your feedback",
+              "toShort": "Feedback too short"
           },
 
           "copyright": "WebTime. All rights reserved."

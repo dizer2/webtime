@@ -181,7 +181,8 @@
     
             "feedback": {
                 "title": "Chcete nám nechat recenzi?",
-                "placeholder": "Vaše zpětná vazba je pro nás cenná"
+                "placeholder": "Vaše zpětná vazba je pro nás cenná",
+                "toShort": "Zpětná vazba je příliš krátká"
             },
     
             "copyright": "WebTime. Všechna práva vyhrazena."

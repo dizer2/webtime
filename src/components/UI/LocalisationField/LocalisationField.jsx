@@ -19,26 +19,18 @@ function LocalisationField({gradient}) {
     line: { background: gradient }
   }
 
-  // onClick={() => changeLanguage('en')}
-
-  // const languages = ["UA", "EN", "CZ"];
-
-  // let currentLang = 'cz';
-
-  // const [currentLang, setCurrentLang] = useState('cz');
-  // const [leftLang, setLeftLang] = useState('ua');
-  // const [rightLang, setRightLang] = useState('en');
 
   const languages = ['en', 'ua', 'cz'];
-  const [currentLanguage, setCurrentLanguage] = useState('cz');
+  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem("i18nextLng") || 'cz');
+
+
+  // console.log(localStorage.getItem("i18nextLng"))
   
-  // Функция для изменения текущего языка
   const handleLangChange = (lang) => {
       setCurrentLanguage(lang);
       changeLanguage(lang);
   };
   
-  // Определяем оставшиеся два языка без текущего
   const remainingLanguages = languages.filter(lang => lang !== currentLanguage);
   
   return (
