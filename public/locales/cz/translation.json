@@ -1,3 +1,595 @@
 {
-    "title": "Ahoj"
+    "homePage": {
+        "main": {
+            "navigation": {
+                "home": "Domů",
+                "about": "O nás",
+                "services": "Služby",
+                "portfolio": "Portfolio",
+                "contacts": "Kontakty"
+            },
+            "services": {
+                "service1": "Vývoj webových stránek",
+                "service2": "Návrh / Redesign / Logo",
+                "service3": "Plakáty / Billboardy",
+                "service4": "Návrh mobilních aplikací",
+                "service5": "Vizitky / Letáky",
+                "service6": "Kontakt"
+            },
+            "viewMore": "Zobrazit více",
+            
+            "paralaxText1": "Vývoj webových stránek • Vlastní webový design",
+            "paralaxText2": "Plakáty • Billboardy • Návrh mobilních aplikací • Vizitky • Letáky",
+            
+            "contactPopup": {
+                "title": "Úspěšně odesláno!",
+                "text": "Děkujeme, že jste si vybrali Webtime! Váš formulář byl úspěšně odeslán. Naši pracovníci ho brzy zkontrolují. Držte se, zatímco pracujeme na splnění vašich webových představ."
+            }
+        },
+  
+        "home": {
+            "title": {
+                "companyName": "WebTime",
+                "slash": "―",
+                "text": "vaše čas s WebTime, kde se design a vývoj setkávají."
+            },
+  
+            "card1": {
+                "title": "Vývoj webových stránek",
+                "price": "od: 650$"
+            },
+            "card2": {
+                "title": "Design",
+                "price": "od: 500$"
+            },
+            "card3": {
+                "title": "Plakát",
+                "price": "od: 250$"
+            },
+            "card4": {
+                "title": "Logo",
+                "price": "od: 100$"
+            },
+            "card5": {
+                "title": "Vizitky",
+                "price": "od: 100$"
+            },
+            "card6": {
+                "title": "Letáky",
+                "price": "od: 200$"
+            },
+            "card7": {
+                "title": "Billboardy",
+                "price": "od: 300$"
+            },
+        
+            "contactBtn": "Kontakty"
+        },
+  
+        "about": {
+            "mainTitle": {
+                "title": "Naše projekty řeší řadu obchodních úkolů",
+                "secondTitle": "obchod"
+            },
+    
+            "columnText1": "Vytváření originálních a kreativních webových stránek",
+            "columnText2": "Vytváření interaktivních designů plakátů, vizitek, billboardů",
+            "columnText3": "Zvýšení prodeje díky zvýšení konverze",
+    
+            "banner1": "nyní o obchodě",
+            "banner2": "co nás dělá nejlepšími?",
+            "banner3": "tvorba webových stránek",
+    
+            "cardDescription1": "Široká škála projektů.",
+            "cardDescription2": "Kvalitní služby.",
+            "cardDescription3": "Nejlepší ceny na trhu.",
+            "cardDescription4": "Budoucí technologie.",
+    
+            "websiteCreation": {
+                "paragraph1": "Ve společnosti Webtime pevně věříme, že umění vytvářet webové stránky spočívá v rozpoznávání nuancí v každém projektu. Každý klient má schopnost segmentovat trh svým vlastním charakteristickým způsobem, což mu umožňuje nezávisle formovat svůj produkt. Tento přístup často vede k vytvoření zcela unikátních produktů, pro které je typicky standardní webová stránka dostatečná. Co se týče našich praktických zkušeností, důrazně zdůrazňujeme důležitost výběru univerzálního rámce pro každý projekt. To zajistí, že budeme mít flexibilitu použít různé metody během procesu vývoje webových stránek.",
+                "paragraph2": "Právě takovou jedinečnost se snažíme najít pokaždé, když pracujeme s novým klientem. Vždy jde o objevování nových spouští, nových příležitostí, které nás motivují k vytvoření další lepší webové stránky v daném segmentu. Ne vždy to vyjde napoprvé; někdy dokonce trávíme více času než plánováno. Ale zatím jsme nikdy nebyli zklamáni očekáváními. A pokud chcete vytvořit svou první webovou stránku? Právě jste dostali nápad a nevíte, kam jít. Nyní existuje stovky webových studií a agentur. Některé nabízejí rychlost práce, jiné atraktivní ceny. V této pestrosti, jak můžete někomu svěřit své dítě? Navíc, jak můžete svěřit jiné společnosti část svého podnikání? Pojďme to vyřešit společně. Krok za krokem a opatrně.",
+                "title1": "První fáze je stanovení.",
+                "paragraph3": "Doporučujeme všem klientům přesně určit, proč potřebují webovou stránku. Potřebují online obchod nebo jen firemní webové stránky. Budou prodávat zboží nebo jednoduše sloužit jako firemní vizitka. Na samém začátku cesty je toto nejdůležitější otázka. Můžeme navrhnout, ale určitě se nemůžeme rozhodnout za klienta.",
+                "textBold1": "Druhá fáze je rozpočet.",
+                "paragraph4": "Zde je otázka jednoduchá. Bude nová stránka nebo redesign stránky pro klienta výhodný? Ne vždy je v takových případech výhoda otázkou peněz. Stránka může zvýšit viditelnost projektu, změnit vnímání služby nebo být cenným zdrojem informací. Ale jedna věc musí být pamatována - vynaložené zdroje by měly množit, a ne jen být vyplýtvány.",
+                "textBold2": "Třetí fáze je připravenost pracovat se svou stránkou.",
+                "paragraph5": "Jak vidíte, z velké části to závisí na vás. Pokud máte jasnou představu o svém cíli a rozumíte očekávaným výsledkům svých úsilí, možná nebudete potřebovat služby velmi drahých studií.",
+                "title2": "Vytváření nejfantastičtějších stránek na světě",
+                "paragraph6": "Nyní se ponořme do světa obrů - impozantní webové stránky, pečlivě navržené do nejmenších detailů. Co stojí za nimi? Nejčastěji vznikl tento web díky rozsáhlým zkušenostem agentury. A možná i významným rozpočtům, které jsou vždy docela odůvodněné.",
+                "paragraph7": "Webové stránky nejvyšší úrovně jsou složité systémy s poutavými interakcemi. Jednoduché posouvání stránkou již nepostačuje v unikátních projektech. Volba bezchybných obrázků z prémiových zásob? Personalizované fotografické focení jsou nyní vysoce ceněny. Má být tlačítko velké a červené? Ne, nemělo by a nebude.",
+                "paragraph8": "Výjimečné projekty jsou neustálými experimenty. Představují nové zážitky pro uživatele, zahrnují nové efekty, animace, poutavé příběhy a nekonvenční řešení. Opravdově fascinující je neustálý vývoj webových stránek. Nejde jen o to vyčnívat; je to příležitost komunikovat svůj pohled uživatelům. Šance sdělit svou vizi produktu, situace a možná i celého světa.",
+                "paragraph9": "Beze sporu existují obavy, které zůstávají v mysli všech klientů, kteří se těší na experimentování. Je to nutné? Co když jsou klienti obávající se? Budou naše hluboké myšlenky a futuristický design pochopeny? V této souvislosti lze tvrdit - zlepšení je možné pouze tehdy, když překonáte strach ze změny.",
+                "title3": "Zvyšování webové přítomnosti - Webtime Studio",
+                "paragraph10": "Nyní si trochu povíme o Webtime Studio. Sídlíme ve městě Pardubice v České republice a vytváříme nejlepší webové stránky po dobu 5 let. Pardubice jsou plné zajímavých projektů a firem, které potřebují takovéto webové stránky, a my je můžeme nabídnout. Ale nejsme omezeni pouze na Pardubice, v našem portfoliu můžete najít i stránky pro zahraniční firmy.",
+                "paragraph11": "S každým novým projektem zlepšujeme proces vývoje webových stránek - ponořujeme se do UX, UI a nejnovějšího vývoje. Naše závazek využívat nejmodernější technologie nás opravňuje vytvářet skutečně odlišné projekty.",
+                "paragraph12": "Další klíčovou součástí našeho pracovního procesu je vyjádření pozice společnosti klientovi a její odraz na webové stránce. Fotografie, videa a texty slouží jako naše nástroje k dosažení tohoto cíle. Spolupráce s profesionálními dodavateli nám umožňuje nejen vytvořit nejlepší webovou stránku, ale také ji obohatit poutavým obsahem.",
+                "paragraph13": "Vytváříme stránky? Ano, samozřejmě. Budujeme lepší stránky? Určitě."
+            }
+        },
+  
+        "services": {
+            "banner": "naše služby",
+    
+            "mainTitle": {
+                "title": "Přinášíme vaše nápady a přání k životu!",
+                "secondTitle": "služby"
+            },
+    
+            "card1Description": "Nejde jen o vývoj, design a propagaci. Jedná se o řešení marketingových a obchodních úkolů: finančních i nefinančních.",
+            "card2Description": "Proměňujeme nápady ve vizuální dokonalost. Vaše značka, naše kreativita. Vytvořte jedinečný design a výrazný styl s námi.",
+            "card3Description": "Vytváříme jasné plakáty a billboardy pro vaši jedinečnou myšlenku. Každý detail je krokem ke působivým pocitům, které zanechají stopu a přitáhnou pozornost.",
+            "card4Description": "Překládáme vaše nápady do mobilního designu, vytváříme harmonickou interakci formy a funkce. Vaše značka má svůj vlastní příběh, a my ho učiníme viditelným.",
+            "card5Description": "Naším cílem je přitáhnout pozornost a šířit vaši značku. Nejenže vytváříme nápady, ale rozdmýcháváme je a pomáháme jim rozkvést do jedinečných zážitků se značkou.",
+            "card6Description": "Vytváříme více než webové stránky a design. Vytváříme „tvář“ značky, prodejní nástroj a obrazovou zbraň. Náš speciální přístup a zkušenosti nám v tomto pomáhají."
+        },
+  
+        "portfolio": {
+            "banner": "váš projekt může být zde",
+    
+            "mainTitle": {
+                "title": "Projekty, které mluví samy za sebe",
+                "secondTitle": "portfolio"
+            }
+        },
+  
+        "contacts": {
+            "banner": "POJĎME DO AKCE",
+    
+            "mainTitle": {
+                "title": "Vytvořme ten nejlepší design pro váš segment trhu",
+                "secondTitle": ""
+            },
+    
+            "inputName": {
+                "title": "Jméno",
+                "error": "Neplatné jméno",
+                "placeholder": "Vaše jméno"
+            },
+    
+            "inputCompany": {
+                "title": "Společnost",
+                "error": "Neplatná společnost",
+                "placeholder": "Vaše společnost",
+    
+                "clue": "Není nutné vyplnit"
+            },
+    
+            "inputEmail": {
+                "title": "Email",
+                "error": "Neplatný email",
+                "placeholder": "Váš email"
+            },
+    
+            "inputPhone": {
+                "title": "Telefonní číslo",
+                "error": "Neplatné telefonní číslo",
+                "placeholder": "Vaše telefonní číslo"
+            },
+    
+            "inputMessage": {
+                "title": "Zpráva",
+                "error": "Neplatná zpráva",
+                "placeholder": "Napište o službě, kterou byste chtěli obdržet"
+            },
+    
+            "sendBtn": "Odeslat"
+        },
+  
+        "footer": {
+            "description": "Webtime - místo, kde váš web zazáří, váš podnik vyšplhá nahoru a úspěch bude na prvním místě. Kontaktujte nás dnes a splňme vaše sny.",
+            "navigation": "Navigace",
+    
+            "feedback": {
+                "title": "Chcete nám nechat recenzi?",
+                "placeholder": "Vaše zpětná vazba je pro nás cenná",
+                "toShort": "Zpětná vazba je příliš krátká"
+            },
+    
+            "copyright": "WebTime. Všechna práva vyhrazena."
+        }
+    },
+    "servicesPage": {
+        "main": {
+            "contactBtn": "Pojďme diskutovat",
+            "navHome": "Domů"
+        },
+        "popup": {
+            "name": "Jméno",
+            "namePlaceholder": "Vaše jméno",
+            "phone": "Telefonní číslo",
+            "phonePlaceholder": "Vaše telefonní číslo",
+            "email": "Email",
+            "emailPlaceholder": "Emailová adresa",
+            "message": "Zpráva",
+            "messagePlaceholder": "Jak vám můžeme pomoci?",
+            "sendBtn": "Odeslat"
+        },
+        "web-development": {
+            "backgroundImg": "./images/0-background.svg",
+            "mainColor": "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_370",
+                "color1": "#2BBFFE",
+                "color2": "#8629FD",
+                "color3": "#FC4AF5",
+                "offset": "0.521875"
+            },
+            "menu": {
+                "nav1": {
+                    "nav": "Firemní weby",
+                    "goTo": "corporate-sites"
+                },
+                "nav2": {
+                    "nav": "Landing Page",
+                    "goTo": "landing-page"
+                },
+                "nav3": {
+                    "nav": "Online obchody",
+                    "goTo": "online-stores"
+                },
+                "nav4": {
+                    "nav": "Vysokozátěžové služby a portály",
+                    "goTo": "services-portals"
+                },
+                "nav5": {
+                    "nav": "WOW weby",
+                    "goTo": "wow-sites"
+                },
+                "nav6": {
+                    "nav": "Portfolio",
+                    "goTo": "personal-portfolio"
+                }
+            },
+            "title": "Web Development",
+            "subtitle": "Nejde jen o vývoj, design a propagaci. Jedná se o řešení marketingových a obchodních úkolů: finančních i nefinančních. Nezískáváte jen hodiny práce, kupujete naši zkušenost, odbornost a dovednosti k vytvoření nejlepších webů ve vašem segmentu trhu.",
+            "examples": {
+                "example1": {
+                    "title": "Firemní weby",
+                    "imgPath": "./images/corporate-sites.jpg",
+                    "goTo": "corporate-sites"
+                },
+                "example2": {
+                    "title": "Landing Page",
+                    "imgPath": "./images/landing-page.jpg",
+                    "goTo": "landing-page"
+                },
+                "example3": {
+                    "title": "Online obchody",
+                    "imgPath": "./images/online-stores.jpg",
+                    "goTo": "online-stores"
+                },
+                "example4": {
+                    "title": "Služby / Portály",
+                    "imgPath": "./images/services-portals.jpg",
+                    "goTo": "services-portals"
+                },
+                "example5": {
+                    "title": "WOW weby",
+                    "imgPath": "./images/wow-sites.jpg",
+                    "goTo": "wow-sites"
+                },
+                "example6": {
+                    "title": "Osobní / Portfolio",
+                    "imgPath": "./images/personal-portfolio.jpg",
+                    "goTo": "personal-portfolio"
+                }
+            },
+            "services": {
+                "block1": {
+                    "title": "Firemní weby",
+                    "blockID": "corporate-sites",
+                    "tag1": "Firemní web",
+                    "tag2": "Branding",
+                    "tag3": "Online podnikání",
+                    "tag4": "Firemní identita",
+                    "description": "Pro firmy hledající silnou online přítomnost jsou naše služby vývoje firemních webů navrženy tak, aby odrážely vaši značku, hodnoty a cíle. Zajišťujeme profesionální a souvislou reprezentaci vašeho podnikání, která rezonuje s vaším cílovým publikem."
+                },
+                "block2": {
+                    "title": "Landing Page",
+                    "blockID": "landing-page",
+                    "tag1": "Impresivní design",
+                    "tag2": "Webový landing",
+                    "tag3": "Vysoké konverze",
+                    "tag4": "Optimalizace konverzí",
+                    "description": "Vytváření účinných webových landingů je klíčové pro konverze. Specializujeme se na tvorbu vizuálně atraktivních a vysoko konvertibilních landingových stránek, které zaujmou návštěvníky, donutí je k požadovaným akcím a posílí vaše obchodní cíle."
+                },
+                "block3": {
+                    "title": "Online obchody",
+                    "blockID": "online-stores",
+                    "tag1": "E-commerce centrum",
+                    "tag2": "Bezpečný nákup",
+                    "tag3": "Digitální obchod",
+                    "tag4": "Nákup online",
+                    "description": "E-commerce je srdcem moderního podnikání. Naše služby vývoje online obchodů jsou navrženy tak, aby poskytovaly plynulé a bezpečné nákupní zážitky pro vaše zákazníky. Od uživatelsky přívětivých rozhraní po robustní platební systémy zajišťujeme kompletní e-commerce řešení."
+                },
+                "block4": {
+                    "title": "Služby / Portály",
+                    "blockID": "services-portals",
+                    "tag1": "Měřitelný web",
+                    "tag2": "Vysoký provoz",
+                    "tag3": "Pokročilé služby",
+                    "tag4": "Vysoká zátěž",
+                    "description": "Pro projekty, které vyžadují škálovatelnost a vysoký výkon, je naše vývojářský tým zručný ve vytváření vysoko zatížených služeb a portálů. Využíváme všestranné rámce pro zvládání složitých funkcionalit, zajistíme tak plynulý uživatelský zážitek i při vysokém provozu."
+                },
+                "block5": {
+                    "title": "WOW weby",
+                    "blockID": "wow-sites",
+                    "tag1": "Inovativní design",
+                    "tag2": "3D efekty",
+                    "tag3": "Animace",
+                    "tag4": "Vizuální dojem",
+                    "description": "Někdy toužíte po webové stránce, která překračuje obvyklé. Naše WOW weby jsou navrženy tak, aby zanechaly trvalý dojem, pochlubí se špičkovými animacemi, pohlcujícími 3D efekty a inovativním designem. Snažíme se zajistit, aby vaše webová stránka nejen vynikala, ale oslnila vaše publikum dynamickými vizuálními zážitky."
+                },
+                "block6": {
+                    "title": "Osobní / Portfolio",
+                    "blockID": "personal-portfolio",
+                    "tag1": "Prezentace práce",
+                    "tag2": "Galerie projektů",
+                    "tag3": "Profesionální portfolia",
+                    "tag4": "Vizuální životopis",
+                    "description": "Efektivní prezentace vaší práce je zásadní. Naše služby vývoje portfolia vám pomáhají prezentovat vaše úspěchy, projekty a schopnosti vizuálně přitažlivým způsobem, budují důvěryhodnost a přitahují potenciální klienty. Ve Webtime vás krok za krokem provedeme procesem vývoje webu, zajistíme pečlivé zohlednění vašich jedinečných potřeb a cílů. Chápeme, že důvěra ve firmu s vaším podnikáním je důležité rozhodnutí, a jsme odhodláni vaše očekávání překonat. Vydejme se na cestu vytváření webové stránky, která splňuje nejen, ale překračuje vaši vizi."
+                }
+            }
+        },
+        "design": {
+            "backgroundImg": "./images/1-background.svg",
+            "mainColor": "linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_375",
+                "color1": "#FE842B",
+                "color2": "#FD2929",
+                "color3": "#FF006B",
+                "offset": "0.486"
+            },
+            "menu": {
+                "nav1": {
+                    "nav": "Design",
+                    "goTo": "design"
+                },
+                "nav2": {
+                    "nav": "Redesign",
+                    "goTo": "redesign"
+                },
+                "nav3": {
+                    "nav": "Logo",
+                    "goTo": "logo"
+                },
+                "nav4": {
+                    "nav": "Mobilní design",
+                    "goTo": "mobile-design",
+                    "otherPage": true
+                }
+            },
+            "title": "Design / Redesign\nLogo",
+            "subtitle": "V obchodním světě si získejte pozornost s našimi designovými službami. Ať už potřebujete zcela nové logo, stylový redesign nebo inspirující značku, náš tým zkušených designérů je připraven přivést vaše myšlenky k životu. Přineseme vaši značku na novou úroveň s našimi kreativními řešeními navrženými tak, aby zdůraznily vaši jedinečnost a zaujaly pozornost vaší cílové skupiny.",
+            "examples": {
+                "example1": {
+                    "title": "Web Design",
+                    "imgPath": "./images/web-design.jpg",
+                    "goTo": "design"
+                },
+                "example2": {
+                    "title": "Web Redesign",
+                    "imgPath": "./images/web-redesign.jpg",
+                    "goTo": "redesign"
+                },
+                "example3": {
+                    "title": "Logo",
+                    "imgPath": "./images/logo.jpg",
+                    "goTo": "logo"
+                }
+            },
+            "services": {
+                "block1": {
+                    "title": "Web Design",
+                    "blockID": "design",
+                    "tag1": "Jakýkoli rozsah",
+                    "tag2": "Vícestránkové",
+                    "tag3": "Pohodlí",
+                    "tag4": "Umění",
+                    "description": "Odemkněte plný potenciál vaší online přítomnosti s našimi moderními webovými designovými službami. Náš odborný tým vytváří vizuálně ohromující a uživatelsky přívětivé webové stránky přizpůsobené k zvýšení vaší značky. Od intuitivní navigace po poutavou estetiku zajistíme bezproblémový uživatelský zážitek, který zanechá trvalý dojem. Proměňte svou digitální identitu a vynikněte v rušné online krajině. Zvýšte svůj obchod s naším odborným webovým designem – tam, kde inovace potkává dopad."
+                },
+                "block2": {
+                    "title": "Web Redesign",
+                    "blockID": "redesign",
+                    "tag1": "Moderní",
+                    "tag2": "Nové technologie",
+                    "tag3": "Vylepšení",
+                    "tag4": "Aktualizace",
+                    "description": "Zažijte digitální proměnu s našimi službami redesignu. Ať už obnovujete svou stávající webovou stránku nebo procházíte úplnou transformací, náš zkušený tým zvyšuje vizuální atraktivitu, funkčnost a zapojení uživatelů. Zvýšte online přítomnost své značky, zaujměte své publikum a držte krok v neustále se měnící digitální krajině. Uvolněte sílu redesignu a předefinujte úspěch ve virtuálním světě – kde se setkává evoluce vaší značky s excelencí."
+                },
+                "block3": {
+                    "title": "Logo",
+                    "blockID": "logo",
+                    "tag1": "Branding",
+                    "tag2": "Grafický design",
+                    "tag3": "Jedinečné",
+                    "tag4": "Emblém",
+                    "description": "Vytvořte nezapomenutelnou identitu značky s našimi službami návrhu loga. Náš tvořivý tým se specializuje na návrhy log, které rezonují s podstatou vaší značky. Od nadčasové jednoduchosti po odvážnou inovaci tvoříme loga, která zanechávají trvalý otisk. Zvyšte rozpoznatelnost své značky a udělejte výrok na jakémkoli trhu. Objevte umění vizuálního vyprávění s naší odborností v návrhu loga – kde každé logo je jedinečným symbolem cesty a aspirací vaší značky."
+                }
+            }
+        },
+        "poster-billboards": {
+            "backgroundImg": "./images/2-background.svg",
+            "mainColor": "linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_376",
+                "color1": "#68E0CF",
+                "color2": "#3DCDFF",
+                "color3": "#209CFF",
+                "offset": "0.516"
+            },
+            "menu": {
+                "nav1": {
+                    "nav": "Plakáty",
+                    "goTo": "posters"
+                },
+                "nav2": {
+                    "nav": "Reklamní tabule",
+                    "goTo": "billboards"
+                },
+                "nav3": {
+                    "nav": "Vizitky",
+                    "goTo": "business-card-leaflets",
+                    "otherPage": true
+                },
+                "nav4": {
+                    "nav": "Letáky",
+                    "goTo": "business-card-leaflets",
+                    "otherPage": true
+                }
+            },
+            "title": "Plakáty / Reklamní tabule",
+            "subtitle": "Zvýšte přítomnost vaší značky s našimi službami návrhu plakátů a reklamních tabulí. Naši odborní designéři vytvářejí vizuálně úchvatné plakáty, které oslovují na menší úrovni, a odvážné reklamní tabule, které dominují městskému panoramatu. Od výrazných obrazů po poutavé zprávy zaručujeme, že vaše značka vynikne jak v intimních, tak ve velkých prostorech. Učiňte silné prohlášení, vzbudťe zájem a zanechte trvalý dojem s naší odborností v návrhu plakátů a reklamních tabulí. Kde kreativita potkává viditelnost, proměňujeme vaše myšlenky v vizuální spektákly, které si zaslouží pozornost.",
+            "examples": {
+                "example1": {
+                    "title": "Plakáty",
+                    "imgPath": "./images/poster.jpg",
+                    "goTo": "posters"
+                },
+                "example2": {
+                    "title": "Reklamní tabule",
+                    "imgPath": "./images/billboard.jpg",
+                    "goTo": "billboards"
+                }
+            },
+            "services": {
+                "block1": {
+                    "title": "Plakáty",
+                    "blockID": "posters",
+                    "tag1": "Návrh plakátů",
+                    "tag2": "Vícebarevné",
+                    "tag3": "Událost",
+                    "tag4": "Různé velikosti",
+                    "description": "Přetvořte svou zprávu v vizuální mistrovský kousek s našimi službami návrhu plakátů. Naši zkušení designéři vytvářejí oku lahodící plakáty, které oslovují publikum a zanechávají trvalý dojem. Od výrazných obrazů po poutavé texty zaručujeme, že váš plakát vynikne v jakémkoli prostoru. Zlepšete své propagační úsilí, vzbudťe zvědavost a učiňte prohlášení s naší odborností v návrhu plakátů. Uvolněte sílu vizuální komunikace a obrate hlavy plakáty, které mluví hlasitěji než slova."
+                },
+                "block2": {
+                    "title": "Reklamní tabule",
+                    "blockID": "billboards",
+                    "tag1": "Návrh reklamních tabulí",
+                    "tag2": "Přitahování lidí",
+                    "tag3": "Reklamní tabule",
+                    "tag4": "Velké",
+                    "description": "Maximalizujte viditelnost vaší značky s našimi službami návrhu reklamních tabulí. Náš odborný tým vytváří poutavé designy, které dominují panoramatu města a poutají pozornost. Od odvážných vizuálů po stručné zprávy zaručujeme, že vaše reklamní tabule zanechá trvalý dojem na kolemjdoucí. Zlepšte svou venkovní reklamu, zesilte rozpoznatelnost značky a učiňte prohlášení na velké scéně. Důvěřujte naší odbornosti v návrhu reklamních tabulí a proměňte vaši zprávu v nepřehlédnutelný spektákl v městském panoramatu."
+                }
+            }
+        },
+        "mobile-design": {
+            "backgroundImg": "./images/3-background.svg",
+            "mainColor": "linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_377",
+                "color1": "#84FAB0",
+                "color2": "#8FD3F4",
+                "color3": "#8FD3F4",
+                "offset": "0.892222"
+            },
+            "menu": {
+                "nav1": {
+                    "nav": "Mobilní design",
+                    "goTo": "mobile-design"
+                },
+                "nav2": {
+                    "nav": "Webový design",
+                    "goTo": "design",
+                    "otherPage": true
+                },
+                "nav3": {
+                    "nav": "Předělání webového designu",
+                    "goTo": "design",
+                    "otherPage": true
+                },
+                "nav4": {
+                    "nav": "Logo",
+                    "goTo": "design",
+                    "otherPage": true
+                }
+            },
+            "title": "Mobilní design",
+            "subtitle": "Jedinečný design pro vaši mobilní aplikaci je klíčem k úspěšnému spuštění! Naši specialisté na mobilní design vytvoří intuitivní a stylová rozhraní, která nejen přitahují pozornost, ale také zajistí snadné používání. Dejte své značce výrazný vzhled a udělejte trvalý dojem.",
+            "examples": {
+                "example1": {
+                    "title": "Mobilní design",
+                    "imgPath": "./images/mobile-design.jpg",
+                    "goTo": "mobile-design"
+                }
+            },
+            "services": {
+                "block1": {
+                    "title": "Mobilní design",
+                    "blockID": "mobile-design",
+                    "tag1": "Návrh aplikace",
+                    "tag2": "Pohyblivost",
+                    "tag3": "Vizuální dotek",
+                    "tag4": "Vícestránkový",
+                    "description": "Ponořte své publikum do mobilně přívětivého zážitku s našimi službami Mobilního designu. Náš odborný tým se specializuje na vytváření intuitivních a vizuálně přitažlivých mobilních rozhraní. Od responsivních rozložení po uživatelsky orientovanou navigaci zajišťujeme, že vaše značka září na každém zařízení. Zvýšte svůj digitální dosah, zapojte uživatele bez námahy a udržujte se v čele v mobilním světě. Prozkoumejte umění mobilního designu s námi - kde inovace splňuje uživatelskou spokojenost a vytváří trvalý dojem na cestách."
+                }
+            }
+        },
+        "business-card-leaflets": {
+            "backgroundImg": "./images/4-background.svg",
+            "mainColor": "linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_341",
+                "color3": "#040D61",
+                "color2": "#1562D2",
+                "color1": "#004E92",
+                "offset": "0.396"
+            },
+            "menu": {
+                "nav1": {
+                    "nav": "Visitenkarte",
+                    "goTo": "business-card"
+                },
+                "nav2": {
+                    "nav": "Flyer",
+                    "goTo": "leaflets"
+                },
+                "nav3": {
+                    "nav": "Plakate",
+                    "goTo": "poster-billboards",
+                    "otherPage": true
+                },
+                "nav4": {
+                    "nav": "Logo",
+                    "goTo": "poster-billboards",
+                    "otherPage": true
+                }
+            },
+            "title": "Visitenkarte / Flyer",
+            "subtitle": "Schmieden Sie eine dauerhafte Verbindung mit unseren Visitenkarten- und Flyer-Design-Services. Unsere erfahrenen Designer erstellen Visitenkarten, die Professionalität verkörpern, und Flyer, die Ihre Markengeschichte prägnant erzählen. Von eindrucksvollen ersten Eindrücken bis hin zu umfassender Markenkommunikation sorgen unsere Designs dafür, dass Sie herausstechen. Steigern Sie Ihre Netzwerk- und Werbestrategien mit unserer Expertise und verwandeln Sie gewöhnliche Stücke in leistungsstarke Markenassets. Machen Sie jeden Austausch unvergesslich - wo Visitenkarten und Flyer zu Botschaftern Ihrer Markenidentität werden.",
+            "examples": {
+                "example1": {
+                    "title": "Visitenkarte",
+                    "imgPath": "./images/business-card.jpg",
+                    "goTo": "business-card"
+                },
+                "example2": {
+                    "title": "Flyer",
+                    "imgPath": "./images/leaflets.jpg",
+                    "goTo": "leaflets"
+                }
+            },
+            "services": {
+                "block1": {
+                    "title": "Visitenkarte",
+                    "blockID": "business-card",
+                    "tag1": "Kompaktes Design",
+                    "tag2": "Stylische Karte",
+                    "tag3": "Lakonische Karte",
+                    "tag4": "Spektakuläre Karte",
+                    "description": "Setzen Sie ein Zeichen mit unseren Visitenkarten-Design-Services. Unser Team ist spezialisiert auf die Erstellung von Visitenkarten, die einen bleibenden Eindruck hinterlassen. Von eleganter Professionalität bis hin zur kreativen Einzigartigkeit gestalten wir Designs, die Ihre Markenidentität widerspiegeln. Verbessern Sie Ihr Networking-Spiel und machen Sie jede Vorstellung zählbar. Entdecken Sie die Kunst der kompakten Raffinesse mit unserer Expertise im Visitenkarten-Design - wo jede Karte ein Statement für die Exzellenz Ihrer Marke ist."
+                },
+                "block2": {
+                    "title": "Flyer",
+                    "blockID": "leaflets",
+                    "tag1": "Flyer-Design",
+                    "tag2": "Informativ",
+                    "tag3": "Grafischer Inhalt",
+                    "tag4": "Konzise",
+                    "description": "Erzählen Sie Ihre Markengeschichte prägnant mit unseren Flyer-Design-Services. Unsere erfahrenen Designer gestalten Flyer, die die Aufmerksamkeit erregen und Ihre Botschaft effektiv vermitteln. Von überzeugenden visuellen Elementen bis hin zu prägnanten Texten stellen wir sicher, dass Ihre Flyer aus der Masse herausstechen. Verbessern Sie Ihre Werbemaßnahmen, informieren Sie Ihr Publikum und hinterlassen Sie einen bleibenden Eindruck mit unserer Expertise im Flyer-Design. Entdecken Sie die Kraft der grafischen Erzählkunst und verwandeln Sie jedes Stück in eine packende Erzählung, die bei Ihrer Zielgruppe anklingt."
+                }
+            }
+        }
+    }
 }

@@ -1,3 +1,568 @@
 {
-    "title": "Привет"
-}
+    "homePage": {
+        "main": {
+            "navigation": {
+                "home": "Головна",
+                "about": "Про нас",
+                "services": "Послуги",
+                "portfolio": "Портфоліо",
+                "contacts": "Контакти"
+            },
+            "services": {
+                "service1": "Розробка веб-сайтів",
+                "service2": "Дизайн / Редизайн / Логотип",
+                "service3": "Плакати / Білборди",
+                "service4": "Мобільний дизайн",
+                "service5": "Візитки / Листівки",
+                "service6": "Контакти"
+            },
+            "viewMore": "Дивитися більше",
+            "paralaxText1": "Розробка веб-сайтів • Індивідуальний веб-дизайн",
+            "paralaxText2": "Плакати • Білборди • Мобільний дизайн • Візитки • Листівки ",
+            "contactPopup": {
+                "title": "Успішно подано!",
+                "text": "Дякуємо, що обрали Webtime! Ваша заявка успішно надіслана. Наша команда оперативно її перегляне. Залишайтеся з нами, поки ми працюємо, щоб здійснити ваші мрії про веб-сайт."
+            }
+        },
+        "home": {
+            "title": {
+                "companyName": "WebTime",
+                "slash": "―",
+                "text": "ваш час з webtime, де зустрічаються дизайн і розробка."
+            },
+            "card1": {
+                "title": "Розробка веб-сайтів",
+                "price": "від: 650$"
+            },
+            "card2": {
+                "title": "Дизайн",
+                "price": "від: 500$"
+            },
+            "card3": {
+                "title": "Плакати",
+                "price": "від: 250$"
+            },
+            "card4": {
+                "title": "Логотип",
+                "price": "від: 100$"
+            },
+            "card5": {
+                "title": "Візитки",
+                "price": "від: 100$"
+            },
+            "card6": {
+                "title": "Листівки",
+                "price": "від: 200$"
+            },
+            "card7": {
+                "title": "Білборди",
+                "price": "від: 300$"
+            },
+            "contactBtn": "Контакти"
+        },
+        "about": {
+            "mainTitle": {
+                "title": "Наші проекти вирішують ряд бізнес-завдань",
+                "secondTitle": "бізнес"
+            },
+            "columnText1": "Створення оригінальних та творчих веб-сайтів",
+            "columnText2": "Створення інтерактивного дизайну плакатів, візиток, білбордів",
+            "columnText3": "Збільшення продажів за рахунок збільшення конверсії",
+            "banner1": "тепер про бізнес",
+            "banner2": "що робить нас кращими?",
+            "banner3": "створення веб-сайтів",
+            "cardDescription1": "Широкий спектр проектів.",
+            "cardDescription2": "Якісний сервіс.",
+            "cardDescription3": "Найкращі ціни на ринку.",
+            "cardDescription4": "Майбутні технології.",
+            "websiteCreation": {
+                "paragraph1": "У Webtime ми наполегливо вважаємо, що мистецтво створення веб-сайтів полягає в розпізнаванні відтінків у кожному проекті. Кожен клієнт має здатність сегментувати ринок у власний унікальний спосіб, що дозволяє їм самостійно формувати свій продукт. Цей підхід часто призводить до створення повністю унікальних продуктів, для яких зазвичай достатньо стандартного веб-сайту. Щодо наших практичних досвідів, ми постійно підкреслюємо важливість вибору універсального каркасу для кожного проекту. Це забезпечує нам гнучкість для використання різноманітних методів під час процесу розробки веб-сайту.",
+                "paragraph2": "Це саме те унікальне, що ми намагаємося знайти кожного разу, коли працюємо з новим клієнтом. Це завжди про відкриття нових спускових крючків, нових можливостей, які змусять нас створити ще кращий веб-сайт у своїй ніші. Це не завжди виходить вперше; іноді ми навіть витрачаємо більше часу, ніж планували. Але наразі ми ніколи не розчаровувалися в очікуваннях. І якщо ви хочете створити свій перший веб-сайт? У вас тільки є ідея, і ви не знаєте, куди йти. Зараз існує сотні веб-студій і агентств. Деякі пропонують швидкість у роботі, інші привабливі ціни. В такому різноманітті як можна довіряти комусь своєму дитячому? І ще, як можна довірити іншій компанії частину вашого бізнесу? Давайте разом це вирішимо. Крок за кроком і обережно.",
+                "title1": "Перший етап - призначення.",
+                "paragraph3": "Ми рекомендуємо всім клієнтам точно визначити, для чого їм потрібен веб-сайт. Їм потрібен інтернет-магазин або просто корпоративний сайт. Він буде продавати товари або просто слугувати візитівкою для компанії. На самому початку це найважливіше питання у подорожі. Ми можемо порадити, але точно не вирішимо за клієнта.",
+                "textBold1": "Другий етап - бюджет.",
+                "paragraph4": "Тут питання просте. Чи буде новий сайт чи редизайн сайту корисним для клієнта? Не завжди користь у таких випадках стосується грошей. Сайт може підвищити видимість проекту, змінити сприйняття сервісу або бути цінним джерелом інформації. Але одне треба пам'ятати - витрачені ресурси повинні множитися, а не просто бути витрачені.",
+                "textBold2": "Третій етап - готовність працювати з вашим сайтом.",
+                "paragraph5": "Як бачите, це в значній мірі залежить від вас. Якщо у вас є чітке уявлення про вашу мету та розуміння очікуваних результатів вашої діяльності, вам може не знадобитися дорогі послуги великої кількості студій.",
+                "title2": "Створення найфантастичніших сайтів у світі",
+                "paragraph6": "Тепер давайте поглибимося в реальність - вражаючі веб-сайти, доглянуті до найменших деталей. Що за ними стоїть? Найчастіше цей сайт народжується завдяки великому досвіду агентства. І можливо значні бюджети, які завжди цілком обґрунтовані.",
+                "paragraph7": "Сучасні веб-сайти верхнього рівня - це складні системи з захоплюючими взаємодіями. Просто прокручувати сторінку вже не достатньо в унікальних проектах. Вибір бездоганних зображень з преміальних стоків? Персоналізовані фотосесії тепер високо цінуються. Чи має кнопка бути великою та червоною? Ні, вона не має, і не буде.",
+                "paragraph8": "Виняткові проекти - це постійні експерименти. Вони вводять нові враження для користувачів, включають нові ефекти, анімації, захоплюючі наративи та нетрадиційні рішення. Справжня цікавість викликає постійний розвиток веб-сайтів. Це не просто виділятися; це можливість спілкуватися з користувачами свого бачення продукту, ситуації, а можливо, й усього світу.",
+                "paragraph9": "Безумовно, існують обурення, які ходять у головах у всіх клієнтів, які прагнуть спробувати експеримент. Чи це необхідно? Що, якщо клієнти будуть занепокоєні? Чи будуть розумітися наші глибокі думки та футуристичний дизайн? У цьому відношенні можна стверджувати - покращення можливе тільки тоді, коли ви завоюєте страх змін.",
+                "title3": "Підвищення веб-присутності - Веб-студія Webtime",
+                "paragraph10": "Тепер давайте трошки поговоримо про Веб-студію Webtime. Ми знаходимося у місті Пардубіце в Чехії та створюємо найкращі веб-сайти вже 5 років. Пардубіце повні цікавих проектів та компаній, які потребують таких сайтів, і ми можемо їх запропонувати. Але ми не обмежуємося лише Пардубіцями, у нашому портфоліо ви також можете знайти сайти для іноземних компаній.",
+                "paragraph11": "Ми поліпшуємо процес розробки веб-сайтів з кожним новим проектом, поглиблюючись у UX, UI та передову розробку. Наше прагнення використовувати найновітніші технології дозволяє нам створювати дійсно унікальні проекти.",
+                "paragraph12": "Ще один важливий аспект нашого робочого процесу - сформулювати позицію компанії перед клієнтом та відобразити її на веб-сайті. Фотографії, відео та тексти служать нашими інструментами у досягненні цієї мети. Співпраця з професійними підрядниками дозволяє нам не лише створювати найкращий веб-сайт, але й збагачувати його захопливим контентом.",
+                "paragraph13": "Ми робимо сайти? Так звичайно. Ми будуємо кращі сайти? Определенно."
+            }
+        },
+        "services": {
+            "banner": "наші послуги",
+            "mainTitle": {
+                "title": "Втілення ваших ідей і бажань у життя!",
+                "secondTitle": "послуги"
+            },
+            "card1Description": "Це не просто розробка, дизайн та просування. Це рішення маркетингових і бізнес-завдань: фінансові та нефінансові.",
+            "card2Description": "Ми перетворюємо ідеї на візуальну досконалість. Ваш бренд, наша креативність. Створюйте унікальний дизайн і виразний стиль разом з нами.",
+            "card3Description": "Ми створюємо яскраві плакати та білборди для вашої унікальної ідеї. Кожна деталь - це крок до вражаючих відчуттів, які залишать слід та привернуть увагу.",
+            "card4Description": "Ми переносимо ваші ідеї у мобільний дизайн, створюючи гармонійну взаємодію форми і функції. Ваш бренд має свою власну історію, і ми робимо її видимою.",
+            "card5Description": "Наша місія - привернути увагу та розповсюдити ваш бренд. Ми не просто створюємо ідеї, ми запалюємо їх та допомагаємо їм розквітнути у виразні брендові враження.",
+            "card6Description": "Ми створюємо більше, ніж просто веб-сайти та дизайн. Ми створюємо «обличчя» бренду, інструмент продажів та зображення озброєння. Наш особливий підхід та досвід допомагають нам у цьому."
+        },
+        "portfolio": {
+            "banner": "ваш проект може бути тут",
+            "mainTitle": {
+                "title": "Проекти, які говорять самі за себе",
+                "secondTitle": "портфоліо"
+            }
+        },
+        "contacts": {
+            "banner": "ПОЙДЕМО ДО ДІЇ",
+            "mainTitle": {
+                "title": "Дозвольте нам створити найкращий дизайн для вашої ніші",
+                "secondTitle": ""
+            },
+            "inputName": {
+                "title": "Ім'я",
+                "error": "Недійсне ім'я",
+                "placeholder": "Ваше ім'я"
+            },
+            "inputCompany": {
+                "title": "Компанія",
+                "error": "Недійсна компанія",
+                "placeholder": "Ваша компанія",
+                "clue": "Не обов'язково заповнювати"
+            },
+            "inputEmail": {
+                "title": "Електронна пошта",
+                "error": "Недійсна електронна пошта",
+                "placeholder": "Ваша електронна пошта"
+            },
+            "inputPhone": {
+                "title": "Номер телефону",
+                "error": "Недійсний номер телефону",
+                "placeholder": "Ваш номер телефону"
+            },
+            "inputMessage": {
+                "title": "Повідомлення",
+                "error": "Недійсне повідомлення",
+                "placeholder": "Напишіть про послугу, яку ви хотіли б отримати"
+            },
+            "sendBtn": "Надіслати"
+        },
+        "footer": {
+            "description": "Webtime - де ваш сайт буде сяяти, ваш бізнес буде підніматися, а успіх буде головним. Зв'яжіться з нами сьогодні, давайте здійснимо ваші мрії.",
+            "navigation": "Навігація",
+            "feedback": {
+                "title": "Бажаєте залишити відгук?",
+                "placeholder": "Ми цінуємо вашу думку",
+                "toShort": "Відгук занадто короткий"
+            },
+            "copyright": "WebTime. Усі права захищено."
+        }
+    },
+    "servicesPage": {
+        "main": {
+            "contactBtn": "Давайте обговоримо",
+            "navHome": "Головна"
+        },
+        "popup": {
+        "name": "Ім'я",
+        "namePlaceholder": "Ваше ім'я",
+        "phone": "Номер телефону",
+        "phonePlaceholder": "Ваш номер телефону",
+        "email": "Електронна пошта",
+        "emailPlaceholder": "Електронна пошта",
+        "message": "Повідомлення",
+        "messagePlaceholder": "Як ми можемо вам допомогти?",
+        "sendBtn": "Надіслати"
+        },
+        "web-development": {
+        "backgroundImg": "./images/0-background.svg",
+        "mainColor": "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)",
+        "gradientParts": {
+            "gradientID": "paint0_linear_866_370",
+            "color1": "#2BBFFE",
+            "color2": "#8629FD",
+            "color3": "#FC4AF5",
+            "offset": "0.521875"
+        },
+        "menu": {
+            "nav1": {
+            "nav": "Корпоративні сайти",
+            "goTo": "corporate-sites"
+            },
+            "nav2": {
+            "nav": "Лендінги",
+            "goTo": "landing-page"
+            },
+            "nav3": {
+            "nav": "Онлайн-магазини",
+            "goTo": "online-stores"
+            },
+            "nav4": {
+            "nav": "Високонавантажені сервіси та портали",
+            "goTo": "services-portals"
+            },
+            "nav5": {
+            "nav": "WOW-сайти",
+            "goTo": "wow-sites"
+            },
+            "nav6": {
+            "nav": "Особисті / Портфоліо",
+            "goTo": "personal-portfolio"
+            }
+        },
+        "title": "Розробка веб-сайтів",
+        "subtitle": "Це не просто розробка, дизайн та просування. Це розв'язання маркетингових і бізнес-задач: фінансових та нефінансових. Ви не просто купуєте людино-години, ви купуєте наш досвід, експертизу та навички, щоб створювати найкращі сайти у вашій ніші.",
+        "examples": {
+            "example1": {
+            "title": "Корпоративні сайти",
+            "imgPath": "./images/corporate-sites.jpg",
+            "goTo": "corporate-sites"
+            },
+            "example2": {
+            "title": "Лендінги",
+            "imgPath": "./images/landing-page.jpg",
+            "goTo": "landing-page"
+            },
+            "example3": {
+            "title": "Онлайн-магазини",
+            "imgPath": "./images/online-stores.jpg",
+            "goTo": "online-stores"
+            },
+            "example4": {
+            "title": "Сервіси / Портали",
+            "imgPath": "./images/services-portals.jpg",
+            "goTo": "services-portals"
+            },
+            "example5": {
+            "title": "WOW-сайти",
+            "imgPath": "./images/wow-sites.jpg",
+            "goTo": "wow-sites"
+            },
+            "example6": {
+            "title": "Особисті / Портфоліо",
+            "imgPath": "./images/personal-portfolio.jpg",
+            "goTo": "personal-portfolio"
+            }
+        },
+        "services": {
+            "block1": {
+            "title": "Корпоративні сайти",
+            "blockID": "corporate-sites",
+            "tag1": "Корпоративний веб",
+            "tag2": "Брендинг",
+            "tag3": "Бізнес онлайн",
+            "tag4": "Корпоративна ідентичність",
+            "description": "Для підприємств, які бажають встановити міцну онлайн-присутність, наші послуги розробки корпоративних сайтів адаптовані для відображення вашого бренду, цінностей та цілей. Ми гарантуємо професійне та єдина представлення вашого бізнесу, яке взаємодіє з вашою цільовою аудиторією."
+            },
+            "block2": {
+            "title": "Лендінги",
+            "blockID": "landing-page",
+            "tag1": "Впливовий дизайн",
+            "tag2": "Веб-лендінг",
+            "tag3": "Високі конверсії",
+            "tag4": "Оптимізовані для конверсій",
+            "description": "Створення впливових лендінгів є важливим для конверсій. Ми спеціалізуємося на створенні візуально привабливих і висококонвертуючих лендінгів, які захоплюють відвідувачів, змушуючи їх виконувати потрібні дії та підвищувати ваші бізнес-цілі."
+            },
+            "block3": {
+            "title": "Онлайн-магазини",
+            "blockID": "online-stores",
+            "tag1": "Хаб електронної торгівлі",
+            "tag2": "Безпечні покупки",
+            "tag3": "Цифровий магазин",
+            "tag4": "Покупки онлайн",
+            "description": "Електронна комерція є серцем сучасного бізнесу. Наші послуги розробки онлайн-магазинів призначені забезпечити безперешкодний та безпечний досвід покупок для ваших клієнтів. Від користувацьких інтерфейсів до міцних платіжних систем, ми гарантуємо повноцінне рішення для електронної комерції."
+            },
+            "block4": {
+            "title": "Сервіси / Портали",
+            "blockID": "services-portals",
+            "tag1": "Масштабований веб",
+            "tag2": "Високий трафік",
+            "tag3": "Розширені сервіси",
+            "tag4": "Висока навантаженість",
+            "description": "Для проектів, які вимагають масштабованості та високої продуктивності, наша команда розробників володіє вміннями створювати високонавантажені сервіси та портали. Ми використовуємо різноманітні фреймворки для обробки складних функцій, гарантуючи плавний користувацький досвід навіть при великому навантаженні."
+            },
+            "block5": {
+            "title": "WOW-сайти",
+            "blockID": "wow-sites",
+            "tag1": "Інноваційний дизайн",
+            "tag2": "3D-ефекти",
+            "tag3": "Анімація",
+            "tag4": "Візуальний вплив",
+            "description": "Іноді ви прагнете сайту, який перевершує звичайне. Наші WOW-сайти створені для того, щоб залишити незабутнє враження, володіючи передовими анімаціями, захоплюючими 3D-ефектами та інноваційним дизайном. Ми прагнемо забезпечити, щоб ваш веб-сайт не тільки виділявся, але й захоплював вашу аудиторію динамічними візуальними враженнями."
+            },
+            "block6": {
+            "title": "Особисті / Портфоліо",
+            "blockID": "personal-portfolio",
+            "tag1": "Виставка робіт",
+            "tag2": "Галерея проектів",
+            "tag3": "Професійні портфоліо",
+            "tag4": "Візуальне резюме",
+            "description": "Ефективне відображення ваших робіт є важливим. Наші послуги розробки портфоліо допомагають вам відображати ваші досягнення, проекти та можливості візуально привабливим способом, встановлюючи авторитет та привертаючи потенційних клієнтів. У Webtime ми керуємося вашими унікальними потребами та цілями на кожному етапі процесу розробки веб-сайту. Ми розуміємо, що довіра компанії вашому бізнесу є значущим рішенням, і ми зобов'язані перевищити ваші очікування. Почнемо подорож створення веб-сайту, який не просто відповідає, але перевершує вашу візію."
+            }
+        }
+        },
+        "design": {
+            "backgroundImg": "./images/1-background.svg",
+            "mainColor": "linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_375",
+                "color1": "#FE842B",
+                "color2": "#FD2929",
+                "color3": "#FF006B",
+                "offset": "0.486"
+            },
+            "menu": {
+                "nav1": {
+                "nav": "Design",
+                "goTo": "design"
+                },
+                "nav2": {
+                "nav": "Redesign",
+                "goTo": "redesign"
+                },
+                "nav3": {
+                "nav": "Logo",
+                "goTo": "logo"
+                },
+                "nav4": {
+                "nav": "Mobile design",
+                "goTo": "mobile-design",
+                "otherPage": true
+                }
+            },
+            "title": "Design / Redesign\nLogo",
+            "subtitle": "Make a distinctive mark in the business world with our design services. Whether you need a completely new logo, a stylish redesign, or an inspiring brand, our team of experienced designers is ready to bring your ideas to life. Elevate your brand to new heights with our creative solutions designed to highlight your uniqueness and capture the attention of your target audience.",
+            "examples": {
+                "example1": {
+                "title": "Web Design",
+                "imgPath": "./images/web-design.jpg",
+                "goTo": "design"
+                },
+                "example2": {
+                "title": "Web Redesign",
+                "imgPath": "./images/web-redesign.jpg",
+                "goTo": "redesign"
+                },
+                "example3": {
+                "title": "Logo",
+                "imgPath": "./images/logo.jpg",
+                "goTo": "logo"
+                }
+            },
+            "services": {
+                "block1": {
+                "title": "Web Design",
+                "blockID": "design",
+                "tag1": "Any scale",
+                "tag2": "Multy page",
+                "tag3": "Convenience",
+                "tag4": "Art",
+                "description": "Unlock the full potential of your online presence with our cutting-edge Web Design services. Our expert team crafts visually stunning and user-friendly websites tailored to elevate your brand. From intuitive navigation to captivating aesthetics, we ensure a seamless user experience that leaves a lasting impression. Transform your digital identity and stand out in the crowded online landscape. Elevate your business with our Web Design expertise – where innovation meets impact."
+                },
+                "block2": {
+                "title": "Web Redesign",
+                "blockID": "redesign",
+                "tag1": "Modern",
+                "tag2": "New technologies",
+                "tag3": "Improvement",
+                "tag4": "Update",
+                "description": "Experience a digital makeover with our Redesign services. Whether refreshing your current website or undergoing a complete transformation, our skilled team enhances visual appeal, functionality, and user engagement. Elevate your brand's online presence, captivate your audience, and stay ahead in the ever-evolving digital landscape. Unleash the power of redesign to redefine success in the virtual realm – where your brand's evolution meets excellence."
+                },
+                "block3": {
+                "title": "Logo",
+                "blockID": "logo",
+                "tag1": "Branding",
+                "tag2": "Graphic design",
+                "tag3": "Unique",
+                "tag4": "Emblem",
+                "description": "Forge a memorable brand identity with our Logo Design services. Our creative team specializes in designing logos that resonate with your brand's essence. From timeless simplicity to bold innovation, we tailor logos that leave a lasting imprint. Elevate your brand recognition and make a statement in any market. Discover the art of visual storytelling with our Logo Design expertise – where every logo is a unique symbol of your brand's journey and aspirations."
+                }
+            }
+        },
+        "poster-billboards": {
+        "backgroundImg": "./images/2-background.svg",
+        "mainColor": "linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%)",
+        "gradientParts": {
+            "gradientID": "paint0_linear_866_376",
+            "color1": "#68E0CF",
+            "color2": "#3DCDFF",
+            "color3": "#209CFF",
+            "offset": "0.516"
+        },
+        "menu": {
+            "nav1": {
+            "nav": "Posters",
+            "goTo": "posters"
+            },
+            "nav2": {
+            "nav": "Billboards",
+            "goTo": "billboards"
+            },
+            "nav3": {
+            "nav": "Business card",
+            "goTo": "business-card-leaflets",
+            "otherPage": true
+            },
+            "nav4": {
+            "nav": "Leaflets",
+            "goTo": "business-card-leaflets",
+            "otherPage": true
+            }
+        },
+        "title": "Posters / Billboards",
+        "subtitle": "Elevate your brand presence with our Poster and Billboard Design services. Our expert designers craft visually striking posters that captivate on a smaller scale, and bold billboards that dominate the urban skyline. From impactful imagery to compelling messaging, we ensure your brand stands out in both intimate and grand spaces. Make a powerful statement, spark interest, and leave a lasting impression with our Poster and Billboard Design expertise. Where creativity meets visibility, we turn your ideas into visual spectacles that demand attention.",
+        "examples": {
+            "example1": {
+            "title": "Posters",
+            "imgPath": "./images/poster.jpg",
+            "goTo": "posters"
+            },
+            "example2": {
+            "title": "Billboards",
+            "imgPath": "./images/billboard.jpg",
+            "goTo": "billboards"
+            }
+        },
+        "services": {
+            "block1": {
+            "title": "Posters",
+            "blockID": "posters",
+            "tag1": "Poster Design",
+            "tag2": "Multicolored",
+            "tag3": "Event",
+            "tag4": "Different Size",
+            "description": "Transform your message into a visual masterpiece with our Poster Design services. Our skilled designers craft eye-catching posters that captivate audiences and leave a lasting impression. From impactful imagery to compelling copy, we ensure your poster stands out in any space. Elevate your promotional efforts, spark curiosity, and make a statement with our Poster Design expertise. Unleash the power of visual communication and turn heads with posters that speak louder than words."
+            },
+            "block2": {
+            "title": "Billboards",
+            "blockID": "billboards",
+            "tag1": "Billboards Design",
+            "tag2": "Attracting people",
+            "tag3": "Advertising Boards",
+            "tag4": "Large",
+            "description": "Maximize your brand visibility with our Billboard Design services. Our expert team creates captivating designs that dominate the skyline and command attention. From bold visuals to concise messaging, we ensure your billboard leaves a lasting impact on passersby. Elevate your outdoor advertising game, amplify brand recognition, and make a statement on the grand stage. Trust our Billboard Design expertise to transform your message into an unmissable spectacle in the urban landscape."
+            }
+        }
+        },
+        "mobile-design": {
+            "backgroundImg": "./images/3-background.svg",
+            "mainColor": "linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_377",
+                "color1": "#84FAB0",
+                "color2": "#8FD3F4",
+                "color3": "#8FD3F4",
+                "offset": "0.892222"
+            },
+            "menu": {
+                "nav1": {
+                "nav": "Mobile design",
+                "goTo": "mobile-design"
+                },
+                "nav2": {
+                "nav": "Web design",
+                "goTo": "design",
+                "otherPage": true
+                },
+                "nav3": {
+                "nav": "Web redesign",
+                "goTo": "design",
+                "otherPage": true
+                },
+                "nav4": {
+                "nav": "Logo",
+                "goTo": "design",
+                "otherPage": true
+                }
+            },
+            "title": "Mobile Design",
+            "subtitle": "Unique design for your mobile app is the key to a successful launch! Our mobile design specialists will create intuitive and stylish interfaces that not only attract attention but also ensure ease of use. Give your brand a standout look and make a lasting impression.",
+            "examples": {
+                "example1": {
+                "title": "Mobile Design",
+                "imgPath": "./images/mobile-design.jpg",
+                "goTo": "mobile-design"
+                }
+            },
+            "services": {
+                "block1": {
+                "title": "Mobile Design",
+                "blockID": "mobile-design",
+                "tag1": "App design",
+                "tag2": "Mobility",
+                "tag3": "Visual Touch",
+                "tag4": "Multi-page",
+                "description": "Immerse your audience in a mobile-friendly experience with our Mobile Design services. Our expert team specializes in creating intuitive and visually appealing mobile interfaces. From responsive layouts to user-centric navigation, we ensure your brand shines on every device. Elevate your digital reach, engage users effortlessly, and stay ahead in the mobile-centric landscape. Explore the art of mobile design with us – where innovation meets user satisfaction, creating a lasting impact on the go."
+                }
+            }
+        },
+        "business-card-leaflets": {
+            "backgroundImg": "./images/4-background.svg",
+            "mainColor": "linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%)",
+            "gradientParts": {
+                "gradientID": "paint0_linear_866_341",
+                "color3": "#040D61",
+                "color2": "#1562D2",
+                "color1": "#004E92",
+                "offset": "0.396"
+            },
+            "menu": {
+                "nav1": {
+                "nav": "Business card",
+                "goTo": "business-card"
+                },
+                "nav2": {
+                "nav": "Leaflets",
+                "goTo": "leaflets"
+                },
+                "nav3": {
+                "nav": "Posters",
+                "goTo": "poster-billboards",
+                "otherPage": true
+                },
+                "nav4": {
+                "nav": "Logo",
+                "goTo": "poster-billboards",
+                "otherPage": true
+                }
+            },
+            "title": "Business card / Leaflets",
+            "subtitle": "Forge a lasting connection with our Business Card and Leaflet Design services. Our expert designers create business cards that embody professionalism and leaflets that tell your brand story succinctly. From impactful first impressions to comprehensive brand communication, our designs ensure you stand out. Elevate your networking and promotional strategies with our expertise, turning ordinary pieces into powerful brand assets. Make every exchange memorable – where business cards and leaflets become ambassadors of your brand identity.",
+            "examples": {
+                "example1": {
+                "title": "Business Card",
+                "imgPath": "./images/business-card.jpg",
+                "goTo": "business-card"
+                },
+                "example2": {
+                "title": "Leaflets",
+                "imgPath": "./images/leaflets.jpg",
+                "goTo": "leaflets"
+                }
+            },
+            "services": {
+                "block1": {
+                "title": "Business card",
+                "blockID": "business-card",
+                "tag1": "Compact Design",
+                "tag2": "Stylish Card",
+                "tag3": "Laconic Card",
+                "tag4": "Spectacular Card",
+                "description": "Make your mark with our Business Card Design services. Our team specializes in creating business cards that leave a lasting impression. From sleek professionalism to creative uniqueness, we tailor designs that reflect your brand identity. Elevate your networking game and make every introduction count. Explore the art of compact sophistication with our Business Card Design expertise – where every card is a statement of your brand's excellence."
+                },
+                "block2": {
+                "title": "Leaflets",
+                "blockID": "leaflets",
+                "tag1": "Leaflet Design",
+                "tag2": "Informative",
+                "tag3": "Graphic Content",
+                "tag4": "Concise",
+                "description": "Tell your brand story succinctly with our Leaflet Design services. Our expert designers craft leaflets that capture attention and communicate your message effectively. From compelling visuals to concise copy, we ensure your leaflets stand out in the crowd. Elevate your promotional efforts, inform your audience, and leave a lasting impact with our Leaflet Design expertise. Discover the power of graphic storytelling and turn every piece into a compelling narrative that resonates with your target audience."
+                }
+            }
+        }
+    }
+ }

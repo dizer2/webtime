@@ -39,11 +39,11 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 		// Validation: Check if feedbackInput has less than 5 characters
 		if (feedbackInput.trim().length < 5) {
 			console.log("Feedback must be at least 5 characters long.");
-			setFeedbackTitle('Feedback too short');
+			setFeedbackTitle(t('homePage.footer.feedback.toShort'));
 			return; 
 		}
 
-		setFeedbackTitle('Would you like to leave a review?');
+		setFeedbackTitle(t('homePage.footer.feedback.title'));
 		setFeedbackInput('');
 		emailjs
 			.sendForm('service_3o2k54m', 'template_qah1gya', form.current, {
@@ -63,6 +63,7 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 	  const handleChange = (e) => {
 	    setFeedbackInput(e.target.value);
 	  }
+
 	  
   return (
 	<div className='footer'>

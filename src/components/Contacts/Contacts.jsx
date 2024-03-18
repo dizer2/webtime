@@ -9,8 +9,11 @@ import Popup from '../UI/Popup/Popup.jsx';
 import Spline from '@splinetool/react-spline';
 import { useInView } from 'react-intersection-observer';
 import GradientBtn from '../UI/GradientBtn/GradientBtn.jsx';
+import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
+	const {t} = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -142,11 +145,11 @@ const Contacts = () => {
 
 
       <Reveal>
-        <SubTitle text={"LET'S GO TO ACTION"} />
+        <SubTitle text={t('homePage.contacts.banner')} />
       </Reveal>
 
       <RevealSecodary>
-        <Title text={'Let us create the best design for your niche'} description={''} />
+        <Title text={t('homePage.contacts.mainTitle.title')} description={t('homePage.contacts.mainTitle.secondTitle')} />
       </RevealSecodary>
 
       <div className='contacts__wrapper'>
@@ -167,12 +170,12 @@ const Contacts = () => {
             <div className='contacts__form-row'>
               <div className='contacts__form-box'>
                 <p className={`contacts__form-box__heading ${error.name && 'error'}`}>
-                  {error.name ? 'Invalid Name' : 'Name'}
+                  {error.name ? t('homePage.contacts.inputName.error') : t('homePage.contacts.inputName.title')}
                 </p>
                 <input
                   className='contacts__form-box__input'
                   type='text'
-                  placeholder='Your name'
+                  placeholder={t('homePage.contacts.inputName.placeholder')}
                   onChange={handleChange}
                   value={formData.name}
                   name='name'
@@ -182,7 +185,7 @@ const Contacts = () => {
 
               <div className='contacts__form-box'>
                 <div className='contacts__form-box__heading'>
-                  {error.company ? 'Invalid Company' : 'Company'}
+                  {error.company ? t('homePage.contacts.inputCompany.error') : t('homePage.contacts.inputCompany.title')}
 
 
                   <div className='contacts__form-box__heading-clue'>
@@ -194,7 +197,7 @@ const Contacts = () => {
                         </svg>
                       </div>
 
-                      <span>Not required to fill out</span> 
+                      <span>{t('homePage.contacts.inputCompany.clue')}</span> 
                     </div>  
 
                     <div onMouseEnter={handleHover} onMouseLeave={handleHover} className="contacts__form-question-icon contacts__form-question-icon--main"> 
@@ -210,7 +213,7 @@ const Contacts = () => {
                 <input
                   className='contacts__form-box__input'
                   type='text'
-                  placeholder='Your company'
+                  placeholder={t('homePage.contacts.inputCompany.placeholder')}
                   onChange={handleChange}
                   value={formData.company}
                   name='company'
@@ -222,12 +225,12 @@ const Contacts = () => {
             <div className='contacts__form-row'>
               <div className='contacts__form-box'>
                 <p className={`contacts__form-box__heading ${error.email && 'error'}`}>
-                  {error.email ? 'Invalid Email' : 'Email'}
+                  {error.email ? t('homePage.contacts.inputEmail.error') : t('homePage.contacts.inputEmail.title')}
                 </p>
                 <input
                   className='contacts__form-box__input'
                   type='text'
-                  placeholder='Your email'
+                  placeholder={t('homePage.contacts.inputEmail.placeholder')}
                   onChange={handleChange}
                   value={formData.email}
                   name='email'
@@ -237,13 +240,13 @@ const Contacts = () => {
 
               <div className='contacts__form-box'>
                 <p className={`contacts__form-box__heading ${error.phone && 'error'}`}>
-                  {error.phone ? 'Invalid Phone Number' : 'Phone number'}
+                  {error.phone ? t('homePage.contacts.inputPhone.error') : t('homePage.contacts.inputPhone.title')}
                 </p>
                 
                 <input
                   className='contacts__form-box__input'
                   type='number'
-                  placeholder='Your phone number'
+                  placeholder={t('homePage.contacts.inputPhone.placeholder')}
                   onChange={handleChange}
                   value={formData.phone}
                   name='phone'
@@ -255,14 +258,14 @@ const Contacts = () => {
 
             <div className='contacts__form-box'>
               <p className={`contacts__form-box__heading ${error.message && 'error'}`}>
-                {error.message ? 'Invalid Message' : 'Message'}
+                {error.message ? t('homePage.contacts.inputMessage.error') : t('homePage.contacts.inputMessage.title')}
               </p>
          
 
               <div className='contacts__form-box__message'>
                 <textarea
                   className='contacts__form-box__input contacts__form-box__textarea'
-                  placeholder='Write about the service that you would like to receive'
+                  placeholder={t('homePage.contacts.inputMessage.placeholder')}
                   onChange={handleChange}
                   value={formData.message}
                   name='message'
@@ -290,7 +293,7 @@ const Contacts = () => {
               </button> */}
 
               <GradientBtn 
-                text="Send"
+                text={t('homePage.contacts.sendBtn')}
                 isSubmitBtn={true}/>
 
             </div>
