@@ -29,6 +29,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => { i18n.changeLanguage(lng); };
+  const [inHomeSection, setInHomeSection] = useState(true);
 
   // Cursor Animation
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -202,11 +203,16 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
     setCalculatorShow(true);
   }
 
-	useEffect(() => {
+
+  useEffect(() => {
     const handleScroll = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && entry.target.id === 'home') {
-              setCalculatorMenu(false);
+                setInHomeSection(true);
+                setCalculatorMenu(false);
+            } else {
+                setInHomeSection(false);
+                setCalculatorMenu(true);
             }
         });
     };
@@ -214,21 +220,20 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
     const observer = new IntersectionObserver(handleScroll, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5
+        threshold: 0.5 // При необхідності адаптуйте значення для розміру екрану
     });
 
-    const aboutSection = document.getElementById('home');
-    if (aboutSection) {
-        observer.observe(aboutSection);
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        observer.observe(homeSection);
     }
 
     return () => {
-        if (aboutSection) {
-            observer.unobserve(aboutSection);
+        if (homeSection) {
+            observer.unobserve(homeSection);
         }
     };
-}, []);
-
+}, []); // Пам'ята
   
   return (
     <section id='home' className="home">

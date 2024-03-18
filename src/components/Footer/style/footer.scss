@@ -11,7 +11,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
+	justify-content: center;
+	z-index: 12;
+	
 	&__top {
 		margin-bottom: $section-margin;
 		width: 100%;

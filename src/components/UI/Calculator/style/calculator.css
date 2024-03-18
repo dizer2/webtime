@@ -80,7 +80,9 @@ body {
   background-color: rgba(18, 18, 18, 0.7);
   z-index: 4;
   position: fixed;
-  top: -100%;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +93,7 @@ body {
   overflow: hidden;
   transition: all 700ms cubic-bezier(0.075, 0.82, 0.165, 1);
   /* easeOutCirc */
+  z-index: 12;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   /* easeOutCirc */ }
   .calculator-popup__element1 {
@@ -125,7 +128,8 @@ body {
     margin-right: 10px;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
   .calculator-popup__container {
     width: 100%;
     position: absolute;
@@ -151,7 +155,8 @@ body {
       position: relative;
       top: 100px; }
   .calculator-popup__item {
-    display: flex; }
+    display: flex;
+    cursor: pointer; }
     .calculator-popup__item-icon {
       position: relative;
       left: 10px;
@@ -235,7 +240,9 @@ body {
 
 .calculator-popup--open {
   position: fixed;
-  top: 10%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   transition: all 700ms cubic-bezier(0.075, 0.82, 0.165, 1);
   /* easeOutCirc */
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -338,25 +345,12 @@ body {
 @media screen and (max-width: 400px) {
   .calculator-popup__item-icon {
     display: none; } }
-@media screen and (max-height: 577px) {
-  .calculator-popup--open {
-    position: fixed;
-    top: 5%; } }
-@media screen and (max-height: 533px) {
-  .calculator-popup--open {
-    position: fixed;
-    top: 2%; } }
 @media screen and (max-height: 520px) {
   .calculator-popup {
-    height: 450px; }
-
-  .calculator-popup--open {
-    position: fixed;
-    top: 2%; } }
+    height: 450px; } }
 @media screen and (max-height: 520px) and (max-width: 900px) {
   .calculator-popup {
-    height: 450px;
-    background-color: red; }
+    height: 450px; }
     .calculator-popup__close {
       width: 30px;
       height: 30px;
@@ -384,10 +378,6 @@ body {
       margin-top: 10px;
       position: relative;
       bottom: 180px;
-      text-align: center; }
-
-  .calculator-popup--open {
-    position: fixed;
-    top: 2%; } }
+      text-align: center; } }
 
 /*# sourceMappingURL=calculator.css.map */
