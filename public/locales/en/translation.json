@@ -179,6 +179,43 @@
           "description": "Webtime - where your site will shine, your business will climb, and success will be prime. Contact us today, let's make your dreams play.",
           "navigation": "Navigation",
 
+          "calculator": {
+            "title": "Calculate the cost",
+
+            "answer1": {
+              "title": "What kind of site do you want to create?",
+              "service1": "Landing Page",
+              "service2": "Corporate Sites",
+              "service3": "Online stores",
+              "service4": "Services",
+              "service5": "Portals",
+              "service6": "WOW sites",
+              "service7": "Personal",
+              "service8": "Portfolio",
+              "service9": "Other"
+            },
+
+            "answer2": {
+              "title": "Do you have a logo?",
+              "option1": "I want buy",
+              "option2": "Yes",
+              "option3": "No"
+            },
+            "answer3": {
+              "title": "Do you need services for filling, maintaining and promoting the site?",
+              "option1": "Yes",
+              "option2": "No"
+            },
+            "answer4": {
+              "title": "The calculation is ready! Please enter your phone number, we will send the information to it.",
+              "option1": "Write your full name",
+              "option2": "Write your phone number",
+              "error": "Enter a valid name and phone number"
+            },
+
+            "btn": "Next step"
+          },
+
           "feedback": {
               "title": "Would you like to leave a review?",
               "placeholder": "We appreciate your feedback",
@@ -597,5 +634,4 @@
       }
     }
   }
-  
 }

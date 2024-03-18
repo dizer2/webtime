@@ -124,7 +124,8 @@ body {
         line-height: normal;
         letter-spacing: 0;
         color: #fff;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        transition: 0.4s; }
       .contacts__wrapper .contacts__info-phone {
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
@@ -132,7 +133,11 @@ body {
         font-size: 24px;
         line-height: normal;
         letter-spacing: 0;
-        color: #fff; }
+        color: #fff;
+        transition: 0.4s; }
+      .contacts__wrapper .contacts__info--item:hover {
+        transition: .4s;
+        color: #a7a7a7; }
     .contacts__wrapper .animation-div:last-child {
       width: 75% !important; }
     .contacts__wrapper .contacts__form {
@@ -160,23 +165,8 @@ body {
         overflow: hidden;
         height: 260px;
         background-color: #121212; }
-      .contacts__wrapper .contacts__form-box__btn {
-        margin: 30px auto 0px auto;
-        width: 100%;
-        height: 50px;
-        background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 20px;
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: normal;
-        letter-spacing: 0;
-        color: #fff; }
+      .contacts__wrapper .contacts__form-box .gradient-btn {
+        margin: 30px auto 0px auto; }
       .contacts__wrapper .contacts__form-box .error-message {
         color: #FF006B; }
       .contacts__wrapper .contacts__form-box__heading {

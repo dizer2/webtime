@@ -156,10 +156,10 @@ const Contacts = () => {
         
         <Reveal>
           <div className='contacts__info'>
-            <a href='mailto:help.webtime@gmail.com' className='contacts__info-email'>
+            <a href='mailto:help.webtime@gmail.com' className='contacts__info-email contacts__info--item'>
               help.webtime@gmail.com
             </a>
-            <a href='tel:+420 773 203 868' className='contacts__info-phone'>
+            <a href='tel:+420 773 203 868' className='contacts__info-phone contacts__info--item'>
               +420 773 203 868
             </a>
           </div>

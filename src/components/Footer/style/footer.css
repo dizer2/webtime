@@ -142,7 +142,11 @@ body {
           font-size: 16px;
           line-height: normal;
           letter-spacing: 0;
-          color: rgba(255, 255, 255, 0.6); }
+          color: rgba(255, 255, 255, 0.6);
+          transition: .4s; }
+          .footer__top-nav .footer__nav .footer__list .footer__item:hover {
+            color: #fff;
+            transition: .4s; }
     .footer__top-form {
       width: auto; }
       .footer__top-form .footer__top-input {

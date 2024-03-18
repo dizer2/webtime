@@ -261,6 +261,13 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
     height: 100vh;
     width: 22%;
     background-color: #0C0C0C; }
+    .services-page__menu-logo {
+      opacity: 1;
+      transition: .4s;
+      cursor: pointer; }
+      .services-page__menu-logo:hover {
+        opacity: 0.8;
+        transition: .4s; }
     .services-page__menu .services-menu__wrapper {
       height: 100%;
       width: 100%;
@@ -292,7 +299,11 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
         line-height: normal;
         letter-spacing: 0;
         color: #fff;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: .4s; }
+        .services-page__menu-nav .services-page__menu-list .services-page__menu-item:hover {
+          color: #a7a7a7;
+          transition: .4s; }
     .services-page__menu .header__menu {
       display: none; }
   .services-page__main {
@@ -351,7 +362,15 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
       flex-wrap: wrap;
       gap: 50px 6%; }
       .services-page__main .services-page__services-container .services-page__service {
-        cursor: pointer; }
+        cursor: pointer;
+        transition: .4s;
+        transform: translateY(0px); }
+        .services-page__main .services-page__services-container .services-page__service:hover {
+          transition: .4s;
+          transform: translateY(-10px); }
+          .services-page__main .services-page__services-container .services-page__service:hover .services-page__service-title {
+            color: #a7a7a7;
+            transition: .4s; }
         .services-page__main .services-page__services-container .services-page__service-img {
           margin-bottom: 15px;
           width: 300px;
@@ -366,7 +385,8 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
           font-size: 20px;
           line-height: normal;
           letter-spacing: 0;
-          color: #fff; }
+          color: #fff;
+          transition: .4s; }
     .services-page__main .services-page__description-box {
       margin-left: 70px;
       padding-bottom: 140px; }
@@ -703,14 +723,25 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
       text-align: center; } }
 @media screen and (max-width: 500px) {
   .services-page__popup-overlay .services-page__popup {
-    padding: 25px 30px;
+    padding: 45px 30px;
     margin: 0;
     width: 100%; }
     .services-page__popup-overlay .services-page__popup-header {
       margin-bottom: 30px; }
     .services-page__popup-overlay .services-page__popup .gradient-btn {
       margin-top: 10px; } }
-@media screen and (max-height: 730px) {
+@media screen and (max-height: 800px) {
+  .services-page__popup-overlay .services-page__popup {
+    padding: 30px 50px; }
+    .services-page__popup-overlay .services-page__popup-header {
+      margin-bottom: 30px; }
+    .services-page__popup-overlay .services-page__popup .services-page__popup-form {
+      row-gap: 20px; }
+      .services-page__popup-overlay .services-page__popup .services-page__popup-form .services-page__popup__input-box .services-page__popup-input {
+        height: 46px; }
+      .services-page__popup-overlay .services-page__popup .services-page__popup-form .services-page__popup__input-box .services-page__popup__textarea-wrapper .services-page__popup-textarea {
+        height: 80px; } }
+@media screen and (max-height: 620px) {
   .services-page__popup-overlay {
     display: none;
     justify-content: center;

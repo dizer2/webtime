@@ -142,7 +142,12 @@ body {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      flex-direction: column; }
+      flex-direction: column;
+      transition: .4s;
+      transform: translateY(0);
+      cursor: pointer; }
+      .about-us__box2-cart:hover {
+        transform: translateY(-10px); }
       .about-us__box2-cart .animation-div {
         display: flex;
         justify-content: flex-start;

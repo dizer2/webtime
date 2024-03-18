@@ -14,6 +14,8 @@
 		padding-left: $secondry-padding;
 		@include display-center(space-between, center);
 
+
+
 		&-subTitle {
 			@include font(#fff, 24px, 500, normal, normal);
 			transform: rotate(-90deg);
@@ -55,6 +57,13 @@
 			height: auto;
 			@include display-center(flex-start, center);
 			flex-direction: column;
+			transition: .4s;
+			transform: translateY(0);
+			cursor: pointer;
+
+			&:hover {
+				transform: translateY(-10px);
+			}
 
 			.animation-div {
 				@include display-center(flex-start, center);

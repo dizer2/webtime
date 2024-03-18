@@ -26,11 +26,20 @@
         opacity: 0;
         transition: 0.5s;
         z-index: -1;
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                transition: .4s;
+                opacity: 0.8;
+            }
+        }
 
         svg {
             position: relative;
             top: 3px;
             left: 3px;
+            transition: .4s;
         }
 
         &::after {
@@ -178,7 +187,17 @@
                 }
             }
         }
-        
+
+        .header__logo {
+            opacity: 1;
+            transition: .4s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.6;
+                transition: .4s;
+            }
+        }
 
         .header__wrapper {
             width: 100%;
@@ -233,14 +252,15 @@
                     
                                 .header__dropdown-content {
                                     display: flex;
-                                    opacity: 0; /* Initial opacity set to 0 */
-                                    transform: translateY(-20px); /* Initial position above */
-                                    transition: opacity 0.4s, transform 0.4s; /* Transition properties */
+                                    opacity: 0; 
+                                    transform: translateY(-20px); 
+                                    transition: opacity 0.4s, transform 0.4s; 
                                     animation: showDropdown 0.4s forwards;
                                 }
                             }
                         }
-                    
+
+
                         &-content__overlay {
                             position: absolute;
                             top: 10px;

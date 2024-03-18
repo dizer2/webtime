@@ -178,6 +178,42 @@
         "footer": {
             "description": "Webtime - místo, kde váš web zazáří, váš podnik vyšplhá nahoru a úspěch bude na prvním místě. Kontaktujte nás dnes a splňme vaše sny.",
             "navigation": "Navigace",
+            "calculator": {
+                "title": "Vypočítat náklady",
+            
+                "answer1": {
+                    "title": "Jaký druh stránky chcete vytvořit?",
+                    "service1": "Cílová stránka",
+                    "service2": "Firemní weby",
+                    "service3": "Internetové obchody",
+                    "service4": "Služby",
+                    "service5": "Portály",
+                    "service6": "WOW stránky",
+                    "service7": "Osobní",
+                    "service8": "Portfolio",
+                    "service9": "Jiné"
+                },
+            
+                "answer2": {
+                    "title": "Máte logo?",
+                    "option1": "Chci koupit",
+                    "option2": "Ano",
+                    "option3": "Ne"
+                },
+                "answer3": {
+                    "title": "Potřebujete služby pro vyplnění, údržbu a propagaci webu?",
+                    "option1": "Ano",
+                    "option2": "Ne"
+                },
+                "answer4": {
+                    "title": "Výpočet je hotový! Zadejte prosím své telefonní číslo, pošleme vám informace na něj.",
+                    "option1": "Zadejte své celé jméno",
+                    "option2": "Zadejte své telefonní číslo",
+                    "error": "Zadejte platné jméno a telefonní číslo"
+                },
+
+                "btn": "Další krok"
+            },
     
             "feedback": {
                 "title": "Chcete nám nechat recenzi?",
@@ -543,15 +579,15 @@
             },
             "menu": {
                 "nav1": {
-                    "nav": "Visitenkarte",
+                    "nav": "Vizitky",
                     "goTo": "business-card"
                 },
                 "nav2": {
-                    "nav": "Flyer",
+                    "nav": "Letáky",
                     "goTo": "leaflets"
                 },
                 "nav3": {
-                    "nav": "Plakate",
+                    "nav": "Plakáty",
                     "goTo": "poster-billboards",
                     "otherPage": true
                 },
@@ -561,38 +597,38 @@
                     "otherPage": true
                 }
             },
-            "title": "Visitenkarte / Flyer",
-            "subtitle": "Schmieden Sie eine dauerhafte Verbindung mit unseren Visitenkarten- und Flyer-Design-Services. Unsere erfahrenen Designer erstellen Visitenkarten, die Professionalität verkörpern, und Flyer, die Ihre Markengeschichte prägnant erzählen. Von eindrucksvollen ersten Eindrücken bis hin zu umfassender Markenkommunikation sorgen unsere Designs dafür, dass Sie herausstechen. Steigern Sie Ihre Netzwerk- und Werbestrategien mit unserer Expertise und verwandeln Sie gewöhnliche Stücke in leistungsstarke Markenassets. Machen Sie jeden Austausch unvergesslich - wo Visitenkarten und Flyer zu Botschaftern Ihrer Markenidentität werden.",
+            "title": "Vizitky / Letáky",
+            "subtitle": "Vytvořte trvalé spojení s našimi službami designu návštěvních karet a letáků. Naši odborní designéři vytvářejí vizitky, které ztělesňují profesionalitu, a letáky, které stručně vyprávějí příběh vaší značky. Od výrazných prvních dojmů po komplexní komunikaci značky zajišťují naše designy, že se vynoříte. Zvýšte své síťování a propagační strategie s naší expertizou, proměňte běžné kusy na silné aktiva značky. Učiňte každou výměnu nezapomenutelnou - kde vizitky a letáky se stávají ambasadory identity vaší značky.",
             "examples": {
                 "example1": {
-                    "title": "Visitenkarte",
+                    "title": "Vizitky",
                     "imgPath": "./images/business-card.jpg",
                     "goTo": "business-card"
                 },
                 "example2": {
-                    "title": "Flyer",
+                    "title": "Letáky",
                     "imgPath": "./images/leaflets.jpg",
                     "goTo": "leaflets"
                 }
             },
             "services": {
                 "block1": {
-                    "title": "Visitenkarte",
+                    "title": "Vizitky",
                     "blockID": "business-card",
-                    "tag1": "Kompaktes Design",
-                    "tag2": "Stylische Karte",
-                    "tag3": "Lakonische Karte",
-                    "tag4": "Spektakuläre Karte",
-                    "description": "Setzen Sie ein Zeichen mit unseren Visitenkarten-Design-Services. Unser Team ist spezialisiert auf die Erstellung von Visitenkarten, die einen bleibenden Eindruck hinterlassen. Von eleganter Professionalität bis hin zur kreativen Einzigartigkeit gestalten wir Designs, die Ihre Markenidentität widerspiegeln. Verbessern Sie Ihr Networking-Spiel und machen Sie jede Vorstellung zählbar. Entdecken Sie die Kunst der kompakten Raffinesse mit unserer Expertise im Visitenkarten-Design - wo jede Karte ein Statement für die Exzellenz Ihrer Marke ist."
+                    "tag1": "Kompaktní design",
+                    "tag2": "Stylová karta",
+                    "tag3": "Lakonická karta",
+                    "tag4": "Efektní karta",
+                    "description": "Udělejte dojem s našimi službami designu návštěvních karet. Naše tým se specializuje na tvorbu vizitek, které zanechávají trvalý dojem. Od elegantní profesionality po kreativní jedinečnost přizpůsobujeme designy, které odrážejí identitu vaší značky. Zvýšte svou síťovací hru a udělejte každé představení početné. Objevte umění kompaktní elegance s naší expertizou v designu návštěvních karet - kde každá karta je prohlášením o vynikající kvalitě vaší značky."
                 },
                 "block2": {
-                    "title": "Flyer",
+                    "title": "Letáky",
                     "blockID": "leaflets",
-                    "tag1": "Flyer-Design",
-                    "tag2": "Informativ",
-                    "tag3": "Grafischer Inhalt",
-                    "tag4": "Konzise",
-                    "description": "Erzählen Sie Ihre Markengeschichte prägnant mit unseren Flyer-Design-Services. Unsere erfahrenen Designer gestalten Flyer, die die Aufmerksamkeit erregen und Ihre Botschaft effektiv vermitteln. Von überzeugenden visuellen Elementen bis hin zu prägnanten Texten stellen wir sicher, dass Ihre Flyer aus der Masse herausstechen. Verbessern Sie Ihre Werbemaßnahmen, informieren Sie Ihr Publikum und hinterlassen Sie einen bleibenden Eindruck mit unserer Expertise im Flyer-Design. Entdecken Sie die Kraft der grafischen Erzählkunst und verwandeln Sie jedes Stück in eine packende Erzählung, die bei Ihrer Zielgruppe anklingt."
+                    "tag1": "Design letáků",
+                    "tag2": "Informativní",
+                    "tag3": "Grafický obsah",
+                    "tag4": "Stručný",
+                    "description": "Vyprávějte příběh vaší značky stručně s našimi službami designu letáků. Naši odborní designéři tvoří letáky, které přitahují pozornost a efektivně komunikují vaši zprávu. Od poutavých vizuálních prvků po stručné kopie zajistíme, že vaše letáky vyniknou v davu. Zvýšte své propagační úsilí, informujte svou cílovou skupinu a udělejte trvalý dojem s naší expertizou v designu letáků. Objevte sílu grafického vyprávění a proměňte každý kus v poutavý příběh, který rezonuje s vaším cílovým publikem."
                 }
             }
         }
