@@ -53,33 +53,6 @@ const About = ({ setCalculatorMenu }) => {
         }
     }
 
-	// useEffect(() => {
-    //     const handleScroll = (entries) => {
-    //         entries.forEach(entry => {
-    //             if (entry.isIntersecting && entry.target.id === 'about') {
-    //                 setCalculatorMenu(true);
-    //             }
-    //         });
-    //     };
-
-    //     const observer = new IntersectionObserver(handleScroll, {
-    //         root: null,
-    //         rootMargin: '0px',
-    //         threshold: 0.5
-    //     });
-
-    //     const aboutSection = document.getElementById('about');
-    //     if (aboutSection) {
-    //         observer.observe(aboutSection);
-    //     }
-
-    //     return () => {
-    //         if (aboutSection) {
-    //             observer.unobserve(aboutSection);
-    //         }
-    //     };
-    // }, []);
-
 	  
   return (
 	<div id='about' className='about-us'>

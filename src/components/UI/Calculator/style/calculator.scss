@@ -7,7 +7,7 @@
 	z-index: 4;
 	position: fixed;
 	left: 50%;
-	top: -50%;
+	top: -100%;
 	transform: translate(-50%, -50%);
 	@include display-center(center, center);
 	border: 1px solid transparent;
@@ -353,11 +353,14 @@
 @media screen and (max-width: 400px) {
 	.calculator-popup {
 
-	&__item {
-		&-icon {
-			display: none;
+		&__item {
+			&-input {
+				input {
+					font-size: 14px;
+				}
+				
+			}
 		}
-	}
 	}
 
 }

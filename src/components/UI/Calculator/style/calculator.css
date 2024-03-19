@@ -81,7 +81,7 @@ body {
   z-index: 4;
   position: fixed;
   left: 50%;
-  top: -50%;
+  top: -100%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
@@ -343,8 +343,8 @@ body {
     bottom: 175px;
     text-align: center; } }
 @media screen and (max-width: 400px) {
-  .calculator-popup__item-icon {
-    display: none; } }
+  .calculator-popup__item-input input {
+    font-size: 14px; } }
 @media screen and (max-height: 520px) {
   .calculator-popup {
     height: 450px; } }

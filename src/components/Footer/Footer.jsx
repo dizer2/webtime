@@ -146,7 +146,7 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 
 					<div className='footer__top-input'>
 						<input value={feedbackInput} onChange={handleChange} name='feedback' type="text" placeholder={t('homePage.footer.feedback.placeholder')} />
-						<button type="sumbit">
+						<button type="sumbit" aria-label="Submit Feedback">
 							<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M5.99597 28.2801L28.0089 18.4634C29.7739 17.6763 29.7739 15.3237 28.0089 14.5366L5.99597 4.71995C4.00152 3.83053 1.93277 5.80552 2.92067 7.65585L7.12338 15.5275C7.45025 16.1397 7.45025 16.8603 7.12338 17.4725L2.92067 25.3441C1.93277 27.1945 4.00152 29.1695 5.99597 28.2801Z" fill="white"/>
 							</svg>
