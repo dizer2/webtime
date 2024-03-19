@@ -8,7 +8,6 @@ import BurgerMenu from '../UI/BurgerMenu/BurgerMenu'
 import SocialMedia from '../UI/SocialMedia/SocialMedia'
 import GradientBtn from '../UI/GradientBtn/GradientBtn'
 import { useTranslation } from 'react-i18next'
-import { transform } from 'framer-motion'
 
 const ServicesPage = ({ currentPage }) => {
     const { t } = useTranslation();
@@ -540,7 +539,19 @@ const ServicesPage = ({ currentPage }) => {
             document.body.classList.remove("_body-hidden");
         }
     }
- 
+
+
+    // User Correct Path 
+    const userPath = () => {
+        t(`servicesPage.${currentPage}.title`)
+        console.log((t(`servicesPage.${currentPage}.title`)).slice(`\\`));
+    }
+
+    const indexOf = (t(`servicesPage.${currentPage}.title`)).lastIndexOf("\\")
+    const indexOfN = (t(`servicesPage.${currentPage}.title`)).lastIndexOf("n")
+    console.log((t(`servicesPage.${currentPage}.title`)).slice(indexOfN - 1, indexOf));
+
+
 
   return (
     <section id='services-page' className='services-page' style={{backgroundImage: `url(${t(`servicesPage.${currentPage}.backgroundImg`)})`}}>

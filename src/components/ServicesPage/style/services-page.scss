@@ -279,6 +279,17 @@ body._business-card-leaflets {
         width: 22%;
         background-color: $secondary-dark;
 
+        &-logo {
+            opacity: 1;
+            transition: .4s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+                transition: .4s;
+            }
+        }
+
 
         .services-menu__wrapper {
             height: 100%;
@@ -315,6 +326,12 @@ body._business-card-leaflets {
                 .services-page__menu-item {
                     @include font($white, 18px, 600, normal, 0);
                     cursor: pointer;
+                    transition: .4s;
+
+                    &:hover {
+                        color: $grey;
+                        transition: .4s;
+                    }
                 }
             }
         }
@@ -379,6 +396,18 @@ body._business-card-leaflets {
 
             .services-page__service {
                 cursor: pointer;
+                transition: .4s;
+                transform: translateY(0px);
+
+                &:hover {
+                    transition: .4s;
+                    transform: translateY(-10px);
+
+                    .services-page__service-title  {
+                        color: $grey;
+                        transition: .4s;
+                    }
+                }
 
                 &-img {
                     margin-bottom: 15px;
@@ -392,7 +421,9 @@ body._business-card-leaflets {
 
                 &-title {
                     @include font($white, 20px, 400, normal, 0);
+                    transition: .4s;
                 }
+
             }
         }
 
@@ -948,7 +979,7 @@ body._business-card-leaflets {
     .services-page {
         &__popup-overlay {
             .services-page__popup {
-                padding: 25px $main-padding;
+                padding: 45px $main-padding;
                 margin: 0;
                 width: 100%;
 
@@ -965,7 +996,36 @@ body._business-card-leaflets {
 }
 
 
-@media screen and (max-height: 730px) {
+@media screen and (max-height: 800px) {
+    .services-page {
+       &__popup-overlay {
+            .services-page__popup {
+                padding: 30px 50px;
+                &-header {
+                    margin-bottom: 30px;
+                }
+
+                .services-page__popup-form {
+                    row-gap: 20px;
+                    .services-page__popup__input-box {
+                        .services-page__popup-input {
+                            height: 46px;
+                        }
+
+                        .services-page__popup__textarea-wrapper {
+                            .services-page__popup-textarea {
+                                height: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+       } 
+    }
+}
+
+
+@media screen and (max-height: 620px) {
     .services-page {
         &__popup-overlay {
             display: none;

@@ -110,6 +110,7 @@ body {
     .portfolio__box .portfolio__card {
       width: 700px !important; }
       .portfolio__box .portfolio__card-img {
+        cursor: grab;
         width: 100%;
         position: relative;
         z-index: -1;

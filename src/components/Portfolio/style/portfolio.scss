@@ -49,6 +49,7 @@
     .portfolio__card {
       width: 700px !important;
       &-img {
+        cursor: grab;
         width: 100%;
         position: relative;
         z-index: -1;

@@ -1,144 +1,178 @@
-	import React, { useState } from 'react'
-	import "./style/calculator.css"
-	import GradientBtn from '../..//UI/GradientBtn/GradientBtn.jsx';
-	import { useForm } from '@formspree/react';
+import React, { useEffect, useState } from 'react'
+import "./style/calculator.css"
+import GradientBtn from '../..//UI/GradientBtn/GradientBtn.jsx';
+import { useForm } from '@formspree/react';
+import { useTranslation } from 'react-i18next';
 
-	const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
-		const [step, setStep] = useState(0);
-		const [websiteTitle, setWebsiteTitle] = useState("What kind of site do you want to create?");
-		const [webstieType, setWebsiteType] = useState('Landing page');
-		const [logo, setLogo] = useState('I want buy');
-		const [seo, setSEO] = useState('Yes');
-		const [state, handleSubmit] = useForm("mwkgqgdb");
+const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
+	const {t, i18n} = useTranslation();
 
-		const [arrayWebsite] = useState([
-			"Landing page",
-			"Corporate sites",
-			"Online stores",
-			"Services",
-			"Portals",
-			"WOW sites",
-			"Portfolio",	
-			"Portfolio",
-			"Other"
-		]);
+	const [step, setStep] = useState(0);
+	const [websiteTitle, setWebsiteTitle] = useState(t('homePage.footer.calculator.title'));
+	const [webstieType, setWebsiteType] = useState(t('homePage.footer.calculator.answer1.service1'));
+	const [logo, setLogo] = useState(t('homePage.footer.calculator.answer2.option1'));
+	const [seo, setSEO] = useState(t('homePage.footer.calculator.answer2.option1'));
+	const [state, handleSubmit] = useForm("mwkgqgdb");
 
-		const [arrayWebsite2] = useState([
-			"I want buy",
-			"Yes",
-			"No"
-		]);
+	const [arrayWebsite, setArrayWebsite] = useState([
+		t('homePage.footer.calculator.answer1.service1'),
+		t('homePage.footer.calculator.answer1.service2'),
+		t('homePage.footer.calculator.answer1.service3'),
+		t('homePage.footer.calculator.answer1.service4'),
+		t('homePage.footer.calculator.answer1.service5'),
+		t('homePage.footer.calculator.answer1.service6'),
+		t('homePage.footer.calculator.answer1.service7'),	
+		t('homePage.footer.calculator.answer1.service8'),
+		t('homePage.footer.calculator.answer1.service9'),
+	]);
+
+	const [arrayWebsite2, setArrayWebsite2] = useState([
+		t('homePage.footer.calculator.answer2.option1'),
+		t('homePage.footer.calculator.answer2.option2'),
+		t('homePage.footer.calculator.answer2.option3')
+	]);
+	
+	const [arrayWebsite3, setArrayWebsite3] = useState([
+		t('homePage.footer.calculator.answer3.option1'),
+		t('homePage.footer.calculator.answer3.option2')
+	]);
+
+	const [arrayWebsite4, setArrayWebsite4] = useState([
+		t('homePage.footer.calculator.answer4.option1'),
+		t('homePage.footer.calculator.answer4.option2')
+	]);
+	
+
+	const [svgClass, setSvgClass] = useState('svg-color2');
+	const [pathClass, setPathClass] = useState('path-opacity');
+
+	const [selectedItem, setSelectedItem] = useState(0);
+
+	const handleItemClick = (index) => {
+	setSelectedItem(index);
+
+	switch (step) {
+		case 0:
+			setWebsiteType(arrayWebsite[index]);
+			break;
+		case 1:
+			setLogo(arrayWebsite2[index]);
+			break;
+		case 2:
+			setSEO(arrayWebsite3[index]);
+			break;
+		default:
+			break;
+	}
+
+	};
+
+	const handleStep = () => {
+
+		console.log(step);
+
+		if (step !=3) {
+			setStep(step + 1);
+		}
+
+		if (step == 0) {
+			setWebsiteTitle(t('homePage.footer.calculator.answer2.title'));
+		}
+
+		if (step == 1) {
+			setWebsiteTitle(t('homePage.footer.calculator.answer3.title'));
+		}
+
+		if (step == 2) {
+			setWebsiteTitle(t('homePage.footer.calculator.answer4.title'));
+		}
+
 		
-		const [arrayWebsite3] = useState([
-			"Yes",
-			"No"
-		]);
 
-		const [arrayWebsite4] = useState([
-			"Write your full name",
-			"Write your phone number"
-		]);
-		
+		if (step === 3) {
 
-		const [svgClass, setSvgClass] = useState('svg-color2');
-		const [pathClass, setPathClass] = useState('path-opacity');
-
-		const [selectedItem, setSelectedItem] = useState(0);
-
-		const handleItemClick = (index) => {
-		setSelectedItem(index);
-
-		switch (step) {
-            case 0:
-                setWebsiteType(arrayWebsite[index]);
-                break;
-            case 1:
-                setLogo(arrayWebsite2[index]);
-                break;
-            case 2:
-                setSEO(arrayWebsite3[index]);
-                break;
-            default:
-                break;
-        }
-
-		};
-
-		const handleStep = () => {
-
-			console.log(step);
+			if (inputValues[0] == '' || inputValues[1] == '') {
+				setWebsiteTitle(t('homePage.footer.calculator.answer4.error'));
+			} else {
 
 
+				console.log(inputValues.length)
+				console.log(webstieType);
+				console.log(logo);
+				console.log(seo);
+				console.log("Name:", inputValues[0]); 
+				console.log("Phone:", inputValues[1]); 
+				setCalculatorShow(false);
+				setStep(0);
 
-			if (step !=3) {
-				setStep(step + 1);
+				setTimeout(() => {
+					setPopupClass(true);
+				}, 1000);
 
+				setTimeout(() => {
+					handleSubmit({
+						webstieType,
+						logo,
+						seo,
+						name: inputValues[0],
+						phone: inputValues[1]
+					});	
+				}, 200)
 				
-			}
-
-			if (step == 0) {
-				setWebsiteTitle("Do you have a logo?");
-			}
-
-			if (step == 1) {
-				setWebsiteTitle("Do you need services for filling, maintaining and promoting the site?");
-			}
-
-			if (step == 2) {
-				setWebsiteTitle("The calculation is ready! Please enter your phone number, we will send the information to it.");
-			}
-
-			
-
-			if (step === 3) {
-
-				if (inputValues[0] == '' || inputValues[1] == '') {
-					setWebsiteTitle("Enter a valid name and phone number");
-				} else {
-
-
-					console.log(inputValues.length)
-					console.log(webstieType);
-					console.log(logo);
-					console.log(seo);
-					console.log("Name:", inputValues[0]); 
-					console.log("Phone:", inputValues[1]); 
-					setCalculatorShow(false);
-					setStep(0);
-	
-					setTimeout(() => {
-						setPopupClass(true);
-					}, 1000);
-
-					setTimeout(() => {
-						handleSubmit({
-							webstieType,
-							logo,
-							seo,
-							name: inputValues[0],
-							phone: inputValues[1]
-						});	
-					}, 200)
-					
-	
-				}
 
 			}
-
 
 		}
 
-		const handleCloseCalculator = () => {
-			setCalculatorShow(false);
-		}
 
-		const [inputValues, setInputValues] = useState(Array(arrayWebsite3.length).fill('')); 
+	}
 
-		const handleInputChange = (index, value) => {
-			const newInputValues = [...inputValues]; 
-			newInputValues[index] = value; 
-			setInputValues(newInputValues); 
-		};
+	const handleCloseCalculator = () => {
+		setCalculatorShow(false);
+	}
+
+	const [inputValues, setInputValues] = useState(Array(arrayWebsite3.length).fill('')); 
+
+	const handleInputChange = (index, value) => {
+		const newInputValues = [...inputValues]; 
+		newInputValues[index] = value; 
+		setInputValues(newInputValues); 
+	};
+
+
+	// Update useState
+	useEffect(() => {
+		setWebsiteTitle(t('homePage.footer.calculator.title'));
+		setWebsiteType(t('homePage.footer.calculator.answer1.service1'));
+
+		setArrayWebsite([
+			t('homePage.footer.calculator.answer1.service1'),
+			t('homePage.footer.calculator.answer1.service2'),
+			t('homePage.footer.calculator.answer1.service3'),
+			t('homePage.footer.calculator.answer1.service4'),
+			t('homePage.footer.calculator.answer1.service5'),
+			t('homePage.footer.calculator.answer1.service6'),
+			t('homePage.footer.calculator.answer1.service7'),	
+			t('homePage.footer.calculator.answer1.service8'),
+			t('homePage.footer.calculator.answer1.service9'),
+		]);
+
+		setArrayWebsite2([
+			t('homePage.footer.calculator.answer2.option1'),
+			t('homePage.footer.calculator.answer2.option2'),
+			t('homePage.footer.calculator.answer2.option3')
+		])
+
+		setArrayWebsite3([
+			t('homePage.footer.calculator.answer3.option1'),
+			t('homePage.footer.calculator.answer3.option2')
+		])
+
+		setArrayWebsite4([
+			t('homePage.footer.calculator.answer4.option1'),
+			t('homePage.footer.calculator.answer4.option2')
+		])
+	},  [i18n.language]);
 
 
 	return (
@@ -161,7 +195,7 @@
 			</div>
 
 			<div className="calculator-popup__container">
-				<p className="calculator-popup__title">Calculate the cost</p>
+				<p className="calculator-popup__title">{t('homePage.footer.calculator.title')}</p>
 				<p className="calculator-popup__description">{websiteTitle}</p>
 				
 				<div className={`calculator-popup__container-box ${step >= 1 && step <= 3 ? 'calculator-popup__container-box2' : ''}`}>
@@ -287,6 +321,6 @@
 
 		</div>
 	)
-	}
+}
 
-	export default Calculator;
+export default Calculator;

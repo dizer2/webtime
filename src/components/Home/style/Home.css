@@ -99,11 +99,16 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.5s;
-    z-index: -1; }
+    z-index: -1;
+    cursor: pointer; }
+    .home .calculator:hover svg {
+      transition: .4s;
+      opacity: 0.8; }
     .home .calculator svg {
       position: relative;
       top: 3px;
-      left: 3px; }
+      left: 3px;
+      transition: .4s; }
     .home .calculator::after {
       content: "";
       width: 100px;
@@ -200,6 +205,13 @@ body {
       transition: .5s; }
       .home__header._header-hide .header__wrapper .header__nav .header__list .header__dropdown:hover .header__dropdown-content__overlay {
         pointer-events: none; }
+    .home__header .header__logo {
+      opacity: 1;
+      transition: .4s;
+      cursor: pointer; }
+      .home__header .header__logo:hover {
+        opacity: 0.6;
+        transition: .4s; }
     .home__header .header__wrapper {
       width: 100%;
       display: flex;
@@ -247,11 +259,8 @@ body {
             .home__header .header__wrapper .header__nav .header__list .header__dropdown:hover .header__dropdown-content__overlay .header__dropdown-content {
               display: flex;
               opacity: 0;
-              /* Initial opacity set to 0 */
               transform: translateY(-20px);
-              /* Initial position above */
               transition: opacity 0.4s, transform 0.4s;
-              /* Transition properties */
               animation: showDropdown 0.4s forwards; }
           .home__header .header__wrapper .header__nav .header__list .header__dropdown-content__overlay {
             position: absolute;
