@@ -2,6 +2,7 @@
   "name": "webtime",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "@formspree/react": "^2.5.1",
@@ -22,6 +23,7 @@
     "react-intersection-observer": "^9.8.1",
     "react-router-dom": "^6.22.1",
     "react-scripts": "5.0.1",
+    "require": "^2.4.20",
     "spline": "^0.0.0",
     "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
@@ -38,6 +40,11 @@
       "react-app/jest"
     ]
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -49,5 +56,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "imagemin-webp": "^8.0.0"
   }
 }

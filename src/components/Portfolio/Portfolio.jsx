@@ -6,10 +6,10 @@ import 'swiper/css/navigation'; // Імпортуємо стилі для нав
 import "./style/portfolio.css"
 import SubTitle from "../UI/SubTitle/SubTitle.jsx"
 import Title from '../UI/Title/Title.jsx'
-import img1 from "./img/img1.png"
-import img2 from "./img/img2.png"
-import img3 from "./img/img3.png"
-import img4 from "./img/img4.png"
+import img1 from "./img/img1.webp"
+import img2 from "./img/img2.webp"
+import img3 from "./img/img3.webp"
+import img4 from "./img/img4.webp"
 
 
 import { Parallax, Navigation } from 'swiper/modules'; // Додаємо модуль Navigation
