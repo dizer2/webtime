@@ -115,12 +115,23 @@
               "secondTitle": "services"
           },
 
+          "cardTitle1": "Web Development",
+          "cardTitle2": "Design / Redesign / Logo",
+          "cardTitle3": "Posters / Billboards",
+          "cardTitle4": "Mobile design",
+          "cardTitle5": "Business card / Leaflets",
+          "cardTitle6": "Complete website creation",
+          "cardTitle7": "Optimisation",
+          "cardTitle8": "Contact",
+
           "card1Description": "It's not just development, design and promotion. This is the solution of marketing and business tasks: financial and non-financial.",
           "card2Description": "We turn ideas into visual perfection. Your brand, our creativity. Create a unique design and expressive style with us.",
           "card3Description": "We create bright posters and billboards for your unique idea. Every detail is a step towards impressive sensations that will leave a mark and attract attention.",
           "card4Description": "We translate your ideas into mobile design, creating a harmonious interaction of form and function. Your brand has its own story, and we make it visible.",
           "card5Description": "Our mission is to attract attention and spread your brand. We don't just create ideas, we ignite them and help them blossom into unique brand experiences.",
-          "card6Description": "We create more than websites and design. We create the \"face\" of the brand, a sales tool, and an image weapon. Our special approach and experience help us in this."
+          "card6Description": "We provide complete website creation with all necessary steps – from design to SEO settings. The result is an attractive site that attracts the attention of your audience.",
+          "card7Description": "Improve your site's search engine visibility with our SEO service. We will make your site more visible to people searching for your products or services online.",
+          "card8Description": "We create more than websites and design. We create the \"face\" of the brand, a sales tool, and an image weapon. Our special approach and experience help us in this."
       },
 
       "portfolio": {

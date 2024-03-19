@@ -109,18 +109,29 @@
   
         "services": {
             "banner": "naše služby",
-    
+        
             "mainTitle": {
                 "title": "Přinášíme vaše nápady a přání k životu!",
                 "secondTitle": "služby"
             },
-    
-            "card1Description": "Nejde jen o vývoj, design a propagaci. Jedná se o řešení marketingových a obchodních úkolů: finančních i nefinančních.",
-            "card2Description": "Proměňujeme nápady ve vizuální dokonalost. Vaše značka, naše kreativita. Vytvořte jedinečný design a výrazný styl s námi.",
-            "card3Description": "Vytváříme jasné plakáty a billboardy pro vaši jedinečnou myšlenku. Každý detail je krokem ke působivým pocitům, které zanechají stopu a přitáhnou pozornost.",
-            "card4Description": "Překládáme vaše nápady do mobilního designu, vytváříme harmonickou interakci formy a funkce. Vaše značka má svůj vlastní příběh, a my ho učiníme viditelným.",
-            "card5Description": "Naším cílem je přitáhnout pozornost a šířit vaši značku. Nejenže vytváříme nápady, ale rozdmýcháváme je a pomáháme jim rozkvést do jedinečných zážitků se značkou.",
-            "card6Description": "Vytváříme více než webové stránky a design. Vytváříme „tvář“ značky, prodejní nástroj a obrazovou zbraň. Náš speciální přístup a zkušenosti nám v tomto pomáhají."
+        
+            "cardTitle1": "Vývoj webových stránek",
+            "cardTitle2": "Design / Redesign / Logo",
+            "cardTitle3": "Plakáty / Billboardy",
+            "cardTitle4": "Mobilní design",
+            "cardTitle5": "Vizitky / Letáky",
+            "cardTitle6": "Kompletní tvorba webových stránek",
+            "cardTitle7": "Optimalizace",
+            "cardTitle8": "Kontakt",
+        
+            "card1Description": "Není to jen vývoj, design a propagace. Jedná se o řešení marketingových a obchodních úkolů: finančních i nefinančních.",
+            "card2Description": "Přetváříme nápady do vizuální dokonalosti. Váš brand, naše kreativita. Vytvořte jedinečný design a výrazný styl společně s námi.",
+            "card3Description": "Vytváříme jasné plakáty a billboardy pro vaši jedinečnou myšlenku. Každý detail je krokem ke zdůrazňujícím pocitům, které zanechají stopy a přitáhnou pozornost.",
+            "card4Description": "Překládáme vaše myšlenky do mobilního designu, vytváříme harmonickou interakci formy a funkce. Váš brand má svůj vlastní příběh a my ho uděláme viditelným.",
+            "card5Description": "Naše mise je přitahovat pozornost a šířit váš brand. Nejen vytváříme nápady, ale zapalujeme je a pomáháme jim rozkvétat v jedinečné zážitky s brandem.",
+            "card6Description": "Poskytujeme kompletní tvorbu webových stránek se všemi potřebnými kroky - od designu po nastavení SEO. Výsledkem je atraktivní web, který přitahuje pozornost vaší cílové skupiny.",
+            "card7Description": "Zlepšete viditelnost vašich stránek ve vyhledávačích s naší službou SEO. Učiníme váš web více viditelným pro lidi, kteří hledají vaše produkty nebo služby online.",
+            "card8Description": "Vytváříme více než webové stránky a design. Vytváříme \"tvář\" značky, nástroj pro prodej a zbraň obrazu. Náš speciální přístup a zkušenosti nám v tom pomáhají."
         },
   
         "portfolio": {
