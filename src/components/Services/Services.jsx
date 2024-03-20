@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next'
 
 const Services = () => {
 	const {t} = useTranslation();
-
+    let path = window.location.href;
 
     const arrowBtnColor = "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
 
@@ -41,7 +41,7 @@ const Services = () => {
 
         <div className="services__wrapper">
 		    <RevealSecodary>
-                <Link to={"/web-development"}>
+                <Link to={`${path}/web-development`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -68,7 +68,7 @@ const Services = () => {
             </RevealSecodary>
 
 		    <RevealSecodary>
-            <Link to={"/design"}>
+            <Link to={`${path}/design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -97,7 +97,7 @@ const Services = () => {
 
 
 		    <RevealSecodary>
-                <Link to={"/poster-billboards"}>
+                <Link to={`${path}/poster-billboards`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -127,7 +127,7 @@ const Services = () => {
 
 
 		    <RevealSecodary>
-                <Link to={"/mobile-design"}>
+                <Link to={`${path}/mobile-design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -156,7 +156,7 @@ const Services = () => {
 
 
             <RevealSecodary>
-                <Link to={"/business-card-leaflets"}>
+                <Link to={`${path}/business-card-leaflets`}>
                         <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 

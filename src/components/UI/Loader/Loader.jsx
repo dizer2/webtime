@@ -15,7 +15,8 @@ const Loader = ({ hideLoader, setHideLoader }) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 		document.body.classList.remove("_body-hidden"); 
-		}, 4000);
+		console.log("REMOVE BODY HIDDEN")
+		}, 4000);	
 
 		return () => clearTimeout(timer);
 	}, []);

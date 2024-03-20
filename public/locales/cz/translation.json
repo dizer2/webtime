@@ -252,7 +252,7 @@
             "sendBtn": "Odeslat"
         },
         "web-development": {
-            "backgroundImg": "./images/0-background.svg",
+            "backgroundImg": "../../images/0-background.svg",
             "mainColor": "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)",
             "gradientParts": {
                 "gradientID": "paint0_linear_866_370",
@@ -292,32 +292,32 @@
             "examples": {
                 "example1": {
                     "title": "Firemní weby",
-                    "imgPath": "./images/corporate-sites.jpg",
+                    "imgPath": "../../images/corporate-sites.jpg",
                     "goTo": "corporate-sites"
                 },
                 "example2": {
                     "title": "Landing Page",
-                    "imgPath": "./images/landing-page.jpg",
+                    "imgPath": "../../images/landing-page.jpg",
                     "goTo": "landing-page"
                 },
                 "example3": {
                     "title": "Online obchody",
-                    "imgPath": "./images/online-stores.jpg",
+                    "imgPath": "../../images/online-stores.jpg",
                     "goTo": "online-stores"
                 },
                 "example4": {
                     "title": "Služby / Portály",
-                    "imgPath": "./images/services-portals.jpg",
+                    "imgPath": "../../images/services-portals.jpg",
                     "goTo": "services-portals"
                 },
                 "example5": {
                     "title": "WOW weby",
-                    "imgPath": "./images/wow-sites.jpg",
+                    "imgPath": "../../images/wow-sites.jpg",
                     "goTo": "wow-sites"
                 },
                 "example6": {
                     "title": "Osobní / Portfolio",
-                    "imgPath": "./images/personal-portfolio.jpg",
+                    "imgPath": "../../images/personal-portfolio.jpg",
                     "goTo": "personal-portfolio"
                 }
             },
@@ -379,7 +379,7 @@
             }
         },
         "design": {
-            "backgroundImg": "./images/1-background.svg",
+            "backgroundImg": "../../images/1-background.svg",
             "mainColor": "linear-gradient(99deg, #FE842B 5.86%, #FD2929 51.61%, #FF006B 100%)",
             "gradientParts": {
                 "gradientID": "paint0_linear_866_375",
@@ -412,17 +412,17 @@
             "examples": {
                 "example1": {
                     "title": "Web Design",
-                    "imgPath": "./images/web-design.jpg",
+                    "imgPath": "../../images/web-design.jpg",
                     "goTo": "design"
                 },
                 "example2": {
                     "title": "Web Redesign",
-                    "imgPath": "./images/web-redesign.jpg",
+                    "imgPath": "../../images/web-redesign.jpg",
                     "goTo": "redesign"
                 },
                 "example3": {
                     "title": "Logo",
-                    "imgPath": "./images/logo.jpg",
+                    "imgPath": "../../images/logo.jpg",
                     "goTo": "logo"
                 }
             },
@@ -457,7 +457,7 @@
             }
         },
         "poster-billboards": {
-            "backgroundImg": "./images/2-background.svg",
+            "backgroundImg": "../../images/2-background.svg",
             "mainColor": "linear-gradient(285deg, #68E0CF 0%, #3DCDFF 53.88%, #209CFF 104.43%)",
             "gradientParts": {
                 "gradientID": "paint0_linear_866_376",
@@ -491,12 +491,12 @@
             "examples": {
                 "example1": {
                     "title": "Plakáty",
-                    "imgPath": "./images/poster.jpg",
+                    "imgPath": "../../images/poster.jpg",
                     "goTo": "posters"
                 },
                 "example2": {
                     "title": "Reklamní tabule",
-                    "imgPath": "./images/billboard.jpg",
+                    "imgPath": "../../images/billboard.jpg",
                     "goTo": "billboards"
                 }
             },
@@ -522,7 +522,7 @@
             }
         },
         "mobile-design": {
-            "backgroundImg": "./images/3-background.svg",
+            "backgroundImg": "../../images/3-background.svg",
             "mainColor": "linear-gradient(99deg, #84FAB0 5.86%, #8FD3F4 100%)",
             "gradientParts": {
                 "gradientID": "paint0_linear_866_377",
@@ -557,12 +557,12 @@
             "examples": {
                 "example1": {
                     "title": "Mobilní design",
-                    "imgPath": "./images/mobile-design.jpg",
+                    "imgPath": "../../images/mobile-design.jpg",
                     "goTo": "mobile-design"
                 },
                 "example2": {
                     "title": "Mobilní redesign",
-                    "imgPath": "./images/mobile-redesign.jpg",
+                    "imgPath": "../../images/mobile-redesign.jpg",
                     "goTo": "mobile-design"
                   }
             },
@@ -579,7 +579,7 @@
             }
         },
         "business-card-leaflets": {
-            "backgroundImg": "./images/4-background.svg",
+            "backgroundImg": "../../images/4-background.svg",
             "mainColor": "linear-gradient(281deg, #000428 -7.61%, #1A55AC 35%, #004E92 100%)",
             "gradientParts": {
                 "gradientID": "paint0_linear_866_341",
@@ -613,12 +613,12 @@
             "examples": {
                 "example1": {
                     "title": "Vizitky",
-                    "imgPath": "./images/business-card.jpg",
+                    "imgPath": "../../images/business-card.jpg",
                     "goTo": "business-card"
                 },
                 "example2": {
                     "title": "Letáky",
-                    "imgPath": "./images/leaflets.jpg",
+                    "imgPath": "../../images/leaflets.jpg",
                     "goTo": "leaflets"
                 }
             },
@@ -643,5 +643,9 @@
                 }
             }
         }
+    },
+    "pageNotFound": {
+        "main": "Ups! Vypadá to, že jste se ztratili. \nVraťte se na domovskou stránku, pokud máte odvahu!",
+        "btn": "MÁM ODMAHLIT!"
     }
 }

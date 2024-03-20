@@ -27,6 +27,10 @@ import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
 const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
   const { t, i18n } = useTranslation();
+  let path = window.location.href;
+
+
+  const currentLang = localStorage.getItem("i18nextLng");
 
   const changeLanguage = (lng) => { i18n.changeLanguage(lng); };
   const [inHomeSection, setInHomeSection] = useState(true);
@@ -329,7 +333,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
                 <div className="header__dropdown-content__overlay">
                   <ul className='header__dropdown-content'>
                       <div className="header__dropdown--left">
-                        <Link to="/web-development">
+                        <Link to={`${path}/web-development`}>
                           <li className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -346,7 +350,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
                         </Link>
 
 
-                        <Link to={"/design"}>
+                        <Link to={`${path}/design`}>
                           <li className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -362,7 +366,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
                           </li>
                         </Link>
 
-                        <Link to={"/poster-billboards"}>
+                        <Link to={`${path}/poster-billboards`}>
                           <li className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -382,8 +386,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
 
 
                       <div className="header__dropdown--right">
-
-                        <Link to={"/mobile-design"}>
+                        <Link to={`${path}/mobile-design`}>
                           <li className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -398,8 +401,8 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
                               {t('homePage.main.services.service4')}
                           </li>
                         </Link>
-
-                        <Link to={"/business-card-leaflets"}>
+                        
+                        <Link to={`${path}/business-card-leaflets`}>
                           <li className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -531,7 +534,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
           className="intro__slider mySwiper"
         >
           <SwiperSlide className="intro__card"> 
-            <Link to="/web-development">
+            <Link to={`${path}/web-development`}>
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card1.title')}</h4>
 
@@ -549,7 +552,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/design">
+            <Link to={`${path}/design`}>
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card2.title')}</h4>
 
@@ -567,7 +570,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/poster-billboards">
+            <Link to={`${path}/poster-billboards`}>
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card3.title')}</h4>
 
@@ -583,7 +586,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/design">
+            <Link to={`${path}/design`}>
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card4.title')}</h4>
 
@@ -601,7 +604,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
           </SwiperSlide>
           
           <SwiperSlide className="intro__card">
-            <Link to="/business-card-leaflets">
+            <Link to={`${path}/business-card-leaflets`}>
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card5.title')}</h4>
 
@@ -619,7 +622,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/business-card-leaflets">
+            <Link to={`${path}/business-card-leaflets`}>
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card6.title')}</h4>
 
@@ -637,7 +640,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/poster-billboards">
+            <Link to={`${path}/poster-billboards`}>
               <div className="intro__card-header">
                 <h4 className="intro__card-title">{t('homePage.home.card7.title')}</h4>
 
