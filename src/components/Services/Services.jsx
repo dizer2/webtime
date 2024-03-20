@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next'
 
 const Services = () => {
 	const {t} = useTranslation();
-    let path = window.location.href;
+    let path = window.location.pathname;
 
     const arrowBtnColor = "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
 

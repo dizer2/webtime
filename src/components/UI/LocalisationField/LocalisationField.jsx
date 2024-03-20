@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import "./style/localisation-field.css";
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router';
 
 function LocalisationField({ gradient }) {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -23,30 +25,13 @@ function LocalisationField({ gradient }) {
   const defaultLanguage = 'cz'; // Установите язык по умолчанию
   const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem("i18nextLng") || defaultLanguage);
 
-  // const setByDefaultLang = () => {
-  //   window.location.href = `/${currentLanguage}`;
-  //   console.log(currentLanguage)
-  // }
-
-  // let lang = (window.location.href).lastIndexOf("/")
-  // console.log((window.location.href).toString().slice(lang, -2));
-
-
-
-  // let fullPath = (window.location.href).lastIndexOf("/");
-  // let fullPath = window.location.href;
-  // let basePath = fullPath.slice(-3);
-  // console.log(basePath)
-
-
   let oldLang = currentLanguage;
-  // console.log(oldLang)
 
   const handleLangChange = (lang) => {
     let isPathWithoutLang = true;
     console.log(lang)
 
-    let path = window.location.href;
+    let path =  window.location.pathname
     let last = path.slice(-3);
     let lastSlash = path.lastIndexOf("/");
 
@@ -63,20 +48,18 @@ function LocalisationField({ gradient }) {
       changeLanguage(lang);
       localStorage.setItem("i18nextLng", lang);
 
-      window.location.href = path.replace(oldLang, lang);
+      window.location.pathname = path.replace(oldLang, lang);
+      console.log("PATHNAME: ", window.location.pathname);
 
-      // let pathWitoutLang = path.substring(0, lastSlash);
-      // console.log("PATH: ", pathWitoutLang);  
-      // window.location.href = `${pathWitoutLang}/${lang}`;
+      // navigate(path.replace(oldLang, lang));
     } else if(isPathWithoutLang) {
       setCurrentLanguage(lang);
       changeLanguage(lang);
       localStorage.setItem("i18nextLng", lang);
 
-      window.location.href = path.replace(oldLang, lang);
-
-
-      // window.location.href = `${path}${lang}`;
+      window.location.pathname = path.replace(oldLang, lang);
+      console.log("PATHNAME: ", window.location.pathname);
+      // navigate(path.replace(oldLang, lang))
     }
   };
 

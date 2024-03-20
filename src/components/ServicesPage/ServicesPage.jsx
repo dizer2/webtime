@@ -138,10 +138,10 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
 
     // Reset location href
     const resetHref = (page) => {
-        let path = window.location.href;
+        let path = window.location.pathname;
         let lastSlashIndex  = path.lastIndexOf('/');
 
-        window.location.href = `${path.substring(0, lastSlashIndex)}/${page}`;
+        window.location.pathname = `${path.substring(0, lastSlashIndex)}/${page}`;
     }
 
 
@@ -224,7 +224,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
                         </Link>
                         
                         {Object.values(t(`servicesPage.${currentPage}.menu`)).map((menuItem, index) => (
-                            <Link key={index} onClick={() => {handleScrollToSection(menuItem.goTo); resetHref(menuItem.goTo);}} className="services-page__menu-item">
+                            <Link key={index} onClick={() => {handleScrollToSection(menuItem.goTo);  menuItem.otherPage && resetHref(menuItem.goTo);}} className="services-page__menu-item">
                                 {menuItem.nav}
                             </Link>
                         ))}
@@ -251,7 +251,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
                                 </Link>
 
                                 {Object.values(t(`servicesPage.${currentPage}.menu`)).map((menuItem, index) => (
-                                    <Link key={index + 1} onClick={() => {handleScrollToSection(menuItem.goTo); clearBodyClasses(); resetHref(menuItem.goTo);}} to={menuItem.otherPage ? `${currentLang}/${menuItem.goTo}` : ""}  className="header__menu-item">
+                                    <Link key={index + 1} onClick={() => {handleScrollToSection(menuItem.goTo); clearBodyClasses(); menuItem.otherPage && resetHref(menuItem.goTo);}}  className="header__menu-item">
                                         <div className='header__menu-item__order'>{(index + 2).toString().padStart(2, '0')}</div>
                                         <div className='header__menu-item__rhombus'></div>
                                         <p>{menuItem.nav}</p>
