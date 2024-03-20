@@ -415,19 +415,19 @@ body {
           background-repeat: no-repeat;
           background-position: center; }
           .home__intro .intro__slider .intro__card-img--1 {
-            background-image: url(../img/website-webdesign.jpg); }
+            background-image: url(../img/website-webdesign.webp); }
           .home__intro .intro__slider .intro__card-img--2 {
-            background-image: url(../img/webdesign.jpg); }
+            background-image: url(../img/webdesign.webp); }
           .home__intro .intro__slider .intro__card-img--3 {
-            background-image: url(../img/poster.jpg); }
+            background-image: url(../img/poster.webp); }
           .home__intro .intro__slider .intro__card-img--4 {
-            background-image: url(../img/logo.jpg); }
+            background-image: url(../img/logo.webp); }
           .home__intro .intro__slider .intro__card-img--5 {
-            background-image: url(../img/business-cards.jpg); }
+            background-image: url(../img/business-cards.webp); }
           .home__intro .intro__slider .intro__card-img--6 {
-            background-image: url(../img/leafleats.jpg); }
+            background-image: url(../img/leafleats.webp); }
           .home__intro .intro__slider .intro__card-img--7 {
-            background-image: url(../img/billboard.jpg); }
+            background-image: url(../img/billboard.webp); }
   .home__footer {
     padding: 0 120px;
     margin-bottom: 20px;
@@ -808,4 +808,4 @@ body {
     .home._menu-open .home__header .header__wrapper .header__nav-box .header__btn-menu {
       margin-top: 30px; } }
 
-/*# sourceMappingURL=Home.css.map */
+/*# sourceMappingURL=home.css.map */
