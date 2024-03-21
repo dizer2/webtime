@@ -1,10 +1,12 @@
-// LocalisationField.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./style/localisation-field.css";
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function LocalisationField({ gradient }) {
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -22,19 +24,22 @@ function LocalisationField({ gradient }) {
 
   const languages = ['en', 'ua', 'cz'];
   const defaultLanguage = 'cz';
-  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem("i18nextLng") || defaultLanguage);
+  const [currentLanguage, setCurrentLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem("i18nextLng");
+    return savedLanguage || defaultLanguage;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("i18nextLng", currentLanguage);
+  }, [currentLanguage]);
 
   const handleLangChange = (lang) => {
-    const path = window.location.pathname;
-    const newPath = path.replace(`/${currentLanguage}`, `/${lang}`);
-  
+    const newPath = pathname.replace(`/${currentLanguage}`, `/${lang}`);
     setCurrentLanguage(lang);
     changeLanguage(lang);
-    localStorage.setItem("i18nextLng", lang);
-
-    window.location.pathname = newPath;
+    localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
+    navigate(newPath);
   };
-
   const remainingLanguages = languages.filter(lang => lang !== currentLanguage);
 
   return (

@@ -16,9 +16,11 @@ function App() {
     i18n.changeLanguage(lng);
   };
 
+  const currentLang = localStorage.getItem('i18nextLng') || 'cz';
+
   return (
     <div className="App">
-      <Pages/>
+      <Pages currentLang={currentLang}/>
     </div>
   );
 }
