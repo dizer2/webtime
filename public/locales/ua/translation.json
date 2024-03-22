@@ -386,17 +386,17 @@
             "examples": {
                 "example1": {
                     "title": "Веб-дизайн",
-                    "imgPath": "./images/web-design.jpg",
+                    "imgPath": "../../images/web-design.jpg",
                     "goTo": "design"
                 },
                 "example2": {
                     "title": "Редизайн веб-сайту",
-                    "imgPath": "./images/web-redesign.jpg",
+                    "imgPath": "../../images/web-redesign.jpg",
                     "goTo": "redesign"
                 },
                 "example3": {
                     "title": "Логотип",
-                    "imgPath": "./images/logo.jpg",
+                    "imgPath": "../../images/logo.jpg",
                     "goTo": "logo"
                 }
             },
@@ -536,7 +536,7 @@
                 },
                 "example2": {
                     "title": "Мобільний редизайн",
-                    "imgPath": "./images/mobile-redesign.jpg",
+                    "imgPath": "../../images/mobile-redesign.jpg",
                     "goTo": "mobile-design"
                   }
             },
@@ -587,7 +587,7 @@
             "examples": {
                 "example1": {
                     "title": "Візитка",
-                    "imgPath": "./images/business-card.jpg",
+                    "imgPath": "../../images/business-card.jpg",
                     "goTo": "business-card"
                 },
                 "example2": {
