@@ -40,7 +40,7 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
       <About setCalculatorMenu={setCalculatorMenu}/>
       <section className='text-animation'>
         <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
-        <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText1')}</ParallaxText>
+        <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText2')}</ParallaxText>
       </section>
       <Services hideLoader={hideLoader} setHideLoader={setHideLoader}/>
       <Portfolio />

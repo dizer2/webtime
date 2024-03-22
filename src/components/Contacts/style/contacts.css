@@ -95,8 +95,6 @@ body {
       cursor: none; }
   .contacts__container {
     width: 100%; }
-  .contacts .title__container-title {
-    width: 600px; }
   .contacts .error-message {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -358,8 +356,6 @@ body {
 @media screen and (max-width: 1000px) {
   .contacts__animation {
     display: none !important; }
-  .contacts .title__container-title {
-    width: 500px; }
   .contacts .animation-div {
     width: 100% !important; }
   .contacts__wrapper {
@@ -378,8 +374,6 @@ body {
       .contacts__wrapper .contacts__info-email, .contacts__wrapper .contacts__info-phone {
         font-size: 20px; } }
 @media screen and (max-width: 800px) {
-  .contacts .title__container-title {
-    width: 400px; }
   .contacts__wrapper {
     padding: 0 30px 0 70px; }
     .contacts__wrapper .contacts__info {
