@@ -25,7 +25,7 @@ import { Reveal } from '../utils/Reveal/Reveal.tsx';
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
-const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
+const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader, setHideLoader }) => {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => { i18n.changeLanguage(lng); };
@@ -235,6 +235,9 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
     };
 }, []); // Пам'ята
 
+  const openPopup = () => {
+    setHideLoader(false);
+  }
 
   return (
     <section id='home' className="home">
@@ -329,7 +332,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
                 <div className="header__dropdown-content__overlay">
                   <div className='header__dropdown-content'>
                       <div className="header__dropdown--left">
-                        <Link to="/web-development">
+                        <Link onClick={openPopup}  to="/web-development">
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -346,7 +349,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
                         </Link>
 
 
-                        <Link to={"/design"}>
+                        <Link onClick={openPopup} to={"/design"}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}

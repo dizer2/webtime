@@ -8,8 +8,9 @@ import BurgerMenu from '../UI/BurgerMenu/BurgerMenu'
 import SocialMedia from '../UI/SocialMedia/SocialMedia'
 import GradientBtn from '../UI/GradientBtn/GradientBtn'
 import { useTranslation } from 'react-i18next'
+import Loader from '../UI/Loader/Loader'
 
-const ServicesPage = ({ currentPage }) => {
+const ServicesPage = ({ currentPage, hideLoader, setHideLoader}) => {
     const { t } = useTranslation();
     const { pathname } = useLocation();
 
@@ -555,6 +556,8 @@ const ServicesPage = ({ currentPage }) => {
 
   return (
     <section id='services-page' className='services-page' style={{backgroundImage: `url(${t(`servicesPage.${currentPage}.backgroundImg`)})`}}>
+        <Loader hideLoader={hideLoader} setHideLoader={setHideLoader} />
+
       <div className="header__menu-overlay"></div>
 
 

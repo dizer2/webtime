@@ -10,7 +10,7 @@ const Loader = ({ hideLoader, setHideLoader }) => {
 		}, 5000);
 
 		return () => clearTimeout(timer);
-	}, []);
+	}, [hideLoader]);
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -18,7 +18,7 @@ const Loader = ({ hideLoader, setHideLoader }) => {
 		}, 4000);
 
 		return () => clearTimeout(timer);
-	}, []);
+	}, [hideLoader]);
 
 	const icon = {
 		hidden: {
