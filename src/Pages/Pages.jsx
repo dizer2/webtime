@@ -5,6 +5,7 @@ import Index from './Index';
 import ServicesPage from '../components/ServicesPage/ServicesPage';
 import { useTranslation } from 'react-i18next';
 import PageNotFound from '../components/PageNotFound/PageNotFound';
+import Loader from '../components/UI/Loader/Loader';
 
 const Pages = () => {
   const { i18n } = useTranslation();
@@ -29,10 +30,23 @@ const Pages = () => {
     };
 
     changeLanguageBasedOnRoute();
+
   }, [i18n]);
 
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setHideLoader(false);
+    document.body.classList.add("_body-hidden"); 
 
+      console.log("CH")
+    };
 
+    i18n.on('languageChanged', handleLanguageChange);
+
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
 
   return (
     <div>
@@ -55,6 +69,7 @@ const Pages = () => {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
+
     </div>
   );
 }

@@ -33,6 +33,8 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
 
 
 
+
+
   return (
     <div>
       <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>
