@@ -9,6 +9,7 @@ import SocialMedia from '../UI/SocialMedia/SocialMedia'
 import GradientBtn from '../UI/GradientBtn/GradientBtn'
 import { useTranslation } from 'react-i18next'
 import Loader from '../UI/Loader/Loader'
+import { Helmet } from 'react-helmet'
 
 const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
     const { t } = useTranslation();
@@ -151,9 +152,12 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
 
 
   return (
+    
     <section id='services-page' className='services-page' style={{backgroundImage: `url(${t(`servicesPage.${currentPage}.backgroundImg`)})`}}>
         <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader} />
-
+        <Helmet>
+            <title>Webtime Studio - {t(`servicesPage.${currentPage}.title`)}</title>
+        </Helmet>
       <div className="header__menu-overlay"></div>
 
       <Loader hideLoader={hideLoader} setHideLoader={setHideLoader}/>

@@ -1,16 +1,13 @@
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import React from 'react';
 import "./components/main/style.css";
-
-import ServicesPage from './components/ServicesPage/ServicesPage';
-import { ParallaxText } from './components/UI/ParallaxProps/ParallaxProps.tsx';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Index from './Pages/Index.jsx';
+import { Helmet } from 'react-helmet';
 import Pages from './Pages/Pages.jsx';
 
 
 function App() {
   const { t, i18n } = useTranslation();
+  const [title, setTitle] = useState('');
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -18,13 +15,19 @@ function App() {
 
   const currentLang = localStorage.getItem('i18nextLng') || 'cz';
 
+
+  useEffect(() => {
+    setTitle(t("homePage.main.title"));
+  }, [t, i18n]);
+
   return (
     <div className="App">
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <Pages currentLang={currentLang}/>
     </div>
   );
 }
-
-
 
 export default App;
