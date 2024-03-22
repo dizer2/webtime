@@ -20,11 +20,17 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 
-const Services = () => {
+const Services = ({ hideLoader, setHideLoader }) => {
 	const {t} = useTranslation();
     let path = window.location.pathname;
 
     const arrowBtnColor = "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
+
+    const openPopup = () => {
+        setHideLoader(false);
+        document.body.classList.add("_body-hidden"); 
+    }
+    
 
   return (
     <section id='services' className='services'>
@@ -41,7 +47,7 @@ const Services = () => {
 
         <div className="services__wrapper">
 		    <RevealSecodary>
-                <Link to={`${path}/web-development`}>
+                <Link onClick={openPopup} to={`${path}/web-development`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -68,7 +74,7 @@ const Services = () => {
             </RevealSecodary>
 
 		    <RevealSecodary>
-            <Link to={`${path}/design`}>
+            <Link onClick={openPopup}  to={`${path}/design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -97,7 +103,7 @@ const Services = () => {
 
 
 		    <RevealSecodary>
-                <Link to={`${path}/poster-billboards`}>
+                <Link onClick={openPopup}  to={`${path}/poster-billboards`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -127,7 +133,7 @@ const Services = () => {
 
 
 		    <RevealSecodary>
-                <Link to={`${path}/mobile-design`}>
+                <Link onClick={openPopup}  to={`${path}/mobile-design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -156,7 +162,7 @@ const Services = () => {
 
 
             <RevealSecodary>
-                <Link to={`${path}/business-card-leaflets`}>
+                <Link onClick={openPopup}  to={`${path}/business-card-leaflets`}>
                         <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
