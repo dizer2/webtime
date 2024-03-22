@@ -27,6 +27,10 @@ import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
 const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader, setHideLoader }) => {
   const { t, i18n } = useTranslation();
+  let path = window.location.href;
+
+
+  const currentLang = localStorage.getItem("i18nextLng");
 
   const changeLanguage = (lng) => { i18n.changeLanguage(lng); };
   const [inHomeSection, setInHomeSection] = useState(true);
@@ -332,7 +336,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
                 <div className="header__dropdown-content__overlay">
                   <div className='header__dropdown-content'>
                       <div className="header__dropdown--left">
-                        <Link onClick={openPopup}  to="/web-development">
+                        <Link to={`${path}/web-development`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -349,7 +353,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
                         </Link>
 
 
-                        <Link onClick={openPopup} to={"/design"}>
+                        <Link to={`${path}/design`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -365,7 +369,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
                           </div>
                         </Link>
 
-                        <Link to={"/poster-billboards"}>
+                        <Link to={`${path}/poster-billboards`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -385,8 +389,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
 
 
                       <div className="header__dropdown--right">
-
-                        <Link to={"/mobile-design"}>
+                        <Link to={`${path}/mobile-design`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -401,8 +404,8 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
                               {t('homePage.main.services.service4')}
                           </div>
                         </Link>
-
-                        <Link to={"/business-card-leaflets"}>
+                        
+                        <Link to={`${path}/business-card-leaflets`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -534,7 +537,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
           className="intro__slider mySwiper"
         >
           <SwiperSlide className="intro__card"> 
-            <Link to="/web-development">
+            <Link to={`${path}/web-development`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card1.title')}</h2>
 
@@ -552,7 +555,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/design">
+            <Link to={`${path}/design`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card2.title')}</h2>
 
@@ -570,7 +573,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/poster-billboards">
+            <Link to={`${path}/poster-billboards`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card3.title')}</h2>
 
@@ -586,7 +589,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/design">
+            <Link to={`${path}/design`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card4.title')}</h2>
 
@@ -604,7 +607,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
           </SwiperSlide>
           
           <SwiperSlide className="intro__card">
-            <Link to="/business-card-leaflets">
+            <Link to={`${path}/business-card-leaflets`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card5.title')}</h2>
 
@@ -622,7 +625,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/business-card-leaflets">
+            <Link to={`${path}/business-card-leaflets`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card6.title')}</h2>
 
@@ -640,7 +643,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link to="/poster-billboards">
+            <Link to={`${path}/poster-billboards`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card7.title')}</h2>
 

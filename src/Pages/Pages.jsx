@@ -1,37 +1,63 @@
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter as HashRouter, Router, Routes, Route, Link } from "react-router-dom";
+// Pages.js
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Index from './Index';
 import ServicesPage from '../components/ServicesPage/ServicesPage';
 import { useTranslation } from 'react-i18next';
-import Loader from '../components/UI/Loader/Loader';
-
+import PageNotFound from '../components/PageNotFound/PageNotFound';
 
 const Pages = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
+  const [hideLoader, setHideLoader] = useState(false);
+  const [currentLang, setCurrentLang] = useState(localStorage.getItem('i18nextLng'));
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  useEffect(() => {
+    i18n.changeLanguage(currentLang);
+  }, [currentLang, i18n]);
 
-	const [hideLoader, setHideLoader] = useState(false);
+  useEffect(() => {
+    const changeLanguageBasedOnRoute = () => {
+      const langParam = window.location.pathname.split('/')[1]; // Получаем языковой параметр из URL
+      let language = currentLang;
+
+      if (['cz', 'ua', 'en'].includes(langParam)) { // Проверяем, что параметр является допустимым языком
+        language = langParam;
+      }
+
+      i18n.changeLanguage(language);
+      setCurrentLang(language);
+    };
+
+    changeLanguageBasedOnRoute();
+  }, [i18n]);
+
+
 
 
   return (
     <div>
-        <HashRouter>
-            <Routes>
-                <Route path="/" element={ <Index hideLoader={hideLoader} setHideLoader={setHideLoader}/> } />
-                <Route path="/web-development" element={<ServicesPage hideLoader={hideLoader} setHideLoader={setHideLoader} currentPage="web-development" />} />
-                <Route path="/design" element={ <ServicesPage currentPage="design" />  } />
-                <Route path="/poster-billboards" element={ <ServicesPage currentPage="poster-billboards" />  } />
-                <Route path="/mobile-design" element={ <ServicesPage currentPage="mobile-design" />  } />
-                <Route path="/business-card-leaflets" element={ <ServicesPage currentPage="business-card-leaflets" />  } />
-            </Routes>
-        </HashRouter>
+      <Router>
+        <Routes>
+          {/* Default path */}
+          <Route path="/" element={<Navigate to={`/${currentLang}`} />} />
+          
+          {/* Default path for languages */}
+          <Route path="/:lang" element={<Index hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
 
-
+          {/* Service page */}
+          <Route path="/:lang/web-development/" element={<ServicesPage currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/:lang/design/" element={<ServicesPage  currentPage="design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/:lang/poster-billboards/" element={<ServicesPage currentPage="poster-billboards" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/:lang/mobile-design/" element={<ServicesPage currentPage="mobile-design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/:lang/business-card-leaflets/" element={<ServicesPage currentPage="business-card-leaflets" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          
+          {/* Page not found */}
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Router>
     </div>
-  )
+  );
 }
 
-export default Pages
+export default Pages;
+
