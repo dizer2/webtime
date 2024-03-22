@@ -646,7 +646,7 @@
     }
   },
   "pageNotFound": {
-    "main": "Ой! Здається, ви загубилися. \nПоверніться на домашню сторінку, якщо осмілилися!",
-    "btn": "Я ОСМІЛЮЮСЬ!"
+    "main": "Uh oh! Looks like you got lost. \nGo back to the homepage if you dare!", 
+    "btn": "I DARE!"
   }
 }
