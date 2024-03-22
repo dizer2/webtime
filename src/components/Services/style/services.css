@@ -71,6 +71,9 @@ body {
   display: flex;
   column-gap: 20px; }
 
+@media screen and (max-width: 600px) {
+  .social__media-wrapper {
+    column-gap: 15px; } }
 .App {
   overflow-x: hidden; }
 
@@ -88,6 +91,7 @@ body {
       width: 500px;
       height: 340px;
       background-color: #121212;
+      transition: .4s;
       display: flex;
       justify-content: space-between;
       align-items: start;
@@ -97,6 +101,9 @@ body {
       border-image: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
       border-image-repeat: round;
       border-image-slice: 1; }
+      .services__wrapper .services__card:hover {
+        transform: translateY(-10px);
+        transition: .4s; }
       .services__wrapper .services__card--contact {
         background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
       .services__wrapper .services__card-main .services__card-title {
@@ -121,7 +128,7 @@ body {
   .services__wrapper .services__card {
     padding: 20px;
     width: 410px;
-    height: 280px;
+    height: 300px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -131,11 +138,12 @@ body {
       font-size: 22px; } }
 @media screen and (max-width: 1200px) {
   .services__wrapper {
+    gap: 50px 15px;
     padding: 0 100px 0 185px; }
     .services__wrapper .services__card {
       padding: 15px;
-      width: 340px;
-      height: 240px; }
+      width: 350px;
+      height: 260px; }
       .services__wrapper .services__card-main .services__card-title {
         margin: 15px 0 10px;
         font-size: 20px; }
@@ -148,7 +156,7 @@ body {
     .services__wrapper .services__card {
       padding: 15px;
       width: 100%;
-      height: 240px; }
+      height: 230px; }
       .services__wrapper .services__card-main .services__card-title {
         margin: 15px 0 10px;
         font-size: 20px; }
@@ -161,7 +169,7 @@ body {
     .services__wrapper .services__card {
       padding: 15px;
       width: 100%;
-      height: 240px; }
+      height: 260px; }
       .services__wrapper .services__card-main .services__card-title {
         margin: 15px 0 10px;
         font-size: 20px; }

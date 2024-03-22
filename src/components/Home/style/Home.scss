@@ -9,9 +9,6 @@
     flex-direction: column;
     overflow: hidden;
 
- 
-
-
     .calculator {
         width: 80px;
         height: 80px;
@@ -1029,18 +1026,18 @@
 
                                             p {
                                                 &::before {
-                                                    left: -80px;
-                                                    width: 84.3px;   
+                                                    left: -60px;
+                                                    width: 64.3px;   
                                                 }
                                             }
                                         }
 
                                         &__rhombus {
-                                            margin-right: 80px;
+                                            margin-right: 60px;
                                         }
 
                                         p {
-                                            font-size: 28px;
+                                            font-size: 24px;
                                             &::before {
                                                 min-height: 1px;
                                             }
@@ -1077,6 +1074,16 @@
             .intro__title {
                 margin-bottom: 20px;
                 font-size: 6.4vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .home {
+        &__intro {
+            .intro__slider {
+                margin-left: 10px;
             }
         }
     }

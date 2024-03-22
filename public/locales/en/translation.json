@@ -68,7 +68,7 @@
 
       "about": {
           "mainTitle": {
-              "title": "Our projects solve a number of business-tasks",
+              "title": "Our projects solve \na number of \nbusiness-tasks",
               "secondTitle": "business"
           },
 
@@ -111,7 +111,7 @@
           "banner": "our services",
 
           "mainTitle": {
-              "title": "Bringing your ideas and wishes to life!",
+              "title": "Bringing your \nideas and \nwishes to life!",
               "secondTitle": "services"
           },
 
@@ -138,7 +138,7 @@
           "banner": "your project can be here",
 
           "mainTitle": {
-              "title": "Projects that speak for themselves",
+              "title": "Projects that \nspeak for \nthemselves",
               "secondTitle": "portfolio"
           }
       },
@@ -147,7 +147,7 @@
           "banner": "LET'S GO TO ACTION",
 
           "mainTitle": {
-              "title": "Let us create the best design for your niche",
+              "title": "Let us create the best \ndesign for your niche",
               "secondTitle": ""
           },
 

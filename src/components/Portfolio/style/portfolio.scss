@@ -156,6 +156,16 @@
 
 @media screen and (max-width: 500px) {
   .portfolio {
+    .title__container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&-title {
+				width: auto;
+				text-align: center;
+			}
+		}
     &__box {
       display: flex;
       justify-content: center;

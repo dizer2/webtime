@@ -22,6 +22,7 @@
             width: 500px;
             height: 340px;
             background-color: $ligth-dark;
+            transition: .4s;
 
             @include display-center(space-between, start);
             flex-direction: column;
@@ -33,6 +34,12 @@
             border-image: $main;
             border-image-repeat: round;
             border-image-slice: 1;
+
+
+            &:hover {
+                transform: translateY(-10px);
+                transition: .4s;
+            }
 
 
             &--contact {
@@ -61,7 +68,7 @@
             .services__card {
                 padding: 20px;
                 width: 410px;
-                height: 280px;
+                height: 300px;
     
                 @include display-center(space-between, start);
                 flex-direction: column;
@@ -84,19 +91,14 @@
 
 
     .services {
-        // .title__container {
-        //     &-title {
-        //         width: 320px;
-        //     }
-        // }
-
         &__wrapper {
+            gap: 50px 15px;
             padding: 0 $main-padding 0 $secondry-padding;
 
             .services__card {
                 padding: 15px;
-                width: 340px;
-                height: 240px;
+                width: 350px;
+                height: 260px;
     
                 &-main {
                     .services__card-title {
@@ -120,21 +122,14 @@
 
 
     .services {
-        // .title__container {
-        //     &-title {
-        //         width: 320px;
-        //     }
-        // }
-
         &__wrapper {
             padding: 0 $main-padding $section-margin $secondry-padding;
             gap: 30px 0px;
 
-
             .services__card {
                 padding: 15px;
                 width: 100%;
-                height: 240px;
+                height: 230px;
     
                 &-main {
                     .services__card-title {
@@ -158,12 +153,6 @@
 
 
     .services {
-        // .title__container {
-        //     &-title {
-        //         width: 260px;
-        //     }
-        // }
-
         &__wrapper {
             padding: 0 $main-padding 0 $secondry-padding;
             gap: 30px 0px;
@@ -172,7 +161,7 @@
             .services__card {
                 padding: 15px;
                 width: 100%;
-                height: 240px;
+                height: 260px;
     
                 &-main {
                     .services__card-title {
