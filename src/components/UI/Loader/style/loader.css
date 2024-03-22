@@ -104,7 +104,6 @@ body {
   .loader .loader__bg1 {
     width: 400px;
     height: 400px;
-    background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
     position: absolute;
     filter: blur(300px);
     left: -10%;
@@ -113,7 +112,6 @@ body {
   .loader .loader__bg2 {
     width: 400px;
     height: 400px;
-    background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%);
     position: absolute;
     filter: blur(300px);
     right: -10%;

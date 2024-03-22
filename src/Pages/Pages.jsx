@@ -42,7 +42,7 @@ const Pages = () => {
           <Route path="/" element={<Navigate to={`/${currentLang}`} />} />
           
           {/* Default path for languages */}
-          <Route path="/:lang" element={<Index hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/:lang" element={<Index currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
 
           {/* Service page */}
           <Route path="/:lang/web-development/" element={<ServicesPage currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />

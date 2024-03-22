@@ -10,7 +10,7 @@ import Loader from '../components/UI/Loader/Loader.jsx';
 import { useTranslation } from 'react-i18next';
 import Calculator from '../components/UI/Calculator/Calculator.jsx';
 
-const Index = ({ hideLoader, setHideLoader }) => {
+const Index = ({ hideLoader, setHideLoader, currentPage }) => {
   const { t, i18n } = useTranslation();
 
   const [baseVelocity, setBaseVelocity] = useState({});
@@ -35,14 +35,14 @@ const Index = ({ hideLoader, setHideLoader }) => {
 
   return (
     <div>
-      <Loader hideLoader={hideLoader} setHideLoader={setHideLoader}/>
+      <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>
       <Home setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
       <About setCalculatorMenu={setCalculatorMenu}/>
       <section className='text-animation'>
         <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
         <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText2')}</ParallaxText>
       </section>
-      <Services/>
+      <Services hideLoader={hideLoader} setHideLoader={setHideLoader}/>
       <Portfolio />
       <Contacts/>
       <Footer setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>

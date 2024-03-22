@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import "./style/loader.css"
 import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { useTranslation } from 'react-i18next';
 
-const Loader = ({ hideLoader, setHideLoader }) => {
+const Loader = ({ hideLoader, setHideLoader, currentPage }) => {
+    const { t } = useTranslation();
+    const [currentLang, setCurrentLang] = useState(localStorage.getItem('i18nextLng'));
+	const [gradient, setGradient] = useState('');
+
+
+	useEffect(() => {
+        setGradient(`${t(`servicesPage.${currentPage}.mainColor`)}`);
+		console.log(gradient);
+    }, [currentPage]);
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -49,6 +59,7 @@ const Loader = ({ hideLoader, setHideLoader }) => {
 
 		<motion.div
 			className="loader__bg1"
+			style={{ background: gradient  }}
 			animate={{
 				rotate: [0, 270], 
 				x: [0, -1000], 
@@ -63,6 +74,7 @@ const Loader = ({ hideLoader, setHideLoader }) => {
 
 		<motion.div
 			className="loader__bg2"
+			style={{ background: gradient }}
 			animate={{
 				rotate: [0, 270], 
 				x: [0, 1000], 
@@ -182,9 +194,9 @@ const Loader = ({ hideLoader, setHideLoader }) => {
 		/>
 		<defs>
 		<linearGradient id="paint0_linear_886_264" x1="1.49469" y1="5.51267" x2="36.8216" y2="10.2782" gradientUnits="userSpaceOnUse">
-		<stop stopColor="#2BBFFE"/>
-		<stop offset="0.521875" stopColor="#8629FD"/>
-		<stop offset="1" stopColor="#FC4AF5"/>
+		<stop stopColor={t(`servicesPage.${currentPage}.gradientParts.color1`)}/>
+		<stop offset="0.521875" stopColor={t(`servicesPage.${currentPage}.gradientParts.color2`)}/>
+		<stop offset="1" stopColor={t(`servicesPage.${currentPage}.gradientParts.color3`)}/>
 		</linearGradient>
 		</defs>
 
