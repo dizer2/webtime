@@ -25,7 +25,7 @@ import { Reveal } from '../utils/Reveal/Reveal.tsx';
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
-const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
+const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader, setHideLoader }) => {
   const { t, i18n } = useTranslation();
   let path = window.location.href;
 
@@ -239,6 +239,9 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu }) => {
     };
 }, []); // Пам'ята
 
+  const openPopup = () => {
+    setHideLoader(false);
+  }
 
   return (
     <section id='home' className="home">

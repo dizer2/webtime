@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./style/footer.css"
 import Logo from '../main/img/Logo';
 import SocialMedia from '../UI/SocialMedia/SocialMedia';
@@ -9,7 +9,7 @@ import Calculator from '../UI/Calculator/Calculator';
 
 
 const Footer = ({ calculatorShow, setCalculatorShow }) => {
-	const {t} = useTranslation();
+	const {t, i18n} = useTranslation();
 
 	const currentYear = new Date().getFullYear();
 	const [feedbackInput, setFeedbackInput] = useState('');
@@ -33,6 +33,10 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 		  sectionRef.scrollIntoView({ behavior: 'smooth' });
 		}
 	  };
+
+	  useEffect(() => {
+		setFeedbackTitle(t('homePage.footer.feedback.title'));
+	  }, [t, i18n]);
 
 	  const handleFeedback = (e) => {
 		e.preventDefault();

@@ -147,6 +147,8 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
 
   return (
     <section id='services-page' className='services-page' style={{backgroundImage: `url(${t(`servicesPage.${currentPage}.backgroundImg`)})`}}>
+        <Loader hideLoader={hideLoader} setHideLoader={setHideLoader} />
+
       <div className="header__menu-overlay"></div>
 
       <Loader hideLoader={hideLoader} setHideLoader={setHideLoader}/>
