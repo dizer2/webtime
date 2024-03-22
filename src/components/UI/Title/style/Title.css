@@ -78,7 +78,6 @@ body {
   padding: 0 230px;
   margin-bottom: 80px; }
   .title__container-title {
-    width: 460px;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     font-style: normal;
@@ -88,7 +87,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    position: relative; }
+    position: relative;
+    word-wrap: break-word; }
     .title__container-title::after {
       content: attr(data-after-content);
       position: absolute;

@@ -86,7 +86,7 @@ const About = ({ setCalculatorMenu }) => {
 						<p className='about-us__box-subTitle'>02</p>
 						<p className='about-us__box-line'></p>
 					</div>
-					<p className='about-us__box-description'>{t('homePage.about.columnText1')}</p>
+					<p className='about-us__box-description'>{t('homePage.about.columnText2')}</p>
 				</div>
 			</Reveal>
 
@@ -96,7 +96,7 @@ const About = ({ setCalculatorMenu }) => {
 						<p className='about-us__box-subTitle'>03</p>
 						<p className='about-us__box-line'></p>
 					</div>
-					<p className='about-us__box-description'>{t('homePage.about.columnText1')}</p>
+					<p className='about-us__box-description'>{t('homePage.about.columnText3')}</p>
 				</div>
 			</Reveal>
 
