@@ -71,6 +71,9 @@ body {
   display: flex;
   column-gap: 20px; }
 
+@media screen and (max-width: 600px) {
+  .social__media-wrapper {
+    column-gap: 15px; } }
 .App {
   overflow-x: hidden; }
 
@@ -746,12 +749,12 @@ body {
         .home._menu-open .home__header .header__wrapper .header__menu-wrapper .header__menu-row .header__menu-nav .header__menu-list .header__menu-item:hover {
           transform: translateX(-15px); }
           .home._menu-open .home__header .header__wrapper .header__menu-wrapper .header__menu-row .header__menu-nav .header__menu-list .header__menu-item:hover p::before {
-            left: -80px;
-            width: 84.3px; }
+            left: -60px;
+            width: 64.3px; }
         .home._menu-open .home__header .header__wrapper .header__menu-wrapper .header__menu-row .header__menu-nav .header__menu-list .header__menu-item__rhombus {
-          margin-right: 80px; }
+          margin-right: 60px; }
         .home._menu-open .home__header .header__wrapper .header__menu-wrapper .header__menu-row .header__menu-nav .header__menu-list .header__menu-item p {
-          font-size: 28px; }
+          font-size: 24px; }
           .home._menu-open .home__header .header__wrapper .header__menu-wrapper .header__menu-row .header__menu-nav .header__menu-list .header__menu-item p::before {
             min-height: 1px; }
   .home__header._header-show {
@@ -765,6 +768,9 @@ body {
   .home__intro .intro__title {
     margin-bottom: 20px;
     font-size: 6.4vw; } }
+@media screen and (max-width: 330px) {
+  .home__intro .intro__slider {
+    margin-left: 10px; } }
 @media screen and (max-height: 900px) {
   .home__header .header__wrapper .header__logo svg {
     height: 36px;
@@ -808,4 +814,4 @@ body {
     .home._menu-open .home__header .header__wrapper .header__nav-box .header__btn-menu {
       margin-top: 30px; } }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=Home.css.map */

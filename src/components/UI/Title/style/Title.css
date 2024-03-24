@@ -71,6 +71,9 @@ body {
   display: flex;
   column-gap: 20px; }
 
+@media screen and (max-width: 600px) {
+  .social__media-wrapper {
+    column-gap: 15px; } }
 .App {
   overflow-x: hidden; }
 
@@ -84,6 +87,7 @@ body {
     color: #fff;
     font-weight: 700;
     line-height: normal;
+    white-space: pre-line;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -160,4 +164,4 @@ body {
         left: 50%;
         transform: translate(-50%, -50%); } }
 
-/*# sourceMappingURL=Title.css.map */
+/*# sourceMappingURL=title.css.map */

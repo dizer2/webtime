@@ -30,6 +30,21 @@ const Services = ({ hideLoader, setHideLoader }) => {
         setHideLoader(false);
         document.body.classList.add("_body-hidden"); 
     }
+
+      // Scroll To Section 
+  const handleScrollToSection = (sectionId) => {
+    document.body.classList.remove("body-hidden", false); 
+
+    if (!sectionId || sectionId === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+  
+    const sectionRef = document.getElementById(sectionId);
+    if (sectionRef) {
+      sectionRef.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
     
 
   return (
@@ -190,7 +205,7 @@ const Services = ({ hideLoader, setHideLoader }) => {
             </RevealSecodary>
 
             <RevealSecodary>
-                <div className="services__card">
+                <div onClick={() => handleScrollToSection('contacts')} className="services__card">
                     <div className="services__card-main">
                         <IconBox 
                             imgPath={FullWebsite}
@@ -216,7 +231,7 @@ const Services = ({ hideLoader, setHideLoader }) => {
             </RevealSecodary>
 
             <RevealSecodary>
-                <div className="services__card">
+                <div onClick={() => handleScrollToSection('contacts')} className="services__card">
                     <div className="services__card-main">
                         <IconBox 
                             imgPath={OptimisationIcon}

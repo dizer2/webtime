@@ -19,13 +19,13 @@
 
 
 @mixin title() {
-    // width: 460px;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     font-style: normal;
     color: $white;
     font-weight: 700;
     line-height: normal;
+    white-space: pre-line;
 }
 
 @mixin secondary-title() {

@@ -71,6 +71,9 @@ body {
   display: flex;
   column-gap: 20px; }
 
+@media screen and (max-width: 600px) {
+  .social__media-wrapper {
+    column-gap: 15px; } }
 .App {
   overflow-x: hidden; }
 
@@ -95,6 +98,8 @@ body {
       cursor: none; }
   .contacts__container {
     width: 100%; }
+  .contacts .title__container-title {
+    max-width: 960px; }
   .contacts .error-message {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;

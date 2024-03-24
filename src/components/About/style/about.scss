@@ -251,6 +251,7 @@
 		}
 		&__box {
 			&-description {
+				margin-top: 3px;
 				width: 330px;
 				@include secondary-description();
 			}
@@ -385,12 +386,6 @@
     $secondry-padding: 70px;
 
 	.about-us {
-		.title__container {
-			&-title {
-				width: 330px;
-			}
-		}
-
 		&__box {
 			gap: 30px;
 			padding-left:  $secondry-padding;
@@ -467,12 +462,22 @@
 			padding-right: $main-padding;
 		}
 
+		.title__container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&-title {
+				width: auto;
+				text-align: center;
+			}
+		}
+
 		&__box {
 			position: relative;
 
 			.about-us__position {
 				width: 100%;
-
 			}
 
 			&-column {
@@ -491,14 +496,11 @@
 				margin-left: 0px;
 				text-align: center;
 				padding: 0 20px;
-
 			}
-
 			
 			&-line {
 				margin-top: 30px;
 			}
-	
 		}
 	
 		&__box2 {
@@ -511,7 +513,6 @@
 
 			
 			&-cart {
-			
 				.animation-div {
 					div {
 						@include display-center(center, center);
@@ -519,12 +520,10 @@
 						flex-direction: column;
 						text-align: center;
 					}
-	
 				}
 				.about-us__cart-description {
 					width: 60%;
 				}
-
 			}
 		}
 		

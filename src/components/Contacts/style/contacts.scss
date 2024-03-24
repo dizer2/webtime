@@ -28,11 +28,11 @@
         width: 100%;
     }
 
-    // .title__container {
-    //     &-title {
-    //         width: 600px;
-    //     }
-    // }
+    .title__container {
+        &-title {
+            max-width: 960px;
+        }
+    }
 
     .error-message {
         @include font($error-color, 14px, 400, normal, 0);

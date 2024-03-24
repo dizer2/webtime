@@ -71,6 +71,9 @@ body {
   display: flex;
   column-gap: 20px; }
 
+@media screen and (max-width: 600px) {
+  .social__media-wrapper {
+    column-gap: 15px; } }
 .App {
   overflow-x: hidden; }
 
@@ -135,4 +138,4 @@ body {
     .subTitle__container-description {
       font-size: 16px; } }
 
-/*# sourceMappingURL=SubTitle.css.map */
+/*# sourceMappingURL=subTitle.css.map */
