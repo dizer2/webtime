@@ -154,7 +154,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
   return (
     
     <section id='services-page' className='services-page' style={{backgroundImage: `url(${t(`servicesPage.${currentPage}.backgroundImg`)})`}}>
-        <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader} />
+        {!hideLoader && <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>}
         <Helmet>
             <title>Webtime Studio - {t(`servicesPage.${currentPage}.title`)}</title>
         </Helmet>
@@ -243,6 +243,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
                 </nav>
 
                 <LocalisationField
+                    setHideLoader={setHideLoader}
                     gradient = {t(`servicesPage.${currentPage}.mainColor`)}
                 />
 

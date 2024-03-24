@@ -33,20 +33,7 @@ const Pages = () => {
 
   }, [i18n]);
 
-  useEffect(() => {
-    const handleLanguageChange = () => {
-      setHideLoader(false);
-    document.body.classList.add("_body-hidden"); 
 
-      console.log("CH")
-    };
-
-    i18n.on('languageChanged', handleLanguageChange);
-
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
-    };
-  }, [i18n]);
 
   return (
     <div>

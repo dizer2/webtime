@@ -31,13 +31,9 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
     return () => window.removeEventListener('resize', updateBaseVelocity);
   }, []);
 
-
-
-
-
   return (
     <div>
-      <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>
+      {!hideLoader && <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>}
       <Home setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
       <About setCalculatorMenu={setCalculatorMenu}/>
       <section className='text-animation'>

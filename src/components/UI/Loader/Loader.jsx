@@ -4,15 +4,14 @@ import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { useTranslation } from 'react-i18next';
 
 const Loader = ({ hideLoader, setHideLoader, currentPage }) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [currentLang, setCurrentLang] = useState(localStorage.getItem('i18nextLng'));
 	const [gradient, setGradient] = useState('');
 
-
-	useEffect(() => {
-        setGradient(`${t(`servicesPage.${currentPage}.mainColor`)}`);
-		console.log(gradient);
-    }, [currentPage]);
+    useEffect(() => {
+        const currentGradient = t(`servicesPage.${currentPage}.mainColor`);
+        setGradient(currentGradient);
+    }, [currentPage, t]);
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -44,19 +43,9 @@ const Loader = ({ hideLoader, setHideLoader, currentPage }) => {
 		}
 	  };
 
-  return (
-	<motion.div
-      className={`${hideLoader ? "hidden": "loader"}`}
-	  animate={{ height: [100 + "vh", 0 + "vh"]}}
-			transition={{
-				type: "spring",
-				stiffness: 260,
-				duration: 1,
-				damping: 80,
-				delay: 3.5,
-	}}
-    >
 
+  return (
+	<>
 		<motion.div
 			className="loader__bg1"
 			style={{ background: gradient  }}
@@ -87,6 +76,17 @@ const Loader = ({ hideLoader, setHideLoader, currentPage }) => {
 			>
 			{/* Вміст, який ви бажаєте анімувати */}
 		</motion.div>
+	<motion.div
+      className={`${hideLoader ? "hidden": "loader"}`}
+	  animate={{ height: [100 + "vh", 0 + "vh"]}}
+			transition={{
+				type: "spring",
+				stiffness: 260,
+				duration: 1,
+				damping: 80,
+				delay: 3.5,
+	}}
+    >
 
 		 <motion.svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -203,6 +203,7 @@ const Loader = ({ hideLoader, setHideLoader, currentPage }) => {
 		
 		</motion.svg>
 	</motion.div>
+	</>
   )
 }
 

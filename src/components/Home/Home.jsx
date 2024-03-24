@@ -710,6 +710,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
         </div>
 
         <LocalisationField
+          setHideLoader={setHideLoader}
           gradient="linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
         />
       </footer>

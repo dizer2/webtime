@@ -3,7 +3,7 @@ import "./style/localisation-field.css";
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function LocalisationField({ gradient }) {
+function LocalisationField({ gradient, setHideLoader }) {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -39,6 +39,9 @@ function LocalisationField({ gradient }) {
     changeLanguage(lang);
     localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
     navigate(newPath);
+
+    setHideLoader(false);
+    document.body.classList.add("_body-hidden"); 
   };
   const remainingLanguages = languages.filter(lang => lang !== currentLanguage);
 
