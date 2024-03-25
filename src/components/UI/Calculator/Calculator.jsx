@@ -311,7 +311,7 @@ const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
 
 				<div className="calculator-popup__container-buttons" onClick={handleStep}>
 					<GradientBtn
-						text="Next step"
+						text={t('homePage.footer.calculator.btn')}
 						width="100%"
 						height="50"
 					/>

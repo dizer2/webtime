@@ -155,12 +155,14 @@
           "inputName": {
               "title": "Name",
               "error": "Invalid Name",
+              "empty": "Name field cannot be empty",
               "placeholder": "Your name"
           },
 
           "inputCompany": {
               "title": "Company",
               "error": "Invalid Company",
+              "empty": "Name field cannot be empty",
               "placeholder": "Your company",
 
               "clue": "Not d to fill out"
@@ -251,7 +253,12 @@
       "emailPlaceholder": "Email name",
       "message": "Message",
       "messagePlaceholder": "How can we help you ?",
-      "sendBtn": "Send"
+      "sendBtn": "Send",
+
+      "inputNameEmpty": "* Сannot be empty",
+      "inputPhoneEmpty": "* Сannot be empty",
+      "inputMessageEmpty": "* Сannot be empty",
+      "emailIsntValid": "* Isn't valid email address"
     },
     "web-development": {
       "backgroundImg": "../../images/0-background.svg",

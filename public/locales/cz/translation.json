@@ -197,7 +197,7 @@
                     "title": "Jaký druh stránky chcete vytvořit?",
                     "service1": "Cílová stránka",
                     "service2": "Firemní weby",
-                    "service3": "Internetové obchody",
+                    "service3": "Online obchody",
                     "service4": "Služby",
                     "service5": "Portály",
                     "service6": "WOW stránky",
@@ -250,7 +250,12 @@
             "emailPlaceholder": "Emailová adresa",
             "message": "Zpráva",
             "messagePlaceholder": "Jak vám můžeme pomoci?",
-            "sendBtn": "Odeslat"
+            "sendBtn": "Odeslat",
+
+            "inputNameEmpty": "* Nesmí být prázdné",
+            "inputPhoneEmpty": "* Nesmí být prázdné",
+            "inputMessageEmpty": "* Nesmí být prázdné",
+            "emailIsntValid": "* Neplatná e-mailová adresa"
         },
         "web-development": {
             "backgroundImg": "../../images/0-background.svg",
