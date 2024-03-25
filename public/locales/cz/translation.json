@@ -155,6 +155,7 @@
             "inputName": {
                 "title": "Jméno",
                 "error": "Neplatné jméno",
+                "empty": "Pole jmena nemůže být prázdné",
                 "placeholder": "Vaše jméno"
             },
     
@@ -169,18 +170,21 @@
             "inputEmail": {
                 "title": "Email",
                 "error": "Neplatný email",
+                "isntValid": "Prosím zadejte platnou emailovou adresu",
                 "placeholder": "Váš email"
             },
     
             "inputPhone": {
                 "title": "Telefonní číslo",
                 "error": "Neplatné telefonní číslo",
+                "empty": "Pole telefonu nemůže být prázdné",
                 "placeholder": "Vaše telefonní číslo"
             },
     
             "inputMessage": {
                 "title": "Zpráva",
                 "error": "Neplatná zpráva",
+                "empty": "Pole zprávy nemůže být prázdné",
                 "placeholder": "Napište o službě, kterou byste chtěli obdržet"
             },
     

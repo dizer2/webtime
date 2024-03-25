@@ -257,7 +257,7 @@ const Services = ({ hideLoader, setHideLoader }) => {
             </RevealSecodary>
 
 		    <RevealSecodary>
-                <div className="services__card services__card--contact">
+                <div onClick={() => handleScrollToSection('contacts')} className="services__card services__card--contact">
                     <div className="services__card-main">
                         <IconBox 
                             imgPath={PhoneIcon}

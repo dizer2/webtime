@@ -128,7 +128,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
         service_name: title
       }));
 
-      console.log(formData);
+      // console.log(formData);
     
       if (!togglePopup) {
         document.body.classList.add("_body-hidden");
@@ -197,7 +197,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
       return;
     }
     
-    console.log('Sending email with data:', formData);
+    // console.log('Sending email with data:', formData);
 
     setError({}); 
 
@@ -207,7 +207,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
       service_name: formData.service_name 
     };
 
-    console.log(formDataWithServiceName)
+    // console.log(formDataWithServiceName)
 
 
     // Directly pass the form reference to sendForm
@@ -221,7 +221,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
       }, { publicKey: 'nSGLhPAWpzUuxel2z', } )
       .then(
         () => {
-          console.log('SUCCESS!');
+          // console.log('SUCCESS!');
           setIsSendSuccessfully(true);
 
           setFormData({

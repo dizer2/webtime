@@ -74,13 +74,11 @@ const Contacts = () => {
       if (formData[key].trim() === '') {
 
         if (key === 'name') {
-          newError[key] = `Name field cannot be empty`;
-        } else if (key === 'company') {
-          newError[key] = `Company field cannot be empty`;
+          newError[key] = t('homePage.contacts.inputName.empty');
         } else if (key === 'phone') {
-          newError[key] = `Phone field cannot be empty`;
+          newError[key] = t('homePage.contacts.inputPhone.empty');
         } else if (key === 'message') {
-          newError[key] = `Message field cannot be empty`;
+          newError[key] = t('homePage.contacts.inputMessage.empty');
         }
         formIsValid = false;
       }
@@ -89,7 +87,7 @@ const Contacts = () => {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      newError.email = 'Please enter a valid email address';
+      newError.email = t('homePage.contacts.inputEmail.isntValid');
       formIsValid = false;
     }
   
@@ -98,7 +96,7 @@ const Contacts = () => {
       return;
     }
   
-    console.log('Sending email with data:', formData);
+    // console.log('Sending email with data:', formData);
 
     setError({}); 
     setFormData({
@@ -115,7 +113,7 @@ const Contacts = () => {
     })
     .then(
       () => {
-        console.log('SUCCESS!');
+        // console.log('SUCCESS!');
         setPopupClass(true);
       },
       (error) => {
@@ -218,7 +216,6 @@ const Contacts = () => {
                   value={formData.company}
                   name='company'
                 />
-                {error.company && <p className='error-message'>{error.company}</p>}
               </div>
             </div>
 
