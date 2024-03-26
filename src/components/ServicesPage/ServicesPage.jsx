@@ -10,7 +10,7 @@ import GradientBtn from "../UI/GradientBtn/GradientBtn";
 import { useTranslation } from "react-i18next";
 import emailjs from '@emailjs/browser';
 import Loader from "../UI/Loader/Loader";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Popup from "../UI/Popup/Popup";
 
 const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
@@ -264,9 +264,14 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
           setHideLoader={setHideLoader}
         />
       )}
-      <Helmet>
-        <title>Webtime Studio - {t(`servicesPage.${currentPage}.title`)}</title>
-      </Helmet>
+
+
+      <HelmetProvider>
+        <Helmet>
+          <title>Webtime Studio - {t(`servicesPage.${currentPage}.title`)}</title>
+        </Helmet>
+      </HelmetProvider>
+
       <div className="header__menu-overlay"></div>
 
 
