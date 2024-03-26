@@ -1,61 +1,61 @@
-import React, { useEffect, useRef, useState } from 'react';
-import "./style/about.css"
-import SubTitle from "../UI/SubTitle/SubTitle.jsx"
-import Title from '../UI/Title/Title.jsx'
-import IconBox from '../UI/IconBox/IconBox.jsx';
-import img1 from "./img/img1.svg";
-import img2 from "./img/img2.svg";
-import img3 from "./img/img3.svg";
-import img4 from "./img/img4.svg";
-import { Reveal } from '../utils/Reveal/Reveal.tsx';
-import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
-import { useTranslation } from 'react-i18next';
+	import React, { useEffect, useRef, useState } from 'react';
+	import "./style/about.css"
+	import SubTitle from "../UI/SubTitle/SubTitle.jsx"
+	import Title from '../UI/Title/Title.jsx'
+	import IconBox from '../UI/IconBox/IconBox.jsx';
+	import img1 from "./img/img1.svg";
+	import img2 from "./img/img2.svg";
+	import img3 from "./img/img3.svg";
+	import img4 from "./img/img4.svg";
+	import { Reveal } from '../utils/Reveal/Reveal.tsx';
+	import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
+	import { useTranslation } from 'react-i18next';
 
-const About = ({ setCalculatorMenu }) => {
-	const {t} = useTranslation();
+	const About = ({ setCalculatorMenu }) => {
+		const {t} = useTranslation();
 
-    const [showText, setShowText] = useState(true);
-    const [textHeight, setTextHeight] = useState(0);
-    const [defulTextHeight, setDefulTextHeight] = useState(0);
+		const [showText, setShowText] = useState(true);
+		const [textHeight, setTextHeight] = useState(0);
+		const [defulTextHeight, setDefulTextHeight] = useState(0);
 
-    const aboutDescriptionRef = useRef(null);
-    const aboutDescriptionRef2 = useRef(null);
+		const aboutDescriptionRef = useRef(null);
+		const aboutDescriptionRef2 = useRef(null);
 
-    const aboutDescription = showText ? "about-us__box3-description" : "about-us__box3-description about-us__box3-description--active";
-    const aboutLine = showText ? "about-us__button-line" : "about-us__button-line about-us__button-line--active";
+		const aboutDescription = showText ? "about-us__box3-description" : "about-us__box3-description about-us__box3-description--active";
+		const aboutLine = showText ? "about-us__button-line" : "about-us__button-line about-us__button-line--active";
 
-	
-    useEffect(() => {
-        function handleResize() {
-            if (aboutDescriptionRef2.current) {
-                setDefulTextHeight(aboutDescriptionRef2.current.scrollHeight);
-                setTextHeight(aboutDescriptionRef2.current.scrollHeight);
-            }
-        }
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+		
+		useEffect(() => {
+			function handleResize() {
+				if (aboutDescriptionRef2.current) {
+					setDefulTextHeight(aboutDescriptionRef2.current.scrollHeight);
+					setTextHeight(aboutDescriptionRef2.current.scrollHeight);
+				}
+			}
+			handleResize();
+			window.addEventListener('resize', handleResize);
+			return () => window.removeEventListener('resize', handleResize);
+		}, []);
 
-    const showTextHandle = () => {
-		const button = document.querySelector('.about-us__button');
+		const showTextHandle = () => {
+			const button = document.querySelector('.about-us__button');
 
-		if (button) {
-			button.classList.toggle('about-us__button--open');
-		}	
-        setShowText(!showText);
-        if (showText === false) {
-            setTextHeight(defulTextHeight);
-        } else {
-            if (aboutDescriptionRef.current) {
-                setTextHeight(aboutDescriptionRef.current.scrollHeight);
-            }
-        }
-    }
+			if (button) {
+				button.classList.toggle('about-us__button--open');
+			}	
+			setShowText(!showText);
+			if (showText === false) {
+				setTextHeight(defulTextHeight);
+			} else {
+				if (aboutDescriptionRef.current) {
+					setTextHeight(aboutDescriptionRef.current.scrollHeight);
+				}
+			}
+		}
 
-	  
-  return (
-	<div id='about' className='about-us'>
+		
+	return (
+		<div id='about' className='about-us'>
 
 		<Reveal>
 			<SubTitle text={t('homePage.about.banner1')}/>

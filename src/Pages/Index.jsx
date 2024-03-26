@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Home from '../components/Home/Home';
-import About from '../components/About/About';
-import Services from '../components/Services/Services';
-import Portfolio from '../components/Portfolio/Portfolio';
-import Contacts from '../components/Contacts/Contacts';
-import Footer from '../components/Footer/Footer';
-import { ParallaxText } from '../components/UI/ParallaxProps/ParallaxProps.tsx';
-import Loader from '../components/UI/Loader/Loader.jsx';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import Calculator from '../components/UI/Calculator/Calculator.jsx';
+import Loader from '../components/UI/Loader/Loader.jsx';
+import { ParallaxText } from '../components/UI/ParallaxProps/ParallaxProps.tsx';
+
+const LazyHome = React.lazy(() => import("../components/Home/Home.jsx"));
+const LazyAbout = React.lazy(() => import("../components/About/About.jsx"));
+const LazyService = React.lazy(() => import("../components/Services/Services.jsx"));
+const LazyPortfolio = React.lazy(() => import("../components/Portfolio/Portfolio.jsx"));
+const LazyContacts = React.lazy(() => import("../components/Contacts/Contacts.jsx"));
+const LazyFooter = React.lazy(() => import("../components/Footer/Footer.jsx"));
 
 const Index = ({ hideLoader, setHideLoader, currentPage }) => {
   const { t, i18n } = useTranslation();
@@ -16,6 +16,9 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
   const [baseVelocity, setBaseVelocity] = useState({});
   const [calculatorShow, setCalculatorShow] = useState(false);
   const [calculatorMenu, setCalculatorMenu] = useState(false);
+  const [aboutScrolled, setAboutScrolled] = useState(false);
+  const [serviceScrolled, setServiceScrolled] = useState(false);
+  const [portfolioScrolled, setPortfolioScrolled] = useState(false);
 
   useEffect(() => {
     const updateBaseVelocity = () => {
@@ -31,19 +34,52 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
     return () => window.removeEventListener('resize', updateBaseVelocity);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutComponent = document.getElementById('about');
+      if (aboutComponent && window.scrollY >= aboutComponent.offsetTop) {
+        setAboutScrolled(true);
+      }
+      
+      const serviceComponent = document.getElementById('services');
+      if (serviceComponent && window.scrollY >= serviceComponent.offsetTop) {
+        setServiceScrolled(true);
+      }
+
+      const portfolioComponent = document.getElementById('portfolio');
+      if (portfolioComponent && window.scrollY >= portfolioComponent.offsetTop) {
+        setPortfolioScrolled(true);
+      }
+
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div>
       {!hideLoader && <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>}
-      <Home setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
-      <About setCalculatorMenu={setCalculatorMenu}/>
-      <section className='text-animation'>
-        <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
-        <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText2')}</ParallaxText>
-      </section>
-      <Services hideLoader={hideLoader} setHideLoader={setHideLoader}/>
-      <Portfolio />
-      <Contacts/>
-      <Footer setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyHome setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
+        <LazyAbout id="about" setCalculatorMenu={setCalculatorMenu}/>
+        {aboutScrolled && (
+          <section className='text-animation'>
+            <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
+            <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText2')}</ParallaxText>
+          </section>
+        )}
+        {aboutScrolled && (
+          <LazyService hideLoader={hideLoader} setHideLoader={setHideLoader}/>
+        )}
+        {serviceScrolled && (
+          <LazyPortfolio/>
+        )}
+        {portfolioScrolled && (
+          <LazyContacts/>
+        )}
+        <LazyFooter setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>
+      </Suspense>
     </div>
   );
 }
