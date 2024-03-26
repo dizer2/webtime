@@ -16,24 +16,19 @@ import SocialMedia from '../UI/SocialMedia/SocialMedia.jsx';
 import LocalisationField from '../UI/LocalisationField/LocalisationField.jsx';
 import GradientBtn from '../UI/GradientBtn/GradientBtn.jsx';
 
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Reveal } from '../utils/Reveal/Reveal.tsx';
-import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx';
 import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
-const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader, setHideLoader }) => {
-  const { t, i18n } = useTranslation();
+const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoader }) => {
+  const { t } = useTranslation();
   let path = window.location.href;
 
 
-  const currentLang = localStorage.getItem("i18nextLng");
-
-  const changeLanguage = (lng) => { i18n.changeLanguage(lng); };
-  const [inHomeSection, setInHomeSection] = useState(true);
+  // const [inHomeSection, setInHomeSection] = useState(true);
 
   // Cursor Animation
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -212,10 +207,10 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, hideLoader
     const handleScroll = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && entry.target.id === 'home') {
-                setInHomeSection(true);
+                // setInHomeSection(true);
                 setCalculatorMenu(false);
             } else {
-                setInHomeSection(false);
+                // setInHomeSection(false);
                 setCalculatorMenu(true);
             }
         });
