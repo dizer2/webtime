@@ -15,7 +15,7 @@
     .menu__icon {
         width: 30px;
         height: 30px;
-        @include display-center(center, end);
+        @include display-center(center, flex-end);
         flex-direction: column;
         row-gap: 8px;
         cursor: pointer;

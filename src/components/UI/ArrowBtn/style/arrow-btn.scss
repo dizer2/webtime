@@ -2,7 +2,7 @@
 
 .arrow-btn {
     @include font($white, 16px, 700, normal, 0.1rem);
-    @include display-center(start, center);
+    @include display-center(flex-start, center);
     column-gap: 10px;
     text-transform: uppercase;
     cursor: pointer;

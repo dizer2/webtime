@@ -96,7 +96,7 @@ body {
     height: auto;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     position: relative; }
     .footer__top-logo {
       position: relative;

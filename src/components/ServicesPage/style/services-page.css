@@ -270,7 +270,7 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
     position: fixed;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     padding: 40px;
     height: 100vh;
@@ -288,7 +288,7 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
       width: 100%;
       display: flex;
       justify-content: space-between;
-      align-items: start;
+      align-items: flex-start;
       flex-direction: column; }
     .services-page__menu-phantom {
       width: 22%; }
@@ -479,7 +479,7 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
         margin-left: 0px;
         margin-bottom: 15px;
         flex-direction: row-reverse;
-        justify-content: start; }
+        justify-content: flex-start; }
         .services-page__main .services-page__description-box .services-page__description-title p {
           font-size: 18px; }
       .services-page__main .services-page__description-box .services-page__description-tags__container {
@@ -769,7 +769,7 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
   .services-page__popup-overlay {
     display: none;
     justify-content: center;
-    align-items: start; }
+    align-items: flex-start; }
     .services-page__popup-overlay._active {
       display: flex; }
     .services-page__popup-overlay .services-page__popup {

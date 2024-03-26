@@ -113,7 +113,7 @@ body {
     padding: 0 120px 0 230px;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     column-gap: 40px; }
     .contacts__wrapper .contacts__info {
       display: flex;

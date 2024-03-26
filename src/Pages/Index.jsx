@@ -11,7 +11,7 @@ const LazyContacts = React.lazy(() => import("../components/Contacts/Contacts.js
 const LazyFooter = React.lazy(() => import("../components/Footer/Footer.jsx"));
 
 const Index = ({ hideLoader, setHideLoader, currentPage }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [baseVelocity, setBaseVelocity] = useState({});
   const [calculatorShow, setCalculatorShow] = useState(false);

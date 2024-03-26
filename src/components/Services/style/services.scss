@@ -24,7 +24,7 @@
             background-color: $ligth-dark;
             transition: .4s;
 
-            @include display-center(space-between, start);
+            @include display-center(space-between, flex-start);
             flex-direction: column;
 
 
@@ -70,7 +70,7 @@
                 width: 410px;
                 height: 300px;
     
-                @include display-center(space-between, start);
+                @include display-center(space-between, flex-start);
                 flex-direction: column;
     
                 &-main {

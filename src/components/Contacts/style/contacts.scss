@@ -41,7 +41,7 @@
 
     &__wrapper {
         padding: 0 $main-padding 0 $secondry-padding;
-        @include display-center(space-between, start);
+        @include display-center(space-between, flex-start);
 
         column-gap: 40px;
 

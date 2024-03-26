@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 
-const Services = ({ hideLoader, setHideLoader }) => {
+const Services = ({ setHideLoader }) => {
 	const {t} = useTranslation();
     let path = window.location.pathname;
 

@@ -232,7 +232,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
             observer.unobserve(homeSection);
         }
     };
-}, []); // Пам'ята
+}, [setCalculatorMenu]); // Пам'ята
 
   const openPopup = () => {
     setHideLoader(false);

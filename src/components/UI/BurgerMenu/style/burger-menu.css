@@ -96,7 +96,7 @@ body {
     height: 30px;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     flex-direction: column;
     row-gap: 8px;
     cursor: pointer;

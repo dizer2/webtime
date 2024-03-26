@@ -281,7 +281,7 @@ body._business-card-leaflets {
     
     &__menu {
         position: fixed;
-        @include display-center(space-between, start);
+        @include display-center(space-between, flex-start);
         flex-direction: column;
 
         padding: 40px;
@@ -304,7 +304,7 @@ body._business-card-leaflets {
         .services-menu__wrapper {
             height: 100%;
             width: 100%;
-            @include display-center(space-between, start);
+            @include display-center(space-between, flex-start);
             flex-direction: column;
         }
 
@@ -524,7 +524,7 @@ body._business-card-leaflets {
                     margin-left: 0px;
                     margin-bottom: 15px;
                     flex-direction: row-reverse;
-                    justify-content: start;
+                    justify-content: flex-start;
     
                     p {
                         font-size: 18px;
@@ -1045,7 +1045,7 @@ body._business-card-leaflets {
         &__popup-overlay {
             display: none;
             justify-content: center;
-            align-items: start;
+            align-items: flex-start;
 
             &._active {
                 display: flex;
