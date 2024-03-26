@@ -69,7 +69,7 @@ const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
 
 	const handleStep = () => {
 
-		console.log(step);
+		// console.log(step);
 
 		if (step !=3) {
 			setStep(step + 1);
@@ -96,12 +96,12 @@ const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
 			} else {
 
 
-				console.log(inputValues.length)
-				console.log(webstieType);
-				console.log(logo);
-				console.log(seo);
-				console.log("Name:", inputValues[0]); 
-				console.log("Phone:", inputValues[1]); 
+				// console.log(inputValues.length)
+				// console.log(webstieType);
+				// console.log(logo);
+				// console.log(seo);
+				// console.log("Name:", inputValues[0]); 
+				// console.log("Phone:", inputValues[1]); 
 				setCalculatorShow(false);
 				setStep(0);
 
@@ -311,7 +311,7 @@ const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
 
 				<div className="calculator-popup__container-buttons" onClick={handleStep}>
 					<GradientBtn
-						text="Next step"
+						text={t('homePage.footer.calculator.btn')}
 						width="100%"
 						height="50"
 					/>

@@ -219,6 +219,10 @@ body._business-card-leaflets {
                     span {
                         margin-bottom: 5px;
                         @include font($white, 16px, 500, normal, 0);
+
+                        & .error {
+                            @include font($error-color, 14px, 400, normal, 0);
+                        }
                     }
 
                     .services-page__popup-input {
@@ -263,6 +267,12 @@ body._business-card-leaflets {
             }
 
         }
+    }
+
+    .popup-form {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11;
     }
 
     .header__menu-wrapper {
@@ -445,6 +455,10 @@ body._business-card-leaflets {
 
                     &:nth-child(3) {
                         display: none;
+                    }
+
+                    .error {
+                        @include font($error-color, 14px, 400, normal, 0);
                     }
                 }
 
@@ -1000,7 +1014,8 @@ body._business-card-leaflets {
     .services-page {
        &__popup-overlay {
             .services-page__popup {
-                padding: 30px 50px;
+                padding-top: 30px;
+                padding-bottom: 30px;
                 &-header {
                     margin-bottom: 30px;
                 }

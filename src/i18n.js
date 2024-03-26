@@ -10,8 +10,8 @@ i18n
   .init({
     fallbackLng: 'en',
     // lng: 'en',
-    debug: true,
-    returnObjects: true, // Enable returnObjects option
+    // debug: true,
+    // returnObjects: true, // Enable returnObjects option
 
     interpolation: {
       escapeValue: false,

@@ -43,7 +43,7 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 		
 		// Validation: Check if feedbackInput has less than 5 characters
 		if (feedbackInput.trim().length < 5) {
-			console.log("Feedback must be at least 5 characters long.");
+			// console.log("Feedback must be at least 5 characters long.");
 			setIsError(true)
 			setFeedbackTitle(t('homePage.footer.feedback.toShort'));
 			return; 
@@ -57,7 +57,7 @@ const Footer = ({ calculatorShow, setCalculatorShow }) => {
 			})
 			.then(
 				() => {
-					console.log('SUCCESS!');
+					// console.log('SUCCESS!');
 					setPopupClass(true);
 					setIsError(false)
 				},

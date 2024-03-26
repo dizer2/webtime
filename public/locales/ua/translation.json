@@ -138,6 +138,7 @@
             "inputName": {
                 "title": "Ім'я",
                 "error": "Недійсне ім'я",
+                "empty": "Поле імені не може бути порожнім",
                 "placeholder": "Ваше ім'я"
             },
             "inputCompany": {
@@ -149,16 +150,19 @@
             "inputEmail": {
                 "title": "Електронна пошта",
                 "error": "Недійсна електронна пошта",
+                "isntValid": "Адреса електронної пошти недійсна",
                 "placeholder": "Ваша електронна пошта"
             },
             "inputPhone": {
                 "title": "Номер телефону",
                 "error": "Недійсний номер телефону",
+                "empty": "Поле телефону не може бути порожнім",
                 "placeholder": "Ваш номер телефону"
             },
             "inputMessage": {
                 "title": "Повідомлення",
                 "error": "Недійсне повідомлення",
+                "empty": "Поле повідомлення не може бути порожнім",
                 "placeholder": "Напишіть про послугу, яку ви хотіли б отримати"
             },
             "sendBtn": "Надіслати"
@@ -173,7 +177,7 @@
                     "title": "Який вид сайту ви хочете створити?",
                     "service1": "Лендінг",
                     "service2": "Корпоративні сайти",
-                    "service3": "Інтернет-магазини",
+                    "service3": "Інтернет магазини",
                     "service4": "Сервіси",
                     "service5": "Портали",
                     "service6": "WOW-сайти",
@@ -224,7 +228,12 @@
         "emailPlaceholder": "Електронна пошта",
         "message": "Повідомлення",
         "messagePlaceholder": "Як ми можемо вам допомогти?",
-        "sendBtn": "Надіслати"
+        "sendBtn": "Надіслати",
+
+        "inputNameEmpty": "* Не може бути порожнім",
+        "inputPhoneEmpty": "* Не може бути порожнім",
+        "inputMessageEmpty": "* Не може бути порожнім",
+        "emailIsntValid": "* Недійсний email"
         },
         "web-development": {
             "backgroundImg": "../../images/0-background.svg",

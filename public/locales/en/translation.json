@@ -155,6 +155,7 @@
           "inputName": {
               "title": "Name",
               "error": "Invalid Name",
+              "empty": "Name field cannot be empty",
               "placeholder": "Your name"
           },
 
@@ -162,25 +163,27 @@
               "title": "Company",
               "error": "Invalid Company",
               "placeholder": "Your company",
-
-              "clue": "Not d to fill out"
+              "clue": "Not necessary to fill out"
           },
 
           "inputEmail": {
               "title": "Email",
               "error": "Invalid Email",
+              "isntValid": "Please enter a valid email address",
               "placeholder": "Your email"
           },
 
           "inputPhone": {
               "title": "Phone number",
               "error": "Invalid Phone Number",
+              "empty": "Phone field cannot be empty",
               "placeholder": "Your phone number"
           },
 
           "inputMessage": {
               "title": "Message",
               "error": "Invalid Message",
+              "empty": "Message field cannot be empty",
               "placeholder": "Write about the service that you would like to receive"
           },
 
@@ -251,7 +254,12 @@
       "emailPlaceholder": "Email name",
       "message": "Message",
       "messagePlaceholder": "How can we help you ?",
-      "sendBtn": "Send"
+      "sendBtn": "Send",
+
+      "inputNameEmpty": "* Сannot be empty",
+      "inputPhoneEmpty": "* Сannot be empty",
+      "inputMessageEmpty": "* Сannot be empty",
+      "emailIsntValid": "* Isn't valid email address"
     },
     "web-development": {
       "backgroundImg": "../../images/0-background.svg",

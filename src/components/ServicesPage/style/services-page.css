@@ -218,6 +218,14 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
             line-height: normal;
             letter-spacing: 0;
             color: #fff; }
+            .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box span .error {
+              font-family: 'Montserrat', sans-serif;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: normal;
+              letter-spacing: 0;
+              color: #FF006B; }
           .services-page__popup-overlay .services-page__popup-form .services-page__popup__input-box .services-page__popup-input {
             padding: 0 10px;
             width: 100%;
@@ -252,6 +260,10 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
         .services-page__popup-overlay .services-page__popup-form .gradient-btn {
           height: 50px;
           margin-top: 20px; }
+  .services-page .popup-form {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11; }
   .services-page .header__menu-wrapper {
     display: none; }
   .services-page__menu {
@@ -406,6 +418,14 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
           background: linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%); }
           .services-page__main .services-page__description-box .services-page__description-title span:nth-child(3) {
             display: none; }
+          .services-page__main .services-page__description-box .services-page__description-title span .error {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: normal;
+            letter-spacing: 0;
+            color: #FF006B; }
         .services-page__main .services-page__description-box .services-page__description-title p {
           font-family: 'Montserrat', sans-serif;
           font-style: normal;
@@ -735,7 +755,8 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
       margin-top: 10px; } }
 @media screen and (max-height: 800px) {
   .services-page__popup-overlay .services-page__popup {
-    padding: 30px 50px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
     .services-page__popup-overlay .services-page__popup-header {
       margin-bottom: 30px; }
     .services-page__popup-overlay .services-page__popup .services-page__popup-form {

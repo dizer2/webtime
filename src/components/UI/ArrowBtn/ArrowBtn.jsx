@@ -10,6 +10,7 @@ const ArrowBtn = ({ handleClick, text, isGradient = true, customGradient, isWhit
     backgroundClip: 'text',
     color: isWhite ? "white" : 'transparent',
   };
+  
 
   return (
     <div onClick={handleClick} className={`arrow-btn arrow-btn--${isWhite ? "white" : "gradient"}`}>

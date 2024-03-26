@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import "./components/main/style.css";
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Pages from './Pages/Pages.jsx';
 
 
@@ -22,9 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
+      </HelmetProvider>
+
       <Pages currentLang={currentLang}/>
     </div>
   );
