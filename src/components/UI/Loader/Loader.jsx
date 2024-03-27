@@ -46,6 +46,8 @@ const Loader = ({ hideLoader, setHideLoader, currentPage }) => {
 
   return (
 	<>
+	<div className='loader-background'>
+
 		<motion.div
 			className="loader__bg1"
 			style={{ background: gradient  }}
@@ -76,6 +78,7 @@ const Loader = ({ hideLoader, setHideLoader, currentPage }) => {
 			>
 			{/* Вміст, який ви бажаєте анімувати */}
 		</motion.div>
+	</div>
 	<motion.div
       className={`${hideLoader ? "hidden": "loader"}`}
 	  animate={{ height: [100 + "vh", 0 + "vh"]}}

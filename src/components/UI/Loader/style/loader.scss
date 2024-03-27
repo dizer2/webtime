@@ -4,6 +4,13 @@
 	display: none !important;
 }
 
+.loader-background {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 25;
+	position: absolute;
+}
 
 .loader__bg1 {
 	width: 400px;
@@ -35,6 +42,7 @@
 	background-size: cover;
 	@include display-center(center, center);
 	background-color: $black;
+	overflow: hidden;
 
 	svg {
 		width: 300px;
@@ -56,6 +64,7 @@
 
 @media screen and(max-width: 1200px) {
 	.loader {
+		overflow-x: hidden;
 		svg {
 			width: 250px;
 			height: 250px;
@@ -111,6 +120,7 @@
 	}
 
 	.loader {
+		overflow: hidden;
 		svg {
 			width: 200px;
 			height: 200px;

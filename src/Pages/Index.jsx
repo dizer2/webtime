@@ -58,7 +58,7 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
   }, []);
 
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       {!hideLoader && <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>}
       <Suspense fallback={<div>Loading...</div>}>
         <LazyHome setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
