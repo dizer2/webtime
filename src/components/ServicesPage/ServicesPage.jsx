@@ -438,20 +438,18 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
                 </li>
               </Link>
 
-              {Object.values(t(`servicesPage.${currentPage}.menu`)).map(
-                (menuItem, index) => (
-                  <Link
-                    key={index}
-                    onClick={() => {
-                      handleScrollToSection(menuItem.goTo);
-                      menuItem.otherPage && resetHref(menuItem.goTo);
-                    }}
-                    className="services-page__menu-item"
-                  >
-                    {menuItem.nav}
-                  </Link>
-                )
-              )}
+              {Object.values(t(`servicesPage.${currentPage}.menu`)).map((menuItem, index) => (
+                    <Link
+                      key={index}
+                      onClick={() => {
+                        handleScrollToSection(menuItem.goTo);
+                        menuItem.otherPage && resetHref(menuItem.goTo);
+                      }}
+                      className="services-page__menu-item"
+                    >
+                      {menuItem.nav}
+                    </Link>
+                  ))}
             </ul>
           </nav>
 
@@ -480,25 +478,19 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
                     </div>
                   </Link>
 
-                  {Object.values(t(`servicesPage.${currentPage}.menu`)).map(
-                    (menuItem, index) => (
-                      <Link
-                        key={index + 1}
-                        onClick={() => {
-                          handleScrollToSection(menuItem.goTo);
-                          clearBodyClasses();
-                          menuItem.otherPage && resetHref(menuItem.goTo);
-                        }}
-                        className="header__menu-item"
-                      >
-                        <div className="header__menu-item__order">
-                          {(index + 2).toString().padStart(2, "0")}
-                        </div>
-                        <div className="header__menu-item__rhombus"></div>
-                        <p>{menuItem.nav}</p>
-                      </Link>
-                    )
-                  )}
+                  {Object.values(t(`servicesPage.${currentPage}.menu`)).map((menuItem, index) => (
+                    <Link
+                      key={index}
+                      onClick={() => {
+                        handleScrollToSection(menuItem.goTo);
+                        menuItem.otherPage && resetHref(menuItem.goTo);
+                      }}
+                      className="services-page__menu-item"
+                    >
+                      {menuItem.nav}
+                    </Link>
+                  ))}
+
                 </div>
               </div>
             </div>
@@ -665,22 +657,20 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
         </p>
 
         <div className="services-page__services-container">
-          {Object.values(t(`servicesPage.${currentPage}.examples`)).map(
-            (example, exampleIndex) => (
-              <div
-                key={exampleIndex}
-                onClick={() => handleScrollToSection(example.goTo)}
-                className="services-page__service"
-              >
-                <img
-                  src={example.imgPath}
-                  className="services-page__service-img"
-                  alt={`The best ${example.title} from the webtime company || Website || Design || Agency`}
-                />
-                <p className="services-page__service-title">{example.title}</p>
-              </div>
-            )
-          )}
+          {Object.values(t(`servicesPage.${currentPage}.examples`)).map((example, exampleIndex) => (
+            <div
+              key={exampleIndex}
+              onClick={() => handleScrollToSection(example.goTo)}
+              className="services-page__service"
+            >
+              <img
+                src={example.imgPath}
+                className="services-page__service-img"  
+                alt={`The best ${example.title} from the webtime company || Website || Design || Agency`}
+              />
+              <p className="services-page__service-title">{example.title}</p>
+            </div>
+          ))}
         </div>
 
         {Object.values(t(`servicesPage.${currentPage}.services`)).map(

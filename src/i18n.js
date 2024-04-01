@@ -11,7 +11,7 @@ i18n
     fallbackLng: 'en',
     // lng: 'en',
     // debug: true,
-    // returnObjects: true, // Enable returnObjects option
+    returnObjects: true, // Enable returnObjects option
 
     interpolation: {
       escapeValue: false,
