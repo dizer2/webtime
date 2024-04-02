@@ -572,6 +572,10 @@
 
 
                         .header__menu-row {
+                            position: fixed;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
                             display: flex;
 
                             .header__menu-nav {
@@ -739,7 +743,7 @@
 
 
                     .header__menu-row {
-                        width: 100%;
+                        // width: 100%;
                         display: none;
                         align-items: center;
                         justify-content: start;
