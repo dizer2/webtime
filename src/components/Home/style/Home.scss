@@ -572,11 +572,7 @@
 
 
                         .header__menu-row {
-                            width: 100%;
                             display: flex;
-                            align-items: center;
-                            justify-content: start;
-                            column-gap: 10%;
 
                             .header__menu-nav {
                                 .header__menu-list {
@@ -740,7 +736,18 @@
                     .header__menu-header--phantom {
                         height: 65px;
                     }
+
+
+                    .header__menu-row {
+                        width: 100%;
+                        display: none;
+                        align-items: center;
+                        justify-content: start;
+                        column-gap: 10%;
+                    }
                 }
+
+
 
                 .header__menu {
                     display: flex;
@@ -1010,11 +1017,14 @@
 
                 .header__wrapper {
                     .header__menu-wrapper {
+                        justify-content: center;
+                        align-items: center;
+
                         padding: 0 $main-padding;
 
                         .header__menu-row {
                             flex-direction: column;
-                            justify-content: center;
+                            // justify-content: center;
                             column-gap: 0;
 
                             .header__menu-img {
