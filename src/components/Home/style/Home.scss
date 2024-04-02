@@ -566,13 +566,12 @@
                         position: fixed;
                         top: 0%;
                         left: 0%;
-                        // transform: translate(-50%, -50%);
                         z-index: 12;
                         animation: showElement 2s 1s forwards;
 
 
                         .header__menu-row {
-
+                            width: 100%;
                             display: flex;
 
                             .header__menu-nav {

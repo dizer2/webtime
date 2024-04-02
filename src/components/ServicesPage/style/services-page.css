@@ -482,7 +482,7 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
         margin-left: 0px;
         margin-bottom: 15px;
         flex-direction: row-reverse;
-        justify-content: flex-start; }
+        justify-content: flex-end; }
         .services-page__main .services-page__description-box .services-page__description-title p {
           font-size: 18px; }
       .services-page__main .services-page__description-box .services-page__description-tags__container {
