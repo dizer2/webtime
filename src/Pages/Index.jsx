@@ -37,25 +37,25 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
   useEffect(() => {
     const handleScroll = () => {
       const aboutComponent = document.getElementById('about');
-      if (aboutComponent && window.scrollY >= aboutComponent.offsetTop) {
+      const serviceComponent = document.getElementById('services');
+      const portfolioComponent = document.getElementById('portfolio');
+
+      if (aboutComponent && !aboutScrolled && window.scrollY >= aboutComponent.offsetTop) {
         setAboutScrolled(true);
       }
-      
-      const serviceComponent = document.getElementById('services');
-      if (serviceComponent && window.scrollY >= serviceComponent.offsetTop) {
+
+      if (serviceComponent && !serviceScrolled && window.scrollY >= serviceComponent.offsetTop) {
         setServiceScrolled(true);
       }
 
-      const portfolioComponent = document.getElementById('portfolio');
-      if (portfolioComponent && window.scrollY >= portfolioComponent.offsetTop) {
+      if (portfolioComponent && !portfolioScrolled && window.scrollY >= portfolioComponent.offsetTop) {
         setPortfolioScrolled(true);
       }
-
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [aboutScrolled, serviceScrolled, portfolioScrolled]);
 
   return (
     <div style={{ overflowX: "hidden" }}>
@@ -66,11 +66,10 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
         {aboutScrolled && (
           <section className='text-animation'>
             <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
-            
             <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText2')}</ParallaxText>
           </section>
         )}
-        {aboutScrolled && (
+        {(aboutScrolled || serviceScrolled) && (
           <LazyService hideLoader={hideLoader} setHideLoader={setHideLoader}/>
         )}
         {serviceScrolled && (
