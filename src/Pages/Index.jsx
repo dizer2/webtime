@@ -2,6 +2,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import Loader from '../components/UI/Loader/Loader.jsx';
 import { ParallaxText } from '../components/UI/ParallaxProps/ParallaxProps.tsx';
+import _ from 'lodash';
 
 const LazyHome = React.lazy(() => import("../components/Home/Home.jsx"));
 const LazyAbout = React.lazy(() => import("../components/About/About.jsx"));
@@ -18,7 +19,7 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
   const [calculatorMenu, setCalculatorMenu] = useState(false);
   const [aboutScrolled, setAboutScrolled] = useState(false);
   const [serviceScrolled, setServiceScrolled] = useState(false);
-  const [portfolioScrolled, setPortfolioScrolled] = useState(false);
+  const [aboutVisible, setAboutVisible] = useState(false);
 
   useEffect(() => {
     const updateBaseVelocity = () => {
@@ -35,27 +36,26 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = _.throttle(() => {
       const aboutComponent = document.getElementById('about');
+      if (aboutComponent && window.scrollY >= aboutComponent.offsetTop) {
+        setAboutVisible(true);
+      } else {
+        setAboutVisible(false);
+      }
+
       const serviceComponent = document.getElementById('services');
-      const portfolioComponent = document.getElementById('portfolio');
-
-      if (aboutComponent && !aboutScrolled && window.scrollY >= aboutComponent.offsetTop) {
-        setAboutScrolled(true);
-      }
-
-      if (serviceComponent && !serviceScrolled && window.scrollY >= serviceComponent.offsetTop) {
+      if (serviceComponent && window.scrollY >= serviceComponent.offsetTop) {
         setServiceScrolled(true);
+      } else {
+        setServiceScrolled(false);
       }
 
-      if (portfolioComponent && !portfolioScrolled && window.scrollY >= portfolioComponent.offsetTop) {
-        setPortfolioScrolled(true);
-      }
-    };
+    }, 200); // Задайте інтервал у мілісекундах, наприклад, 200 мс
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [aboutScrolled, serviceScrolled, portfolioScrolled]);
+  }, []);
 
   return (
     <div style={{ overflowX: "hidden" }}>
@@ -63,22 +63,22 @@ const Index = ({ hideLoader, setHideLoader, currentPage }) => {
       <Suspense fallback={<div>Loading...</div>}>
         <LazyHome setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
         <LazyAbout id="about" setCalculatorMenu={setCalculatorMenu}/>
-        {aboutScrolled && (
+        {aboutVisible && (
           <section className='text-animation'>
             <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
             <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText2')}</ParallaxText>
           </section>
         )}
-        {(aboutScrolled || serviceScrolled) && (
-          <LazyService hideLoader={hideLoader} setHideLoader={setHideLoader}/>
-        )}
-        {serviceScrolled && (
-          <LazyPortfolio/>
-        )}
-        {portfolioScrolled && (
-          <LazyContacts/>
-        )}
-        <LazyFooter setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>
+        <Suspense fallback={<div>Loading...</div>}>
+          {aboutVisible && (
+            <>
+              <LazyService hideLoader={hideLoader} setHideLoader={setHideLoader} scrolled={serviceScrolled}/>
+              <LazyPortfolio/>
+              <LazyContacts/>
+              <LazyFooter setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>
+            </>
+          )}
+        </Suspense>
       </Suspense>
     </div>
   );
