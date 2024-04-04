@@ -228,7 +228,8 @@
               "error": "Enter a valid name and phone number"
             },
 
-            "btn": "Next step"
+            "btn": "Next step",
+            "backText": "Back"
           },
 
           "feedback": {

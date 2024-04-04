@@ -94,14 +94,6 @@ const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
 			if (inputValues[0] == '' || inputValues[1] == '') {
 				setWebsiteTitle(t('homePage.footer.calculator.answer4.error'));
 			} else {
-
-
-				// console.log(inputValues.length)
-				// console.log(webstieType);
-				// console.log(logo);
-				// console.log(seo);
-				// console.log("Name:", inputValues[0]); 
-				// console.log("Phone:", inputValues[1]); 
 				setCalculatorShow(false);
 				setStep(0);
 
@@ -174,6 +166,32 @@ const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
 		])
 	},  [i18n.language]);
 
+	const handleBack = () => {
+		console.log(step);
+	
+		if (step > 0) {
+			setStep(step - 1);
+		}
+
+		console.log(t('homePage.footer.calculator.answer1.title'))
+	
+		switch (step) {
+			case 1:
+				setWebsiteTitle(t('homePage.footer.calculator.answer1.title'));
+				break;
+			case 2:
+				setWebsiteTitle(t('homePage.footer.calculator.answer2.title'));
+				break;
+			case 3:
+				setWebsiteTitle(t('homePage.footer.calculator.answer3.title'));
+				break;
+			default:
+				break;
+		}
+	
+		console.log(step);
+	};
+	
 
 	return (
 		<div className={calculatorShow ? 'calculator-popup calculator-popup--open' : 'calculator-popup'}>
@@ -309,12 +327,17 @@ const Calculator = ({ setPopupClass, calculatorShow, setCalculatorShow }) => {
 				</div>
 
 
-				<div className="calculator-popup__container-buttons" onClick={handleStep}>
+				<div className="calculator-popup__container-buttons" >
+					<div onClick={handleStep}>
+
 					<GradientBtn
 						text={t('homePage.footer.calculator.btn')}
 						width="100%"
 						height="50"
 					/>
+					</div>
+				<p onClick={handleBack} className='calculator-popup__container-back'>{t('homePage.footer.calculator.backText')}</p>
+
 				</div>
 			</div>
 
