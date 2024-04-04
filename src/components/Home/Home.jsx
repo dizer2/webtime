@@ -28,8 +28,6 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
   let path = window.location.href;
 
 
-  // const [inHomeSection, setInHomeSection] = useState(true);
-
   // Cursor Animation
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -250,28 +248,21 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
         </div>
       </div>
 
-        {
-          devToolsOpen ?
-          ""
-          :
-          <div
-            style={{ top: mousePosition.y, left: mousePosition.x }}
-            className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" } ${isPreloaderShow ? " _hide-with-preloader" : ""}`}
-          ></div>
-        }
-
-
-        {
-          devToolsOpen ?
-          ""
-          :
-          <motion.div
-            className={`cursor ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" } ${isPreloaderShow ? " _hide-with-preloader" : ""}`}
-            variants={variants}
-            animate={cursorVariant}
-          />
-        }
-
+      {
+        !devToolsOpen && (
+          <>
+            <div
+              style={{ top: mousePosition.y, left: mousePosition.x }}
+              className={`cursor-mini ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" } ${isPreloaderShow ? " _hide-with-preloader" : ""}`}
+            ></div>
+            <motion.div
+              className={`cursor ${cursorVariant === "hide" ? "_hide" : ""} ${isMobile ? "_hide" : "" } ${isPreloaderShow ? " _hide-with-preloader" : ""}`}
+              variants={variants}
+              animate={cursorVariant}
+            />
+          </>
+        )
+      }
 
 
       <div className="home__interactive-element home__interactive-element--1"></div>

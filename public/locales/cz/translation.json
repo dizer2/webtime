@@ -74,7 +74,7 @@
             },
     
             "columnText1": "Tvorba originálních a kreativních webových stránek",
-            "columnText2": "Vytváření interaktivních designů plakátů, vizitek, billboardů",
+            "columnText2": "Vytváření interaktivních designů plakátů, vizitek a billboardů",
             "columnText3": "Zvýšení prodeje díky zvýšení konverze",
     
             "banner1": "NYNÍ O PODNIKÁNÍ",
@@ -192,7 +192,7 @@
         },
   
         "footer": {
-            "description": "Webtime - kde bude váš web zářit, vaše podnikání poroste a úspěch bude prvořadý. Kontaktujte nás ještě dnes, pojďme si zahrát vaše sny.",
+            "description": "Webtime - kde bude váš web zářit, vaše podnikání poroste a úspěch bude prvořadý. Kontaktujte nás ještě dnes, pojďme splnit vaše sny.",
             "navigation": "Navigace",
             "calculator": {
                 "title": "Vypočítat náklady",
@@ -367,7 +367,7 @@
                     "tag2": "Vysoký provoz",
                     "tag3": "Pokročilé služby",
                     "tag4": "Vysoká zátěž",
-                    "description": "Pro projekty, které vyžadují škálovatelnost a vysoký výkon, je naše vývojářský tým zručný ve vytváření vysoko zatížených služeb a portálů. Využíváme všestranné rámce pro zvládání složitých funkcionalit, zajistíme tak plynulý uživatelský zážitek i při vysokém provozu."
+                    "description": "Pro projekty, které vyžadují škálovatelnost a vysoký výkon, je náš vývojářský tým zručný ve vytváření vysoko zatížených služeb a portálů. Využíváme všestranné rámce pro zvládání složitých funkcionalit, zajistíme tak plynulý uživatelský zážitek i při vysokém provozu."
                 },
                 "block5": {
                     "title": "WOW weby",
@@ -445,7 +445,7 @@
                     "tag2": "Vícestránkové",
                     "tag3": "Pohodlí",
                     "tag4": "Umění",
-                    "description": "Odemkněte plný potenciál vaší online přítomnosti s našimi moderními webovými designovými službami. Náš odborný tým vytváří vizuálně ohromující a uživatelsky přívětivé webové stránky přizpůsobené k zvýšení vaší značky. Od intuitivní navigace po poutavou estetiku zajistíme bezproblémový uživatelský zážitek, který zanechá trvalý dojem. Proměňte svou digitální identitu a vynikněte v rušné online krajině. Zvýšte svůj obchod s naším odborným webovým designem – tam, kde inovace potkává dopad."
+                    "description": "Odemkněte plný potenciál vaší online přítomnosti s našimi moderními webovými designovými službami. Náš odborný tým vytváří vizuálně ohromující a uživatelsky přívětivé webové stránky přizpůsobené k zvýšení vaší značky. Od intuitivní navigace po poutavou estetiku zajistíme bezproblémový uživatelský zážitek, který zanechá trvalý dojem. Proměňte svou digitální identitu a vynikněte v rušné online krajině. Zvyšte svůj obchod s naším odborným webovým designem – tam, kde inovace potkává dopad."
                 },
                 "block2": {
                     "title": "Web Redesign",
@@ -454,7 +454,7 @@
                     "tag2": "Nové technologie",
                     "tag3": "Vylepšení",
                     "tag4": "Aktualizace",
-                    "description": "Zažijte digitální proměnu s našimi službami redesignu. Ať už obnovujete svou stávající webovou stránku nebo procházíte úplnou transformací, náš zkušený tým zvyšuje vizuální atraktivitu, funkčnost a zapojení uživatelů. Zvýšte online přítomnost své značky, zaujměte své publikum a držte krok v neustále se měnící digitální krajině. Uvolněte sílu redesignu a předefinujte úspěch ve virtuálním světě – kde se setkává evoluce vaší značky s excelencí."
+                    "description": "Zažijte digitální proměnu s našimi službami redesignu. Ať už obnovujete svou stávající webovou stránku nebo procházíte úplnou transformací, náš zkušený tým zvyšuje vizuální atraktivitu, funkčnost a zapojení uživatelů. Zvyšte online přítomnost své značky, zaujměte své publikum a držte krok v neustále se měnící digitální krajině. Uvolněte sílu redesignu a předefinujte úspěch ve virtuálním světě – kde se setkává evoluce vaší značky s excelencí."
                 },
                 "block3": {
                     "title": "Loga",
@@ -498,7 +498,7 @@
                 }
             },
             "title": "Plakáty / Billboardy",
-            "subtitle": "Zvýšte přítomnost vaší značky s našimi službami návrhu plakátů a reklamních tabulí. Naši odborní designéři vytvářejí vizuálně úchvatné plakáty, které oslovují na menší úrovni, a odvážné reklamní tabule, které dominují městskému panoramatu. Od výrazných obrazů po poutavé zprávy zaručujeme, že vaše značka vynikne jak v intimních, tak ve velkých prostorech. Učiňte silné prohlášení, vzbudťe zájem a zanechte trvalý dojem s naší odborností v návrhu plakátů a reklamních tabulí. Kde kreativita potkává viditelnost, proměňujeme vaše myšlenky v vizuální spektákly, které si zaslouží pozornost.",
+            "subtitle": "Zvyšte přítomnost vaší značky s našimi službami návrhu plakátů a reklamních tabulí. Naši odborní designéři vytvářejí vizuálně úchvatné plakáty, které oslovují na menší úrovni, a odvážné reklamní tabule, které dominují městskému panoramatu. Od výrazných obrazů po poutavé zprávy zaručujeme, že vaše značka vynikne jak v intimních, tak ve velkých prostorech. Učiňte silné prohlášení, vzbudťe zájem a zanechte trvalý dojem s naší odborností v návrhu plakátů a reklamních tabulí. Kde kreativita potkává viditelnost, proměňujeme vaše myšlenky v vizuální spektákly, které si zaslouží pozornost.",
             "examples": {
                 "example1": {
                     "title": "Plakáty",
@@ -519,7 +519,7 @@
                     "tag2": "Vícebarevné",
                     "tag3": "Událost",
                     "tag4": "Různé velikosti",
-                    "description": "Přetvořte svou zprávu v vizuální mistrovský kousek s našimi službami návrhu plakátů. Naši zkušení designéři vytvářejí oku lahodící plakáty, které oslovují publikum a zanechávají trvalý dojem. Od výrazných obrazů po poutavé texty zaručujeme, že váš plakát vynikne v jakémkoli prostoru. Zlepšete své propagační úsilí, vzbudťe zvědavost a učiňte prohlášení s naší odborností v návrhu plakátů. Uvolněte sílu vizuální komunikace a obrate hlavy plakáty, které mluví hlasitěji než slova."
+                    "description": "Přetvořte svou zprávu v vizuální mistrovský kousek s našimi službami návrhu plakátů. Naši zkušení designéři vytvářejí oku lahodící plakáty, které oslovují publikum a zanechávají trvalý dojem. Od výrazných obrazů po poutavé texty zaručujeme, že váš plakát vynikne v jakémkoli prostoru. Zlepšete své propagační úsilí, vzbudťe zvědavost a učiňte prohlášení s naší odborností v návrhu plakátů. Uvolněte sílu vizuální komunikace a obraťte hlavy plakáty, které mluví hlasitěji než slova."
                 },
                 "block2": {
                     "title": "Billboardy",
@@ -585,7 +585,7 @@
                     "tag2": "Pohyblivost",
                     "tag3": "Vizuální dotek",
                     "tag4": "Vícestránkový",
-                    "description": "Ponořte své publikum do mobilně přívětivého zážitku s našimi službami Mobilního designu. Náš odborný tým se specializuje na vytváření intuitivních a vizuálně přitažlivých mobilních rozhraní. Od responsivních rozložení po uživatelsky orientovanou navigaci zajišťujeme, že vaše značka září na každém zařízení. Zvýšte svůj digitální dosah, zapojte uživatele bez námahy a udržujte se v čele v mobilním světě. Prozkoumejte umění mobilního designu s námi - kde inovace splňuje uživatelskou spokojenost a vytváří trvalý dojem na cestách."
+                    "description": "Ponořte své publikum do mobilně přívětivého zážitku s našimi službami Mobilního designu. Náš odborný tým se specializuje na vytváření intuitivních a vizuálně přitažlivých mobilních rozhraní. Od responsivních rozložení po uživatelsky orientovanou navigaci zajišťujeme, že vaše značka září na každém zařízení. Z   vyšte svůj digitální dosah, zapojte uživatele bez námahy a udržujte se v čele v mobilním světě. Prozkoumejte umění mobilního designu s námi - kde inovace splňuje uživatelskou spokojenost a vytváří trvalý dojem na cestách."
                 }
             }
         },
@@ -620,7 +620,7 @@
                 }
             },
             "title": "Vizitky / Letáky",
-            "subtitle": "Vytvořte trvalé spojení s našimi službami designu návštěvních karet a letáků. Naši odborní designéři vytvářejí vizitky, které ztělesňují profesionalitu, a letáky, které stručně vyprávějí příběh vaší značky. Od výrazných prvních dojmů po komplexní komunikaci značky zajišťují naše designy, že se vynoříte. Zvýšte své síťování a propagační strategie s naší expertizou, proměňte běžné kusy na silné aktiva značky. Učiňte každou výměnu nezapomenutelnou - kde vizitky a letáky se stávají ambasadory identity vaší značky.",
+            "subtitle": "Vytvořte trvalé spojení s našimi službami designu návštěvních karet a letáků. Naši odborní designéři vytvářejí vizitky, které ztělesňují profesionalitu, a letáky, které stručně vyprávějí příběh vaší značky. Od výrazných prvních dojmů po komplexní komunikaci značky zajišťují naše designy, že se vynoříte. Zvyšte své síťování a propagační strategie s naší expertizou, proměňte běžné kusy na silné aktiva značky. Učiňte každou výměnu nezapomenutelnou - kde vizitky a letáky se stávají ambasadory identity vaší značky.",
             "examples": {
                 "example1": {
                     "title": "Vizitky",
@@ -641,7 +641,7 @@
                     "tag2": "Stylová karta",
                     "tag3": "Lakonická karta",
                     "tag4": "Efektní karta",
-                    "description": "Udělejte dojem s našimi službami designu návštěvních karet. Naše tým se specializuje na tvorbu vizitek, které zanechávají trvalý dojem. Od elegantní profesionality po kreativní jedinečnost přizpůsobujeme designy, které odrážejí identitu vaší značky. Zvýšte svou síťovací hru a udělejte každé představení početné. Objevte umění kompaktní elegance s naší expertizou v designu návštěvních karet - kde každá karta je prohlášením o vynikající kvalitě vaší značky."
+                    "description": "Udělejte dojem s našimi službami designu návštěvních karet. Naše tým se specializuje na tvorbu vizitek, které zanechávají trvalý dojem. Od elegantní profesionality po kreativní jedinečnost přizpůsobujeme designy, které odrážejí identitu vaší značky. Zvyšte svou síťovací hru a udělejte každé představení početné. Objevte umění kompaktní elegance s naší expertizou v designu návštěvních karet - kde každá karta je prohlášením o vynikající kvalitě vaší značky."
                 },
                 "block2": {
                     "title": "Letáky",
@@ -650,7 +650,7 @@
                     "tag2": "Informativní",
                     "tag3": "Grafický obsah",
                     "tag4": "Stručný",
-                    "description": "Vyprávějte příběh vaší značky stručně s našimi službami designu letáků. Naši odborní designéři tvoří letáky, které přitahují pozornost a efektivně komunikují vaši zprávu. Od poutavých vizuálních prvků po stručné kopie zajistíme, že vaše letáky vyniknou v davu. Zvýšte své propagační úsilí, informujte svou cílovou skupinu a udělejte trvalý dojem s naší expertizou v designu letáků. Objevte sílu grafického vyprávění a proměňte každý kus v poutavý příběh, který rezonuje s vaším cílovým publikem."
+                    "description": "Vyprávějte příběh vaší značky stručně s našimi službami designu letáků. Naši odborní designéři tvoří letáky, které přitahují pozornost a efektivně komunikují vaši zprávu. Od poutavých vizuálních prvků po stručné kopie zajistíme, že vaše letáky vyniknou v davu. Zvyšte své propagační úsilí, informujte svou cílovou skupinu a udělejte trvalý dojem s naší expertizou v designu letáků. Objevte sílu grafického vyprávění a proměňte každý kus v poutavý příběh, který rezonuje s vaším cílovým publikem."
                 }
             }
         }
