@@ -4,11 +4,11 @@ import "./components/main/style.css";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Pages from './Pages/Pages.jsx';
 
-import appleTouchIcon from "./favicon/apple-touch-icon.png"
-import favicon32x32 from "./favicon/favicon-32x32.png"
-import favicon16x16 from "./favicon/favicon-16x16.png"
-import webmanifest from "./favicon/site.webmanifest"
-import safariPinnedTab from "./favicon/safari-pinned-tab.svg"
+// import appleTouchIcon from "./favicon/apple-touch-icon.png"
+// import favicon32x32 from "./favicon/favicon-32x32.png"
+// import favicon16x16 from "./favicon/favicon-16x16.png"
+// import webmanifest from "./favicon/site.webmanifest"
+// import safariPinnedTab from "./favicon/safari-pinned-tab.svg"
 
 
 function App() {
