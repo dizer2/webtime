@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <HelmetProvider>
+      {/* <HelmetProvider>
         <Helmet>
           <title>{title}</title>
           <meta name="description" content="WebTime Studio - Creating Unique Websites with Versatile Frameworks and Unparalleled Experiences"/>
@@ -41,7 +41,7 @@ function App() {
           <link rel="mask-icon" href={safariPinnedTab} color="#5bbad5"/>
           <meta name="msapplication-TileColor" content="#2b5797"/>
         </Helmet>
-      </HelmetProvider>
+      </HelmetProvider> */}
 
       <Pages currentLang={currentLang}/>
     </div>
