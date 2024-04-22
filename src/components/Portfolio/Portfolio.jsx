@@ -73,25 +73,25 @@ const Portfolio = () => {
         >
           <SwiperSlide className="portfolio__card"> 
             <div className="portfolio__card-img portfolio__card-img1">
-              <img src={img1} alt="img" />
+              <img src={img1} alt="webtime" />
             </div>
           </SwiperSlide>
 
           <SwiperSlide className="portfolio__card"> 
             <div className="portfolio__card-img portfolio__card-img2">
-              <img src={img2} alt="img" />
+              <img src={img2} alt="webtime" />
             </div>
           </SwiperSlide>
 
           <SwiperSlide className="portfolio__card"> 
             <div className="portfolio__card-img portfolio__card-img3">
-              <img src={img3} alt="img" />
+              <img src={img3} alt="webtime" />
             </div>
           </SwiperSlide>
 
           <SwiperSlide className="portfolio__card"> 
             <div className="portfolio__card-img portfolio__card-img4">
-              <img src={img4} alt="img" />
+              <img src={img4} alt="webtime" />
             </div>
           </SwiperSlide>
 

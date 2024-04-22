@@ -5,56 +5,56 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://webtime-cz.netlify.app/cz</loc>
+    <loc>https://webtime.cz/cz</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://webtime-cz.netlify.app/cz/web-development</loc>
+    <loc>https://webtime.cz/cz/web-development</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://webtime-cz.netlify.app/cz/design</loc>
+    <loc>https://webtime.cz/cz/design</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://webtime-cz.netlify.app/cz/mobile-design</loc>
+    <loc>https://webtime.cz/cz/mobile-design</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://webtime-cz.netlify.app/cz/business-card-leaflets</loc>
+    <loc>https://webtime.cz/cz/business-card-leaflets</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://webtime-cz.netlify.app/cz/poster-billboards</loc>
+    <loc>https://webtime.cz/cz/poster-billboards</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://webtime-cz.netlify.app/ua</loc>
+    <loc>https://webtime.cz/ua</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://webtime-cz.netlify.app/en</loc>
+    <loc>https://webtime.cz/en</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
