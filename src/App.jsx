@@ -25,6 +25,9 @@ function App() {
       <HelmetProvider>
         <Helmet>
           <title>{title}</title>
+          <meta name="description" content="Webtime Studio - Creating Unique Websites with Versatile Frameworks and Unparalleled Experiences"/>
+          <meta name="keywords" content="Webtime, Webové stránky, Webtime Studio, websites, web development, UX, UI, technology, Czech Republic"/>
+          <meta name="author" content="Webtime Studio"/>
         </Helmet>
       </HelmetProvider>
 
