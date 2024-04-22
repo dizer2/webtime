@@ -266,13 +266,13 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
       )}
 
 
-      <HelmetProvider>
+      {/* <HelmetProvider>
         <Helmet>
           <title>Webtime Studio - {t(`servicesPage.${currentPage}.title`)}</title>
           <meta name="description" content={t(`servicesPage.${currentPage}.subtitle`)} />
           <meta name="keywords" content="Webtime, Webové stránky, Webtime Studio, websites, web development, UX, UI, technology, Czech Republic" />
         </Helmet>
-      </HelmetProvider>
+      </HelmetProvider> */}
 
       <div className="header__menu-overlay"></div>
 
