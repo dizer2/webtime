@@ -1,6 +1,6 @@
 // Pages.js
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, HashRouter } from 'react-router-dom';
 import Index from './Index';
 import ServicesPage from '../components/ServicesPage/ServicesPage';
 import { useTranslation } from 'react-i18next';

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 * {
@@ -50,6 +51,14 @@ body {
 
 .App {
   overflow-x: hidden; }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  /* змінюйте duration та timing function на ваш вибір */ }
+
+.fade-in.visible {
+  opacity: 1; }
 
 .rolling__block {
   position: relative;
@@ -325,7 +334,7 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
     .services-page__menu .header__menu {
       display: none; }
   .services-page__main {
-    padding: 30px 50px 50px 50px;
+    padding: 30px 50px 20px 50px;
     width: 78%;
     background-position: top; }
     .services-page__main .services-page__user-location, .services-page__main .services-page__user-location a {
@@ -462,6 +471,15 @@ body._business-card-leaflets .services-page__main .services-page__title::before 
         line-height: normal;
         letter-spacing: 0;
         color: #fff; }
+    .services-page__main .services-page__footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: normal;
+      letter-spacing: 0;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center; }
 
 @media screen and (max-width: 1200px) {
   .services-page__menu {
