@@ -12,6 +12,7 @@ import emailjs from '@emailjs/browser';
 import Loader from "../UI/Loader/Loader";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Popup from "../UI/Popup/Popup";
+import Footer from "../Footer/Footer";
 
 const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
     const { t } = useTranslation();
@@ -240,7 +241,8 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
       );
   };
 
-    
+
+	const currentYear = new Date().getFullYear();
 
 
   return (
@@ -738,6 +740,10 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
             </div>
           )
         )}
+
+        <footer className="services-page__footer">
+			    <p className="services-page__footer-text">© <span id='year'>{currentYear}</span> {t('homePage.footer.copyright')}</p>
+        </footer>
       </div>
     </section>
   );

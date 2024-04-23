@@ -352,7 +352,7 @@ body._business-card-leaflets {
     }
 
     &__main {
-        padding: 30px 50px 50px 50px;
+        padding: 30px 50px 20px 50px;
         width: 78%;
         background-position: top;
 
@@ -372,7 +372,6 @@ body._business-card-leaflets {
                 transition: .4s;
             }
         }
-
 
         .services-page__title {
             position: relative;
@@ -486,6 +485,13 @@ body._business-card-leaflets {
                 @include font($white, 16px, 400, normal, 0);
             }
         }
+
+        .services-page__footer {
+            &-text {
+                @include font(rgba(255, 255, 255, 0.6), 14px, 500, normal, 0);
+                text-align: center;
+            }
+        }   
     }
 }
 
