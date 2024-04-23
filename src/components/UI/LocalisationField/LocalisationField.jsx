@@ -34,12 +34,15 @@ function LocalisationField({ gradient, setHideLoader }) {
   }, [currentLanguage]);
 
   const handleLangChange = (lang) => {
-    const newPath = pathname.replace(`/${currentLanguage}`, `/${lang}`);
-    setCurrentLanguage(lang);
-    changeLanguage(lang);
+    // Преобразуем en-US в en
+    const langToSet = lang === 'en-US' ? 'en' : lang;
+    // Обновляем путь, заменяя текущий язык на новый
+    const newPath = pathname.replace(`/${currentLanguage}`, `/${langToSet}`);
+    setCurrentLanguage(langToSet); // Устанавливаем новый язык
+    changeLanguage(langToSet); // Меняем язык в i18next
     localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
-    navigate(newPath);
-
+    navigate(newPath); // Обновляем путь
+  
     setHideLoader(false);
     document.body.classList.add("_body-hidden"); 
   };
