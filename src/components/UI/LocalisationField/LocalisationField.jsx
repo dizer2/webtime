@@ -37,11 +37,11 @@ function LocalisationField({ gradient, setHideLoader }) {
     // Преобразуем en-US в en
     // const langToSet = lang === 'en-US' ? 'en' : lang;
     // Обновляем путь, заменяя текущий язык на новый
-    const newPath = pathname.replace(`/${currentLanguage}`, `/${langToSet}`);
-    setCurrentLanguage(langToSet); // Устанавливаем новый язык
-    changeLanguage(langToSet); // Меняем язык в i18next
-    localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
-    navigate(newPath); // Обновляем путь
+    // const newPath = pathname.replace(`/${currentLanguage}`, `/${langToSet}`);
+    setCurrentLanguage(lang); // Устанавливаем новый язык
+    changeLanguage(lang); // Меняем язык в i18next
+    localStorage.setItem("lastVisitedPath", lang); // Сохраняем новый адрес
+    navigate(lang); // Обновляем путь
   
     setHideLoader(false);
     document.body.classList.add("_body-hidden"); 
