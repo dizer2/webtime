@@ -6,6 +6,12 @@ Disallow: /cz/
 Disallow: /ua/
 Disallow: /en/
 Disallow: /en-US/
+Disallow: /*?*
+Disallow: /*?utm_source=*
+Disallow: /*?utm_medium=*
+Disallow: /*?utm_campaign=*
+Disallow: /*?utm_term=*
+Disallow: /*?utm_content=*
 
 
 Sitemap: https://webtime.cz/sitemap.xml
