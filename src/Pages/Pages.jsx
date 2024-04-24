@@ -21,7 +21,7 @@ const Pages = () => {
       const langParam = window.location.pathname.split('/')[1]; // Получаем языковой параметр из URL
       let language = currentLang;
 
-      if (['cz', 'ua', 'en'].includes(langParam)) { // Проверяем, что параметр является допустимым языком
+      if (['cz', 'ua',].includes(langParam)) { // Проверяем, что параметр является допустимым языком
         language = langParam;
       }
 

@@ -22,7 +22,7 @@ function LocalisationField({ gradient, setHideLoader }) {
     line: { background: gradient }
   }
 
-  const languages = ['en', 'ua', 'cz'];
+  const languages = ['ua', 'cz'];
   const defaultLanguage = 'cz';
   const [currentLanguage, setCurrentLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("i18nextLng");
@@ -35,7 +35,7 @@ function LocalisationField({ gradient, setHideLoader }) {
 
   const handleLangChange = (lang) => {
     // Преобразуем en-US в en
-    const langToSet = lang === 'en-US' ? 'en' : lang;
+    // const langToSet = lang === 'en-US' ? 'en' : lang;
     // Обновляем путь, заменяя текущий язык на новый
     const newPath = pathname.replace(`/${currentLanguage}`, `/${langToSet}`);
     setCurrentLanguage(langToSet); // Устанавливаем новый язык
