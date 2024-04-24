@@ -5,6 +5,7 @@ Allow: /
 Disallow: /cz/
 Disallow: /ua/
 Disallow: /en/
+Disallow: /en-US/
 
 
 Sitemap: https://webtime.cz/sitemap.xml
