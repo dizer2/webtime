@@ -1,23 +1,20 @@
-/* / 301
+# Перенаправление для главной страницы на языковую версию по умолчанию (например, английскую)
+/     /  301
 
+# Перенаправление для всех страниц услуг на страницу услуг с языковым параметром
+/web-development/*    /:lang/web-development/  301
+/design/*             /:lang/design/           301
+/poster-billboards/*  /:lang/poster-billboards/ 301
+/mobile-design/*      /:lang/mobile-design/     301
+/business-card-leaflets/*  /:lang/business-card-leaflets/ 301
 
-; # Перенаправление для главной страницы на языковую версию по умолчанию (например, английскую)
-; /     /cz  301
+/web-development/*    /en-US/web-development/  301
+/design/*             /en-US/design/           301
+/poster-billboards/*  /en-US/poster-billboards/ 301
+/mobile-design/*      /en-US/mobile-design/     301
+/business-card-leaflets/*  /en-US/business-card-leaflets/ 301
 
-; # Перенаправление для всех страниц услуг на страницу услуг с языковым параметром
-; /web-development/*    /:lang/web-development/  301
-; /design/*             /:lang/design/           301
-; /poster-billboards/*  /:lang/poster-billboards/ 301
-; /mobile-design/*      /:lang/mobile-design/     301
-; /business-card-leaflets/*  /:lang/business-card-leaflets/ 301
-
-; /web-development/*    /en-US/web-development/  301
-; /design/*             /en-US/design/           301
-; /poster-billboards/*  /en-US/poster-billboards/ 301
-; /mobile-design/*      /en-US/mobile-design/     301
-; /business-card-leaflets/*  /en-US/business-card-leaflets/ 301
-
-; # Если страница не найдена, перенаправляем на страницу с ошибкой 404
-; /*    /404.html   404
+# Если страница не найдена, перенаправляем на страницу с ошибкой 404
+/*    /404.html   404
 
 
