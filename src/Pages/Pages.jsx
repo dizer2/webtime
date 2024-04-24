@@ -30,7 +30,6 @@ const Pages = () => {
     };
 
     changeLanguageBasedOnRoute();
-
   }, [i18n]);
 
 
