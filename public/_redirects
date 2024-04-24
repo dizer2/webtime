@@ -8,11 +8,11 @@
 /mobile-design/*      /:lang/mobile-design/     301
 /business-card-leaflets/*  /:lang/business-card-leaflets/ 301
 
-/en-US/web-development/*    /:lang/web-development/  301
-/en-US/design/*             /:lang/design/           301
-/en-US/poster-billboards/*  /:lang/poster-billboards/ 301
-/en-US/mobile-design/*      /:lang/mobile-design/     301
-/en-US/business-card-leaflets/*  /:lang/business-card-leaflets/ 301
+/en-US/web-development/*    /:lang/web-development/  301! Language=en
+/en-US/design/*             /:lang/design/           301! Language=en
+/en-US/poster-billboards/*  /:lang/poster-billboards/ 301! Language=en
+/en-US/mobile-design/*      /:lang/mobile-design/     301! Language=en
+/en-US/business-card-leaflets/*  /:lang/business-card-leaflets/ 301! Language=en
 
 # Если страница не найдена, перенаправляем на страницу с ошибкой 404
 /*    /404.html   404

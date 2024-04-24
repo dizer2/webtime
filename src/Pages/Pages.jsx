@@ -21,7 +21,7 @@ const Pages = () => {
       const langParam = window.location.pathname.split('/')[1]; // Получаем языковой параметр из URL
       let language = currentLang;
 
-      if (['cz', 'ua',].includes(langParam)) { // Проверяем, что параметр является допустимым языком
+      if (['cz', 'ua', 'en'].includes(langParam)) { // Проверяем, что параметр является допустимым языком
         language = langParam;
       }
 
@@ -58,8 +58,8 @@ const Pages = () => {
           <Route path="/en-US/design/" element={<ServicesPage  currentPage="design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
           <Route path="/en-US/poster-billboards/" element={<ServicesPage currentPage="poster-billboards" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
           <Route path="/en-US/mobile-design/" element={<ServicesPage currentPage="mobile-design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
-          <Route path="/en-US/business-card-leaflets/" element={<ServicesPage currentPage="business-card-leaflets" hideLoader={hideLoader} setHideLoader={setHideLoader} />} /> */}
-          
+          <Route path="/en-US/business-card-leaflets/" element={<ServicesPage currentPage="business-card-leaflets" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+           */}
           {/* Page not found */}
           <Route path="*" element={<PageNotFound />} />
         </Routes>

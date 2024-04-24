@@ -22,7 +22,7 @@ function LocalisationField({ gradient, setHideLoader }) {
     line: { background: gradient }
   }
 
-  const languages = ['ua', 'cz'];
+  const languages = ['en', 'ua', 'cz'];
   const defaultLanguage = 'cz';
   const [currentLanguage, setCurrentLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("i18nextLng");
@@ -35,13 +35,13 @@ function LocalisationField({ gradient, setHideLoader }) {
 
   const handleLangChange = (lang) => {
     // Преобразуем en-US в en
-    // const langToSet = lang === 'en-US' ? 'en' : lang;
+    const langToSet = lang === 'en-US' ? 'en' : lang;
     // Обновляем путь, заменяя текущий язык на новый
-    // const newPath = pathname.replace(`/${currentLanguage}`, `/${langToSet}`);
-    setCurrentLanguage(lang); // Устанавливаем новый язык
-    changeLanguage(lang); // Меняем язык в i18next
-    localStorage.setItem("lastVisitedPath", lang); // Сохраняем новый адрес
-    navigate(lang); // Обновляем путь
+    const newPath = pathname.replace(`/${currentLanguage}`, `/${langToSet}`);
+    setCurrentLanguage(langToSet); // Устанавливаем новый язык
+    changeLanguage(langToSet); // Меняем язык в i18next
+    localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
+    navigate(newPath); // Обновляем путь
   
     setHideLoader(false);
     document.body.classList.add("_body-hidden"); 
@@ -50,11 +50,9 @@ function LocalisationField({ gradient, setHideLoader }) {
 
   return (
     <div className='localisation-field'>
-      {/* <p className='localisation-field__language' onClick={() => { handleLangChange(remainingLanguages[0]) }} style={styles.text}>{remainingLanguages[0].toUpperCase()}</p> */}
-      <p className='localisation-field__language'>UA</p>
+      <p className='localisation-field__language' onClick={() => { handleLangChange(remainingLanguages[0]) }} style={styles.text}>{remainingLanguages[0].toUpperCase()}</p>
       <div className="localisation-field__line" style={styles.line}></div>
-      <p className='localisation-field__language'>CZ</p>
-      {/* <p className='localisation-field__language' onClick={() => { handleLangChange(remainingLanguages[1]) }} style={styles.text}>{remainingLanguages[1].toUpperCase()}</p> */}
+      <p className='localisation-field__language' onClick={() => { handleLangChange(remainingLanguages[1]) }} style={styles.text}>{remainingLanguages[1].toUpperCase()}</p>
     </div>
   );
 }
