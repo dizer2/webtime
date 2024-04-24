@@ -1,21 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /cz/web-development
-Allow: /cz/design
-Allow: /cz/poster-billboards
-Allow: /cz/business-card-leaflets
-Allow: /cz/poster-billboards
+Allow: /
 
-Allow: /ua/web-development
-Allow: /ua/design
-Allow: /ua/poster-billboards
-Allow: /ua/business-card-leaflets
-Allow: /ua/poster-billboards
+Disallow: /cz/
+Disallow: /ua/
+Disallow: /en/
 
-Allow: /en/web-development
-Allow: /en/design
-Allow: /en/poster-billboards
-Allow: /en/business-card-leaflets
-Allow: /en/poster-billboards
 
 Sitemap: https://webtime.cz/sitemap.xml
