@@ -34,22 +34,19 @@ function LocalisationField({ gradient, setHideLoader }) {
   }, [currentLanguage]);
 
   const handleLangChange = (lang) => {
-    // Преобразуем en-US в en
-    const langToSet = lang === 'en-US' ? 'en' : lang;
-    // Получаем текущий путь без языкового префикса
-    const newPath = pathname.replace(`/${currentLanguage}`, '');
-    // Формируем новый путь с новым языковым префиксом
-    const newFullPath = `/${langToSet}${newPath}`;
-    setCurrentLanguage(langToSet); // Устанавливаем новый язык
-    changeLanguage(langToSet); // Меняем язык в i18next
-    localStorage.setItem("lastVisitedPath", newFullPath); // Сохраняем новый адрес
-    navigate(newFullPath); // Обновляем путь
-  
+    const newPath = pathname.replace(`/${currentLanguage}`, `/${lang}`);
+    setCurrentLanguage(lang);
+    changeLanguage(lang);
+    localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
+    navigate(newPath);
+
     setHideLoader(false);
-    document.body.classList.add("_body-hidden");
+    document.body.classList.add("_body-hidden"); 
   };
-  
   const remainingLanguages = languages.filter(lang => lang !== currentLanguage);
+
+
+
 
   return (
     <div className='localisation-field'>
