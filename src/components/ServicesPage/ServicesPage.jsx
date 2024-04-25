@@ -512,7 +512,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
               <div className="social__media-wrapper">
                 <SocialMedia
                   nameOfMedia="whats-up"
-                  linkPath="#!"
+                  linkPath="https://wa.me/+420773203868"
                   icon={
                     <svg
                       width="50"
@@ -574,7 +574,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
 
                 <SocialMedia
                   nameOfMedia="telegram"
-                  linkPath="#!"
+                  linkPath="https://t.me/webtime_cz"
                   icon={
                     <svg
                       width="50"

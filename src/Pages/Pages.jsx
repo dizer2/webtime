@@ -18,20 +18,20 @@ const Pages = () => {
 
   useEffect(() => {
     const changeLanguageBasedOnRoute = () => {
-      const langParam = window.location.pathname.split('/')[1]; // Получаем языковой параметр из URL
+      const langParam = window.location.pathname.split('/')[1]; 
       let language = currentLang;
-
-      if (['cz', 'ua', 'en'].includes(langParam)) { // Проверяем, что параметр является допустимым языком
+  
+      if (['cz', 'ua', 'en'].includes(langParam)) { 
         language = langParam;
       }
-
+  
       i18n.changeLanguage(language);
       setCurrentLang(language);
     };
-
+  
     changeLanguageBasedOnRoute();
-  }, [i18n]);
-
+  }, [currentLang, i18n]);
+  
 
 
   return (

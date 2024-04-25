@@ -14,10 +14,6 @@ i18n
   .init({
     fallbackLng: storedLanguage || 'cz', // Use the stored language or fallback to 'en'
     debug: false,
-    detection: {
-      order: ['queryString', 'cookie'],
-      cache: ['cookie'],
-    },
     returnObjects: true,
     interpolation: {
       escapeValue: false,
