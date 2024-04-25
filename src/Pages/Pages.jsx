@@ -21,7 +21,7 @@ const Pages = () => {
       const langParam = window.location.pathname.split('/')[1]; 
       let language = currentLang;
   
-      if (['cz', 'ua', 'en'].includes(langParam)) { 
+      if (['cz', 'en', 'ua'].includes(langParam)) { 
         language = langParam;
       }
   
@@ -39,7 +39,7 @@ const Pages = () => {
       <Router>
         <Routes>
           {/* Default path */}
-          <Route path="/" element={<Navigate to={`/${currentLang}`} />} />
+          <Route path="/" element={<Index currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
           
           {/* Default path for languages */}
           <Route path="/:lang" element={<Index currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />

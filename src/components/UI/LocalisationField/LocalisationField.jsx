@@ -22,7 +22,7 @@ function LocalisationField({ gradient, setHideLoader }) {
     line: { background: gradient }
   }
 
-  const languages = ['en', 'ua', 'cz'];
+  const languages = ['cz', 'en', 'ua'];
   const defaultLanguage = 'cz';
   const [currentLanguage, setCurrentLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("i18nextLng");
