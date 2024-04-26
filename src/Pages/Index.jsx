@@ -9,7 +9,7 @@ import Portfolio from "../components/Portfolio/Portfolio.jsx";
 import Contacts from "../components/Contacts/Contacts.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 
-const Index = ({ hideLoader, setHideLoader, currentPage }) => {
+const Index = ({ hideLoader, setHideLoader, currentPage, lang }) => {
   const { t } = useTranslation();
 
   const [baseVelocity, setBaseVelocity] = useState({});

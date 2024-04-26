@@ -10,7 +10,12 @@ import Loader from '../components/UI/Loader/Loader';
 const Pages = () => {
   const { i18n } = useTranslation();
   const [hideLoader, setHideLoader] = useState(false);
-  const [currentLang, setCurrentLang] = useState(localStorage.getItem('i18nextLng'));
+  
+  const defaultLanguage = 'cz';
+  const savedLanguage = localStorage.getItem('i18nextLng');
+  const initialLanguage = savedLanguage ? savedLanguage : defaultLanguage;
+
+  const [currentLang, setCurrentLang] = useState(initialLanguage);
 
   useEffect(() => {
     i18n.changeLanguage(currentLang);
@@ -21,7 +26,7 @@ const Pages = () => {
       const langParam = window.location.pathname.split('/')[1]; 
       let language = currentLang;
   
-      if (['cz', 'en', 'ua'].includes(langParam)) { 
+      if (['cz', 'ua', 'en'].includes(langParam)) { 
         language = langParam;
       }
   
@@ -53,13 +58,12 @@ const Pages = () => {
           <Route path="/:lang/business-card-leaflets/" element={<ServicesPage currentPage="business-card-leaflets" hideLoader={hideLoader} setHideLoader={setHideLoader} />} /> 
 
 
-          {/* Service page */}
-          {/* <Route path="/en-US/web-development/" element={<ServicesPage currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
-          <Route path="/en-US/design/" element={<ServicesPage  currentPage="design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
-          <Route path="/en-US/poster-billboards/" element={<ServicesPage currentPage="poster-billboards" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
-          <Route path="/en-US/mobile-design/" element={<ServicesPage currentPage="mobile-design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
-          <Route path="/en-US/business-card-leaflets/" element={<ServicesPage currentPage="business-card-leaflets" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
-           */}
+          <Route path="/web-development/" element={<ServicesPage currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/design/" element={<ServicesPage  currentPage="design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/poster-billboards/" element={<ServicesPage currentPage="poster-billboards" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/mobile-design/" element={<ServicesPage currentPage="mobile-design" hideLoader={hideLoader} setHideLoader={setHideLoader} />} />
+          <Route path="/business-card-leaflets/" element={<ServicesPage currentPage="business-card-leaflets" hideLoader={hideLoader} setHideLoader={setHideLoader} />} /> 
+
           {/* Page not found */}
           <Route path="*" element={<PageNotFound />} />
         </Routes>

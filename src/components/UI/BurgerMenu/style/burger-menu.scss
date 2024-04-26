@@ -128,7 +128,7 @@
 
                     @keyframes hide {
                         0% { display: block; bottom: 44.5px; }
-                        100% { display: none; bottom: -100vb; }
+                        100% { display: none; bottom: -100vh; }
                     }
                 }
             }
@@ -138,11 +138,11 @@
 
 // Burger Animation
 .header__menu-overlay {
-    top: -100vb;
+    top: -100vh;
     display: block;
     position: fixed;
     width: 100vw;
-    height: 100vb;
+    height: 100vh;
     background-color: rgb(0, 0, 0);
     opacity: 0;
     z-index: -1;
@@ -222,13 +222,13 @@
 //         display: block;
 //         position: fixed;
 //         width: 100vw;
-//         height: 100vb;
+//         height: 100vh;
 //         background-color: rgb(0, 0, 0);
 //         z-index: 11;
 //         opacity: 1;
 
 //         @keyframes burgerOverlayAnimation {
-//             0% { top: -100vb; }
+//             0% { top: -100vh; }
 //             100% { top: 0px; }
 //         }
 //     }

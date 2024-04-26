@@ -460,6 +460,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
           </nav>
 
           <LocalisationField
+            isServicesPage={true}
             setHideLoader={setHideLoader}
             gradient={t(`servicesPage.${currentPage}.mainColor`)}
           />
@@ -594,6 +595,7 @@ const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
               </div>
 
               <LocalisationField
+                isServicesPage={true}
                 gradient={t(`servicesPage.${currentPage}.mainColor`)}
               />
             </footer>

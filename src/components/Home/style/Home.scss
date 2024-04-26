@@ -5,7 +5,8 @@
     height: 100vh;
     width: 100vw;
     background-color: $black;
-    @include display-center(space-between, none);
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
     overflow: hidden;
 

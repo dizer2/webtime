@@ -62,7 +62,7 @@ const Services = ({ setHideLoader }) => {
 
         <div className="services__wrapper">
 		    <RevealSecodary>
-                <Link onClick={openPopup} to={`${path}/web-development`}>
+                <Link onClick={openPopup} to={`/web-development`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -89,7 +89,7 @@ const Services = ({ setHideLoader }) => {
             </RevealSecodary>
 
 		    <RevealSecodary>
-            <Link onClick={openPopup}  to={`${path}/design`}>
+            <Link onClick={openPopup}  to={`/design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -118,7 +118,7 @@ const Services = ({ setHideLoader }) => {
 
 
 		    <RevealSecodary>
-                <Link onClick={openPopup}  to={`${path}/poster-billboards`}>
+                <Link onClick={openPopup}  to={`/poster-billboards`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -148,7 +148,7 @@ const Services = ({ setHideLoader }) => {
 
 
 		    <RevealSecodary>
-                <Link onClick={openPopup}  to={`${path}/mobile-design`}>
+                <Link onClick={openPopup}  to={`/mobile-design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -177,7 +177,7 @@ const Services = ({ setHideLoader }) => {
 
 
             <RevealSecodary>
-                <Link onClick={openPopup}  to={`${path}/business-card-leaflets`}>
+                <Link onClick={openPopup}  to={`/business-card-leaflets`}>
                         <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 

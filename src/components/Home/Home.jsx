@@ -323,7 +323,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                 <div className="header__dropdown-content__overlay">
                   <div className='header__dropdown-content'>
                       <div className="header__dropdown--left">
-                        <Link onClick={openPopup} to={`${path}/web-development`}>
+                        <Link onClick={openPopup} to={`/web-development`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -340,7 +340,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                         </Link>
 
 
-                        <Link onClick={openPopup} to={`${path}/design`}>
+                        <Link onClick={openPopup} to={`/design`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -356,7 +356,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                           </div>
                         </Link>
 
-                        <Link onClick={openPopup} to={`${path}/poster-billboards`}>
+                        <Link onClick={openPopup} to={`/poster-billboards`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -376,7 +376,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
 
 
                       <div className="header__dropdown--right">
-                        <Link onClick={openPopup} to={`${path}/mobile-design`}>
+                        <Link onClick={openPopup} to={`/mobile-design`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -392,7 +392,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                           </div>
                         </Link>
                         
-                        <Link onClick={openPopup} to={`${path}/business-card-leaflets`}>
+                        <Link onClick={openPopup} to={`/business-card-leaflets`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -479,7 +479,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           className="intro__slider mySwiper"
         >
           <SwiperSlide className="intro__card"> 
-            <Link onClick={openPopup} to={`${path}/web-development`}>
+            <Link onClick={openPopup} to={`/web-development`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card1.title')}</h2>
 
@@ -497,7 +497,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`${path}/design`}>
+            <Link onClick={openPopup} to={`/design`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card2.title')}</h2>
 
@@ -512,10 +512,10 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                 height="50"
               />
             </Link>
-          </SwiperSlide>
+          </SwiperSlide> 
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`${path}/poster-billboards`}>
+            <Link onClick={openPopup} to={`/poster-billboards`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card3.title')}</h2>
 
@@ -531,7 +531,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`${path}/design`}>
+            <Link onClick={openPopup} to={`/design`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card4.title')}</h2>
 
@@ -549,7 +549,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
           
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`${path}/business-card-leaflets`}>
+            <Link onClick={openPopup} to={`/business-card-leaflets`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card5.title')}</h2>
 
@@ -567,7 +567,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`${path}/business-card-leaflets`}>
+            <Link onClick={openPopup} to={`/business-card-leaflets`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card6.title')}</h2>
 
@@ -585,7 +585,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`${path}/poster-billboards`}>
+            <Link onClick={openPopup} to={`/poster-billboards`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card7.title')}</h2>
 

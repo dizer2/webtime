@@ -3,7 +3,7 @@ import "./style/localisation-field.css";
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function LocalisationField({ gradient, setHideLoader }) {
+function LocalisationField({ gradient, setHideLoader, isServicesPage = false }) {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -34,19 +34,25 @@ function LocalisationField({ gradient, setHideLoader }) {
   }, [currentLanguage]);
 
   const handleLangChange = (lang) => {
-    const newPath = pathname.replace(`/${currentLanguage}`, `/${lang}`);
-    setCurrentLanguage(lang);
-    changeLanguage(lang);
-    localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
-    navigate(newPath);
+    const langToSet = lang === 'en-US' ? 'en' : lang;
+    const newPath = pathname.replace(`/${currentLanguage}`, `/${langToSet}`);
+    setCurrentLanguage(langToSet);
+    changeLanguage(langToSet); 
+    // localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
+    let path = `/${lang}`
 
+    
+    if(isServicesPage) {
+      navigate(newPath);
+    } else {
+      navigate(path);
+    }
+    console.log(window.location.href, "LANG TO SET:", langToSet, "NEW PATH:", newPath)
+  
     setHideLoader(false);
     document.body.classList.add("_body-hidden"); 
   };
   const remainingLanguages = languages.filter(lang => lang !== currentLanguage);
-
-
-
 
   return (
     <div className='localisation-field'>
