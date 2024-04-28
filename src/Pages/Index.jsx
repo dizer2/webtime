@@ -9,7 +9,7 @@ import Portfolio from "../components/Portfolio/Portfolio.jsx";
 import Contacts from "../components/Contacts/Contacts.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 
-const Index = ({ hideLoader, setHideLoader, currentPage, lang }) => {
+const Index = ({ hideLoader, setHideLoader, lang }) => {
   const { t } = useTranslation();
 
   const [baseVelocity, setBaseVelocity] = useState({});
@@ -36,18 +36,18 @@ const Index = ({ hideLoader, setHideLoader, currentPage, lang }) => {
 
   return (
     <div style={{ overflowX: "hidden" }}>
-      {!hideLoader && <Loader currentPage={currentPage} hideLoader={hideLoader} setHideLoader={setHideLoader}/>}
+      {!hideLoader && <Loader currentPage="web-development" hideLoader={hideLoader} setHideLoader={setHideLoader}/>}
       <Home setCalculatorMenu={setCalculatorMenu} calculatorMenu={calculatorMenu} setCalculatorShow={setCalculatorShow}  hideLoader={hideLoader} setHideLoader={setHideLoader}/>
-      <About id="about" setCalculatorMenu={setCalculatorMenu}/>
+      <About id="about" lang={lang} setCalculatorMenu={setCalculatorMenu}/>
         <section className='text-animation'>
           <ParallaxText baseVelocity={baseVelocity.velocity1}>{t('homePage.main.paralaxText1')}</ParallaxText>
           <ParallaxText baseVelocity={baseVelocity.velocity2}>{t('homePage.main.paralaxText2')}</ParallaxText>
         </section>
         <>
-          <Services hideLoader={hideLoader} setHideLoader={setHideLoader} scrolled={serviceScrolled}/>
-          <Portfolio/>
-          <Contacts/>
-          <Footer setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow}/>
+          <Services hideLoader={hideLoader} setHideLoader={setHideLoader} scrolled={serviceScrolled} lang={lang}/>
+          <Portfolio lang={lang}/>
+          <Contacts lang={lang}/>
+          <Footer setCalculatorShow={setCalculatorShow} calculatorShow={calculatorShow} lang={lang}/>
         </>
     </div>
   );
