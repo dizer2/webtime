@@ -27,25 +27,6 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const defaultLang = pathname === '/' ? (localStorage.getItem("i18nextLng") || 'cz') : '';
-  console.log(defaultLang)
-
-
-  // let path = window.location.href;
-  // console.log(path)
-  
-  // const navigate = useNavigate();
-  // const history = useHistory(); 
-  
-
-  // const handleLinkClick = (page) => {
-  //   openPopup(); // Call your openPopup function
-
-  //   const defaultLang = localStorage.getItem("i18nextLng") || 'cz';
-  //   const path = `/${defaultLang}/${page}`;
-  //   // navigate(path);
-  //   history.push(path)
-  // };
-
 
 
   // Cursor Animation
@@ -343,7 +324,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                 <div className="header__dropdown-content__overlay">
                   <div className='header__dropdown-content'>
                       <div className="header__dropdown--left">
-                        <Link onClick={openPopup} to={`/web-development`}>
+                        <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}web-development`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -360,7 +341,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                         </Link>
 
 
-                        <Link onClick={openPopup} to={`/design`}>
+                        <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}design`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -376,7 +357,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                           </div>
                         </Link>
 
-                        <Link onClick={openPopup} to={`/poster-billboards`}>
+                        <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}poster-billboards`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -396,7 +377,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
 
 
                       <div className="header__dropdown--right">
-                        <Link onClick={openPopup} to={`/mobile-design`}>
+                        <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}mobile-design`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -412,7 +393,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
                           </div>
                         </Link>
                         
-                        <Link onClick={openPopup} to={`/business-card-leaflets`}>
+                        <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}business-card-leaflets`}>
                           <div className="header__dropdown-item">
                               <IconBox
                                 boxSize={40}
@@ -517,7 +498,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`/design`}>
+            <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}design`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card2.title')}</h2>
 
@@ -535,7 +516,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide> 
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`/poster-billboards`}>
+            <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}poster-billboards`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card3.title')}</h2>
 
@@ -551,7 +532,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`/design`}>
+            <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}design`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card4.title')}</h2>
 
@@ -569,7 +550,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
           
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`/business-card-leaflets`}>
+            <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}business-card-leaflets`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card5.title')}</h2>
 
@@ -587,7 +568,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`/business-card-leaflets`}>
+            <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}business-card-leaflets`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card6.title')}</h2>
 
@@ -605,7 +586,7 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           </SwiperSlide>
 
           <SwiperSlide className="intro__card">
-            <Link onClick={openPopup} to={`/poster-billboards`}>
+            <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}poster-billboards`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card7.title')}</h2>
 

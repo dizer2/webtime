@@ -16,13 +16,15 @@ import FullWebsite from "./../main/img/complete-website-creation.svg";
 import OptimisationIcon from "./../main/img/optimisation-icon.svg";
 import { Reveal } from '../utils/Reveal/Reveal.tsx'
 import { RevealSecodary } from '../utils/RevealSecodary/RevealSecodary.tsx'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 
 const Services = ({ setHideLoader }) => {
 	const {t} = useTranslation();
-    let path = window.location.pathname;
+
+    const { pathname } = useLocation();
+    const defaultLang = pathname === '/' ? (localStorage.getItem("i18nextLng") || 'cz') : '';
 
     const arrowBtnColor = "linear-gradient(99deg, #2BBFFE 5.86%, #8629FD 54.99%, #FC4AF5 100%)"
 
@@ -62,7 +64,7 @@ const Services = ({ setHideLoader }) => {
 
         <div className="services__wrapper">
 		    <RevealSecodary>
-                <Link onClick={openPopup} to={`/web-development`}>
+                <Link onClick={openPopup} to={`${defaultLang ? `${defaultLang}/` : ''}web-development`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -89,7 +91,7 @@ const Services = ({ setHideLoader }) => {
             </RevealSecodary>
 
 		    <RevealSecodary>
-            <Link onClick={openPopup}  to={`/design`}>
+            <Link onClick={openPopup}  to={`${defaultLang ? `${defaultLang}/` : ''}design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -118,7 +120,7 @@ const Services = ({ setHideLoader }) => {
 
 
 		    <RevealSecodary>
-                <Link onClick={openPopup}  to={`/poster-billboards`}>
+                <Link onClick={openPopup}  to={`${defaultLang ? `${defaultLang}/` : ''}poster-billboards`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -148,7 +150,7 @@ const Services = ({ setHideLoader }) => {
 
 
 		    <RevealSecodary>
-                <Link onClick={openPopup}  to={`/mobile-design`}>
+                <Link onClick={openPopup}  to={`${defaultLang ? `${defaultLang}/` : ''}mobile-design`}>
                     <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
@@ -177,7 +179,7 @@ const Services = ({ setHideLoader }) => {
 
 
             <RevealSecodary>
-                <Link onClick={openPopup}  to={`/business-card-leaflets`}>
+                <Link onClick={openPopup}  to={`${defaultLang ? `${defaultLang}/` : ''}business-card-leaflets`}>
                         <div className="services__card">
                         <div className="services__card-main">
                             <IconBox 
