@@ -16,7 +16,7 @@ import SocialMedia from '../UI/SocialMedia/SocialMedia.jsx';
 import LocalisationField from '../UI/LocalisationField/LocalisationField.jsx';
 import GradientBtn from '../UI/GradientBtn/GradientBtn.jsx';
 
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation, useNavigate } from "react-router-dom";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,7 +25,27 @@ import BurgerMenu from '../UI/BurgerMenu/BurgerMenu.jsx';
 
 const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoader }) => {
   const { t } = useTranslation();
-  let path = window.location.href;
+  const { pathname } = useLocation();
+  const defaultLang = pathname === '/' ? (localStorage.getItem("i18nextLng") || 'cz') : '';
+  console.log(defaultLang)
+
+
+  // let path = window.location.href;
+  // console.log(path)
+  
+  // const navigate = useNavigate();
+  // const history = useHistory(); 
+  
+
+  // const handleLinkClick = (page) => {
+  //   openPopup(); // Call your openPopup function
+
+  //   const defaultLang = localStorage.getItem("i18nextLng") || 'cz';
+  //   const path = `/${defaultLang}/${page}`;
+  //   // navigate(path);
+  //   history.push(path)
+  // };
+
 
 
   // Cursor Animation
@@ -478,8 +498,8 @@ const Home = ({ setCalculatorShow, calculatorMenu, setCalculatorMenu, setHideLoa
           }}
           className="intro__slider mySwiper"
         >
-          <SwiperSlide className="intro__card"> 
-            <Link onClick={openPopup} to={`/web-development`}>
+          <SwiperSlide  className="intro__card"> 
+            <Link onClick={() => {openPopup()}} to={`${defaultLang ? `${defaultLang}/` : ''}web-development`}>
               <div className="intro__card-header">
                 <h2 className="intro__card-title">{t('homePage.home.card1.title')}</h2>
 

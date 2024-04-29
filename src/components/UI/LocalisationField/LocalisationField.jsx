@@ -12,16 +12,6 @@ function LocalisationField({ gradient, setHideLoader, isServicesPage = false }) 
     i18n.changeLanguage(lng);
   };
 
-  const styles = {
-    text: {
-      background: gradient,
-      backgroundClip: 'text',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-    },
-    line: { background: gradient }
-  }
-
   const languages = ['cz', 'en', 'ua'];
   const defaultLanguage = 'cz';
   const [currentLanguage, setCurrentLanguage] = useState(() => {
@@ -41,7 +31,6 @@ function LocalisationField({ gradient, setHideLoader, isServicesPage = false }) 
     // localStorage.setItem("lastVisitedPath", newPath); // Сохраняем новый адрес
     let path = `/${lang}`
 
-    
     if(isServicesPage) {
       navigate(newPath);
     } else {
@@ -53,6 +42,18 @@ function LocalisationField({ gradient, setHideLoader, isServicesPage = false }) 
     document.body.classList.add("_body-hidden"); 
   };
   const remainingLanguages = languages.filter(lang => lang !== currentLanguage);
+
+
+  const styles = {
+    text: {
+      background: gradient,
+      backgroundClip: 'text',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+    },
+    line: { background: gradient }
+  }
+
 
   return (
     <div className='localisation-field'>
