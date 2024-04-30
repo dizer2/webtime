@@ -4,14 +4,18 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+
+  <!-- Home -->
   <url>
-    <loc>https://webtime.cz</loc>
+    <loc>https://webtime.cz/</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
- <url>
+
+  <!-- CZ Version -->
+  <url>
     <loc>https://webtime.cz/cz/web-development</loc>
     <lastmod>2024-04-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -46,6 +50,8 @@
     <priority>0.7</priority>
   </url>
   
+
+  <!-- UA Version -->
   <url>
     <loc>https://webtime.cz/ua</loc>
     <lastmod>2024-04-01</lastmod>
@@ -53,6 +59,43 @@
     <priority>0.9</priority>
   </url>
 
+    <url>
+    <loc>https://webtime.cz/ua/web-development</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://webtime.cz/ua/design</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://webtime.cz/ua/mobile-design</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://webtime.cz/ua/business-card-leaflets</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://webtime.cz/ua/poster-billboards</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <!-- EN Version -->
   <url>
     <loc>https://webtime.cz/en</loc>
     <lastmod>2024-04-01</lastmod>
@@ -60,5 +103,38 @@
     <priority>0.9</priority>
   </url> 
 
+  <url>
+    <loc>https://webtime.cz/en/web-development</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
+  <url>
+    <loc>https://webtime.cz/en/design</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://webtime.cz/en/mobile-design</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://webtime.cz/en/business-card-leaflets</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://webtime.cz/en/poster-billboards</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
