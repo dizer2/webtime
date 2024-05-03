@@ -10,9 +10,7 @@ import GradientBtn from "../UI/GradientBtn/GradientBtn";
 import { useTranslation } from "react-i18next";
 import emailjs from '@emailjs/browser';
 import Loader from "../UI/Loader/Loader";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import Popup from "../UI/Popup/Popup";
-import Footer from "../Footer/Footer";
 
 const ServicesPage = ({ currentPage, hideLoader, setHideLoader }) => {
     const { t } = useTranslation();

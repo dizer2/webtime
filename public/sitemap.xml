@@ -8,23 +8,22 @@
   <!-- Home -->
   <url>
     <loc>https://webtime.cz/</loc>
-    <link rel="alternate" href="https://webtime.cz/cz" hreflang="cz" />
-    <link rel="alternate" href="https://webtime.cz/en" hreflang="en" />
-    <link rel="alternate" href="https://webtime.cz/ua" hreflang="ua" />
-    <link rel="alternate" href="https://webtime.cz/en-US" hreflang="en-us" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/cz" hreflang="cz" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en" hreflang="en" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/ua" hreflang="ua" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en-US" hreflang="en-us" />
     <lastmod>2024-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-
   <!-- CZ Version -->
   <url>
     <loc>https://webtime.cz/web-development</loc>
-    <link rel="alternate" href="https://webtime.cz/cz/web-development" hreflang="cz" />
-    <link rel="alternate" href="https://webtime.cz/en/web-development" hreflang="en" />
-    <link rel="alternate" href="https://webtime.cz/ua/web-development" hreflang="ua" />
-    <link rel="alternate" href="https://webtime.cz/en-US/web-development" hreflang="en-us" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en/web-development" hreflang="en" />
+    <sitemap:sitemap:link rel="alternate" href="https://webtime.cz/cz/web-development" hreflang="cz" />
+    <sitemap:sitemap:link rel="alternate" href="https://webtime.cz/ua/web-development" hreflang="ua" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en-US/web-development" hreflang="en-us" />
     <lastmod>2024-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -32,10 +31,10 @@
 
   <url>
     <loc>https://webtime.cz/cz/design</loc>
-    <link rel="alternate" href="https://webtime.cz/cz/design" hreflang="cz" />
-    <link rel="alternate" href="https://webtime.cz/en/design" hreflang="en" />
-    <link rel="alternate" href="https://webtime.cz/ua/design" hreflang="ua" />
-    <link rel="alternate" href="https://webtime.cz/en-US/design" hreflang="en-us" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/cz/design" hreflang="cz" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en/design" hreflang="en" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/ua/design" hreflang="ua" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en-US/design" hreflang="en-us" />
     <lastmod>2024-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -43,10 +42,10 @@
 
   <url>
     <loc>https://webtime.cz/cz/mobile-design</loc>
-    <link rel="alternate" href="https://webtime.cz/cz/mobile-design" hreflang="cz" />
-    <link rel="alternate" href="https://webtime.cz/en/mobile-design" hreflang="en" />
-    <link rel="alternate" href="https://webtime.cz/ua/mobile-design" hreflang="ua" />
-    <link rel="alternate" href="https://webtime.cz/en-US/mobile-design" hreflang="en-us" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/cz/mobile-design" hreflang="cz" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en/mobile-design" hreflang="en" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/ua/mobile-design" hreflang="ua" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en-US/mobile-design" hreflang="en-us" />
     <lastmod>2024-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -54,10 +53,10 @@
 
   <url>
     <loc>https://webtime.cz/cz/business-card-leaflets</loc>
-    <link rel="alternate" href="https://webtime.cz/cz/business-card-leaflets" hreflang="cz" />
-    <link rel="alternate" href="https://webtime.cz/en/business-card-leaflets" hreflang="en" />
-    <link rel="alternate" href="https://webtime.cz/ua/business-card-leaflets" hreflang="ua" />
-    <link rel="alternate" href="https://webtime.cz/en-US/business-card-leaflets" hreflang="en-us" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/cz/business-card-leaflets" hreflang="cz" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en/business-card-leaflets" hreflang="en" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/ua/business-card-leaflets" hreflang="ua" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en-US/business-card-leaflets" hreflang="en-us" />
     <lastmod>2024-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -65,144 +64,12 @@
 
   <url>
     <loc>https://webtime.cz/cz/poster-billboards</loc>
-    <link rel="alternate" href="https://webtime.cz/cz/poster-billboards" hreflang="cz" />
-    <link rel="alternate" href="https://webtime.cz/en/poster-billboards" hreflang="en" />
-    <link rel="alternate" href="https://webtime.cz/ua/poster-billboards" hreflang="ua" />
-    <link rel="alternate" href="https://webtime.cz/en-US/poster-billboards" hreflang="en-us" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/cz/poster-billboards" hreflang="cz" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en/poster-billboards" hreflang="en" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/ua/poster-billboards" hreflang="ua" />
+    <sitemap:link rel="alternate" href="https://webtime.cz/en-US/poster-billboards" hreflang="en-us" />
     <lastmod>2024-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  </urlset>
-
-  <!-- UA Version -->
-  <!-- <url>
-    <loc>https://webtime.cz/ua</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-    <url>
-    <loc>https://webtime.cz/ua/web-development</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/ua/design</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/ua/mobile-design</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/ua/business-card-leaflets</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/ua/poster-billboards</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-
-  EN Version
-  <url>
-    <loc>https://webtime.cz/en</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url> 
-
-  <url>
-    <loc>https://webtime.cz/en/web-development</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en/design</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en/mobile-design</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en/business-card-leaflets</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en/poster-billboards</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-
-  EN-US Version
-    <url>
-    <loc>https://webtime.cz/en-US</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url> 
-
-  <url>
-    <loc>https://webtime.cz/en-US/web-development</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en-US/design</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en-US/mobile-design</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en-US/business-card-leaflets</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://webtime.cz/en-US/poster-billboards</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url> -->
-<!-- </urlset> -->
+</urlset>
