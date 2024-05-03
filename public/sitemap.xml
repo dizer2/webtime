@@ -73,7 +73,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+  </urlset>
 
   <!-- UA Version -->
   <!-- <url>
@@ -119,7 +119,7 @@
   </url>
 
 
-  <!-- EN Version -->
+  EN Version
   <url>
     <loc>https://webtime.cz/en</loc>
     <lastmod>2024-05-02</lastmod>
@@ -163,7 +163,7 @@
   </url>
 
 
-  <!-- EN-US Version -->
+  EN-US Version
     <url>
     <loc>https://webtime.cz/en-US</loc>
     <lastmod>2024-05-02</lastmod>
@@ -205,4 +205,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url> -->
-</urlset>
+<!-- </urlset> -->
