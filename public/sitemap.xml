@@ -30,7 +30,7 @@
   </url>
 
   <url>
-    <loc>https://webtime.cz/cz/design</loc>
+    <loc>https://webtime.cz/design</loc>
     <sitemap:link rel="alternate" href="https://webtime.cz/cz/design" hreflang="cz" />
     <sitemap:link rel="alternate" href="https://webtime.cz/en/design" hreflang="en" />
     <sitemap:link rel="alternate" href="https://webtime.cz/ua/design" hreflang="ua" />
@@ -41,7 +41,7 @@
   </url>
 
   <url>
-    <loc>https://webtime.cz/cz/mobile-design</loc>
+    <loc>https://webtime.cz/mobile-design</loc>
     <sitemap:link rel="alternate" href="https://webtime.cz/cz/mobile-design" hreflang="cz" />
     <sitemap:link rel="alternate" href="https://webtime.cz/en/mobile-design" hreflang="en" />
     <sitemap:link rel="alternate" href="https://webtime.cz/ua/mobile-design" hreflang="ua" />
@@ -52,7 +52,7 @@
   </url>
 
   <url>
-    <loc>https://webtime.cz/cz/business-card-leaflets</loc>
+    <loc>https://webtime.cz/business-card-leaflets</loc>
     <sitemap:link rel="alternate" href="https://webtime.cz/cz/business-card-leaflets" hreflang="cz" />
     <sitemap:link rel="alternate" href="https://webtime.cz/en/business-card-leaflets" hreflang="en" />
     <sitemap:link rel="alternate" href="https://webtime.cz/ua/business-card-leaflets" hreflang="ua" />
@@ -63,7 +63,7 @@
   </url>
 
   <url>
-    <loc>https://webtime.cz/cz/poster-billboards</loc>
+    <loc>https://webtime.cz/poster-billboards</loc>
     <sitemap:link rel="alternate" href="https://webtime.cz/cz/poster-billboards" hreflang="cz" />
     <sitemap:link rel="alternate" href="https://webtime.cz/en/poster-billboards" hreflang="en" />
     <sitemap:link rel="alternate" href="https://webtime.cz/ua/poster-billboards" hreflang="ua" />
